@@ -45,7 +45,6 @@ biologie -> biologia
 Filosofie -> filosofie
 požívá -> používá
 Atomismus -> atomismus
-Pozitivismus -> pozitivismus
 metafysika -> metafyzika
 metafysika -> metafyzika
 analytické -> Analytická

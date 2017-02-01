@@ -169,11 +169,13 @@ def cleanUpText(text):
 def cleanUpSentence(text, removeDigits=False, removePunctuation=False):
     if(text == None):
 	return None
+    text = re.sub("\*",", ",text, re.M) #Replace bullets
     text = re.sub("\"(\s*\")*","\"",text, re.M) #Remove more apostrophes
     text = re.sub("\s*,(\s*,)*",",",text, re.M) #Remove more commas
     text = re.sub("\s*:(\s*:)*",":",text, re.M) #Remove more colons    
     text = re.sub("^(\s*(\*)\s*)","",text, re.M) #Replace bullets
     text = re.sub("^[(:*\s*)(,*\s*)]","",text, re.M) #Remove starters
+    text = re.sub("([:.,])+[:.,]+","\\1",text, re.M) #Remove odd punctuation combinations
     if(removeDigits):
 	text = re.sub("[0-9]"," ",text) #Remove more spaces
     if(removePunctuation):
