@@ -151,31 +151,37 @@ def sentenceSimilarity(first, second):
 
 '''Cleans up the text - removes rests from wiki markup, replaces special character (e.g. '…' -> '...', '„' -> '"') '''
 def cleanUpText(text):
-    text = re.sub("\/\*(.*?)\*\/","\\1",text, re.M) #Replace comments
-    text = re.sub("\[.*?\|(.*?)\]","\\1",text, re.M) #Remove wiki interlinks
-    text = re.sub("[„“]","\"",text, re.M) #Clean text
-    text = re.sub("[…]","\.\.\.",text, re.M) #Clean text
-    text = re.sub("\*",", ",text, re.M) #Replace bullets
-    text = re.sub("(\s+)"," ",text, re.M) #Remove more spaces
-    text = re.sub("\"(\s*\")*","\"",text, re.M) #Remove more apostrophes
-    text = re.sub("\s*,(\s*,)*",",",text, re.M) #Remove more commas
-    text = re.sub("\s*:(\s*:)*",":",text, re.M) #Remove more colons
-    text = re.sub("===.*?===","",text, re.M) #Remove headings
-    text = re.sub("==.*?==","",text, re.M) #Remove headings
-    text = re.sub("=","",text, re.M) #Remove rest equal signs
-    text = re.sub("[\[\]]","",text, re.M) #Clean rest brackets
+    text = re.sub(u"\/\*(.*?)\*\/","\\1",text, re.M) #Replace comments
+    text = re.sub(u"\[.*?\|(.*?)\]","\\1",text, re.M) #Remove wiki interlinks
+    text = re.sub(u"[‘’ʹ՚‛ʻʼ՝ʽʾ]","\'",text, re.M) #Preserve only one type of single quotes
+    text = re.sub(u"[„“˝”ˮ‟″‶〃＂“]","\"",text, re.M) #Preserve only one type of double quotes
+    text = re.sub(u"[‐‑‒−–⁃➖˗﹘-]","-",text, re.M) #Preserve only one type of hyphens
+    text = re.sub(u"[…]","\.\.\.",text, re.M) #Clean text
+    text = re.sub(u"\*",", ",text, re.M) #Replace bullets
+    text = re.sub(u"(\s+)"," ",text, re.M) #Remove more spaces
+    
+    text = re.sub(u"======.*?======","",text, re.M) #Remove headings
+    text = re.sub(u"=====.*?=====","",text, re.M) #Remove headings
+    text = re.sub(u"====.*?====","",text, re.M) #Remove headings
+    text = re.sub(u"===.*?===","",text, re.M) #Remove headings
+    text = re.sub(u"==.*?==","",text, re.M) #Remove headings
+    text = re.sub(u"=","",text, re.M) #Remove rest equal signs
+    text = re.sub(u"[\[\]]","",text, re.M) #Clean rest brackets
     return text
 
 def cleanUpSentence(text, removeDigits=False, removePunctuation=False):
     if(text == None):
 	return None
-    text = re.sub("\*",", ",text, re.M) #Replace bullets
-    text = re.sub("\"(\s*\")*","\"",text, re.M) #Remove more apostrophes
-    text = re.sub("\s*,(\s*,)*",",",text, re.M) #Remove more commas
-    text = re.sub("\s*:(\s*:)*",":",text, re.M) #Remove more colons    
-    text = re.sub("^(\s*(\*)\s*)","",text, re.M) #Replace bullets
-    text = re.sub("^[(:*\s*)(,*\s*)]","",text, re.M) #Remove starters
-    text = re.sub("([:.,])+[:.,]+","\\1",text, re.M) #Remove odd punctuation combinations
+    text = re.sub(u"\*",", ",text, re.M) #Replace bullets
+    text = re.sub(u"\'(\s*\')*","\'",text, re.M) #Remove more single quotes
+    text = re.sub(u"\"(\s*\")*","\"",text, re.M) #Remove more double quotes
+    text = re.sub(u"\s*,(\s*,)*",",",text, re.M) #Remove more commas
+    text = re.sub(u"\s*:(\s*:)*",":",text, re.M) #Remove more colons
+    text = re.sub(u"-(\s*-)*","-",text, re.M) #Remove more hyphens
+    text = re.sub(u"^(\s*(\*)\s*)","",text, re.M) #Replace bullets
+    text = re.sub(u"^.*?([A-Z\"\'])","\\1",text, re.M) #Replace bullets
+    text = re.sub(u"^[(:*\s*)(,*\s*)]","",text, re.M) #Remove starters
+    text = re.sub(u"([:.,])+[:.,]+","\\1",text, re.M) #Remove odd punctuation combinations
     if(removeDigits):
 	text = re.sub("[0-9]"," ",text) #Remove more spaces
     if(removePunctuation):
@@ -360,8 +366,9 @@ if __name__ == "__main__":
 				elif elem.tag.endswith('comment'):
 				    curRevision.comment = cleanUpSentence(cleanUpText(elem.text))
 				elif elem.tag.endswith('text'):
-				    poolAsyncResults.append(pool.apply_async(normalizeText, args=(elem.text,curPage.title)))
-				    #curRevision.text = normalizeText(elem.text, curPage.title)
+				    if(elem.text != None or elem.text != ""):
+					poolAsyncResults.append(pool.apply_async(normalizeText, args=(elem.text,curPage.title)))
+					#curRevision.text = normalizeText(elem.text, curPage.title)
 				elif elem.tag.endswith('revision'):
 				    curPage.revisions.append(curRevision)
 				    curRevision = revision()
