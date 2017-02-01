@@ -319,14 +319,14 @@ def processPage(page):
 		writeCorpBuffer(newRev.comment)
 
 '''Renders wiki markup into plain text via WikiExtractor and then cleans output text'''
-def normalizeText(text):
+def normalizeText(text, title):
 	if(text != None):  
 		out = StringIO.StringIO()
-		extractor = WikiExtractor.Extractor(0, "", text.split("\n"))
+		extractor = WikiExtractor.Extractor(0, 0, title, text.split("\n"))
 		extractor.extract(out)
 		text = out.getvalue()
 		out.close()
-		text = cleanUpText(text).decode('utf-8','ignore').encode("utf-8")
+		text = cleanUpText(text).encode("utf-8")
 		text = splitBySentences(text)
 		for i in range(0, len(text)):
 		    text[i] = cleanUpSentence(text[i])
@@ -360,7 +360,8 @@ if __name__ == "__main__":
 				elif elem.tag.endswith('comment'):
 				    curRevision.comment = cleanUpSentence(cleanUpText(elem.text))
 				elif elem.tag.endswith('text'):
-				    poolAsyncResults.append(pool.apply_async(normalizeText, args=(elem.text,)))
+				    poolAsyncResults.append(pool.apply_async(normalizeText, args=(elem.text,curPage.title)))
+				    #curRevision.text = normalizeText(elem.text, curPage.title)
 				elif elem.tag.endswith('revision'):
 				    curPage.revisions.append(curRevision)
 				    curRevision = revision()

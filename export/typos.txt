@@ -39,9 +39,8 @@ pozorovánými -> pozorovanými
 těses -> tělesa
 vázana -> vázána
 okosystémy -> ekosystémy
-Biomů -> biomů
-Slovo -> slovo
 biologie -> biologia
+Biomů -> biomů
 Filosofie -> filosofie
 požívá -> používá
 Atomismus -> atomismus

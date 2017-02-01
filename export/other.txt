@@ -1,15 +1,3 @@
-reorganisace
-Další informace najdete také v sekci AstrofyzikaJinak, sluneční soustava, planeta, kometa, planetka, hvězda, galaxie, vesmír, ekliptika " myšlená dráha na obloze, kterou během roku prochází Slunce, zemská osa " jakási nehmotná a nekonečná tyčka, kolem které se Země otáčí, nebeský pól (světový pól) " bod ležící nad zemským pólem, zenit (nadhlavník) " bod ležící nad pozorovatelem, nadir (podnožník) \.
-  Ekliptika " myšlená dráha na obloze, kterou během roku prochází Slunce,  Zemská osa " jakási nehmotná a nekonečná tyčka, kolem které se Země otáčí,  Nebeský pól (světový pól) " bod ležící nad zemským pólem,  Zenit (nadhlavník) " bod ležící nad pozorovatelem,  Nadir (podnožník) \.
-
-reorganisace
-bod ležící pod pozorovatelem, nebeská sféra \.
-bod ležící pod pozorovatelem,  Nebeská sféra \.
-
-reorganisace
-nekonečně vzdálená myšlená kulová plocha (obepínající celou Zemi), na kterou se promítají všechny pozorované objekty ve vesmíru, nebeský rovník (světový rovník) \.
-nekonečně vzdálená myšlená kulová plocha (obepínající celou Zemi), na kterou se promítají všechny pozorované objekty ve vesmíru,  Nebeský rovník (světový rovník) \.
-
 
 Sférická astronime sklouží k popisu poloh objektů na nebeské sféře, zavededením souřadnic a popisuje výyznamné křivky a body na nebeské sféře.
 Sférická astronome sklouží k popisu poloh objektů na nebeské sféře, zavededením souřadnic a popisuje výyznamné křivky a body na nebeské sféře.
@@ -38,6 +26,10 @@ Astronomie A se podobně jako další vědy začala rozvíjet ve starověku.
 Astronomie A se podobně jako další vědy začala rozvíjet ve starověku.
 Astronomie se podobně jako další vědy začala rozvíjet ve starověku.
 
+robot: typografickĂ„"€šĂ‚Â© korekce podle specifikace
+Naopak astronomické systémy jsou pro velkou část fyzikální teorie nejdůležitější "laboratoří", přirozeně především ve velkých prostorových a časových měřítkách se projevuje gravitace a testuje obecná teorie relativity.
+Naopak astronomické systémy jsou pro velkou část fyzikální teorie nejdůležitější „laboratoří“, přirozeně především ve velkých prostorových a časových měřítkách se projevuje gravitace a testuje obecná teorie relativity.
+
 Části astronomie odkazy
 Kosmologie studuje Vesmír jako celek a zvláště jeho vznik, vývoj, a budoucí vývoj.
 Kosmologie studuje Vesmír jako celek a zvláště jeho vznik, současný a budoucí vývoj.
@@ -60,7 +52,7 @@ Hvězdná astronomie se zabývá hvězdami, včetně Slunce.
 
 typo, nadpisy, pročištění souvisejících článků (jen ty důležitější, které nejsou zmíněné v článku), typografie
 Galaktická astronomie se zabývá zkoumáním struktury, součástí a vývoje galaxií - v prvé řadě naší Galaxie.
-Galaktická astronomie se zabývá zkoumáním struktury, součástí a vývoje galaxií " v prvé řadě naší Galaxie.
+Galaktická astronomie se zabývá zkoumáním struktury, součástí a vývoje galaxií – v prvé řadě naší Galaxie.
 
 typo, nadpisy, pročištění souvisejících článků (jen ty důležitější, které nejsou zmíněné v článku), typografie
 Řadí se do astronomie, ale jejich části mají často užší spojitost s odpovídajícími vědami o planetě Zemi.
@@ -71,8 +63,8 @@ Hvězdná astronomie se zabývá hvězdami, včetně Slunce.
   Hvězdná astronomie se zabývá hvězdami, včetně Slunce.
 
 meteorická astro, odkazy
-Galaktická astronomie se zabývá zkoumáním struktury, součástí a vývoje galaxií " v prvé řadě naší Galaxie.
-  Galaktická astronomie se zabývá zkoumáním struktury, součástí a vývoje galaxií " v prvé řadě naší Galaxie.
+Galaktická astronomie se zabývá zkoumáním struktury, součástí a vývoje galaxií – v prvé řadě naší Galaxie.
+  Galaktická astronomie se zabývá zkoumáním struktury, součástí a vývoje galaxií – v prvé řadě naší Galaxie.
 
 meteorická astro, odkazy
 Extragalaktická astronomie zkoumá objekty za hranicemi naší Galaxie.
@@ -89,10 +81,6 @@ hhh,  Hvězdná astronomie se zabývá hvězdami, včetně Slunce.
 Historie astronomie 
 První se z astronomie rozvíjela astrometrie, zabývající se měřením poloh hvězd a planet na obloze.
 První se z astronomie rozvíjela astrometrie, zabývající se měřenímVDFVFVF poloh hvězd a planet na obloze.
-
-Části astronomie 
-Naopak astronomické systémy jsou pro velkou část fyzikální teorie nejdůležitější "laboratoří", přirozeně především ve velkých prostorových a časových měřítkách se projevuje gravitace a testuje obecná teorie relativity.
-Naopak astronomické systémy jsou pro velkou část fyzikální teorie nejdůležitější "laboratoří", přirozeně především ve velkých prostorových a časových měřítkách se projevuje Astronomický ústav AV],   ][[Kategorie:Sedm svobodných umění]][[af:Sterrekunde]][[als:Astronomie]][[am:ሥነ ፈለክ]][[an:Astronomía]][[ang:Tungolcr\.
 
 Vztah astronomie k dalším vědám 
 Od novověku do současnosti se astronomie nesmírně rozšířila a vznikla celá řada nových oblastí výzkumu, které lze velmi zhruba rozdělit na pozorování a teorii, nebo podle objektu zájmu.
@@ -164,11 +152,7 @@ Fakt, že se od sebe objekty vzdalují, naznačuje, že někdy v minulosti byly 
 
 Historie astronomie další úpravy
 V letech 1905 až 1915 napsal Albert Einstein teorii relativity - speciální, ve které zavedl a konečnou rychlost světla a obecnou relativitu o gravitaci, čase a prostoru ve velkých rozměrech.
-V letech 1905"1915 napsal Albert Einstein teorii relativity " speciální, vekteré zavedl a konečnou rychlost světla a obecnou relativitu o gravitaci, čase a prostoru ve velkých rozměrech.
-
-Historie astronomie další úpravy
-Naopak astronomické systémy jsou pro velkou část fyzikální teorie nejdůležitější "laboratoří", přirozeně především ve velkých prostorových a časových měřítkách se projevuje gravitace a testuje obecná teorie relativity.
- přirozeně především ve velkých prostorových a časových měřítkách se projevuje gravitace a testuje obecná teorie relativity.
+V letech 1905–1915 napsal Albert Einstein teorii relativity – speciální, vekteré zavedl a konečnou rychlost světla a obecnou relativitu o gravitaci, čase a prostoru ve velkých rozměrech.
 
 Historie astronomie a ještě jedno v latině
 V roce 1687 vydal sir Isaac Newton knihu "Philosophiae naturalis proncipia mathematica" o poloze těses v prostoru a čase a zákon obecné přitažlivosti, podle něhož jsou k sobě tělesa vázana gravitací, která závisí na hmotnosti těles a na jejich vzdálenosti.
@@ -187,8 +171,8 @@ robot přidal: new:खगोलशास्त्र; kosmetické úpravy
   neutrinová astronomie pozoruje neutrina, teleskopy jsou v současnosti velké prostory hluboko pod zemí, zaplněné vodou nebo jiným pozorovacím médiem,  studium kosmického záření, vysokoenergetických částic mimozemského původu.
 
 Astronomie podle objektu zájmu 
-  Galaktická astronomie se zabývá zkoumáním struktury, součástí a vývoje galaxií " v prvé řadě naší Galaxie.
-Podle metody výzkumu se dělí na: 1. stelární statistiku, 2. stelární kinematiku, 3. stelární dynamiku,  Galaktická astronomie se zabývá zkoumáním struktury, součástí a vývoje galaxií " v prvé řadě naší Galaxie.
+  Galaktická astronomie se zabývá zkoumáním struktury, součástí a vývoje galaxií – v prvé řadě naší Galaxie.
+Podle metody výzkumu se dělí na: 1. stelární statistiku, 2. stelární kinematiku, 3. stelární dynamiku,  Galaktická astronomie se zabývá zkoumáním struktury, součástí a vývoje galaxií – v prvé řadě naší Galaxie.
 
 Historie astronomie 
 První se z astronomie rozvíjela astrometrie, zabývající se měřením poloh hvězd a planet na obloze.
@@ -215,8 +199,8 @@ nudaAstronomie má nejužší vztah s fyzikou.
 Astronomie má nejužší vztah s fyzikou.
 
 bot rozložil {{Sisterlinks}} na šablony s parametry za použití AWB
-Podle metody výzkumu se dělí na: 1. stelární statistiku, 2. stelární kinematiku, 3. stelární dynamiku,  Galaktická astronomie se zabývá zkoumáním struktury, součástí a vývoje galaxií " v prvé řadě naší Galaxie.
- Podle metody výzkumu se dělí na: 1. stelární statistiku, 2. stelární kinematiku, 3. stelární dynamiku,  Galaktická astronomie se zabývá zkoumáním struktury, součástí a vývoje galaxií " v prvé řadě naší Galaxie.
+Podle metody výzkumu se dělí na: 1. stelární statistiku, 2. stelární kinematiku, 3. stelární dynamiku,  Galaktická astronomie se zabývá zkoumáním struktury, součástí a vývoje galaxií – v prvé řadě naší Galaxie.
+ Podle metody výzkumu se dělí na: 1. stelární statistiku, 2. stelární kinematiku, 3. stelární dynamiku,  Galaktická astronomie se zabývá zkoumáním struktury, součástí a vývoje galaxií – v prvé řadě naší Galaxie.
 
 bot rozložil {{Sisterlinks}} na šablony s parametry za použití AWB
   Meteorická astronomie se zabývá studiem pohybu a dalšími vlastnostmi meteorů) a meteoritů.
@@ -256,31 +240,27 @@ V užším slova smyslu bychom pak biologii mohli popsat jako vědu, zkoumajíc�
 
 robot: typografické korekce podle specifikace
 Biologie v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy - tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu prostředí.
-Biologie v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy " tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu prostředí.
-
-robot: typografické korekce podle specifikace
-Slovo "biologie" (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín "biologie" tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744 - 1849).
-Slovo "biologie" (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín \.
+Biologie v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy – tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu prostředí.
 
 Podřízené a související vědní obory 
 Pod biologii tedy můžeme zařadit, nebo nalézt její úzkou spojitost s následujícími vědními obory: Molekulární biologie, biochemie, genetika, buněčná biologie, fyziologie, anatomie, vývojová biologie, evoluční biologie,etologie, ekologie, systematika, botanika, zoologie, mykologie, mikrobiologie, morfologie, bionika,lékařské disciplíny, virologie a mnoho dalších specializovaných vědních disciplín.
 Pod biologii tedy můžeme zařadit, nebo nalézt její úzkou spojitost s následujícími vědními obory: Molekulární biologie, biochemie, genetika, buněčná biologie, fyziologie, anatomie, vývojová biologie, evoluční biologie, etologie, ekologie, systematika, botanika, zoologie, mykologie, mikrobiologie, morfologie, bionika,lékařské disciplíny, virologie a mnoho dalších specializovaných vědních disciplín.
 
 datum úmrtí: z 1849 na 1829, zdroj: internet
-tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744 - 1849).
-tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744 - 1829).
+Slovo „biologie“ (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín „biologie“ tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744 - 1849).
+Slovo „biologie“ (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín „biologie“ tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744 - 1829).
 
 Podřízené a související vědní obory - odrážky
 Pod biologii tedy můžeme zařadit, nebo nalézt její úzkou spojitost s následujícími vědními obory: Molekulární biologie, biochemie, genetika, buněčná biologie, fyziologie, anatomie, vývojová biologie, evoluční biologie, etologie, ekologie, systematika, botanika, zoologie, mykologie, mikrobiologie, morfologie, bionika,lékařské disciplíny, virologie a mnoho dalších specializovaných vědních disciplín.
 Pod biologii tedy můžeme zařadit, nebo nalézt její úzkou spojitost s následujícími vědními obory: Molekulární biologie, biochemie, genetika, buněčná biologie, fyziologie, anatomie, vývojová biologie, evoluční biologie, etologie, ekologie, systematika, botanika, zoologie, mykologie, mikrobiologie, morfologie*bionika*lékařské disciplíny*virologiea mnoho dalších specializovaných vědních disciplín.
 
 historie biologie
-Slovo "biologie" (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín \.
-Slovo "biologie" (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé Název odkazupoužito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín \.
+Slovo „biologie“ (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín „biologie“ tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744 - 1829).
+Slovo „biologie“ (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé Název odkazupoužito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín „biologie“ tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744 - 1829).
 
 -omylem vložený text
-Slovo "biologie" (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé Název odkazupoužito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín \.
-Slovo "biologie" (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín \.
+Slovo „biologie“ (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé Název odkazupoužito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín „biologie“ tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744 - 1829).
+Slovo „biologie“ (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín „biologie“ tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744 - 1829).
 
 obory biologie+obrázek
 Pod biologii tedy můžeme zařadit, nebo nalézt její úzkou spojitost s následujícími vědními obory: Molekulární biologie, biochemie, genetika, buněčná biologie, fyziologie, anatomie, vývojová biologie, evoluční biologie, etologie, ekologie, systematika, botanika, zoologie, mykologie, mikrobiologie, morfologie*bionika*lékařské disciplíny*virologiea mnoho dalších specializovaných vědních disciplín.
@@ -315,8 +295,8 @@ Pod biologii tedy můžeme zařadit, nebo nalézt její úzkou spojitost s násl
 Pod biologii tedy můžeme zařadit, nebo nalézt její úzkou spojitost s následujícími vědními obory:  Molekulární biologie,  biochemie,  genetika,  buněčná biologie,  fyziologie,  anatomie,  vývojová biologie,  evoluční biologie,  etologie,  ekologie,  systematika* botanika* zoologie* mykologie* mikrobiologie* morfologie* bionika* lékařské disciplíny* virologiea mnoho dalších specializovaných vědních disciplín.
 
 
-Biologie v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy " tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu prostředí.
-Biologie (z řeckého bio jako život a logie jako věda - tedy životověda - věda zkoumající život) v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy " tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu prostředí.
+Biologie v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy – tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu prostředí.
+Biologie (z řeckého bio jako život a logie jako věda - tedy životověda - věda zkoumající život) v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy – tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu prostředí.
 
 Podřízené a související vědní obory fixlink
 Pod biologii tedy můžeme zařadit, nebo nalézt její úzkou spojitost s následujícími vědními obory:  Molekulární biologie,  biochemie,  genetika,  buněčná biologie,  fyziologie,  anatomie,  vývojová biologie,  evoluční biologie,  etologie,  ekologie,  systematika* botanika* zoologie* mykologie* mikrobiologie* morfologie* bionika* lékařské disciplíny* virologiea mnoho dalších specializovaných vědních disciplín.
@@ -339,52 +319,20 @@ Pod biologii tedy můžeme zařadit, nebo nalézt její úzkou spojitost s násl
 Pod biologii tedy můžeme zařadit, nebo nalézt její úzkou spojitost s následujícími vědními obory:  molekulární biologie,  biochemie,  genetika,  buněčná biologie,  fyziologie,  anatomie,  vývojová biologie,  evoluční biologie,  etologie,  ekologie,  biogeografie* biologická systematika* botanika* zoologie* mykologie* mikrobiologie* morfologie* bionika* biostatistika* lékařské disciplíny* virologiea mnoho dalších specializovaných vědních disciplín.
 
 Historie 
-Slovo "biologie" (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín \.
-Slovo "prdel" (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín \.
+Slovo „biologie“ (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín „biologie“ tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744 - 1829).
+Slovo „prdel“ (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín „biologie“ tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744 - 1829).
 
 ha ha ha, vtipné. prdel -> biologie
-Slovo "prdel" (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín \.
-Slovo "biologie" (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín \.
-
-
-Počátkem 20. století znovuobjevení práce Gregora Mendela vedlo k rapidnímu vzrůstu výzkumu genetiky Thomasem Morganem a jeho studenty a kolem roku 1930 kombinací populační genetiky a přírodního výběru v \.
-Počátkem 20. století znovuobjevení práce Gregora Mendela vedlo k rapidnímu vzrůstu výzkumu genetiky Thomasem Morganem a jeho studenty a kolem roku 1930 kombinací populační genetiky a přírodního výběru v "novo-Darwinovské syntéze".
-
-
-  Evoluce – v biologii je to označení procesu postupné změny genetických vlastností organismů a procesu přírodního výběru.
-v biologii je to označení procesu postupné změny genetických vlastností organismů a procesu přírodního výběru.
-
-
-  Teorie genů – vlastnosti všech živých organismů jsou zakódovány v genech.
-vlastnosti všech živých organismů jsou zakódovány v genech.
-
-
-  Homeostáze – fyziologické procesy udržující stálé vnitřní podmínky těla nehledíc na podmínky vnější.
-fyziologické procesy udržující stálé vnitřní podmínky těla nehledíc na podmínky vnější.
-
-
-Počátkem 20. století znovuobjevení práce Gregora Mendela vedlo k rapidnímu vzrůstu výzkumu genetiky Thomasem Morganem a jeho studenty a kolem roku 1930 kombinací populační genetiky a přírodního výběru v "novo-Darwinovské syntéze".
-Počátkem 20. století znovuobjevení práce Gregora Mendela vedlo k rapidnímu vzrůstu výzkumu genetiky Thomasem Morganem a jeho studenty a kolem roku 1930 kombinací populační genetiky a přírodního výběru v \.
-
-
-v biologii je to označení procesu postupné změny genetických vlastností organismů a procesu přírodního výběru.
-  Evoluce – v biologii je to označení procesu postupné změny genetických vlastností organismů a procesu přírodního výběru.
-
-
-vlastnosti všech živých organismů jsou zakódovány v genech.
-  Teorie genů – vlastnosti všech živých organismů jsou zakódovány v genech.
-
-
-fyziologické procesy udržující stálé vnitřní podmínky těla nehledíc na podmínky vnější.
-  Homeostáze – fyziologické procesy udržující stálé vnitřní podmínky těla nehledíc na podmínky vnější.
+Slovo „prdel“ (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín „biologie“ tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744 - 1829).
+Slovo „biologie“ (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín „biologie“ tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744 - 1829).
 
 typo
 Nejvýznamnějším biologem 19. století je beze sporu Charles Darwin se svou teorií o evoluci na základě přírodního výběru.
 Nejvýznamnějším biologem 19. století je bezesporu Charles Darwin se svou teorií o evoluci na základě přírodního výběru.
 
 Napřímení interních odkazů a úprava typografie spolu s využitím šablony „Cizojazyčně“.
-Biologie (z řeckého bio jako život a logie jako věda - tedy životověda - věda zkoumající život) v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy " tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu prostředí.
-Biologie (z řeckého ' jako život a ' jako věda " tedy životověda " věda zkoumající život) v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy " tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu prostředí.
+Biologie (z řeckého bio jako život a logie jako věda - tedy životověda - věda zkoumající život) v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy – tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu prostředí.
+Biologie (z řeckého ' jako život a ' jako věda – tedy životověda – věda zkoumající život) v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy – tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu prostředí.
 
 Napřímení interních odkazů a úprava typografie spolu s využitím šablony „Cizojazyčně“.
 V užším slova smyslu bychom pak biologii mohli popsat jako vědu, zkoumající organismy od úrovně subcelulární, tedy od úrovně jednotlivých buněčných organel se vším, co s nimi souvisí, přes úrovně buněk, tkání, orgánů a jedinců až po úroveň populací, společenstev, ekosystémů a biomů.
@@ -407,32 +355,28 @@ Pod biologii tedy můžeme zařadit, nebo nalézt její úzkou spojitost s násl
 Pod biologii tedy můžeme zařadit, nebo nalézt její úzkou spojitost s následujícími vědními obory:  molekulární biologie,  biochemie,  genetika,  buněčná biologie,  fyziologie,  anatomie,  vývojová biologie,  evoluční biologie,  etologie,  ekologie,  bionomie* biogeografie* biologická systematika* botanika* zoologie* mykologie* mikrobiologie* virologie* morfologie* bionika* agrobiologie* biostatistika* matematická biologie* medicínská biologie a lékařské disciplíny* paleontologiea mnoho dalších specializovaných vědních disciplín.
 
 WPCleaner v1.37b - Opraveno pomocí WP:WCW (Tag bez obsahu - Opravy pravopisu a typografie)
-tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744 - 1829).
-tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744\.
-
-WPCleaner v1.37b - Opraveno pomocí WP:WCW (Tag bez obsahu - Opravy pravopisu a typografie)
-Počátkem 20. století znovuobjevení práce Gregora Mendela vedlo k rapidnímu vzrůstu výzkumu genetiky Thomasem Morganem a jeho studenty a kolem roku 1930 kombinací populační genetiky a přírodního výběru v \.
-Počátkem 20. století znovuobjevení práce Gregora Mendela vedlo k rapidnímu vzrůstu výzkumu genetiky Thomasem Morganem a jeho studenty a kolem roku 1930 kombinací populační genetiky a přírodního výběru v „novo-Darwinovské syntéze“.
+Slovo „biologie“ (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín „biologie“ tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744 - 1829).
+Slovo „biologie“ (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín „biologie“ tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744–1829).
 
 Typografie
-řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín \.
-řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova \.
-
-Typografie
-tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744\.
-tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744–1829).
+Slovo „biologie“ (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín „biologie“ tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744–1829).
+Slovo „biologie“ (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova – "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín „biologie“ tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744–1829).
 
 Typografie
 Pod biologii tedy můžeme zařadit, nebo nalézt její úzkou spojitost s následujícími vědními obory:  agrobiologie - věda, která využívá biologické zákonitosti v zemědělství,  anatomie - studium forem a funkcí u rostlin, zvířat a jiných organismů, nebo specificky u lidí,  bionomie - je komplexní studium organismu a jeho vztah k jeho prostředí,  biogeografie - je nauka o rozdělení biodiverzity v prostoru a čase,  biochemie - je vědní disciplína na pomezí biologie a chemie,  biologická systematika - (též taxonomie) vědecky zkoumá druhy a druhovou diverzitu organismů a všechny vztahy mezi nimi,  bionika - je hraniční obor, systematicky zaměřený na uplatňování poznatků ze studia živých organismů a jejich struktur při vývoji nových technologií,  biostatistika - obor využívající metody matematické statistiky při studiu proměnlivosti živých organizmů,  botanika - (též rostlinopis, fytologie) zabývá se flórou, tudíž rostlinnou částí přírody,  buněčná biologie - (též cytologie) je věda zabývající se studiem buněk,  ekologie - studium vlivů živých organismů a neživých složek navzájem, nebo na jejich prostředí* etologie - vědní obor v rámci zoologie, který se zabývá studiem chování živočichů* evoluční biologie - zabývá  se biologickou evolucí organismů a mechanismy, které se při ní uplatňují* fyziologie - studium o fungování živých organismů, jejich částí a orgánů* genetika - zabývá se dědičností i proměnlivostí organismů a jejími příčinami* matematická biologie -  používá matematické metody ke studiu živých organismů* medicínská biologie a lékařské disciplíny * mikrobiologie -  je věda studující mikroorganismy* molekulární biologie - studium buněčných biologických procesů na jejich molekulární úrovni* morfologie - zabývá se vnější stavbou organismů* mykologie - studium hub, jejich genetických a biochemických vlastností* paleontologie -  je věda o životě v minulých geologických obdobích* virologie - zabývá se studiem nebuněčných organismů, zejména virů, ale i viroidů a virusoidů* vývojová biologie - zabývá se studiem procesů růstu a vývoje organismů* zoologie - studie zvířat, včetně klasifikace, fyziologie, vývoje a chovánía mnoho dalších specializovaných vědních disciplín.
 Pod biologii tedy můžeme zařadit, nebo nalézt její úzkou spojitost s následujícími vědními obory:  agrobiologie – věda, která využívá biologické zákonitosti v zemědělství,  anatomie – studium forem a funkcí u rostlin, zvířat a jiných organismů, nebo specificky u lidí,  bionomie – je komplexní studium organismu a jeho vztah k jeho prostředí,  biogeografie – je nauka o rozdělení biodiverzity v prostoru a čase,  biochemie – je vědní disciplína na pomezí biologie a chemie,  biologická systematika – (též taxonomie) vědecky zkoumá druhy a druhovou diverzitu organismů a všechny vztahy mezi nimi,  bionika – je hraniční obor, systematicky zaměřený na uplatňování poznatků ze studia živých organismů a jejich struktur při vývoji nových technologií,  biostatistika – obor využívající metody matematické statistiky při studiu proměnlivosti živých organizmů,  botanika – (též rostlinopis, fytologie) zabývá se flórou, tudíž rostlinnou částí přírody,  buněčná biologie – (též cytologie) je věda zabývající se studiem buněk,  ekologie – studium vlivů živých organismů a neživých složek navzájem, nebo na jejich prostředí* etologie – vědní obor v rámci zoologie, který se zabývá studiem chování živočichů* evoluční biologie – zabývá  se biologickou evolucí organismů a mechanismy, které se při ní uplatňují* fyziologie – studium o fungování živých organismů, jejich částí a orgánů* genetika – zabývá se dědičností i proměnlivostí organismů a jejími příčinami* matematická biologie –  používá matematické metody ke studiu živých organismů* medicínská biologie a lékařské disciplíny * mikrobiologie –  je věda studující mikroorganismy* molekulární biologie – studium buněčných biologických procesů na jejich molekulární úrovni* morfologie – zabývá se vnější stavbou organismů* mykologie – studium hub, jejich genetických a biochemických vlastností* paleontologie –  je věda o životě v minulých geologických obdobích* virologie – zabývá se studiem nebuněčných organismů, zejména virů, ale i viroidů a virusoidů* vývojová biologie – zabývá se studiem procesů růstu a vývoje organismů* zoologie – studie zvířat, včetně klasifikace, fyziologie, vývoje a chovánía mnoho dalších specializovaných vědních disciplín.
 
 
-Biologie (z řeckého ' jako život a ' jako věda " tedy životověda " věda zkoumající život) v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy " tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu prostředí.
-Biologie (z řeckého ' jako život a ' jako věda " tedy životověda " věda zkoumající život) v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy " tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu zadek.
+Biologie (z řeckého ' jako život a ' jako věda – tedy životověda – věda zkoumající život) v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy – tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu prostředí.
+Biologie (z řeckého ' jako život a ' jako věda – tedy životověda – věda zkoumající život) v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy – tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu zadek.
 
 Babička 
-Biologie (z řeckého ' jako život a ' jako věda " tedy životověda " věda zkoumající život) v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy " tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu zadek.
-Kretén (z řeckého ' jako život a ' jako věda " tedy životověda " věda zkoumající život) v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy " tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu zadek.
+Biologie (z řeckého ' jako život a ' jako věda – tedy životověda – věda zkoumající život) v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy – tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu zadek.
+Kretén (z řeckého ' jako život a ' jako věda – tedy životověda – věda zkoumající život) v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy – tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu zadek.
+
+
+Slovo „biologie“ (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova – "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín „biologie“ tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744–1829).
+Slovo „babička“ (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova – "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín „biologie“ tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744–1829).
 
 
 Pod biologii tedy můžeme zařadit, nebo nalézt její úzkou spojitost s následujícími vědními obory:  agrobiologie – věda, která využívá biologické zákonitosti v zemědělství,  anatomie – studium forem a funkcí u rostlin, zvířat a jiných organismů, nebo specificky u lidí,  bionomie – je komplexní studium organismu a jeho vztah k jeho prostředí,  biogeografie – je nauka o rozdělení biodiverzity v prostoru a čase,  biochemie – je vědní disciplína na pomezí biologie a chemie,  biologická systematika – (též taxonomie) vědecky zkoumá druhy a druhovou diverzitu organismů a všechny vztahy mezi nimi,  bionika – je hraniční obor, systematicky zaměřený na uplatňování poznatků ze studia živých organismů a jejich struktur při vývoji nových technologií,  biostatistika – obor využívající metody matematické statistiky při studiu proměnlivosti živých organizmů,  botanika – (též rostlinopis, fytologie) zabývá se flórou, tudíž rostlinnou částí přírody,  buněčná biologie – (též cytologie) je věda zabývající se studiem buněk,  ekologie – studium vlivů živých organismů a neživých složek navzájem, nebo na jejich prostředí* etologie – vědní obor v rámci zoologie, který se zabývá studiem chování živočichů* evoluční biologie – zabývá  se biologickou evolucí organismů a mechanismy, které se při ní uplatňují* fyziologie – studium o fungování živých organismů, jejich částí a orgánů* genetika – zabývá se dědičností i proměnlivostí organismů a jejími příčinami* matematická biologie –  používá matematické metody ke studiu živých organismů* medicínská biologie a lékařské disciplíny * mikrobiologie –  je věda studující mikroorganismy* molekulární biologie – studium buněčných biologických procesů na jejich molekulární úrovni* morfologie – zabývá se vnější stavbou organismů* mykologie – studium hub, jejich genetických a biochemických vlastností* paleontologie –  je věda o životě v minulých geologických obdobích* virologie – zabývá se studiem nebuněčných organismů, zejména virů, ale i viroidů a virusoidů* vývojová biologie – zabývá se studiem procesů růstu a vývoje organismů* zoologie – studie zvířat, včetně klasifikace, fyziologie, vývoje a chovánía mnoho dalších specializovaných vědních disciplín.
@@ -603,8 +547,8 @@ Závazný Pilipův dodatek se však vrátil ke stavu z roku 1983.  "Filosofie".
 Závazný Pilipův dodatek se však vrátil ke stavu z roku 1983. == Slovníky ==,  "Filosofie".
 
 Filosofové 
-226 " 232,  Morální realismus,  Filozofické poradenství== Vnější odkazy ==,  filosofie.
-226 " 232== Podívejte se též na ==,  Morální realismus,  Filozofické poradenství== Vnější odkazy ==,  filosofie.
+226 – 232,  Morální realismus,  Filozofické poradenství== Vnější odkazy ==,  filosofie.
+226 – 232== Podívejte se též na ==,  Morální realismus,  Filozofické poradenství== Vnější odkazy ==,  filosofie.
 
 Novopozitivismus 
 NovopozitivismusJazyky píšící latinkou:# ph: # s: # z: Je tedy jen na nás, zda se čeština zařadí mezi západoevropské nebo východoevropské jazyky.
@@ -623,8 +567,8 @@ Závazný Pilipův dodatek se však vrátil ke stavu z roku 1983. == Slovníky =
 Závazný Pilipův dodatek se však vrátil ke stavu z roku 1983.  "Filosofie".
 
 Novopozitivismus 
-226 " 232== Podívejte se též na ==,  Morální realismus,  Filozofické poradenství== Vnější odkazy ==,  filosofie.
-226 " 232,  Morální realismus,  Filozofické poradenství== Vnější odkazy ==,  filosofie.
+226 – 232== Podívejte se též na ==,  Morální realismus,  Filozofické poradenství== Vnější odkazy ==,  filosofie.
+226 – 232,  Morální realismus,  Filozofické poradenství== Vnější odkazy ==,  filosofie.
 
 Pravopis jeste jedna oprava
 Závazný Pilipův dodatek se však vrátil ke stavu z roku 1983. Jazyky píšící latinkou:# ph: # s: # z: Je tedy jen na nás, zda se čeština zařadí mezi západo- a východoevropské nebo středodoevropské jazyky.
@@ -679,8 +623,8 @@ Filosofie orientální
  "Filosofie Indická": Védské písně, "Filosofie Čínská": Konfucius, Laozi, Zhuangzi, "Filosofie Japonská": Zen, "Předsókratikové": Thalés, Anaximandros, Anaximenés, Pythagoras, Démokritós, Parmenidés, Hérakleitos, Empedoklés, Anaxagorás, "Vrcholné období": Sókratés, Platón a Aristotelés , "Helénismus": Stoicismus, Epikurejství, Skepticismus, Eklektismus, "Patristika": Aurelius Augustin, "Scholastika": Tomáš Akvinský, William Ockham*"Baroko": René Descartes, Baruch Spinoza, Gottfried Leibniz, Thomas Hobbes a Isaac Newton*"Osvícenství": John Locke, George Berkeley, David Hume, a Immanuel Kant*Gottlieb Fichte, Friedrich Wilhelm Joseph von Schelling a Georg Wilhelm Friedrich Hegel*"Perspektivismus a psychologie": Arthur Schopenhauer, Friedrich Nietzsche, Søren Kierkegaard, Ladislav Klíma*"Dialektický materialismus": Karl Marx* Edmund Husserl, Martin Heidegger, Hans-Georg Gadamer.
 
 to je pěkný nesmysl.
-Podle § 99 Pravidel českého pravopisu z roku 1957 se "v latinské příponě "-ismus" píše jen "s"; rovněž tak v několika slovech humanistické tradice "filosofie, gymnasium, president, presidium, universita" (a v jejich odvozeninách); jen "s" se ovšem píše též v slovech nezdomácnělých, jako např. "cirrhosis, gnose, gnoseologie, konsensus, spasmus, tenesmus", a rovněž v některých vlastních jménech osobních a zeměpisných (viz § 108 "" 113)".
-Jazyky píšící latinkou:# ph: # s: # z: Jazyky nepíšící latinkou:# s: Podle § 99 Pravidel českého pravopisu z roku 1957 se "v latinské příponě "-ismus" píše jen "s"; rovněž tak v několika slovech humanistické tradice "filosofie, gymnasium, president, presidium, universita" (a v jejich odvozeninách); jen "s" se ovšem píše též v slovech nezdomácnělých, jako např. "cirrhosis, gnose, gnoseologie, konsensus, spasmus, tenesmus", a rovněž v některých vlastních jménech osobních a zeměpisných (viz § 108 "" 113)".
+Podle § 99 Pravidel českého pravopisu z roku 1957 se "v latinské příponě "-ismus" píše jen "s"; rovněž tak v několika slovech humanistické tradice "filosofie, gymnasium, president, presidium, universita" (a v jejich odvozeninách); jen "s" se ovšem píše též v slovech nezdomácnělých, jako např. "cirrhosis, gnose, gnoseologie, konsensus, spasmus, tenesmus", a rovněž v některých vlastních jménech osobních a zeměpisných (viz § 108 – 113)".
+Jazyky píšící latinkou:# ph: # s: # z: Jazyky nepíšící latinkou:# s: Podle § 99 Pravidel českého pravopisu z roku 1957 se "v latinské příponě "-ismus" píše jen "s"; rovněž tak v několika slovech humanistické tradice "filosofie, gymnasium, president, presidium, universita" (a v jejich odvozeninách); jen "s" se ovšem píše též v slovech nezdomácnělých, jako např. "cirrhosis, gnose, gnoseologie, konsensus, spasmus, tenesmus", a rovněž v některých vlastních jménech osobních a zeměpisných (viz § 108 – 113)".
 
 Současné filozofické směry v České republice 
 Také Jiří Fuchs přednáší mimo akademické kruhy už z dob před listopadem 1989 v současnosti v kontaktu s Občanským institutem.
@@ -731,15 +675,19 @@ Závazný Pilipův dodatek se však vrátil ke stavu z roku 1983. == Podívejte 
 Závazný Pilipův dodatek se však vrátil ke stavu z roku 1983. == Podívejte se též na ==,  Morální realismus,  Filozofické poradenství,  Advaita,  Seznam německých filozofů== Vnější odkazy ==,  filosofie.
 
 robot: typografické korekce podle specifikace
+Jazyky píšící latinkou:# ph: # s: # z: Jazyky nepíšící latinkou:# s: Podle § 99 Pravidel českého pravopisu z roku 1957 se "v latinské příponě "-ismus" píše jen "s"; rovněž tak v několika slovech humanistické tradice "filosofie, gymnasium, president, presidium, universita" (a v jejich odvozeninách); jen "s" se ovšem píše též v slovech nezdomácnělých, jako např. "cirrhosis, gnose, gnoseologie, konsensus, spasmus, tenesmus", a rovněž v některých vlastních jménech osobních a zeměpisných (viz § 108 – 113)".
+Jazyky píšící latinkou:# ph: # s: # z: Jazyky nepíšící latinkou:# s: Podle § 99 Pravidel českého pravopisu z roku 1957 se „v latinské příponě "-ismus" píše jen "s"; rovněž tak v několika slovech humanistické tradice "filosofie, gymnasium, president, presidium, universita" (a v jejich odvozeninách); jen "s" se ovšem píše též v slovech nezdomácnělých, jako např. "cirrhosis, gnose, gnoseologie, konsensus, spasmus, tenesmus", a rovněž v některých vlastních jménech osobních a zeměpisných (viz § 108 – 113).
+
+robot: typografické korekce podle specifikace
 Toto pravidlo bylo zrušeno v PČP 1983, kdy bylo zavedeno psaní "z", avšak psaní "s" též povoleno.
-" Toto pravidlo bylo zrušeno v PČP 1983, kdy bylo zavedeno psaní "z", avšak psaní "s" též povoleno.
+“ Toto pravidlo bylo zrušeno v PČP 1983, kdy bylo zavedeno psaní "z", avšak psaní "s" též povoleno.
 
 Pravopis typo
-Jazyky píšící latinkou:# ph: # s: # z: Jazyky nepíšící latinkou:# s: Podle § 99 Pravidel českého pravopisu z roku 1957 se "v latinské příponě "-ismus" píše jen "s"; rovněž tak v několika slovech humanistické tradice "filosofie, gymnasium, president, presidium, universita" (a v jejich odvozeninách); jen "s" se ovšem píše též v slovech nezdomácnělých, jako např. "cirrhosis, gnose, gnoseologie, konsensus, spasmus, tenesmus", a rovněž v některých vlastních jménech osobních a zeměpisných (viz § 108 "" 113)".
-Jazyky píšící latinkou:# ph: # s: # z: Jazyky nepíšící latinkou:# s: Podle § 99 Pravidel českého pravopisu z roku 1957 se "v latinské příponě "-ismus" píše jen "s"; rovněž tak v několika slovech humanistické tradice "filosofie, gymnasium, president, presidium, universita" (a v jejich odvozeninách); jen "s" se ovšem píše též v slovech nezdomácnělých, jako např. "cirrhosis, gnose, gnoseologie, konsensus, spasmus, tenesmus", a rovněž v některých vlastních jménech osobních a zeměpisných (viz § 108 "" 113)""".
+Jazyky píšící latinkou:# ph: # s: # z: Jazyky nepíšící latinkou:# s: Podle § 99 Pravidel českého pravopisu z roku 1957 se „v latinské příponě "-ismus" píše jen "s"; rovněž tak v několika slovech humanistické tradice "filosofie, gymnasium, president, presidium, universita" (a v jejich odvozeninách); jen "s" se ovšem píše též v slovech nezdomácnělých, jako např. "cirrhosis, gnose, gnoseologie, konsensus, spasmus, tenesmus", a rovněž v některých vlastních jménech osobních a zeměpisných (viz § 108 – 113).
+Jazyky píšící latinkou:# ph: # s: # z: Jazyky nepíšící latinkou:# s: Podle § 99 Pravidel českého pravopisu z roku 1957 se „v latinské příponě "-ismus" píše jen "s"; rovněž tak v několika slovech humanistické tradice "filosofie, gymnasium, president, presidium, universita" (a v jejich odvozeninách); jen "s" se ovšem píše též v slovech nezdomácnělých, jako např. "cirrhosis, gnose, gnoseologie, konsensus, spasmus, tenesmus", a rovněž v některých vlastních jménech osobních a zeměpisných (viz § 108 – 113)“.
 
 Pravopis typo
-" Toto pravidlo bylo zrušeno v PČP 1983, kdy bylo zavedeno psaní "z", avšak psaní "s" též povoleno.
+“ Toto pravidlo bylo zrušeno v PČP 1983, kdy bylo zavedeno psaní "z", avšak psaní "s" též povoleno.
 Toto pravidlo bylo zrušeno v PČP 1983, kdy bylo zavedeno psaní "z", avšak psaní "s" též povoleno.
 
 Filosofie orientální - Lao-C'
@@ -750,21 +698,17 @@ Současné filozofické směry v České republice opraven link
 S. Sousedíka (FF UK, KTF UK): Petr Dvořák (FF UK, CMTF UP), Tomáš Machula, Lukáš Novák, Daniel Heider (všichni TF JU), David Svoboda (KTF UK).
 Stanislava Sousedíka (FF UK, KTF UK): Petr Dvořák (FF UK, CMTF UP), Tomáš Machula, Lukáš Novák, Daniel Heider (všichni TF JU), David Svoboda (KTF UK).
 
-Hlavní filosofické disciplíny fmt, jazyková úprava
-Jazyky píšící latinkou:# ph: # s: # z: Jazyky nepíšící latinkou:# s: Podle § 99 Pravidel českého pravopisu z roku 1957 se "v latinské příponě "-ismus" píše jen "s"; rovněž tak v několika slovech humanistické tradice "filosofie, gymnasium, president, presidium, universita" (a v jejich odvozeninách); jen "s" se ovšem píše též v slovech nezdomácnělých, jako např. "cirrhosis, gnose, gnoseologie, konsensus, spasmus, tenesmus", a rovněž v některých vlastních jménech osobních a zeměpisných (viz § 108 "" 113)""".
-v latinské příponě "-ismus" píše jen "s"; rovněž tak v několika slovech humanistické tradice "filosofie, gymnasium, president, presidium, universita" (a v jejich odvozeninách); jen "s" se ovšem píše též v slovech nezdomácnělých, jako např. "cirrhosis, gnose, gnoseologie, konsensus, spasmus, tenesmus", a rovněž v některých vlastních jménech osobních a zeměpisných (viz § 108 \.
-
 Filosofie orientální védy
  "Filosofie indická": Védské písně, "Filosofie čínská": Konfucius, Lao-c', Zhuangzi, "Filosofie japonská": Zen, "Předsókratikové": Thalés, Anaximandros, Anaximenés, Pythagoras, Démokritos, Parmenidés, Hérakleitos, Empedoklés, Anaxagorás, "Vrcholné období": Sókratés, Platón a Aristotelés , "Helénismus": Stoicismus, Epikurejství, Skepticismus, Eklektismus, "Patristika": Aurelius Augustin, "Scholastika": Tomáš Akvinský, William Ockham*"Baroko": René Descartes, Baruch Spinoza, Gottfried Leibniz, Thomas Hobbes a Isaac Newton*"Osvícenství": John Locke, George Berkeley, David Hume, a Immanuel Kant*Gottlieb Fichte, Friedrich Wilhelm Joseph von Schelling a Georg Wilhelm Friedrich Hegel*"Perspektivismus a psychologie": Arthur Schopenhauer, Friedrich Nietzsche, Søren Kierkegaard, Ladislav Klíma*"Dialektický materialismus": Karl Marx* Edmund Husserl, Martin Heidegger, Hans-Georg Gadamer* Jean-Paul Sartre, Albert Camus, Maurice Merleau-Ponty, Paul Ricoeur* Jan Patočka* Ayn Rand, Leonard Peikoff, David E. Kelley*Na dnešních českých univerzitách se většinou přednáší fenomenologie a existencialismus.
  "Filosofie indická": Védy, "Filosofie čínská": Konfucius, Lao-c', Zhuangzi, "Filosofie japonská": Zen, "Předsókratikové": Thalés, Anaximandros, Anaximenés, Pythagoras, Démokritos, Parmenidés, Hérakleitos, Empedoklés, Anaxagorás, "Vrcholné období": Sókratés, Platón a Aristotelés , "Helénismus": Stoicismus, Epikurejství, Skepticismus, Eklektismus, "Patristika": Aurelius Augustin, "Scholastika": Tomáš Akvinský, William Ockham*"Baroko": René Descartes, Baruch Spinoza, Gottfried Leibniz, Thomas Hobbes a Isaac Newton*"Osvícenství": John Locke, George Berkeley, David Hume, a Immanuel Kant*Gottlieb Fichte, Friedrich Wilhelm Joseph von Schelling a Georg Wilhelm Friedrich Hegel*"Perspektivismus a psychologie": Arthur Schopenhauer, Friedrich Nietzsche, Søren Kierkegaard, Ladislav Klíma*"Dialektický materialismus": Karl Marx* Edmund Husserl, Martin Heidegger, Hans-Georg Gadamer* Jean-Paul Sartre, Albert Camus, Maurice Merleau-Ponty, Paul Ricoeur* Jan Patočka* Ayn Rand, Leonard Peikoff, David E. Kelley*Na dnešních českých univerzitách se většinou přednáší fenomenologie a existencialismus.
 
 Hlavní filosofické disciplíny 
-v latinské příponě "-ismus" píše jen "s"; rovněž tak v několika slovech humanistické tradice "filosofie, gymnasium, president, presidium, universita" (a v jejich odvozeninách); jen "s" se ovšem píše též v slovech nezdomácnělých, jako např. "cirrhosis, gnose, gnoseologie, konsensus, spasmus, tenesmus", a rovněž v některých vlastních jménech osobních a zeměpisných (viz § 108 \.
-v latinské příponě "-ismus" píše jen "s"; rovněž tak v několika slovech humanistické tradice "filosofie, gymnasium, president, presidium, universita" (a v jejich odvozeninách); jen "s" se ovšem píše též v slovech nezdomácnělých, jako např. "cirrhosis, gnose, gnoseologie, konsensus, spasmus, tenesmus", a rovněž v některých vlastních jménech osobních a zeměpisných (viz § 108 – 113)“.
+  ontologie – teorie bytí,  epistemologii – filosofie vědy a vědění,  gnozeologie neboli noetika – teorie poznání,  axiologie – teorie hodnoty,  etika – teorie morálky,  filozofická antropologie – zabývající se otázkou člověka,  atomismus vs.
+  Teoretická filosofie,  ontologie – teorie bytí,  gnozeologie neboli noetika – teorie poznání,  filozofická antropologie – zabývající se otázkou člověka,  Praktická filosofie,  etika – teorie morálky,  poietika – nauka o tvořivé činnosti, zhotovování ,  Ostatní ,  epistemologii – filosofie vědy a vědění ,  axiologie – teorie hodnoty,  atomismus vs.
 
 Hlavní filosofické disciplíny 
-  Teoretická filosofie,  ontologie " teorie bytí,  gnozeologie neboli noetika " teorie poznání,  filozofická antropologie " zabývající se otázkou člověka,  Praktická filosofie,  etika " teorie morálky,  poietika \.
-  Teoretická filosofie (zabývající se nejobecnějšími otázkami):  ontologie " teorie bytí,  gnozeologie neboli noetika " teorie poznání,  filozofická antropologie " zabývající se otázkou člověka,  Praktická filosofie (nauky o lidském jednání a tvořivosti):  etika " teorie morálky,  poietika \.
+  Teoretická filosofie,  ontologie – teorie bytí,  gnozeologie neboli noetika – teorie poznání,  filozofická antropologie – zabývající se otázkou člověka,  Praktická filosofie,  etika – teorie morálky,  poietika – nauka o tvořivé činnosti, zhotovování ,  Ostatní ,  epistemologii – filosofie vědy a vědění ,  axiologie – teorie hodnoty,  atomismus vs.
+  Teoretická filosofie (zabývající se nejobecnějšími otázkami):  ontologie – teorie bytí,  gnozeologie neboli noetika – teorie poznání,  filozofická antropologie – zabývající se otázkou člověka,  Praktická filosofie (nauky o lidském jednání a tvořivosti):  etika – teorie morálky,  poietika – nauka o tvořivé činnosti, zhotovování ,  Ostatní ,  epistemologii – filosofie vědy a vědění ,  axiologie – teorie hodnoty,  atomismus vs.
 
 Vnější odkazy -> Externí
 Závazný Pilipův dodatek se však vrátil ke stavu z roku 1983. == Podívejte se též na ==,  Morální realismus,  Filozofické poradenství,  Advaita,  Seznam německých filozofů== Vnější odkazy ==,  filosofie.
@@ -775,8 +719,8 @@ Filosofie jazyka, Ludwig Wittgenstein, Ferdinand de Saussure, Noam Chomsky, Umbe
 Filosofie jazyka==, Ludwig Wittgenstein, Ferdinand de Saussure, Noam Chomsky, Umberto Eco====Filosofie anglicky mluvících: pragmatická a analytická====, Bertrand Russell, George Edward Moore, Rudolf CarnapV devatenáctém století žil filosof a ekonom John Stuart Mill.
 
 Hlavní filosofické disciplíny 
-Jazyky píšící latinkou:# ph: # s: # z: Jazyky nepíšící latinkou:# s: Podle § 99 Pravidel českého pravopisu z roku 1957 se \.
-== Pravopis slova filosofie ==Jazyky píšící latinkou:# ph: # s: # z: Jazyky nepíšící latinkou:# s: Podle § 99 Pravidel českého pravopisu z roku 1957 se \.
+Jazyky píšící latinkou:# ph: # s: # z: Jazyky nepíšící latinkou:# s: Podle § 99 Pravidel českého pravopisu z roku 1957 se „v latinské příponě "-ismus" píše jen "s"; rovněž tak v několika slovech humanistické tradice "filosofie, gymnasium, president, presidium, universita" (a v jejich odvozeninách); jen "s" se ovšem píše též v slovech nezdomácnělých, jako např. "cirrhosis, gnose, gnoseologie, konsensus, spasmus, tenesmus", a rovněž v některých vlastních jménech osobních a zeměpisných (viz § 108 – 113)“.
+== Pravopis slova filosofie ==Jazyky píšící latinkou:# ph: # s: # z: Jazyky nepíšící latinkou:# s: Podle § 99 Pravidel českého pravopisu z roku 1957 se „v latinské příponě "-ismus" píše jen "s"; rovněž tak v několika slovech humanistické tradice "filosofie, gymnasium, president, presidium, universita" (a v jejich odvozeninách); jen "s" se ovšem píše též v slovech nezdomácnělých, jako např. "cirrhosis, gnose, gnoseologie, konsensus, spasmus, tenesmus", a rovněž v některých vlastních jménech osobních a zeměpisných (viz § 108 – 113)“.
 
 
 Praktická filosofie (nauky o lidském jednání a tvořivosti), Na dnešních českých univerzitách se většinou přednáší fenomenologie a existencialismus.
@@ -785,10 +729,6 @@ Praktická filosofie (nauky o lidském jednání a tvořivosti),  Ayn Rand, Leon
 
 Filosofie jazyka==, Ludwig Wittgenstein, Ferdinand de Saussure, Noam Chomsky, Umberto Eco====Filosofie anglicky mluvících: pragmatická a analytická====, Bertrand Russell, George Edward Moore, Rudolf CarnapV devatenáctém století žil filosof a ekonom John Stuart Mill.
 ====Filosofie jazyka====, Ludwig Wittgenstein, Ferdinand de Saussure, Noam Chomsky, Umberto Eco====Filosofie anglicky mluvících: pragmatická a analytická====, Bertrand Russell, George Edward Moore, Rudolf CarnapV devatenáctém století žil filosof a ekonom John Stuart Mill.
-
-Filosofie orientální čuang, upanišady
-v latinské příponě "-ismus" píše jen "s"; rovněž tak v několika slovech humanistické tradice "filosofie, gymnasium, president, presidium, universita" (a v jejich odvozeninách); jen "s" se ovšem píše též v slovech nezdomácnělých, jako např. "cirrhosis, gnose, gnoseologie, konsensus, spasmus, tenesmus", a rovněž v některých vlastních jménech osobních a zeměpisných (viz § 108 – 113)“.
-== Pravopis slova filosofie ==Jazyky píšící latinkou:# ph: # s: # z: Jazyky nepíšící latinkou:# s: Podle § 99 Pravidel českého pravopisu z roku 1957 se „v latinské příponě "-ismus" píše jen "s"; rovněž tak v několika slovech humanistické tradice "filosofie, gymnasium, president, presidium, universita" (a v jejich odvozeninách); jen "s" se ovšem píše též v slovech nezdomácnělých, jako např. "cirrhosis, gnose, gnoseologie, konsensus, spasmus, tenesmus", a rovněž v některých vlastních jménech osobních a zeměpisných (viz § 108 – 113)“.
 
 Východní filosofie čuang-c
 TradičníJiné dělení Praktická filosofie AntikaStředověk Raný novověkOsvícenství19. století20. stoletíFilosofie jazyka=,  Ferdinand de Saussure, Ludwig Wittgenstein, Noam Chomsky, Umberto Eco====Analytická filosofie====,  George Edward Moore, Bertrand Russell, Rudolf Carnap====Filosofie vědy====Karl Popper, Paul Karl Feyerabend, Thomas Kuhn===Východní filosofie===, "Filosofie indická": Védy, Upanišada, "Filosofie čínská": Konfucius, Lao-c', Zhuangzi, "Filosofie japonská": Zen== Hlavní filosofické pozice ==,  atomismus vs.
@@ -799,12 +739,12 @@ TradičníJiné dělení Praktická filosofie AntikaStředověk Raný novověkOs
 Osvícenství19. století20. stoletíFilosofie jazyka=,  Ferdinand de Saussure, Ludwig Wittgenstein, Noam Chomsky, Umberto Eco====Analytická filosofie====,  George Edward Moore, Bertrand Russell, Rudolf Carnap====Filosofie vědy====Karl Popper, Paul Karl Feyerabend, Thomas Kuhn===Východní filosofie===, "Filosofie indická": Védy, Upanišada, "Filosofie čínská": Konfucius, Lao-c', Čuang-c’, "Filosofie japonská": Zen== Hlavní filosofické pozice ==,  atomismus vs.
 
 doplnění textu a literatury, ext. odkazů
-"Platon"):"Údiv vedl lidi k filosofování \.
-Platon":"Údiv vedl lidi k filosofování \.
+“ ("Platon"):„Údiv vedl lidi k filosofování – na počátku i dnes – a to tak, že se zarazili s údivem u nejbližších otázek a potom se pomalu zamýšleli i nad většími věcmi.
+“ "Platon":„Údiv vedl lidi k filosofování – na počátku i dnes – a to tak, že se zarazili s údivem u nejbližších otázek a potom se pomalu zamýšleli i nad většími věcmi.
 
 doplnění textu a literatury, ext. odkazů
-"Aristotelés"):\.
-"Aristotelés":\.
+“ ("Aristotelés"):„Kdo chce hledat radost sám v sobě, nenajde ji jinde než ve filosofii.
+“ "Aristotelés":„Kdo chce hledat radost sám v sobě, nenajde ji jinde než ve filosofii.
 
 doplnění textu a literatury, ext. odkazů
 “ ("Aristotelés"):„Filosofie je péče (starost) o duši.
@@ -835,12 +775,8 @@ textů - fr,  Antika – en, gr, la,  Antika, patristika, středověk – en, la
 textů - fr,  Antika – en, gr, la,  Antika, patristika, středověk – en, la,  Bibliotheca Classica Selecta – fr, la, gr,  Latinské texty - la,  Bibliotheca virtualis, středověk – en, fr, la, it,  Portál patristiky,  Tomáš Akv, Summa theologica – cs, en, la,  Středověk - en* Immanuel Kant - de* Politická filosofie - en * filosofie.
 
 robot: typografické a kódové korekce a náhrady přesměrování podle specifikace
-a to tak, že se zarazili s údivem u nejbližších otázek a potom se pomalu zamýšleli i nad většími věcmi.
-a to tak, že se zarazili s údivem u nejbližších otázek a potom se pomalu zamýšleli i nad většími věcmi\.
-
-robot: typografické a kódové korekce a náhrady přesměrování podle specifikace
-Kdo chce hledat radost sám v sobě, nenajde ji jinde než ve filosofii.
-"Aristotelés":„Kdo chce hledat radost sám v sobě, nenajde ji jinde než ve filosofii.
+“ "Platon":„Údiv vedl lidi k filosofování – na počátku i dnes – a to tak, že se zarazili s údivem u nejbližších otázek a potom se pomalu zamýšleli i nad většími věcmi.
+“ "Platon":„Údiv vedl lidi k filosofování – na počátku i dnes – a to tak, že se zarazili s údivem u nejbližších otázek a potom se pomalu zamýšleli i nad většími věcmi… A kdo se zamýšlí a diví, ten se domnívá, že neví.
 
 robot: typografické a kódové korekce a náhrady přesměrování podle specifikace
 iracionalismus,  historicismus, perspektivismus, psychologismus, nominalismus, pozitivismus a realismus,  hédonismus,  humanismus,  naturalismus ,  pragmatismus,  novopozitivismus==Literatura======Slovníky a příručky====,  Durozoi – Roussel: "Filozofický slovník".
@@ -907,16 +843,24 @@ Od věd, které kdysi z filosofie vzešly, se filosofie liší jednak širší, 
 “ "Xenauros z Milétu"Od věd, které kdysi z filosofie vzešly, se filosofie liší jednak širší, vlastně neomezenou oblastí témat, jednak volnější metodou.
 
 citáty na konec a asi by měly jít na wikicitáty, drobnosti,
-“ Potíž začíná tam, kde na sebe dvě různé moudrosti narazí: která z nich teď platí?
-Potíž začíná tam, kde na sebe dvě různé moudrosti narazí: která z nich teď platí?
+“ "Xenauros z Milétu"Od věd, které kdysi z filosofie vzešly, se filosofie liší jednak širší, vlastně neomezenou oblastí témat, jednak volnější metodou.
+Od věd, které kdysi z filosofie vzešly, se filosofie liší jednak širší, vlastně neomezenou oblastí témat, jednak volnější metodou.
 
 citáty na konec a asi by měly jít na wikicitáty, drobnosti,
 Praha 2001. ISBN 80-7298-030-0.  Fiala, J. "Analytická filosofie 1 - Úvod" Plzeň 2005. ISBN 80-239-7106-9==Poznámky==== Související články ==,  Seznam německých filozofů,  Současná filozofie v České republice== Externí odkazy =====Slovníky===,  Stanford Encyclopedia of Philosophy - en (vynikající),  Internet Encyclopedia of Philosophy - en,  Phillex – slovník filosofických pojmů - de,  Philolex – slovník filosofů a pojmů - de,  Rudolf Eisler: Wörterbuch der philosophischen Begriffe (1904)* F. Kirchner: Wörterbuch philosophischer Grundbegriffe - de===Dějiny filosofie===* Charles Jourdain, "Notions de philosophie" - fr* Karl Vorländer – Geschichte der Philosophie (1902) - de* Paul Janet, "Traité élémentaire de philosophie" - fr ;* Victor Cousin, "Histoire générale de la philosophie" - fr.
 "Descartes" == Reference ==== Související články ==,  Seznam německých filozofů,  Současná filozofie v České republice== Externí odkazy =====Slovníky===,  Stanford Encyclopedia of Philosophy - en,  Internet Encyclopedia of Philosophy - en,  Phillex – slovník filosofických pojmů - de,  Philolex – slovník filosofů a pojmů - de,  Rudolf Eisler: Wörterbuch der philosophischen Begriffe (1904),  F. Kirchner: Wörterbuch philosophischer Grundbegriffe - de===Dějiny filosofie===* Charles Jourdain, "Notions de philosophie" - fr* Karl Vorländer – Geschichte der Philosophie (1902) - de* Paul Janet, "Traité élémentaire de philosophie" - fr ;* Victor Cousin, "Histoire générale de la philosophie" - fr.
 
 Nový oddíl "Filosofové o filosofii", kam jsem přesunul citáty.
-Potíž začíná tam, kde na sebe dvě různé moudrosti narazí: která z nich teď platí?
-“ Potíž začíná tam, kde na sebe dvě různé moudrosti narazí: která z nich teď platí?
+Immanuel Kant vymezil úlohu filosofie třemi otázkami: 1) Co můžu vědět?
+René Descartes:Immanuel Kant vymezil úlohu filosofie třemi otázkami: 1) Co mohu vědět?
+
+Nový oddíl "Filosofové o filosofii", kam jsem přesunul citáty.
+ které lze podle něho shrnout do jediné:  „Co je člověk?
+ které lze shrnout do jediné:  „Co je člověk?
+
+Nový oddíl "Filosofové o filosofii", kam jsem přesunul citáty.
+Od věd, které kdysi z filosofie vzešly, se filosofie liší jednak širší, vlastně neomezenou oblastí témat, jednak volnější metodou.
+Ludwig WittgensteinOd věd, které kdysi z filosofie vzešly, se filosofie liší jednak širší, vlastně neomezenou oblastí témat, jednak volnější metodou.
 
 Nový oddíl "Filosofové o filosofii", kam jsem přesunul citáty.
 Raný novověkOsvícenství19. století20. století,  Henri Bergson, Wilhelm Dilthey, Hans Driesch, Oswald Sprengler,  William James, John Dewey,  Fenomenologie: Edmund Husserl, Martin Heidegger, Hans-Georg Gadamer, Maurice Merleau-Ponty, Paul Ricoeur, Jan Patočka, Eugen Fink,  Jean-Paul Sartre, Albert Camus, Karl Jaspers,  Pierre Teilhard de Chardin====Filosofie jazyka====,  Ferdinand de Saussure, Ludwig Wittgenstein, Noam Chomsky, Umberto Eco====Analytická filosofie====,  George Edward Moore, Bertrand Russell, Rudolf Carnap====Filosofie vědy====Karl Popper, Paul Karl Feyerabend, Thomas Kuhn===Východní filosofie===, "Filosofie indická": Védy, Upanišady, Bhagavadgíta, Buddha (Siddhártha Gautama), Mahávíra (Džina), Pataňdžali, Bódhidharma, Ánanda*"Filosofie čínská": Konfucius (Kchung-fu-c', Kongfuzi), Lao-c' (Laozi), Čuang-c’ (Zhuangzi), Mo-c' (Mozi)*"Filosofie japonská": Zen, Kúkai, Dógen*"Filosofie korejská": Son== Hlavní filosofické pozice ==* atomismus vs.
@@ -951,12 +895,12 @@ Není to tedy jen akademická disciplina, ale také způsob života, který zač
 Není to tedy jen akademická disciplina, ale také způsob života, který začíná údivem (Platón) a snaží se s tajemstvím světa a existence nějak vyrovnat.
 
 Celková revize po formální stránce
-Platón:"Údiv vedl lidi k filosofování \.
-Platón "Údiv vedl lidi k filosofování \.
+“ Platón:„Údiv vedl lidi k filosofování – na počátku i dnes – a to tak, že se zarazili s údivem u nejbližších otázek a potom se pomalu zamýšleli i nad většími věcmi… A kdo se zamýšlí a diví, ten se domnívá, že neví.
+“ Platón „Údiv vedl lidi k filosofování – na počátku i dnes – a to tak, že se zarazili s údivem u nejbližších otázek a potom se pomalu zamýšleli i nad většími věcmi… A kdo se zamýšlí a diví, ten se domnívá, že neví.
 
 Celková revize po formální stránce
-Aristotelés:„Kdo chce hledat radost sám v sobě, nenajde ji jinde než ve filosofii.
-Aristotelés „Kdo chce hledat radost sám v sobě, nenajde ji jinde než ve filosofii.
+“ Aristotelés:„Kdo chce hledat radost sám v sobě, nenajde ji jinde než ve filosofii.
+“ Aristotelés „Kdo chce hledat radost sám v sobě, nenajde ji jinde než ve filosofii.
 
 Celková revize po formální stránce
 “ Aristotelés:„Filosofie je péče (starost) o duši.
@@ -1059,12 +1003,12 @@ Praha 2004. ISBN 80-71788-04-X.
 Praha 2004. ISBN 80-7178-804-X.
 
 Typografická úprava
-Platón "Údiv vedl lidi k filosofování \.
-Platón"Údiv vedl lidi k filosofování \.
+“ Platón „Údiv vedl lidi k filosofování – na počátku i dnes – a to tak, že se zarazili s údivem u nejbližších otázek a potom se pomalu zamýšleli i nad většími věcmi… A kdo se zamýšlí a diví, ten se domnívá, že neví.
+“ Platón„Údiv vedl lidi k filosofování – na počátku i dnes – a to tak, že se zarazili s údivem u nejbližších otázek a potom se pomalu zamýšleli i nad většími věcmi… A kdo se zamýšlí a diví, ten se domnívá, že neví.
 
 Typografická úprava
-Aristotelés „Kdo chce hledat radost sám v sobě, nenajde ji jinde než ve filosofii.
-Aristotelés„Kdo chce hledat radost sám v sobě, nenajde ji jinde než ve filosofii.
+“ Aristotelés „Kdo chce hledat radost sám v sobě, nenajde ji jinde než ve filosofii.
+“ Aristotelés„Kdo chce hledat radost sám v sobě, nenajde ji jinde než ve filosofii.
 
 Typografická úprava
 “ Aristotelés „Filosofie je péče (starost) o duši.
@@ -1407,44 +1351,20 @@ Rostislav MazurOd věd, které kdysi z filosofie vzešly, se filosofie liší je
 “ Rostislav MazurOd věd, které kdysi z filosofie vzešly, se filosofie liší jednak širší, vlastně neomezenou oblastí témat, jednak volnější metodou.
 
 Filosofové o filosofii 
-Někteří filosofii charakterizovali takto:"Údiv je postoj člověka, který moudrost skutečně miluje, a není jiný počátek filosofie než tento".
-Rostislav Mazur"Údiv je postoj člověka, který moudrost skutečně miluje, a není jiný počátek filosofie než tento.
-
-Filosofové o filosofii 
-Platón"Údiv vedl lidi k filosofování \.
-Údiv vedl lidi k filosofování \.
-
-Filosofové o filosofii 
-a to tak, že se zarazili s údivem u nejbližších otázek a potom se pomalu zamýšleli i nad většími věcmi\.
-a to tak, že se zarazili s údivem u nejbližších otázek a potom se pomalu zamýšleli i nad většími věcmi… A kdo se zamýšlí a diví, ten se domnívá, že neví.
-
-Filosofové o filosofii 
-Aristotelés„Kdo chce hledat radost sám v sobě, nenajde ji jinde než ve filosofii.
-“ Aristotelés„Kdo chce hledat radost sám v sobě, nenajde ji jinde než ve filosofii.
+Někteří filosofii charakterizovali takto:„Údiv je postoj člověka, který moudrost skutečně miluje, a není jiný počátek filosofie než tento.
+“ Rostislav Mazur„Údiv je postoj člověka, který moudrost skutečně miluje, a není jiný počátek filosofie než tento.
 
 Filosofové o filosofii 
 “ Rostislav MazurOd věd, které kdysi z filosofie vzešly, se filosofie liší jednak širší, vlastně neomezenou oblastí témat, jednak volnější metodou.
 “ Ludwig WittgensteinOd věd, které kdysi z filosofie vzešly, se filosofie liší jednak širší, vlastně neomezenou oblastí témat, jednak volnější metodou.
 
 Přidání mezery
-Rostislav Mazur"Údiv je postoj člověka, který moudrost skutečně miluje, a není jiný počátek filosofie než tento.
-Rostislav Mazur "Údiv je postoj člověka, který moudrost skutečně miluje, a není jiný počátek filosofie než tento.
+“ Rostislav Mazur„Údiv je postoj člověka, který moudrost skutečně miluje, a není jiný počátek filosofie než tento.
+“ Rostislav Mazur „Údiv je postoj člověka, který moudrost skutečně miluje, a není jiný počátek filosofie než tento.
 
 Filosofové o filosofii - nevhodný citát
-Rostislav Mazur "Údiv je postoj člověka, který moudrost skutečně miluje, a není jiný počátek filosofie než tento.
-Někteří filosofii charakterizovali takto:"Údiv je postoj člověka, který moudrost skutečně miluje, a není jiný počátek filosofie než tento".
-
-Filosofové o filosofii - nevhodný citát
-Údiv vedl lidi k filosofování \.
-Platón"Údiv vedl lidi k filosofování \.
-
-Filosofové o filosofii - nevhodný citát
-a to tak, že se zarazili s údivem u nejbližších otázek a potom se pomalu zamýšleli i nad většími věcmi… A kdo se zamýšlí a diví, ten se domnívá, že neví.
-a to tak, že se zarazili s údivem u nejbližších otázek a potom se pomalu zamýšleli i nad většími věcmi\.
-
-Filosofové o filosofii - nevhodný citát
-“ Aristotelés„Kdo chce hledat radost sám v sobě, nenajde ji jinde než ve filosofii.
-Aristotelés„Kdo chce hledat radost sám v sobě, nenajde ji jinde než ve filosofii.
+“ Rostislav Mazur „Údiv je postoj člověka, který moudrost skutečně miluje, a není jiný počátek filosofie než tento.
+Někteří filosofii charakterizovali takto:„Údiv je postoj člověka, který moudrost skutečně miluje, a není jiný počátek filosofie než tento.
 
 externí odkazy
 Plzeň 2005. ISBN 80-239-7106-9=== Související články ===,  Seznam filosofů,  Seznam politických filosofů=== Externí odkazy ===,  ==== Slovníky ====,  Stanford Encyclopedia of Philosophy – en,  Internet Encyclopedia of Philosophy – en* Rudolf Eisler: "Wörterbuch der philosophischen Begriffe" (1904)* F. Kirchner: "Wörterbuch philosophischer Grundbegriffe" – de==== Dějiny filosofie ====* Karl Vorländer, "Geschichte der Philosophie (1902)" – de==== Texty ke stažení ====* Project Gutenberg: Klasická literatura – en* "Gallica", knihovna el.

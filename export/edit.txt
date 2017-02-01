@@ -6,13 +6,17 @@ větší editace
 Astrofyzika se zabývá fyzikou hvězd a mezihvězdné hmoty (hustotou, teplotou, chemickým složením atd.).
 Zabývá se fyzikou hvězd a mezihvězdné hmoty (hustotou, teplotou, chemickým složením atd.).
 
+robot: typografickĂ„"€šĂ‚Â© korekce podle specifikace
+Naopak astronomické systémy jsou pro velkou část fyzikální teorie nejdůležitější "laboratoří", přirozeně především ve velkých prostorových a časových měřítkách se projevuje gravitace a testuje obecná teorie relativity.
+Naopak astronomické systémy jsou pro velkou část fyzikální teorie nejdůležitější „laboratoří“, přirozeně především ve velkých prostorových a časových měřítkách se projevuje gravitace a testuje obecná teorie relativity.
+
 Editace uživatele „85.13.76.143“ vrácena do předchozího stavu, jehož autorem je „Tlusťa“.
 bla,bla,bla,bla,bla,bla,bla,bla,bla,blaHvězdná astronomie se zabývá hvězdami, včetně Slunce.
 Hvězdná astronomie se zabývá hvězdami, včetně Slunce.
 
 typo, nadpisy, pročištění souvisejících článků (jen ty důležitější, které nejsou zmíněné v článku), typografie
 Galaktická astronomie se zabývá zkoumáním struktury, součástí a vývoje galaxií - v prvé řadě naší Galaxie.
-Galaktická astronomie se zabývá zkoumáním struktury, součástí a vývoje galaxií " v prvé řadě naší Galaxie.
+Galaktická astronomie se zabývá zkoumáním struktury, součástí a vývoje galaxií – v prvé řadě naší Galaxie.
 
 typo, nadpisy, pročištění souvisejících článků (jen ty důležitější, které nejsou zmíněné v článku), typografie
 Řadí se do astronomie, ale jejich části mají často užší spojitost s odpovídajícími vědami o planetě Zemi.
@@ -20,35 +24,23 @@ typo, nadpisy, pročištění souvisejících článků (jen ty důležitější
 
 robot: typografické korekce podle specifikace
 Biologie v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy - tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu prostředí.
-Biologie v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy " tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu prostředí.
-
-robot: typografické korekce podle specifikace
-Slovo "biologie" (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín "biologie" tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744 - 1849).
-Slovo "biologie" (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín \.
+Biologie v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy – tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu prostředí.
 
 Napřímení interních odkazů a úprava typografie spolu s využitím šablony „Cizojazyčně“.
-Biologie (z řeckého bio jako život a logie jako věda - tedy životověda - věda zkoumající život) v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy " tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu prostředí.
-Biologie (z řeckého ' jako život a ' jako věda " tedy životověda " věda zkoumající život) v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy " tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu prostředí.
+Biologie (z řeckého bio jako život a logie jako věda - tedy životověda - věda zkoumající život) v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy – tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu prostředí.
+Biologie (z řeckého ' jako život a ' jako věda – tedy životověda – věda zkoumající život) v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy – tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu prostředí.
 
 Napřímení interních odkazů a úprava typografie spolu s využitím šablony „Cizojazyčně“.
 V užším slova smyslu bychom pak biologii mohli popsat jako vědu, zkoumající organismy od úrovně subcelulární, tedy od úrovně jednotlivých buněčných organel se vším, co s nimi souvisí, přes úrovně buněk, tkání, orgánů a jedinců až po úroveň populací, společenstev, ekosystémů a biomů.
 V užším slova smyslu bychom pak biologii mohli popsat jako vědu, zkoumající organismy od úrovně subcelulární, tedy od úrovně jednotlivých buněčných organel se vším, co s nimi souvisí, přes úrovně buněk, tkání, orgánů a jedinců až po úroveň populací, společenstev, ekosystémů a biomů.
 
 WPCleaner v1.37b - Opraveno pomocí WP:WCW (Tag bez obsahu - Opravy pravopisu a typografie)
-tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744 - 1829).
-tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744\.
-
-WPCleaner v1.37b - Opraveno pomocí WP:WCW (Tag bez obsahu - Opravy pravopisu a typografie)
-Počátkem 20. století znovuobjevení práce Gregora Mendela vedlo k rapidnímu vzrůstu výzkumu genetiky Thomasem Morganem a jeho studenty a kolem roku 1930 kombinací populační genetiky a přírodního výběru v \.
-Počátkem 20. století znovuobjevení práce Gregora Mendela vedlo k rapidnímu vzrůstu výzkumu genetiky Thomasem Morganem a jeho studenty a kolem roku 1930 kombinací populační genetiky a přírodního výběru v „novo-Darwinovské syntéze“.
+Slovo „biologie“ (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín „biologie“ tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744 - 1829).
+Slovo „biologie“ (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín „biologie“ tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744–1829).
 
 Typografie
-řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín \.
-řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova \.
-
-Typografie
-tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744\.
-tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744–1829).
+Slovo „biologie“ (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín „biologie“ tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744–1829).
+Slovo „biologie“ (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova – "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín „biologie“ tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744–1829).
 
 Typografie
 Pod biologii tedy můžeme zařadit, nebo nalézt její úzkou spojitost s následujícími vědními obory:  agrobiologie - věda, která využívá biologické zákonitosti v zemědělství,  anatomie - studium forem a funkcí u rostlin, zvířat a jiných organismů, nebo specificky u lidí,  bionomie - je komplexní studium organismu a jeho vztah k jeho prostředí,  biogeografie - je nauka o rozdělení biodiverzity v prostoru a čase,  biochemie - je vědní disciplína na pomezí biologie a chemie,  biologická systematika - (též taxonomie) vědecky zkoumá druhy a druhovou diverzitu organismů a všechny vztahy mezi nimi,  bionika - je hraniční obor, systematicky zaměřený na uplatňování poznatků ze studia živých organismů a jejich struktur při vývoji nových technologií,  biostatistika - obor využívající metody matematické statistiky při studiu proměnlivosti živých organizmů,  botanika - (též rostlinopis, fytologie) zabývá se flórou, tudíž rostlinnou částí přírody,  buněčná biologie - (též cytologie) je věda zabývající se studiem buněk,  ekologie - studium vlivů živých organismů a neživých složek navzájem, nebo na jejich prostředí* etologie - vědní obor v rámci zoologie, který se zabývá studiem chování živočichů* evoluční biologie - zabývá  se biologickou evolucí organismů a mechanismy, které se při ní uplatňují* fyziologie - studium o fungování živých organismů, jejich částí a orgánů* genetika - zabývá se dědičností i proměnlivostí organismů a jejími příčinami* matematická biologie -  používá matematické metody ke studiu živých organismů* medicínská biologie a lékařské disciplíny * mikrobiologie -  je věda studující mikroorganismy* molekulární biologie - studium buněčných biologických procesů na jejich molekulární úrovni* morfologie - zabývá se vnější stavbou organismů* mykologie - studium hub, jejich genetických a biochemických vlastností* paleontologie -  je věda o životě v minulých geologických obdobích* virologie - zabývá se studiem nebuněčných organismů, zejména virů, ale i viroidů a virusoidů* vývojová biologie - zabývá se studiem procesů růstu a vývoje organismů* zoologie - studie zvířat, včetně klasifikace, fyziologie, vývoje a chovánía mnoho dalších specializovaných vědních disciplín.
@@ -91,8 +83,12 @@ Upravil Petr DvořákFilosofie jazyka, Ludwig Wittgenstein, Ferdinand de Sausure
 Filosofie jazyka, Ludwig Wittgenstein, Ferdinand de Sausure, Noam Chomsky, Umberto Eco Filosofie anglicky mluvících: pragmatická a analytická, Bertrand Russell, George Edward Moore, Rudolf CarnapV devatenáctém století žil filosof a ekonom John Stuart Mill.
 
 robot: typografické korekce podle specifikace
+Jazyky píšící latinkou:# ph: # s: # z: Jazyky nepíšící latinkou:# s: Podle § 99 Pravidel českého pravopisu z roku 1957 se "v latinské příponě "-ismus" píše jen "s"; rovněž tak v několika slovech humanistické tradice "filosofie, gymnasium, president, presidium, universita" (a v jejich odvozeninách); jen "s" se ovšem píše též v slovech nezdomácnělých, jako např. "cirrhosis, gnose, gnoseologie, konsensus, spasmus, tenesmus", a rovněž v některých vlastních jménech osobních a zeměpisných (viz § 108 – 113)".
+Jazyky píšící latinkou:# ph: # s: # z: Jazyky nepíšící latinkou:# s: Podle § 99 Pravidel českého pravopisu z roku 1957 se „v latinské příponě "-ismus" píše jen "s"; rovněž tak v několika slovech humanistické tradice "filosofie, gymnasium, president, presidium, universita" (a v jejich odvozeninách); jen "s" se ovšem píše též v slovech nezdomácnělých, jako např. "cirrhosis, gnose, gnoseologie, konsensus, spasmus, tenesmus", a rovněž v některých vlastních jménech osobních a zeměpisných (viz § 108 – 113).
+
+robot: typografické korekce podle specifikace
 Toto pravidlo bylo zrušeno v PČP 1983, kdy bylo zavedeno psaní "z", avšak psaní "s" též povoleno.
-" Toto pravidlo bylo zrušeno v PČP 1983, kdy bylo zavedeno psaní "z", avšak psaní "s" též povoleno.
+“ Toto pravidlo bylo zrušeno v PČP 1983, kdy bylo zavedeno psaní "z", avšak psaní "s" též povoleno.
 
 Současné filozofické směry v České republice opraven link
 S. Sousedíka (FF UK, KTF UK): Petr Dvořák (FF UK, CMTF UP), Tomáš Machula, Lukáš Novák, Daniel Heider (všichni TF JU), David Svoboda (KTF UK).
@@ -103,12 +99,8 @@ TradičníJiné dělení Praktická filosofie AntikaStředověk Raný novověkOs
 Osvícenství19. století20. stoletíFilosofie jazyka=,  Ferdinand de Saussure, Ludwig Wittgenstein, Noam Chomsky, Umberto Eco====Analytická filosofie====,  George Edward Moore, Bertrand Russell, Rudolf Carnap====Filosofie vědy====Karl Popper, Paul Karl Feyerabend, Thomas Kuhn===Východní filosofie===, "Filosofie indická": Védy, Upanišada, "Filosofie čínská": Konfucius, Lao-c', Čuang-c’, "Filosofie japonská": Zen== Hlavní filosofické pozice ==,  atomismus vs.
 
 robot: typografické a kódové korekce a náhrady přesměrování podle specifikace
-a to tak, že se zarazili s údivem u nejbližších otázek a potom se pomalu zamýšleli i nad většími věcmi.
-a to tak, že se zarazili s údivem u nejbližších otázek a potom se pomalu zamýšleli i nad většími věcmi\.
-
-robot: typografické a kódové korekce a náhrady přesměrování podle specifikace
-Kdo chce hledat radost sám v sobě, nenajde ji jinde než ve filosofii.
-"Aristotelés":„Kdo chce hledat radost sám v sobě, nenajde ji jinde než ve filosofii.
+“ "Platon":„Údiv vedl lidi k filosofování – na počátku i dnes – a to tak, že se zarazili s údivem u nejbližších otázek a potom se pomalu zamýšleli i nad většími věcmi.
+“ "Platon":„Údiv vedl lidi k filosofování – na počátku i dnes – a to tak, že se zarazili s údivem u nejbližších otázek a potom se pomalu zamýšleli i nad většími věcmi… A kdo se zamýšlí a diví, ten se domnívá, že neví.
 
 robot: typografické a kódové korekce a náhrady přesměrování podle specifikace
 iracionalismus,  historicismus, perspektivismus, psychologismus, nominalismus, pozitivismus a realismus,  hédonismus,  humanismus,  naturalismus ,  pragmatismus,  novopozitivismus==Literatura======Slovníky a příručky====,  Durozoi – Roussel: "Filozofický slovník".
@@ -147,12 +139,12 @@ Není to tedy jen akademická disciplina, ale také způsob života, který zač
 Není to tedy jen akademická disciplina, ale také způsob života, který začíná údivem (Platón) a snaží se s tajemstvím světa a existence nějak vyrovnat.
 
 Celková revize po formální stránce
-Platón:"Údiv vedl lidi k filosofování \.
-Platón "Údiv vedl lidi k filosofování \.
+“ Platón:„Údiv vedl lidi k filosofování – na počátku i dnes – a to tak, že se zarazili s údivem u nejbližších otázek a potom se pomalu zamýšleli i nad většími věcmi… A kdo se zamýšlí a diví, ten se domnívá, že neví.
+“ Platón „Údiv vedl lidi k filosofování – na počátku i dnes – a to tak, že se zarazili s údivem u nejbližších otázek a potom se pomalu zamýšleli i nad většími věcmi… A kdo se zamýšlí a diví, ten se domnívá, že neví.
 
 Celková revize po formální stránce
-Aristotelés:„Kdo chce hledat radost sám v sobě, nenajde ji jinde než ve filosofii.
-Aristotelés „Kdo chce hledat radost sám v sobě, nenajde ji jinde než ve filosofii.
+“ Aristotelés:„Kdo chce hledat radost sám v sobě, nenajde ji jinde než ve filosofii.
+“ Aristotelés „Kdo chce hledat radost sám v sobě, nenajde ji jinde než ve filosofii.
 
 Celková revize po formální stránce
 “ Aristotelés:„Filosofie je péče (starost) o duši.
