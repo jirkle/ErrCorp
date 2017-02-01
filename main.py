@@ -14,7 +14,7 @@ from multiprocessing import Pool
 from collections import deque
 
 #Czech excluded pages
-excludeFilter = r".*((Hlavní\sstrana)|(Main\sPage)|([rR]ozcestník)|(Nápověda\:)|(Wikipedista\:)|(Wikipedie\:)|(Diskuse\:)|(MediaWiki\:)|(Portál\:)|(Šablona\:)|(Kategorie\:)).*"
+excludeFilter = ur".*((Hlavní\sstrana)|(Main\sPage)|([rR]ozcestník)|(Nápověda\:)|(Wikipedista\:)|(Wikipedie\:)|(Diskuse\:)|(MediaWiki\:)|(Portál\:)|(Šablona\:)|(Kategorie\:)).*"
 
 #Comment filters
 typoFilter = ur".*(([Tt]ypo)|([Cc]l[\s\:])|([Cc]leanup)|([Cc]u[\s\:])|([Pp]řeklep)|([Pp]ravopis)|([Kk]osmetické)|([Dd]robnost)|([Oo]prav)|([Oo]pr\s)|(\-\>)).*"
@@ -67,11 +67,11 @@ class revision:
 
 #Funkce z http://stackoverflow.com/questions/4576077/python-split-text-on-sentences, TODO: licence?
 caps = "([A-Z])"
-prefixes = "(Mr|St|Mrs|Ms|Dr|MUDr|JuDr|Mgr|Bc|atd|tzv|řec|lat|it|např|př)[.]"
+prefixes = "\s+(Mr|St|Mrs|Ms|Dr|MUDr|JuDr|Mgr|Bc|atd|tzv|řec|lat|it|např|př)[.]"
 suffixes = "(Inc|Ltd|Jr|Sr|Co)"
 starters = "(Mr|Mrs|Ms|Dr|He\s|She\s|It\s|They\s|Their\s|Our\s|We\s|But\s|However\s|That\s|This\s|Wherever)"
 acronyms = "([A-Z][.][A-Z][.](?:[A-Z][.])?)"
-websites = "[.](com|net|org|io|gov|cz)"
+websites = "[.](com|net|org|io|gov|cz)\s"
 digits = "([0-9])"
 decimalPoint = "[.|,]"
 
@@ -79,8 +79,8 @@ def splitBySentences(text):
 	if(text == None): return None
 	text = " " + text + "  "
 	text = text.replace("\n"," ")
-	text = re.sub(prefixes,"\\1<prd>",text)
-	text = re.sub(websites,"<prd>\\1",text)
+	text = re.sub(prefixes," \\1<prd>",text)
+	text = re.sub(websites,"<prd>\\1 ",text)
 	if "Ph.D" in text: text = text.replace("Ph.D.","Ph<prd>D<prd>")
 	if "n.l" in text: text = text.replace("n.l.","n<prd>l<prd>")
 	if "n. l" in text: text = text.replace("n. l.","n<prd> l<prd>")
@@ -91,24 +91,25 @@ def splitBySentences(text):
 	text = re.sub(" "+suffixes+"[.] "+starters," \\1<stop> \\2",text)
 	text = re.sub(" "+suffixes+"[.]"," \\1<prd>",text)
 	text = re.sub(" " + caps + "[.]"," \\1<prd>",text)
-	text = re.sub(digits + decimalPoint + digits,"\\1<prd>\\2",text)
-	text = re.sub(digits + "[\.]", "\\1<prd>",text)
+	text = re.sub(digits + decimalPoint + "\s*" + digits,"\\1<prd> \\2",text)
+	text = re.sub(digits + "[\.]\s*", "\\1<prd> ",text)
 	if "”" in text: text = text.replace(".”","”.")
 	if "\"" in text: text = text.replace(".\"","\".")
 	if "!" in text: text = text.replace("!\"","\"!")
 	if "?" in text: text = text.replace("?\"","\"?")
+	text = text.replace("\.*,","<prd>,")
 	text = text.replace(".",".<stop>")
 	text = text.replace("?","?<stop>")
 	text = text.replace("!","!<stop>")
 	text = text.replace("<prd>",".")
-	sentences = text.split("<stop>")
+	sentences = re.split("<stop>", text, flags=re.MULTILINE)
 	sentences = sentences[:-1]
 	sentences = [s.strip() for s in sentences]
 	return sentences
 
 '''Function for text lemmatization'''
 def lemma(text):
-    text = cleanUp(text, True, True).decode('utf-8','ignore').encode("utf-8") #No lemma just remove unnecessary chars
+    text = cleanUpSentence(text, True, True).decode('utf-8','ignore').encode("utf-8") #No lemma just remove unnecessary chars
     return text
 
 '''Generates bag of words'''
@@ -139,9 +140,7 @@ def wordDistance(s1, s2):
     
     return previous_row[-1]
 
-
-
-'''Generates num <0,1> which represents similarity of two given sentences'''
+'''Metric for similarity of two given sentences, returns nuber in range <0,1>'''
 def sentenceSimilarity(first, second):
 	firstBag = bagOfWords(first)
 
@@ -150,24 +149,36 @@ def sentenceSimilarity(first, second):
 	similarity = 2 * float(len(firstBag & secndBag))/(len(firstBag)+len(secndBag))
 	return similarity
 
-def cleanUp(text, removeDigits=False, removePunctuation=False):
-    #text = re.sub("[(\\br)]"," ",text) #Clean text
-    text = re.sub("===.*?===","",text) #Remove headings
-    text = re.sub("==.*?==","",text) #Remove headings
-    text = re.sub("=","",text) #Remove rest equal signs
-    text = re.sub("\*",", ",text) #Replace bullets
-    text = re.sub("[„“]","\"",text) #Clean text
-    text = re.sub("\"+","\"",text) #Remove more apostrophes
-    text = re.sub("[…]","\.\.\.",text) #Clean text
-    #text = re.sub("(\xc2\xa0)"," ",text) #Clean text
-    text = re.sub("\[.*?\|(.*?)\]","\\1 ",text) #Clean text
-    text = re.sub("[\[\]]","",text) #Clean text
-    text = re.sub("(\s+)"," ",text) #Remove more spaces
+'''Cleans up the text - removes rests from wiki markup, replaces special character (e.g. '…' -> '...', '„' -> '"') '''
+def cleanUpText(text):
+    text = re.sub("\/\*(.*?)\*\/","\\1",text, re.M) #Replace comments
+    text = re.sub("\[.*?\|(.*?)\]","\\1",text, re.M) #Remove wiki interlinks
+    text = re.sub("[„“]","\"",text, re.M) #Clean text
+    text = re.sub("[…]","\.\.\.",text, re.M) #Clean text
+    text = re.sub("\*",", ",text, re.M) #Replace bullets
+    text = re.sub("(\s+)"," ",text, re.M) #Remove more spaces
+    text = re.sub("\"(\s*\")*","\"",text, re.M) #Remove more apostrophes
+    text = re.sub("\s*,(\s*,)*",",",text, re.M) #Remove more commas
+    text = re.sub("\s*:(\s*:)*",":",text, re.M) #Remove more colons
+    text = re.sub("===.*?===","",text, re.M) #Remove headings
+    text = re.sub("==.*?==","",text, re.M) #Remove headings
+    text = re.sub("=","",text, re.M) #Remove rest equal signs
+    text = re.sub("[\[\]]","",text, re.M) #Clean rest brackets
+    return text
+
+def cleanUpSentence(text, removeDigits=False, removePunctuation=False):
+    if(text == None):
+	return None
+    text = re.sub("\"(\s*\")*","\"",text, re.M) #Remove more apostrophes
+    text = re.sub("\s*,(\s*,)*",",",text, re.M) #Remove more commas
+    text = re.sub("\s*:(\s*:)*",":",text, re.M) #Remove more colons    
+    text = re.sub("^(\s*(\*)\s*)","",text, re.M) #Replace bullets
+    text = re.sub("^[(:*\s*)(,*\s*)]","",text, re.M) #Remove starters
     if(removeDigits):
 	text = re.sub("[0-9]"," ",text) #Remove more spaces
     if(removePunctuation):
 	text = ''.join([i for i in text if (i not in string.punctuation)])
-    return text
+    return text    
 
 
 ###############################################################################
@@ -176,6 +187,22 @@ def cleanUp(text, removeDigits=False, removePunctuation=False):
 #
 ###############################################################################
 
+'''Extracts word order corrections from old & new sentence version and writes them into the stream. 
+Key idea - if difference of old sentence's & new sentence's word's sets is equals 0 then the only 
+thing that could've changed is word order'''
+def findWO(oldSent, newSent, comment):
+    oldBag = bagOfWords(cleanUpSentence(oldSent, False, True))
+    newBag = bagOfWords(cleanUpSentence(newSent, False, True))
+    if(oldBag - newBag == 0):
+	woOutputStream.write("%s\n%s\n%s\n\n" % (comment.encode("utf-8"), oldSent, newSent))
+	return True
+    else:
+	return False
+
+'''Extracts typos from old & new sentence version and writes them into the stream. Key idea -
+difference of old sentence's & new sentence's word's sets gives us set of words which has been changed.
+If we look through the new sentence's words for each this word and get the one with the least word
+distance lesser than typo treshold it might be the correction'''
 def findTypos(oldSent, newSent, comment):
     if(not re.search(typoFilter, comment, re.M)):
 	return False
@@ -192,28 +219,23 @@ def findTypos(oldSent, newSent, comment):
 	    writed=True
     return writed
 
-def findWO(oldSent, newSent, comment):
-    oldBag = bagOfWords(cleanUp(oldSent, True))
-    newBag = bagOfWords(cleanUp(newSent, True))    
-    if(oldBag - newBag == 0):
-	woOutputStream.write("%s\n%s\n%s\n\n" % (comment.encode("utf-8"), oldSent, newSent))
-	return True
-    else:
-	return False
-
+'''Extracts edits from old & new sentence version and writes them into the stream.
+Key idea - comment contains predefined words'''
 def findEdits(oldSent, newSent, comment):
     if (not re.search(editFilter, comment, re.M)):
 	return False
     editOutputStream.write("%s\n%s\n%s\n\n" % (comment.encode("utf-8"), oldSent, newSent))
 
+'''Writes old & new sentences to buffer'''
 def writeToCorpBuffer(oldSent, newSent):
 	global corpBuffer
 	corpBuffer.append((oldSent, newSent))
 
+'''Processes and flushes buffer to disk'''
 def writeCorpBuffer(comment):
 	global corpBuffer
 	if len(corpBuffer) > 0:
-		for sentTuple in corpBuffer:
+		for sentTuple in corpBuffer:		    
 		    founded = False
 		    founded = findWO(sentTuple[0], sentTuple[1], comment)
 		    if(not founded):
@@ -228,6 +250,7 @@ def writeCorpBuffer(comment):
 		otherOutputStream.flush()
 		corpBuffer = []
 
+'''Processes sentence's stacks - old sentences are matched to sentences from new sentence's stack'''
 def processStacks(oldStack, newStack):
 	if(len(oldStack) == 0 or len(newStack) == 0):
 		return
@@ -239,6 +262,7 @@ def processStacks(oldStack, newStack):
 			candidates = sorted(candidates, key=lambda candidate: candidate[1], reverse=True)
 			writeToCorpBuffer(oldSent, candidates[0][0])		
 
+'''Compares two revisions and constructs old and new stacks of sentences for further processing'''
 def processRevisions(oldRev, newRev):
 	if(oldRev == None or newRev == None or oldRev.text == None or newRev.text == None):
 		return
@@ -264,12 +288,13 @@ def processRevisions(oldRev, newRev):
 		newStack.append(line[1:])
 	processStacks(oldStack, newStack)
 
+'''Function for removing reverted revisions. TODO - bug - doesn't match all reverted revs'''
 def removeRevertedRevs(page):
     previous = None
     for rev in page.revisions:
 	if(rev == None or rev.comment == None):
 	    page.revisions.remove(rev)
-	elif(re.search(revertFilter, cleanUp(rev.comment), re.U)):
+	elif(re.search(revertFilter, rev.comment, re.U)):
 	    try:
 		page.revisions.remove(rev)
 	    except:
@@ -280,8 +305,8 @@ def removeRevertedRevs(page):
 		pass
 	previous = rev
 
+'''Removes reverted revisions, goes through revs and sends every two neighbous to processing'''
 def processPage(page):
-	#print("Zacinam zpracovavat stranku")
 	removeRevertedRevs(page)
 	newRev = page.revisions[0]
 	for i in range(1, len(page.revisions) - 1):
@@ -290,9 +315,8 @@ def processPage(page):
 		if(newRev.comment != None):
 		    processRevisions(oldRev, newRev)
 		writeCorpBuffer(newRev.comment)
-	#print("Koncim zpracovani stranky")
-		
 
+'''Renders wiki markup into plain text via WikiExtractor and then cleans output text'''
 def normalizeText(text):
 	if(text != None):  
 		out = StringIO.StringIO()
@@ -300,18 +324,13 @@ def normalizeText(text):
 		extractor.extract(out)
 		text = out.getvalue()
 		out.close()
-		text = cleanUp(text).decode('utf-8','ignore').encode("utf-8")
+		text = cleanUpText(text).decode('utf-8','ignore').encode("utf-8")
 		text = splitBySentences(text)
+		for i in range(0, len(text)):
+		    text[i] = cleanUpSentence(text[i])
 		return text
 	else:
 		return ""
-
-def decodeToUtf8(unicodeText):
-	if(unicodeText == None): return None
-	if(type(unicodeText) is str):
-		return unicodeText.encode("utf-8", 'ignore')
-	else:
-		return unicodeText.encode("utf-8", 'ignore')
 
 if __name__ == "__main__":
 	pool = Pool(processes=poolProcesses)
@@ -325,37 +344,33 @@ if __name__ == "__main__":
 		if event == 'end':
 			if elem.tag.endswith('title'):
 			    pagesProcessed += 1
-			    curPage.title = decodeToUtf8(elem.text)
+			    curPage.title = elem.text
 			    if(re.search(excludeFilter, curPage.title, re.M)):
-				print("Přeskakuji stránku  #%s: %s" % (pagesProcessed, curPage.title))
+				print("Přeskakuji stránku  #%s: %s" % (pagesProcessed, curPage.title.encode("utf-8", 'ignore')))
 				skip = True
 				continue
 			    else:
-				print("Zpracovávám stránku #%s: %s" % (pagesProcessed, curPage.title))
+				print("Zpracovávám stránku #%s: %s" % (pagesProcessed, curPage.title.encode("utf-8", 'ignore')))
 				skip = False
 			if(not skip):
 				if elem.tag.endswith('timestamp'):
-					curRevision.timestamp = decodeToUtf8(elem.text)
+				    curRevision.timestamp = elem.text
 				elif elem.tag.endswith('comment'):
-					curRevision.comment = elem.text
+				    curRevision.comment = cleanUpSentence(cleanUpText(elem.text))
 				elif elem.tag.endswith('text'):
-				    #try:
-					#curRevision.text = normalizeText(elem.text)
 				    poolAsyncResults.append(pool.apply_async(normalizeText, args=(elem.text,)))
-				    #except:
-				    #	curRevision.text = None
 				elif elem.tag.endswith('revision'):
-					curPage.revisions.append(curRevision)
-					curRevision = revision()
+				    curPage.revisions.append(curRevision)
+				    curRevision = revision()
 				elif elem.tag.endswith('page'):
-					for i in range(0, len(poolAsyncResults) - 1):
-					    try:
-						curPage.revisions[i].text = poolAsyncResults[i].get()	#collect results from pool
-					    except:
-						curPage.revisions[i].text = None
-					#pool.apply(processPage, args=(curPage,))
-					processPage(curPage)
-					curPage = page()
-					curPage.revisions = []
-					poolAsyncResults = []
+				    for i in range(0, len(poolAsyncResults) - 1):
+					try:
+					    curPage.revisions[i].text = poolAsyncResults[i].get()	#collect results from pool
+					except:
+					    curPage.revisions[i].text = None
+				    #pool.apply(processPage, args=(curPage,))
+				    processPage(curPage)
+				    curPage = page()
+				    curPage.revisions = []
+				    poolAsyncResults = []
 			elem.clear()
