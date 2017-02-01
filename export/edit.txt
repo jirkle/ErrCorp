@@ -1,0 +1,232 @@
+větší editace
+Nebeská mechanika se zabývá pohybem těles v gravitačním poli, například planet ve Sluneční soustavě.
+Zabývá se pohybem těles v gravitačním poli, například planet ve Sluneční soustavě.
+
+větší editace
+Astrofyzika se zabývá fyzikou hvězd a mezihvězdné hmoty (hustotou, teplotou, chemickým složením atd.).
+Zabývá se fyzikou hvězd a mezihvězdné hmoty (hustotou, teplotou, chemickým složením atd.).
+
+Editace uživatele „85.13.76.143“ vrácena do předchozího stavu, jehož autorem je „Tlusťa“.
+bla,bla,bla,bla,bla,bla,bla,bla,bla,blaHvězdná astronomie se zabývá hvězdami, včetně Slunce.
+Hvězdná astronomie se zabývá hvězdami, včetně Slunce.
+
+typo, nadpisy, pročištění souvisejících článků (jen ty důležitější, které nejsou zmíněné v článku), typografie
+Galaktická astronomie se zabývá zkoumáním struktury, součástí a vývoje galaxií - v prvé řadě naší Galaxie.
+Galaktická astronomie se zabývá zkoumáním struktury, součástí a vývoje galaxií " v prvé řadě naší Galaxie.
+
+typo, nadpisy, pročištění souvisejících článků (jen ty důležitější, které nejsou zmíněné v článku), typografie
+Řadí se do astronomie, ale jejich části mají často užší spojitost s odpovídajícími vědami o planetě Zemi.
+Řadí se do astronomie, ale jejich části mají často užší spojitost s odpovídajícími vědami o planetě Zemi (například "geologie Marsu").
+
+robot: typografické korekce podle [[Wikipedista:TypoBot|specifikace]]
+Biologie v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy - tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu prostředí.
+Biologie v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy " tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu prostředí.
+
+Napřímení interních odkazů a úprava typografie spolu s využitím šablony „Cizojazyčně“.
+Biologie (z řeckého bio jako život a logie jako věda - tedy životověda - věda zkoumající život) v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy " tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu prostředí.
+Biologie (z řeckého ' jako život a ' jako věda " tedy životověda " věda zkoumající život) v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy " tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu prostředí.
+
+Napřímení interních odkazů a úprava typografie spolu s využitím šablony „Cizojazyčně“.
+V užším slova smyslu bychom pak biologii mohli popsat jako vědu, zkoumající organismy od úrovně subcelulární, tedy od úrovně jednotlivých buněčných organel se vším, co s nimi souvisí, přes úrovně buněk, tkání, orgánů a jedinců až po úroveň populací, společenstev, ekosystémů a biomů.
+V užším slova smyslu bychom pak biologii mohli popsat jako vědu, zkoumající organismy od úrovně subcelulární, tedy od úrovně jednotlivých buněčných organel se vším, co s nimi souvisí, přes úrovně buněk, tkání, orgánů a jedinců až po úroveň populací, společenstev, ekosystémů a biomů.
+
+[[WP:WPCleaner|WPCleaner]] v1.37b - Opraveno pomocí [[WP:WCW]] (Tag bez obsahu - Opravy pravopisu a typografie)
+Slovo "biologie" (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín "biologie" tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744 - 1829).
+Slovo "biologie" (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín "biologie" tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744"1829).
+
+Typografie
+Slovo "biologie" (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín "biologie" tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744"1829).
+Slovo "biologie" (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova " "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766. Termín "biologie" tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744"1829).
+
+Typografie
+Pod biologii tedy můžeme zařadit, nebo nalézt její úzkou spojitost s následujícími vědními obory: , agrobiologie - věda, která využívá biologické zákonitosti v zemědělství, anatomie - studium forem a funkcí u rostlin, zvířat a jiných organismů, nebo specificky u lidí, bionomie - je komplexní studium organismu a jeho vztah k jeho prostředí, biogeografie - je nauka o rozdělení biodiverzity v prostoru a čase, biochemie - je vědní disciplína na pomezí biologie a chemie, biologická systematika - (též taxonomie) vědecky zkoumá druhy a druhovou diverzitu organismů a všechny vztahy mezi nimi, bionika - je hraniční obor, systematicky zaměřený na uplatňování poznatků ze studia živých organismů a jejich struktur při vývoji nových technologií, biostatistika - obor využívající metody matematické statistiky při studiu proměnlivosti živých organizmů, botanika - (též rostlinopis, fytologie) zabývá se flórou, tudíž rostlinnou částí přírody, buněčná biologie - (též cytologie) je věda zabývající se studiem buněk, ekologie - studium vlivů živých organismů a neživých složek navzájem, nebo na jejich prostředí, etologie - vědní obor v rámci zoologie, který se zabývá studiem chování živočichů, evoluční biologie - zabývá  se biologickou evolucí organismů a mechanismy, které se při ní uplatňují, fyziologie - studium o fungování živých organismů, jejich částí a orgánů, genetika - zabývá se dědičností i proměnlivostí organismů a jejími příčinami, matematická biologie -  používá matematické metody ke studiu živých organismů, medicínská biologie a lékařské disciplíny , mikrobiologie -  je věda studující mikroorganismy, molekulární biologie - studium buněčných biologických procesů na jejich molekulární úrovni, morfologie - zabývá se vnější stavbou organismů, mykologie - studium hub, jejich genetických a biochemických vlastností, paleontologie -  je věda o životě v minulých geologických obdobích, virologie - zabývá se studiem nebuněčných organismů, zejména virů, ale i viroidů a virusoidů, vývojová biologie - zabývá se studiem procesů růstu a vývoje organismů, zoologie - studie zvířat, včetně klasifikace, fyziologie, vývoje a chovánía mnoho dalších specializovaných vědních disciplín.
+Pod biologii tedy můžeme zařadit, nebo nalézt její úzkou spojitost s následujícími vědními obory: , agrobiologie " věda, která využívá biologické zákonitosti v zemědělství, anatomie " studium forem a funkcí u rostlin, zvířat a jiných organismů, nebo specificky u lidí, bionomie " je komplexní studium organismu a jeho vztah k jeho prostředí, biogeografie " je nauka o rozdělení biodiverzity v prostoru a čase, biochemie " je vědní disciplína na pomezí biologie a chemie, biologická systematika " (též taxonomie) vědecky zkoumá druhy a druhovou diverzitu organismů a všechny vztahy mezi nimi, bionika " je hraniční obor, systematicky zaměřený na uplatňování poznatků ze studia živých organismů a jejich struktur při vývoji nových technologií, biostatistika " obor využívající metody matematické statistiky při studiu proměnlivosti živých organizmů, botanika " (též rostlinopis, fytologie) zabývá se flórou, tudíž rostlinnou částí přírody, buněčná biologie " (též cytologie) je věda zabývající se studiem buněk, ekologie " studium vlivů živých organismů a neživých složek navzájem, nebo na jejich prostředí, etologie " vědní obor v rámci zoologie, který se zabývá studiem chování živočichů, evoluční biologie " zabývá  se biologickou evolucí organismů a mechanismy, které se při ní uplatňují, fyziologie " studium o fungování živých organismů, jejich částí a orgánů, genetika " zabývá se dědičností i proměnlivostí organismů a jejími příčinami, matematická biologie "  používá matematické metody ke studiu živých organismů, medicínská biologie a lékařské disciplíny , mikrobiologie "  je věda studující mikroorganismy, molekulární biologie " studium buněčných biologických procesů na jejich molekulární úrovni, morfologie " zabývá se vnější stavbou organismů, mykologie " studium hub, jejich genetických a biochemických vlastností, paleontologie "  je věda o životě v minulých geologických obdobích, virologie " zabývá se studiem nebuněčných organismů, zejména virů, ale i viroidů a virusoidů, vývojová biologie " zabývá se studiem procesů růstu a vývoje organismů, zoologie " studie zvířat, včetně klasifikace, fyziologie, vývoje a chovánía mnoho dalších specializovaných vědních disciplín.
+
+přepsání
+Filozofie (řecky φιλοσοφία, složenina ze slov φιλώ "(filó)" miluji, objímám, líbám a σοφία "(sofía)" moudrost), je láska k moudrosti, v antice souhrn veškerého vědění, dnes věda o kladení si otázek o smyslu života, možnostech poznání, podstatě světa a vesmíru apod.
+Filosofie (řecky φιλοσοφία, složenina ze slov φιλώ "(filó)" miluji, objímám, líbám a σοφία "(sofía)" moudrost) je věda zkoumající neempirické otázky: o smyslu života, možnostech poznání, podstatě světa a vesmíru apod.
+
+přepsání
+Filozofie je zkoumání neempirických otázek jako jak můžeme věci vědět, zda můžeme vědět něco o budoucnosti, když jediné co máme je minulost, co je hodnota a jak ji poznáte, nebo co je eticky přípustné a co není.
+V sémantickém významu je filosofie zkoumání, jak můžeme věci vědět, zda můžeme vědět něco o budoucnosti, když jediné, co máme, je minulost; co je hodnota a jak ji poznáme; co je ethicky přípustné a co není.
+
+/* Hlavní filozofické pozice */
+Racionalismus , Historicismus, Perspektivismus, Psychologismus a Nominalismusvs.
+Racionalismus , Historicismus, Perspektivismus, Psychologismus a Nominalismus vs.
+
+/* Hlavní filosofické pozice */
+Pozitivismus a Realismus, Hedonismus, Humanismus, Naturalismus , PragmatismusFilosofem je člověk studovaný, logicky uvažující, zkoumající podstatu věci.
+Pozitivismus a Realismus, Hedonismus, Humanismus, Naturalismus , Pragmatismus, NovopozitivismusFilosofem je člověk studovaný, logicky uvažující, zkoumající podstatu věci.
+
+oprava opravy - nejspis chyba zavlekla soucasnou editaci dvou lidi ve dvou mistech
+Jazyky píšící latinkou:# ph: , , , , , , # s: , , , , , , , , , , , , , , , , , , # z: , , , , , , , Je tedy jen na nás, zda se čeština zařadí mezi západo- a východoevropské nebo středodoevropské jazyky.
+Jazyky píšící latinkou:# ph: , , , , , , # s: , , , , , , , , , , , , , , , , # z: , , , , , , , Jazyky nepíšící latinkou:# s: , , Je tedy jen na nás, zda se čeština zařadí mezi západo- a východoevropské nebo středodoevropské jazyky.
+
+/* Současné filozofické směry v České republice */
+Také Jiří Fuchs přednáší mimo akademické kruhy už z dob před listopadem 1989 v současnosti v kontaktu s Občanským institutem.
+Jiří Fuchs přednáší mimo akademické kruhy už z dob před listopadem 1989 v současnosti v kontaktu s Občanským institutem.
+
+/* Současné filozofické směry v České republice */
+, Ludwig Wittgenstein, Ferdinand de Sausure, Noam Chomsky, Umberto Eco , Bertrand Russell, George Edward Moore, Rudolf CarnapV devatenáctém století žil filosof a ekonom John Stuart Mill.
+Upravil Petr Dvořák, Ludwig Wittgenstein, Ferdinand de Sausure, Noam Chomsky, Umberto Eco , Bertrand Russell, George Edward Moore, Rudolf CarnapV devatenáctém století žil filosof a ekonom John Stuart Mill.
+
+/* Současné filozofické směry v České republice */- podpis
+Upravil Petr Dvořák, Ludwig Wittgenstein, Ferdinand de Sausure, Noam Chomsky, Umberto Eco , Bertrand Russell, George Edward Moore, Rudolf CarnapV devatenáctém století žil filosof a ekonom John Stuart Mill.
+, Ludwig Wittgenstein, Ferdinand de Sausure, Noam Chomsky, Umberto Eco , Bertrand Russell, George Edward Moore, Rudolf CarnapV devatenáctém století žil filosof a ekonom John Stuart Mill.
+
+/* Současné filozofické směry v České republice */  opraven link
+S. Sousedíka (FF UK, KTF UK): Petr Dvořák (FF UK, CMTF UP), Tomáš Machula, Lukáš Novák, Daniel Heider (všichni TF JU), David Svoboda (KTF UK).
+Stanislava Sousedíka (FF UK, KTF UK): Petr Dvořák (FF UK, CMTF UP), Tomáš Machula, Lukáš Novák, Daniel Heider (všichni TF JU), David Svoboda (KTF UK).
+
+robot: typografické a kódové korekce a náhrady přesměrování podle [[Wikipedista:Dinybot|specifikace]]
+"Platon" :"Údiv vedl lidi k filosofování " na počátku i dnes " a to tak, že se zarazili s údivem u nejbližších otázek a potom se pomalu zamýšleli i nad většími věcmi.
+"Platon" :"Údiv vedl lidi k filosofování " na počátku i dnes " a to tak, že se zarazili s údivem u nejbližších otázek a potom se pomalu zamýšleli i nad většími věcmi"\.
+
+robot: typografické a kódové korekce a náhrady přesměrování podle [[Wikipedista:Dinybot|specifikace]]
+"Cicero":Immanuel Kant vymezil úlohu filosofie třemi otázkami: :, 1) Co mohu vědět?
+"Cicero":Immanuel Kant vymezil úlohu filosofie třemi otázkami::, 1) Co mohu vědět?
+
+robot: typografické a kódové korekce a náhrady přesměrování podle [[Wikipedista:Dinybot|specifikace]]
+a :, 3) V co mohu doufat?
+a:, 3) V co mohu doufat?
+
+robot: typografické a kódové korekce a náhrady přesměrování podle [[Wikipedista:Dinybot|specifikace]]
+, které lze podle něho shrnout do jediné: :, "Co je člověk"?
+, které lze podle něho shrnout do jediné::, "Co je člověk"?
+
+robot: typografické a kódové korekce a náhrady přesměrování podle [[Wikipedista:Dinybot|specifikace]]
+Tak filosofické myšlení má např., vytvářet a používat pevné pojmy, , každé cizí tvrzení podrobit kritice,, každé vlastní být schopno racionálně zdůvodnit.Naopak zde neplatí žádné jiné autority než přesvědčivost racionálního argumentu.
+Tak filosofické myšlení má např., vytvářet a používat pevné pojmy,, každé cizí tvrzení podrobit kritice,, každé vlastní být schopno racionálně zdůvodnit.Naopak zde neplatí žádné jiné autority než přesvědčivost racionálního argumentu.
+
+robot: typografické a kódové korekce a náhrady přesměrování podle [[Wikipedista:Dinybot|specifikace]]
+Hlavní filosofické pozice LiteraturaSlovníky a příručkyLiteratura k úvodu Podívejte se též na Externí odkazy , Stanford Encyclopedia of Philosophy - en, Internet Encyclopedia of Philosophy - en , Phillex " slovník filosofických pojmů - de, Philolex " slovník filosofů a pojmů - de, Rudolf Eisler: Wörterbuch der philosophischen Begriffe (1904), F. Kirchner: Wörterbuch philosophischer Grundbegriffe - de, Charles Jourdain, "Notions de philosophie" - fr , Karl Vorländer " Geschichte der Philosophie (1902) - de, Paul Janet, "Traité élémentaire de philosophie" - fr ; , Victor Cousin, "Histoire générale de la philosophie" - fr.
+Hlavní filosofické pozice LiteraturaSlovníky a příručkyLiteratura k úvodu Podívejte se též na Externí odkazy , Stanford Encyclopedia of Philosophy - en, Internet Encyclopedia of Philosophy - en, Phillex " slovník filosofických pojmů - de, Philolex " slovník filosofů a pojmů - de, Rudolf Eisler: Wörterbuch der philosophischen Begriffe (1904), F. Kirchner: Wörterbuch philosophischer Grundbegriffe - de, Charles Jourdain, "Notions de philosophie" - fr, Karl Vorländer " Geschichte der Philosophie (1902) - de, Paul Janet, "Traité élémentaire de philosophie" - fr ;, Victor Cousin, "Histoire générale de la philosophie" - fr.
+
+Náhrada názvu sekce "Podívejte se ..." na "Související články"
+Hlavní filosofické pozice LiteraturaSlovníky a příručkyLiteratura k úvodu Podívejte se též na Externí odkazy , Stanford Encyclopedia of Philosophy - en, Internet Encyclopedia of Philosophy - en, Phillex " slovník filosofických pojmů - de, Philolex " slovník filosofů a pojmů - de, Rudolf Eisler: Wörterbuch der philosophischen Begriffe (1904), F. Kirchner: Wörterbuch philosophischer Grundbegriffe - de, Charles Jourdain, "Notions de philosophie" - fr, Karl Vorländer " Geschichte der Philosophie (1902) - de, Paul Janet, "Traité élémentaire de philosophie" - fr ;, Victor Cousin, "Histoire générale de la philosophie" - fr.
+Hlavní filosofické pozice LiteraturaSlovníky a příručkyLiteratura k úvodu Související články Externí odkazy , Stanford Encyclopedia of Philosophy - en, Internet Encyclopedia of Philosophy - en, Phillex " slovník filosofických pojmů - de, Philolex " slovník filosofů a pojmů - de, Rudolf Eisler: Wörterbuch der philosophischen Begriffe (1904), F. Kirchner: Wörterbuch philosophischer Grundbegriffe - de, Charles Jourdain, "Notions de philosophie" - fr, Karl Vorländer " Geschichte der Philosophie (1902) - de, Paul Janet, "Traité élémentaire de philosophie" - fr ;, Victor Cousin, "Histoire générale de la philosophie" - fr.
+
+Celková revize po formální stránce
+Filosofie, řecky φιλοσοφία, z φιλειν ("filein", mít rád, toužit po něčem) a σοφια ("sofía" moudrost, zdatnost) je soustavné, racionální a kritické zkoumání skutečnosti, světa a člověka, případně i toho, co je přesahuje (metafyzika).
+Filosofie, řecky φιλοσοφία, z φιλειν ("filein", mít rád, toužit po něčem) a σοφια ("sofía", moudrost, zdatnost) je soustavné, racionální a kritické zkoumání skutečnosti, světa a člověka, případně i toho, co je přesahuje (metafyzika).
+
+Celková revize po formální stránce
+Není to tedy jen akademická disciplina, ale také způsob života, který začíná údivem (Platon) a snaží se s tajemstvím světa a existence nějak vyrovnat.
+Není to tedy jen akademická disciplina, ale také způsob života, který začíná údivem (Platón) a snaží se s tajemstvím světa a existence nějak vyrovnat.
+
+Celková revize po formální stránce
+Někteří filosofii charakterizovali takto::"Údiv je postoj člověka, který moudrost skutečně miluje, a není jiný počátek filosofie než tento".
+Někteří filosofii charakterizovali takto:"Údiv je postoj člověka, který moudrost skutečně miluje, a není jiný počátek filosofie než tento".
+
+Celková revize po formální stránce
+Platón :"Údiv vedl lidi k filosofování " na počátku i dnes " a to tak, že se zarazili s údivem u nejbližších otázek a potom se pomalu zamýšleli i nad většími věcmi"\.
+Platón "Údiv vedl lidi k filosofování " na počátku i dnes " a to tak, že se zarazili s údivem u nejbližších otázek a potom se pomalu zamýšleli i nad většími věcmi"\.
+
+Celková revize po formální stránce
+Aristotelés :"Kdo chce hledat radost sám v sobě, nenajde ji jinde než ve filosofii".
+Aristotelés "Kdo chce hledat radost sám v sobě, nenajde ji jinde než ve filosofii".
+
+Celková revize po formální stránce
+Aristotelés :"Filosofie je péče (starost) o duši".
+Aristotelés "Filosofie je péče (starost) o duši".
+
+Celková revize po formální stránce
+Cicero :"Studium filosofie není k tomu, abychom věděli, co se lidé domnívali, ale jak se to má s pravdou věcí".
+Cicero "Studium filosofie není k tomu, abychom věděli, co se lidé domnívali, ale jak se to má s pravdou věcí".
+
+Celková revize po formální stránce
+Tomáš Akvinský:"Žít a nefilosofovat je jako mít zavřené oči a nikdy se ani nepokusit je otevřít".
+Tomáš Akvinský "Žít a nefilosofovat je jako mít zavřené oči a nikdy se ani nepokusit je otevřít".
+
+Celková revize po formální stránce
+René Descartes :Immanuel Kant vymezil úlohu filosofie třemi otázkami::, 1) Co mohu vědět?
+René Descartes Immanuel Kant vymezil úlohu filosofie třemi otázkami:"Co mohu vědět?
+
+Celková revize po formální stránce
+:, 2) Co mám činit?
+Co mám činit?
+
+Celková revize po formální stránce
+a:, 3) V co mohu doufat?
+V co mohu doufat"?
+
+Celková revize po formální stránce
+, které lze shrnout do jediné::, "Co je člověk"?
+, které lze shrnout do jediné:"Co je člověk"?
+
+Celková revize po formální stránce
+:"Úkolem filosofie je pochopit to, co jest".
+Úkolem filosofie je pochopit to, co jest".
+
+Celková revize po formální stránce
+G. W. F. Hegel :"Zachytit hranice rozumu " jen to je pravá filosofie".
+G. W. F. Hegel "Zachytit hranice rozumu " jen to je pravá filosofie".
+
+Celková revize po formální stránce
+Friedrich Nietzsche :"Velká filosofie není filosofie bez chyb, ale beze strachu".
+Friedrich Nietzsche "Velká filosofie není filosofie bez chyb, ale beze strachu".
+
+Celková revize po formální stránce
+Charles Péguy:"Filosofie není nauka, nýbrž činnost.
+Charles Péguy "Filosofie není nauka, nýbrž činnost.
+
+Celková revize po formální stránce
+Ludwig WittgensteinOd věd, které kdysi z filosofie vzešly, se filosofie liší jednak širší, vlastně neomezenou oblastí témat, jednak volnější metodou.
+Ludwig Wittgenstein Od věd, které kdysi z filosofie vzešly, se filosofie liší jednak širší, vlastně neomezenou oblastí témat, jednak volnější metodou.
+
+Celková revize po formální stránce
+Bývá pozadu za skutečností, kterou chce pochopit - proto říká Hegel, že "Minervina sova létá za soumraku".
+Bývá pozadu za skutečností, kterou chce pochopit " proto říká Hegel, že "Minervina sova létá za soumraku".
+
+Celková revize po formální stránce
+Tak se Descartes cituje podle souborného vydání Adama a Tanneryho z let 1897 - 1913 (AT díl, stránka), Kant podle "Akademie-Ausgabe", Berlín (AA svazek, stránka), Nietzsche podle kritického vydání díla a dopisů (KGW, KGB) nebo podle příručního vydání (KSA, KSB), obojí od Colliho a Montinariho.
+Tak se Descartes cituje podle souborného vydání Adama a Tanneryho z let 1897 " 1913 (AT díl, stránka), Kant podle "Akademie-Ausgabe", Berlín (AA svazek, stránka), Nietzsche podle kritického vydání díla a dopisů (KGW, KGB) nebo podle příručního vydání (KSA, KSB), obojí od Colliho a Montinariho.
+
+Celková revize po formální stránce
+, metafyzika a ontologie " o celku bytí, o jeho počátku, povaze a smyslu;, logika " o správném myšlení, vyvozování a argumentování;, teorie poznání (epistemologie, gnoseologie) " o možnostech a podmínkách poznávání;, teorie vědy " o podmínkách, metodách a cílech vědy;, filosofie jazyka " o vztahu jazyka k myšlení a skutečnosti, o komunikaci.
+, metafyzika a ontologie " o celku bytí, o jeho počátku, povaze a smyslu;, logika " o správném myšlení, vyvozování a argumentování;, teorie poznání (epistemologie, gnoseologie) " o možnostech a podmínkách poznávání;, filosofie vědy " o podmínkách, metodách a cílech vědy;, filosofie jazyka " o vztahu jazyka k myšlení a skutečnosti, o komunikaci.
+
+Celková revize po formální stránce
+, dějiny filosofie " o filosofech, filosofických školách a směrech minulosti;, filosofická antropologie " o člověku, jeho možnostech a společnosti;, filosofie dějin - o dějinných procesech a tendencích, o jejich smyslu;, filosofie mysli " o vědomí, vnímání a mozku;, filosofie náboženství " o Bohu, o náboženství a mravnosti;, filosofie práva " o spravedlnosti, o smyslu a cílech práva;, filosofie výchovy " o výchově a vzdělávání, o úloze učitele a školství;, politická filosofie " o občanovi a svobodě, o vládě a státu.
+, dějiny filosofie " o filosofech, filosofických školách a směrech minulosti;, filosofická antropologie " o člověku, jeho možnostech a společnosti;, filosofie dějin " o dějinných procesech a tendencích, o jejich smyslu;, filosofie mysli " o vědomí, vnímání a mozku;, filosofie náboženství " o Bohu, o náboženství a mravnosti;, filosofie práva " o spravedlnosti, o smyslu a cílech práva;, filosofie výchovy " o výchově a vzdělávání, o úloze učitele a školství;, politická filosofie " o občanovi a svobodě, o vládě a státu.
+
+Celková revize po formální stránce
+Hlavní filosofické pozice LiteraturaSlovníky a příručkyLiteratura k úvodu Související články Externí odkazy , Stanford Encyclopedia of Philosophy - en, Internet Encyclopedia of Philosophy - en, Phillex " slovník filosofických pojmů - de, Philolex " slovník filosofů a pojmů - de, Rudolf Eisler: Wörterbuch der philosophischen Begriffe (1904), F. Kirchner: Wörterbuch philosophischer Grundbegriffe - de, Charles Jourdain, "Notions de philosophie" - fr, Karl Vorländer " Geschichte der Philosophie (1902) - de, Paul Janet, "Traité élémentaire de philosophie" - fr ;, Victor Cousin, "Histoire générale de la philosophie" - fr.
+Východní filosofie Hlavní filosofické pozice Literatura Slovníky a příručky Literatura k úvodu Externí odkazy , Stanford Encyclopedia of Philosophy " en, Internet Encyclopedia of Philosophy " en, Phillex " slovník filosofických pojmů " de, Philolex " slovník filosofů a pojmů " de, Rudolf Eisler: Wörterbuch der philosophischen Begriffe (1904), F. Kirchner: Wörterbuch philosophischer Grundbegriffe " de, Charles Jourdain, "Notions de philosophie" " fr, Karl Vorländer, "Geschichte der Philosophie (1902)" " de, Paul Janet, "Traité élémentaire de philosophie" " fr, Victor Cousin, "Histoire générale de la philosophie" " fr, Klasická literatura " en, "Gallica", knihovna el.
+
+/* Co není filosofie? */ oprava citace a pár vnitřních odkazů do odstavce
+Jiří MichálekNa rozdíl od jednotlivých věd, které se zpravidla vymezují také svojí specifickou metodou (matematickou, experimentální, historickou a pod.
+Na rozdíl od jednotlivých věd, které se zpravidla vymezují také svojí specifickou metodou (matematickou, experimentální, historickou a pod.
+
+Editace uživatele [[Special:Contributions/90.179.148.242|90.179.148.242]] ([[User talk:90.179.148.242|diskuse]]) vráceny do předchozího stavu, jehož autorem je [[User:Wespecz|Wespecz]]
+Bonaventura, Roger Bacon, Pozdní scholastika: Mistr Eckhart, Jan Duns Scotus, William Ockham, Jan Buridan, Mikuláš Oresme, Tomáš Bradwardine, Vilém Heytesbury, Petr z Ailly, Renesanční filosofie, Mikuláš Kusánský, Erasmus Rotterdamský, Mikuláš Koperník, Giordano Bruno, Reformace: Jan Hus, Martin Luther, Philipp Melanchthon, Ulrich Zwingli, Jan Kalvín, René Descartes, Baruch Spinoza, Blaise Pascal, Gottfried Leibniz, Thomas Hobbes, John Locke, George Berkeley, Isaac Newton, Charles Louis Montesquieu, Voltaire, Jean-Jacques Rousseau, David Hume, Immanuel Kant nečuuum na mě, Německý idealismus: Johann Gottlieb Fichte, Friedrich Wilhelm Joseph von Schelling, Georg Wilhelm Friedrich Hegel, Jeremy Bentham, Auguste Comte, Herbert Spencer, John Stuart Mill, Ludwig Feuerbach, Arthur Schopenhauer, Friedrich Nietzsche, Søren Kierkegaard, Dialektický materialismus: Karl Marx, Friedrich Engels, Vitalismus: Henri Bergson, Wilhelm Dilthey, Hans Driesch, Oswald Spengler, Pragmatismus: William James, John Dewey, Fenomenologie: Edmund Husserl, Martin Heidegger, Hans-Georg Gadamer, Maurice Merleau-Ponty, Paul Ricoeur, Jan Patočka, Eugen Fink, Existencialismus: Jean-Paul Sartre, Albert Camus, Karl Jaspers, Pierre Teilhard de Chardin, Filosofie jazyka: Ferdinand de Saussure, Ludwig Wittgenstein, Noam Chomsky, Umberto Eco, Analytická filosofie: George Edward Moore, Bertrand Russell, Rudolf Carnap, Filosofie vědy: Karl Raimund Popper, Paul Karl Feyerabend, Thomas Kuhn, Indická filosofie: Védy, Upanišady, Bhagavadgíta, Buddha (Siddhártha Gautama), Mahávíra (Džina), Pataňdžali, Bódhidharma, Ánanda, Čínská filosofie: Konfucius (Kchung-fu-c', Kongfuzi), Lao-c' (Laozi), Čuang-c" (Zhuangzi), Mo-c' (Mozi), Japonská filosofie: Zen, Kúkai, Dógen, Korejská filosofie : Son, atomismus vs.
+Bonaventura, Roger Bacon, Pozdní scholastika: Mistr Eckhart, Jan Duns Scotus, William Ockham, Jan Buridan, Mikuláš Oresme, Tomáš Bradwardine, Vilém Heytesbury, Petr z Ailly, Renesanční filosofie, Mikuláš Kusánský, Erasmus Rotterdamský, Mikuláš Koperník, Giordano Bruno, Reformace: Jan Hus, Martin Luther, Philipp Melanchthon, Ulrich Zwingli, Jan Kalvín, René Descartes, Baruch Spinoza, Blaise Pascal, Gottfried Leibniz, Thomas Hobbes, John Locke, George Berkeley, Isaac Newton, Charles Louis Montesquieu, Voltaire, Jean-Jacques Rousseau, David Hume, Immanuel Kant, Německý idealismus: Johann Gottlieb Fichte, Friedrich Wilhelm Joseph von Schelling, Georg Wilhelm Friedrich Hegel, Jeremy Bentham, Auguste Comte, Herbert Spencer, John Stuart Mill, Ludwig Feuerbach, Arthur Schopenhauer, Friedrich Nietzsche, Søren Kierkegaard, Dialektický materialismus: Karl Marx, Friedrich Engels, Vitalismus: Henri Bergson, Wilhelm Dilthey, Hans Driesch, Oswald Spengler, Pragmatismus: William James, John Dewey, Fenomenologie: Edmund Husserl, Martin Heidegger, Hans-Georg Gadamer, Maurice Merleau-Ponty, Paul Ricoeur, Jan Patočka, Eugen Fink, Existencialismus: Jean-Paul Sartre, Albert Camus, Karl Jaspers, Pierre Teilhard de Chardin, Filosofie jazyka: Ferdinand de Saussure, Ludwig Wittgenstein, Noam Chomsky, Umberto Eco, Analytická filosofie: George Edward Moore, Bertrand Russell, Rudolf Carnap, Filosofie vědy: Karl Raimund Popper, Paul Karl Feyerabend, Thomas Kuhn, Indická filosofie: Védy, Upanišady, Bhagavadgíta, Buddha (Siddhártha Gautama), Mahávíra (Džina), Pataňdžali, Bódhidharma, Ánanda, Čínská filosofie: Konfucius (Kchung-fu-c', Kongfuzi), Lao-c' (Laozi), Čuang-c" (Zhuangzi), Mo-c' (Mozi), Japonská filosofie: Zen, Kúkai, Dógen, Korejská filosofie : Son, atomismus vs.
+
+/* Hlavní filosofické pozice */
+realismus, hédonismus, historicismus, humanismus, naturalismus, perspektivismus, pozitivismus a novopozitivismus, pragmatismus, psychologismus Reference , Klasická literatura " en, "Gallica", knihovna el.
+biocentrismus, hédonismus, historicismus, humanismus, naturalismus, perspektivismus, pozitivismus a novopozitivismus, pragmatismus, psychologismus Reference , Klasická literatura " en, "Gallica", knihovna el.
+
+Revize a omezení ext. odkazů
+biocentrismus, hédonismus, historicismus, humanismus, naturalismus, perspektivismus, pozitivismus a novopozitivismus, pragmatismus, psychologismus, Seznam filosofů, Seznam politických filosofů Reference , Klasická literatura " en, "Gallica", knihovna el.
+biocentrismus, hédonismus, historicismus, humanismus, naturalismus, perspektivismus, pozitivismus a novopozitivismus, pragmatismus, psychologismus, Seznam filosofů, Seznam politických filosofů Reference , Project Gutenberg: Klasická literatura " en, "Gallica", knihovna el.
+
+[[WP:WPCleaner|WPCleaner]] v1.30 - Opraveno pomocí [[WP:WCW]] - Opravy pravopisu a typografie / Zbývající odkaz - [[Tvrzení]]
+Na rozdíl od jednotlivých věd, které se zpravidla vymezují také svojí specifickou metodou (matematickou, experimentální, historickou a pod.
+Na rozdíl od jednotlivých věd, které se zpravidla vymezují také svojí specifickou metodou (matematickou, experimentální, historickou apod.
+
+[[WP:WPCleaner|WPCleaner]] v1.30 - Opraveno pomocí [[WP:WCW]] - Opravy pravopisu a typografie / Zbývající odkaz - [[Tvrzení]]
+Tak filosofické myšlení má např., vytvářet a používat pevné pojmy,, každé cizí tvrzení podrobit kritice,, každé vlastní být schopno racionálně zdůvodnit.Naopak zde neplatí žádné jiné autority než přesvědčivost racionálního argumentu.
+Tak filosofické myšlení má např. , vytvářet a používat pevné pojmy,, každé cizí tvrzení podrobit kritice,, každé vlastní být schopno racionálně zdůvodnit.Naopak zde neplatí žádné jiné autority než přesvědčivost racionálního argumentu.
+
+[[WP:WPCleaner|WPCleaner]] v1.30 - Opraveno pomocí [[WP:WCW]] - Opravy pravopisu a typografie / Zbývající odkaz - [[Tvrzení]]
+Pro dílo Aristotelovo je základem berlínské vydání A. I. Bekkera z let 1816 " 1823. Na začátek "Etiky Nikomachovy" se odkáže jako "Et.
+Pro dílo Aristotelovo je základem berlínské vydání A. I. Bekkera z let 1816"1823. Na začátek "Etiky Nikomachovy" se odkáže jako "Et.
+
+[[WP:WPCleaner|WPCleaner]] v1.30 - Opraveno pomocí [[WP:WCW]] - Opravy pravopisu a typografie / Zbývající odkaz - [[Tvrzení]]
+Tak se Descartes cituje podle souborného vydání Adama a Tanneryho z let 1897 " 1913 (AT díl, stránka), Kant podle "Akademie-Ausgabe", Berlín (AA svazek, stránka), Nietzsche podle kritického vydání díla a dopisů (KGW, KGB) nebo podle příručního vydání (KSA, KSB), obojí od Colliho a Montinariho.
+Tak se Descartes cituje podle souborného vydání Adama a Tanneryho z let 1897"1913 (AT díl, stránka), Kant podle "Akademie-Ausgabe", Berlín (AA svazek, stránka), Nietzsche podle kritického vydání díla a dopisů (KGW, KGB) nebo podle příručního vydání (KSA, KSB), obojí od Colliho a Montinariho.
+
+[[WP:WPCleaner|WPCleaner]] v1.30 - Opraveno pomocí [[WP:WCW]] - Opravy pravopisu a typografie / Zbývající odkaz - [[Tvrzení]]
+Bonaventura, Roger Bacon, Pozdní scholastika: Mistr Eckhart, Jan Duns Scotus, William Ockham, Jan Buridan, Mikuláš Oresme, Tomáš Bradwardine, Vilém Heytesbury, Petr z Ailly, Renesanční filosofie, Mikuláš Kusánský, Erasmus Rotterdamský, Mikuláš Koperník, Giordano Bruno, Reformace: Jan Hus, Martin Luther, Philipp Melanchthon, Ulrich Zwingli, Jan Kalvín, René Descartes, Baruch Spinoza, Blaise Pascal, Gottfried Leibniz, Thomas Hobbes, John Locke, George Berkeley, Isaac Newton, Charles Louis Montesquieu, Voltaire, Jean-Jacques Rousseau, David Hume, Immanuel Kant, Německý idealismus: Johann Gottlieb Fichte, Friedrich Wilhelm Joseph von Schelling, Georg Wilhelm Friedrich Hegel, Jeremy Bentham, Auguste Comte, Herbert Spencer, John Stuart Mill, Ludwig Feuerbach, Arthur Schopenhauer, Friedrich Nietzsche, Søren Kierkegaard, Dialektický materialismus: Karl Marx, Friedrich Engels, Tomáš Garrigue Masaryk, Vitalismus: Henri Bergson, Wilhelm Dilthey, Hans Driesch, Oswald Spengler, Pragmatismus: William James, John Dewey, Fenomenologie: Edmund Husserl, Martin Heidegger, Hans-Georg Gadamer, Maurice Merleau-Ponty, Paul Ricoeur, Jan Patočka, Eugen Fink, Existencialismus: Jean-Paul Sartre, Albert Camus, Karl Jaspers, Pierre Teilhard de Chardin, Filosofie jazyka: Ferdinand de Saussure, Ludwig Wittgenstein, Noam Chomsky, Umberto Eco, Analytická filosofie: George Edward Moore, Bertrand Russell, Rudolf Carnap, Filosofie vědy: Karl Raimund Popper, Paul Karl Feyerabend, Thomas Kuhn, Indická filosofie: Védy, Upanišady, Bhagavadgíta, Buddha (Siddhártha Gautama), Mahávíra (Džina), Pataňdžali, Bódhidharma, Ánanda, Čínská filosofie: Konfucius (Kchung-fu-c', Kongfuzi), Lao-c' (Laozi), Čuang-c" (Zhuangzi), Mo-c' (Mozi), Japonská filosofie: Zen, Kúkai, Dógen, Korejská filosofie : Son, atomismus vs.
+Bonaventura, Roger Bacon, Pozdní scholastika: Mistr Eckhart, Jan Duns Scotus, William Ockham, Jan Buridan, Mikuláš Oresme, Tomáš Bradwardine, Vilém Heytesbury, Petr z Ailly, Renesanční filosofie, Mikuláš Kusánský, Erasmus Rotterdamský, Mikuláš Koperník, Giordano Bruno, Reformace: Jan Hus, Martin Luther, Philipp Melanchthon, Ulrich Zwingli, Jan Kalvín, René Descartes, Baruch Spinoza, Blaise Pascal, Gottfried Leibniz, Thomas Hobbes, John Locke, George Berkeley, Isaac Newton, Charles Louis Montesquieu, Voltaire, Jean-Jacques Rousseau, David Hume, Immanuel Kant, Německý idealismus: Johann Gottlieb Fichte, Friedrich Wilhelm Joseph von Schelling, Georg Wilhelm Friedrich Hegel, Jeremy Bentham, Auguste Comte, Herbert Spencer, John Stuart Mill, Ludwig Feuerbach, Arthur Schopenhauer, Friedrich Nietzsche, Søren Kierkegaard, Dialektický materialismus: Karl Marx, Friedrich Engels, Tomáš Garrigue Masaryk, Vitalismus: Henri Bergson, Wilhelm Dilthey, Hans Driesch, Oswald Spengler, Pragmatismus: William James, John Dewey, Fenomenologie: Edmund Husserl, Martin Heidegger, Hans-Georg Gadamer, Maurice Merleau-Ponty, Paul Ricoeur, Jan Patočka, Eugen Fink, Existencialismus: Jean-Paul Sartre, Albert Camus, Karl Jaspers, Pierre Teilhard de Chardin, Filosofie jazyka: Ferdinand de Saussure, Ludwig Wittgenstein, Noam Chomsky, Umberto Eco, Analytická filosofie: George Edward Moore, Bertrand Russell, Rudolf Carnap, Filosofie vědy: Karl Raimund Popper, Paul Karl Feyerabend, Thomas Kuhn, Indická filosofie: Védy, Upanišady, Bhagavadgíta, Buddha (Siddhártha Gautama), Mahávíra (Džina), Pataňdžali, Bódhidharma, Ánanda, Čínská filosofie: Konfucius (Kchung-fu-c', Kongfuzi), Lao-c' (Laozi), Čuang-c' (Zhuangzi), Mo-c' (Mozi), Japonská filosofie: Zen, Kúkai, Dógen, Korejská filosofie : Son, atomismus vs.
+

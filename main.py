@@ -35,10 +35,10 @@ poolProcesses = 8
 #Count of WikiPages
 pagesCount = 372696
 
-woOutputStream = io.open('wo.txt', 'wb')
-typoOutputStream = io.open('typos.txt', 'wb')
-editOutputStream = io.open('edit.txt', 'wb')
-otherOutputStream = io.open('other.txt', 'wb')
+woOutputStream = io.open('export/wo.txt', 'wb')
+typoOutputStream = io.open('export/typos.txt', 'wb')
+editOutputStream = io.open('export/edit.txt', 'wb')
+otherOutputStream = io.open('export/other.txt', 'wb')
 corpBuffer = []
 
 class page:
