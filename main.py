@@ -109,16 +109,18 @@ def splitBySentences(text):
 
 '''Function for text lemmatization'''
 def lemma(text):
-    text = cleanUpSentence(text, True, True).decode('utf-8','ignore').encode("utf-8") #No lemma just remove unnecessary chars
+    text = cleanUpSentence(text, True).decode('utf-8','ignore').encode("utf-8") #No lemma just remove unnecessary chars
     return text
 
+rePunctuation = re.compile('[%s]' % re.escape(string.punctuation))
 '''Generates bag of words'''
 def bagOfWords(sentence, doLemma=True, minWordLen=0):
-	if(doLemma):
-		sentence = lemma(sentence)
-	words = re.split("\s", sentence, flags=re.MULTILINE)
-	words = [w for w in words if len(w) > minWordLen]
-	return set(words)
+    sentence = rePunctuation.sub(' ', sentence)
+    if(doLemma):
+	sentence = lemma(sentence)
+    words = re.split("\s", sentence, flags=re.MULTILINE)
+    words = [w for w in words if len(w) > minWordLen]
+    return set(words)
 
 '''Func for distance metric (Levenshtein), used this impl: https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance#Python'''
 def wordDistance(s1, s2):
@@ -143,7 +145,6 @@ def wordDistance(s1, s2):
 '''Metric for similarity of two given sentences, returns nuber in range <0,1>'''
 def sentenceSimilarity(first, second):
 	firstBag = bagOfWords(first)
-
 	secndBag = bagOfWords(second)
 	if(len(firstBag) == 0 or len(secndBag) == 0): return 0
 	similarity = 2 * float(len(firstBag & secndBag))/(len(firstBag)+len(secndBag))
@@ -157,36 +158,46 @@ def cleanUpText(text):
     text = re.sub(u"[„“˝”ˮ‟″‶〃＂“]","\"",text, re.M) #Preserve only one type of double quotes
     text = re.sub(u"[‐‑‒−–⁃➖˗﹘-]","-",text, re.M) #Preserve only one type of hyphens
     text = re.sub(u"[…]","\.\.\.",text, re.M) #Clean text
-    text = re.sub(u"\*",", ",text, re.M) #Replace bullets
-    text = re.sub(u"(\s+)"," ",text, re.M) #Remove more spaces
     
-    text = re.sub(u"======.*?======","",text, re.M) #Remove headings
-    text = re.sub(u"=====.*?=====","",text, re.M) #Remove headings
-    text = re.sub(u"====.*?====","",text, re.M) #Remove headings
-    text = re.sub(u"===.*?===","",text, re.M) #Remove headings
-    text = re.sub(u"==.*?==","",text, re.M) #Remove headings
-    text = re.sub(u"=","",text, re.M) #Remove rest equal signs
-    text = re.sub(u"[\[\]]","",text, re.M) #Clean rest brackets
+    text = re.sub(u"======.*?======"," ",text, re.M) #Remove headings
+    text = re.sub(u"=====.*?====="," ",text, re.M) #Remove headings
+    text = re.sub(u"====.*?===="," ",text, re.M) #Remove headings
+    text = re.sub(u"===.*?==="," ",text, re.M) #Remove headings
+    text = re.sub(u"==.*?=="," ",text, re.M) #Remove headings
+    text = re.sub(u"="," ",text, re.M) #Remove rest equal signs
+    text = re.sub(u"[\[\]]"," ",text, re.M) #Clean rest brackets
+    text = re.sub(u"(\s+)"," ",text, re.M) #Remove more spaces
     return text
 
-def cleanUpSentence(text, removeDigits=False, removePunctuation=False):
+def cleanUpSentence(text, removeDigits=False, trimToSentenceStart=False):
     if(text == None):
 	return None
-    text = re.sub(u"\*",", ",text, re.M) #Replace bullets
-    text = re.sub(u"\'(\s*\')*","\'",text, re.M) #Remove more single quotes
-    text = re.sub(u"\"(\s*\")*","\"",text, re.M) #Remove more double quotes
-    text = re.sub(u"\s*,(\s*,)*",",",text, re.M) #Remove more commas
-    text = re.sub(u"\s*:(\s*:)*",":",text, re.M) #Remove more colons
-    text = re.sub(u"-(\s*-)*","-",text, re.M) #Remove more hyphens
-    text = re.sub(u"^(\s*(\*)\s*)","",text, re.M) #Replace bullets
-    text = re.sub(u"^.*?([A-Z\"\'])","\\1",text, re.M) #Replace bullets
-    text = re.sub(u"^[(:*\s*)(,*\s*)]","",text, re.M) #Remove starters
-    text = re.sub(u"([:.,])+[:.,]+","\\1",text, re.M) #Remove odd punctuation combinations
+    text = re.sub(u"\'(\s*\')*", "\'", text, re.M) #Remove more single quotes
+    text = re.sub(u"\"(\s*\")*", "\"", text, re.M) #Remove more double quotes
+    text = re.sub(u"\s*,(\s*,)*", ",", text, re.M) #Remove more commas
+    text = re.sub(u"\s*:(\s*:)*", ":", text, re.M) #Remove more colons
+    text = re.sub(u"-(\s*-)*", "-", text, re.M) #Remove more hyphens
+    #text = re.sub(u"^[(:*\s*)(,*\s*)]", " ", text, re.M) #Remove odd starters
+    text = re.sub(u"([:,\.])(\s*(\*)*\s*)", "\\1 ", text, re.M) #Replace bullets at the start
+    text = re.sub(u"^(\s*(\*)*\s*)", " ", text, re.M) #Replace bullets at the start
+    text = re.sub(u"\*", "; ", text, re.M) #Replace bullets
+    text = re.sub(u"\s*;(\s*;)*", ";", text, re.M) #Remove more semi-colons
+    text = re.sub(u"([:;.,])+[:;.,]+", "\\1 ", text, re.M) #Remove odd punctuation combinations
+    
+    if(trimToSentenceStart):
+	text = re.subn(u"^.*?[a-z0-9]\.\s([A-Z\"\'])", "\\1", text, re.M)
+	if(text[1] == 0):
+	    text = re.subn(u"^.*?([A-Z\"\'])", "\\1", text[0], re.M)
+	    if(text[1] == 0):
+		text = ""
+	    else:
+		text = text[0]
+	else:
+	    text = text[0]
     if(removeDigits):
-	text = re.sub("[0-9]"," ",text) #Remove more spaces
-    if(removePunctuation):
-	text = ''.join([i for i in text if (i not in string.punctuation)])
-    return text    
+	text = re.sub("[0-9]", " ", text) #Remove digits
+    text = re.sub(u"(\s+)"," ",text, re.M) #Remove more spaces
+    return text.strip()
 
 
 ###############################################################################
@@ -199,8 +210,8 @@ def cleanUpSentence(text, removeDigits=False, removePunctuation=False):
 Key idea - if difference of old sentence's & new sentence's word's sets is equals 0 then the only 
 thing that could've changed is word order'''
 def findWO(oldSent, newSent, comment):
-    oldBag = bagOfWords(cleanUpSentence(oldSent, False, True))
-    newBag = bagOfWords(cleanUpSentence(newSent, False, True))
+    oldBag = bagOfWords(oldSent)
+    newBag = bagOfWords(newSent)
     if(oldBag - newBag == 0):
 	woOutputStream.write("%s\n%s\n%s\n\n" % (comment.encode("utf-8"), oldSent, newSent))
 	return True
@@ -335,7 +346,7 @@ def normalizeText(text, title):
 		text = cleanUpText(text).encode("utf-8")
 		text = splitBySentences(text)
 		for i in range(0, len(text)):
-		    text[i] = cleanUpSentence(text[i])
+		    text[i] = cleanUpSentence(text[i], trimToSentenceStart=True)
 		return text
 	else:
 		return ""
