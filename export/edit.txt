@@ -1,3 +1,11 @@
+větší editace
+Nebeská mechanika se zabývá pohybem těles v gravitačním poli, například planet ve Sluneční soustavě.
+Zabývá se pohybem těles v gravitačním poli, například planet ve Sluneční soustavě.
+
+větší editace
+Astrofyzika se zabývá fyzikou hvězd a mezihvězdné hmoty (hustotou, teplotou, chemickým složením atd. ).
+Zabývá se fyzikou hvězd a mezihvězdné hmoty (hustotou, teplotou, chemickým složením atd. ).
+
 typo, nadpisy, pročištění souvisejících článků (jen ty důležitější, které nejsou zmíněné v článku), typografie
 Části astronomie: Astronomie se podobně jako další vědy začala rozvíjet ve starověku.
 Historie astronomie: Astronomie se podobně jako další vědy začala rozvíjet ve starověku.
@@ -14,49 +22,17 @@ Napřímení interních odkazů a úprava typografie spolu s využitím šablony
 V užším slova smyslu bychom pak biologii mohli popsat jako vědu, zkoumající organismy od úrovně subcelulární, tedy od úrovně jednotlivých buněčných organel se vším, co s nimi souvisí, přes úrovně buněk, tkání, orgánů a jedinců až po úroveň populací, společenstev, ekosystémů a biomů.
 V užším slova smyslu bychom pak biologii mohli popsat jako vědu, zkoumající organismy od úrovně subcelulární, tedy od úrovně jednotlivých buněčných organel se vším, co s nimi souvisí, přes úrovně buněk, tkání, orgánů a jedinců až po úroveň populací, společenstev, ekosystémů a biomů.
 
-/* Hlavní filozofické pozice */
-Hlavní filozofické pozice: Atomismus vs. Holismus; Monismus vs. Dualismus a Pluralismus; Materialismus vs. Idealismus; Empirismus vs. Racionalismus; Historicismus, Perspektivismus, Psychologismus a Nominalismusvs.
-Hlavní filozofické pozice: Atomismus vs. Holismus; Monismus vs. Dualismus a Pluralismus; Materialismus vs. Idealismus; Empirismus vs. Racionalismus; Historicismus, Perspektivismus, Psychologismus a Nominalismus vs. Positivismus a Realismus; Hedonismus; Humanismus; Naturalismus; Pragmatismus.
+Typografie
+Termín "biologie" tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744 - 1829).
+Termín "biologie" tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744-1829).
 
-/* Hlavní filosofické pozice */
-Hlavní filozofické pozice: Atomismus vs. Holismus; Monismus vs. Dualismus a Pluralismus; Materialismus vs. Idealismus; Empirismus vs. Racionalismus; Historicismus, Perspektivismus, Psychologismus a Nominalismus vs. Pozitivismus a Realismus; Hedonismus; Humanismus; Naturalismus; Pragmatismus.
-Hlavní filosofické pozice: Atomismus vs. Holismus; Monismus vs. Dualismus a Pluralismus; Materialismus vs. Idealismus; Empirismus vs. Racionalismus; Historicismus, Perspektivismus, Psychologismus a Nominalismus vs. Pozitivismus a Realismus; Hedonismus; Humanismus; Naturalismus; Pragmatismus.
+přepsání
+Filozofie (řecky φιλοσοφία, složenina ze slov φιλώ "(filó)" miluji, objímám, líbám a σοφία "(sofía)" moudrost), je láska k moudrosti, v antice souhrn veškerého vědění, dnes věda o kladení si otázek o smyslu života, možnostech poznání, podstatě světa a vesmíru apod.
+Filosofie (řecky φιλοσοφία, složenina ze slov φιλώ "(filó)" miluji, objímám, líbám a σοφία "(sofía)" moudrost) je věda zkoumající neempirické otázky: o smyslu života, možnostech poznání, podstatě světa a vesmíru apod.
 
-/* Hlavní filosofické pozice */
-Hlavní filosofické pozice: Atomismus vs. Holismus; Monismus vs. Dualismus a Pluralismus; Materialismus vs. Idealismus; Empirismus vs. Racionalismus; Historicismus, Perspektivismus, Psychologismus a Nominalismus vs. Pozitivismus a Realismus; Hedonismus; Humanismus; Naturalismus; Pragmatismus.
-Hlavní filosofické pozice: Atomismus vs. Holismus; Monismus vs. Dualismus a Pluralismus; Materialismus vs. Idealismus; Empirismus vs. Racionalismus; Historicismus, Perspektivismus, Psychologismus a Nominalismus vs. Pozitivismus a Realismus; Hedonismus; Humanismus; Naturalismus; Pragmatismus; Novopozitivismus.
-
-/* Současné filozofické směry v České republice */
-Také Jiří Fuchs přednáší mimo akademické kruhy už z dob před listopadem 1989 v současnosti v kontaktu s Občanským institutem.
-Jiří Fuchs přednáší mimo akademické kruhy už z dob před listopadem 1989 v současnosti v kontaktu s Občanským institutem.
-
-/* Současné filozofické směry v České republice */  opraven link
-S. Sousedíka (FF UK, KTF UK): Petr Dvořák (FF UK, CMTF UP), Tomáš Machula, Lukáš Novák, Daniel Heider (všichni TF JU), David Svoboda (KTF UK).
-Stanislava Sousedíka (FF UK, KTF UK): Petr Dvořák (FF UK, CMTF UP), Tomáš Machula, Lukáš Novák, Daniel Heider (všichni TF JU), David Svoboda (KTF UK).
-
-/* Filosofická metoda */ doplnění chybějícího odstavce hesla Filosofie
-Fenomenologie: Edmund Husserl, Martin Heidegger, Hans-Georg Gadamer, Maurice Merleau-Ponty, Paul Ricoeur, Jan Patočka;  Jean-Paul Sartre, Albert Camus: Filosofie jazyka.
-Fenomenologie: Edmund Husserl, Martin Heidegger, Hans-Georg Gadamer, Maurice Merleau-Ponty, Paul Ricoeur, Jan Patočka;  Jean-Paul Sartre, Albert Camus.
-
-/* Filosofická metoda */ doplnění chybějícího odstavce hesla Filosofie
-Ferdinand de Saussure, Ludwig Wittgenstein, Noam Chomsky, Umberto Eco: Analytická filosofie.
-Filosofie jazyka: Ferdinand de Saussure, Ludwig Wittgenstein, Noam Chomsky, Umberto Eco.
-
-/* Filosofická metoda */ doplnění chybějícího odstavce hesla Filosofie
-George Edward Moore, Bertrand Russell, Rudolf Carnap: Filosofie vědy.
-Analytická filosofie: George Edward Moore, Bertrand Russell, Rudolf Carnap.
-
-/* Filosofická metoda */ doplnění chybějícího odstavce hesla Filosofie
-Karl Popper, Paul Karl Feyerabend, Thomas Kuhn: Východní filosofie.
-Filosofie vědy: Karl Popper, Paul Karl Feyerabend, Thomas Kuhn: Východní filosofie.
-
-/* Filosofická metoda */ doplnění chybějícího odstavce hesla Filosofie
-Stanford Encyclopedia of Philosophy - en; F. Kirchner, Wörterbuch philosophischer Grundbegriffe - de: Texty: Klasická literatura - en;  Antika - en, gr, la;  Antika, patristika, středověk - en, la;  Latinské texty - la;  Bibliotheca virtualis, středověk - en, fr, la, it;  Portál patristiky;  Tomáš Akv, Summa theologica - cs, en, la;  Středověk - en;  Immanuel Kant - de;  Politická filosofie - en;  filosofie.
-Texty: Klasická literatura - en; Antika - en, gr, la;  Antika, patristika, středověk - en, la;  Latinské texty - la;  Bibliotheca virtualis, středověk - en, fr, la, it;  Portál patristiky;  Tomáš Akv, Summa theologica - cs, en, la;  Středověk - en;  Immanuel Kant - de;  Politická filosofie - en;  filosofie.
-
-Náhrada názvu sekce "Podívejte se ..." na "Související články"
-Praha 2001. ISBN 80-7298-030-0. Fiala, J. : "Analytická filosofie 1 - Úvod" Plzeň 2005. ISBN 80-239-7106-9. Poznámky: Podívejte se též na: Seznam německých filozofů;  Současná filozofie v České republice Externí odkazy: Slovníky: Stanford Encyclopedia of Philosophy - en;  Internet Encyclopedia of Philosophy - en;  Phillex - slovník filosofických pojmů - de;  Philolex - slovník filosofů a pojmů - de;  Rudolf Eisler: Wörterbuch der philosophischen Begriffe (1904);  F. Kirchner: Wörterbuch philosophischer Grundbegriffe - de.
-Praha 2001. ISBN 80-7298-030-0. Fiala, J. : "Analytická filosofie 1 - Úvod" Plzeň 2005. ISBN 80-239-7106-9. Poznámky: Související články: Seznam německých filozofů;  Současná filozofie v České republice Externí odkazy: Slovníky: Stanford Encyclopedia of Philosophy - en;  Internet Encyclopedia of Philosophy - en;  Phillex - slovník filosofických pojmů - de;  Philolex - slovník filosofů a pojmů - de;  Rudolf Eisler: Wörterbuch der philosophischen Begriffe (1904);  F. Kirchner: Wörterbuch philosophischer Grundbegriffe - de.
+přepsání
+Filozofie je zkoumání neempirických otázek jako jak můžeme věci vědět, zda můžeme vědět něco o budoucnosti, když jediné co máme je minulost, co je hodnota a jak ji poznáte, nebo co je eticky přípustné a co není.
+V sémantickém významu je filosofie zkoumání, jak můžeme věci vědět, zda můžeme vědět něco o budoucnosti, když jediné, co máme, je minulost; co je hodnota a jak ji poznáme; co je ethicky přípustné a co není.
 
 Celková revize po formální stránce
 Filosofie, řecky φιλοσοφία, z φιλειν ("filein", mít rád, toužit po něčem) a σοφια ("sofía" moudrost, zdatnost) je soustavné, racionální a kritické zkoumání skutečnosti, světa a člověka, případně i toho, co je přesahuje (metafyzika).
@@ -193,4 +169,12 @@ Texty ke stažení: Klasická literatura - en; "Gallica", knihovna el.
 Celková revize po formální stránce
 Antika - en, gr, la; Antika, patristika, středověk - en, la;  Bibliotheca Classica Selecta - fr, la, gr;  Latinské texty - la;  Bibliotheca virtualis, středověk - en, fr, la, it;  Portál patristiky;  Tomáš Akv, Summa theologica - cs, en, la;  Středověk - en;  Immanuel Kant - de;  Politická filosofie - en;  Různé články a texty, náměty -;  filosofie.
 Antika - en, gr, la; Antika, patristika, středověk - en, la;  Bibliotheca Classica Selecta - fr, la, gr;  Latinské texty - la;  Bibliotheca virtualis, středověk - en, fr, la, it;  Portál patristiky;  Tomáš Akvinský, Summa theologiae - cs, en, la;  Středověk - en;  Immanuel Kant - de;  Politická filosofie - en;  Filosof.
+
+Revize a omezení ext. odkazů
+Slovníky: Stanford Encyclopedia of Philosophy - en; Internet Encyclopedia of Philosophy - en;  Phillex - slovník filosofických pojmů - de;  Philolex - slovník filosofů a pojmů - de;  Rudolf Eisler: "Wörterbuch der philosophischen Begriffe" (1904);  F. Kirchner: "Wörterbuch philosophischer Grundbegriffe" - de.
+Slovníky: Stanford Encyclopedia of Philosophy - en; Internet Encyclopedia of Philosophy - en;  Rudolf Eisler: "Wörterbuch der philosophischen Begriffe" (1904);  F. Kirchner: "Wörterbuch philosophischer Grundbegriffe" - de.
+
+Revize a omezení ext. odkazů
+Texty ke stažení: Klasická literatura - en; "Gallica", knihovna el.
+Texty ke stažení: Project Gutenberg: Klasická literatura - en;  "Gallica", knihovna el.
 

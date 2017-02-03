@@ -74,7 +74,7 @@ typoFilter = {
 }
 	    
 editFilter = {
-    "cs": re.compile(ur".*(([Cc]opyedit)|([Cc]pyed)|([Cc]e[\s\:])|([Ee]dit)|([Pp]řepsání)|([Tt]ypografie)|([Rr]evize)).*", re.U),
+    "cs": re.compile(ur".*(([Cc]opyedit)|([Cc]pyed)|([Ee]dit)|([Pp]řepsání)|([Tt]ypografie)|([Rr]evize)).*", re.U),
     "en": re.compile(ur".*(([Cc]opyedit)|([Cc]pyed)|([Cc]e[\s\:])|([Ee]dit)|([Tt]ypography)).*", re.U)
 }
 	    
@@ -282,7 +282,7 @@ def findTypos(oldSent, newSent, comment):
 '''Extracts edits from old & new sentence version and writes them into the stream.
 Key idea - comment contains predefined words'''
 def findEdits(oldSent, newSent, comment):
-    if (not editFilter[lang].search(comment, re.M)):
+    if (not editFilter[lang].search(comment)):
 	return False
     editOutputStream.write("%s\n%s\n%s\n\n" % (comment.encode("utf-8", "ignore"), oldSent.encode("utf-8", "ignore"), newSent.encode("utf-8", "ignore")))
 
@@ -357,7 +357,7 @@ def removeBadRevisions(page):
 	    	except:
 		    pass
     for rev in page.revisions:
-	if(revertFilter[lang].search(rev.comment, re.U)):
+	if(revertFilter[lang].search(rev.comment)):
 	    try:
 		page.revisions.remove(rev)
 	    except:

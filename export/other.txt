@@ -118,6 +118,14 @@ rv - vandalismus
 Hvězdná astronomie se zabývá hvězdami, včetně Slunce.
 Astronomie podle objektu zájmu: Hvězdná astronomie se zabývá hvězdami, včetně Slunce.
 
+/* Související články */
+Související články: Astrofyzika; Astronomický ústav AV; Hvězda; Planeta; Sluneční soustava;  Souhvězdí;  Vesmír;  Významní astronomové
+Související články: Astrofyzika; Astronomický ústav AV; Hvězda; Planeta; Sluneční soustava;  Souhvězdí;  Vesmír;  Významní astronomové evina je defka!
+
+Verze 3989528 uživatele [[Special:Contributions/81.0.253.178|81.0.253.178]] ([[User talk:81.0.253.178|diskuse]]) zrušena rvv
+Související články: Astrofyzika; Astronomický ústav AV; Hvězda; Planeta; Sluneční soustava;  Souhvězdí;  Vesmír;  Významní astronomové evina je defka!
+Související články: Astrofyzika; Astronomický ústav AV; Hvězda; Planeta; Sluneční soustava;  Souhvězdí;  Vesmír;  Významní astronomové
+
 /* Historie astronomie */
 Aristoteles ve svém díle O nebi z roku 340 př. n. l. dokázal, že tvar Země musí být kulatý, jelikož stín Země na Měsíci je při zatmění vždy kulatý, což by při plochém tvaru Země nebylo možné, řekové také zjistili že, pokud sledujeme Polárku z jižnějšího místa na Zemi jeví se nám níže nad obzorem než pro pozorovatele ze severu, krerému se bude její poloha na obloze jevit výše.
 Aristoteles ve svém díle O nebi z roku 340 př. n. l. dokázal, že tvar Země musí být kulatá, jelikož stín Země na Měsíci je při zatmění vždy kulatý, což by při plochém tvaru Země nebylo možné, řekové také zjistili že, pokud sledujeme Polárku z jižnějšího místa na Zemi jeví se nám níže nad obzorem než pro pozorovatele ze severu, krerému se bude její poloha na obloze jevit výše.
@@ -205,6 +213,14 @@ Meteorická astronomie se zabývá studiem pohybu a dalšími vlastnostmi meteor
 /* Astronomická teorie */
 Kosmologie studuje Vesmír jako celek a zvláště jeho vznik, současný a budoucí vývoj.
 Kosmologie studuje vesmír jako celek a zvláště jeho vznik, současný a budoucí vývoj.
+
+externí odkaz
+Reference:
+Reference: .
+
+Verze 10293199 uživatele [[Special:Contributions/KATKAK|KATKAK]] ([[User talk:KATKAK|diskuse]]) zrušena – nevhodný ext. odkaz - viz [[Diskuse s wikipedistou:KATKAK|diskusní stránka]]
+Reference: .
+Reference:
 
 řazení záv. odkazů
 Související články: Astrofyzika; Astronomický ústav AV; Hvězda; Planeta; Sluneční soustava;  Souhvězdí;  Vesmír;  Významní astronomové.
@@ -343,20 +359,12 @@ Obecná biologie: Obecná bižule je průřezové odvětví bižule, zkoumajíc�
 Obecná bižule: Obecná bižule je průřezové odvětví bižule, zkoumající obecné základy živých soustav.
 
 /* Podívejte se též na */
-Podívejte se též na: Seznam biologů; Hierarchie druhů; Prokaryota;  Eukaryota;  všechny druhy (anglicky);  Botanika;  Zoologie;  Fylogenetika;  Vědecká klasifikace;  Nomenklatura;  Carl Linné;  Lékařství;  Vlas
-Podívejte se též na: Seznam bižulologů; Hierarchie druhů; Prokaryota;  Eukaryota;  všechny druhy (anglicky);  Botanika;  Zoologie;  Fylogenetika;  Vědecká klasifikace;  Nomenklatura;  Carl Linné;  Lékařství;  Vlas
-
-revert vandalismu
 Podřízené a související vědní obory: Pod bižuli tedy můžeme zařadit, nebo nalézt její úzkou spojitost s následujícími vědními obory: Molekulární bižule, biochemie, genetika, buněčná bižule, fyziologie, anatomie, vývojová bižule, evoluční bižule, etologie, ekologie, systematika, botanika, zoologie, mykologie, mikrobiologie, morfologie, bionika, lékařské disciplíny, virologie a mnoho dalších specializovaných vědních disciplín.
 Podřízené a související vědní obory: Pod biologii tedy můžeme zařadit, nebo nalézt její úzkou spojitost s následujícími vědními obory: Molekulární biologie, biochemie, genetika, buněčná biologie, fyziologie, anatomie, vývojová biologie, evoluční biologie, etologie, ekologie, systematika, botanika, zoologie, mykologie, mikrobiologie, morfologie, bionika, lékařské disciplíny, virologie a mnoho dalších specializovaných vědních disciplín.
 
-revert vandalismu
+/* Podívejte se též na */
 Obecná bižule: Obecná bižule je průřezové odvětví bižule, zkoumající obecné základy živých soustav.
 Obecná biologie: Obecná biologie je průřezové odvětví biologie, zkoumající obecné základy živých soustav.
-
-revert vandalismu
-Podívejte se též na: Seznam bižulologů; Hierarchie druhů; Prokaryota;  Eukaryota;  všechny druhy (anglicky);  Botanika;  Zoologie;  Fylogenetika;  Vědecká klasifikace;  Nomenklatura;  Carl Linné;  Lékařství;  Vlas
-Podívejte se též na: Seznam biologů; Hierarchie druhů; Prokaryota;  Eukaryota;  všechny druhy (anglicky);  Botanika;  Zoologie;  Fylogenetika;  Vědecká klasifikace;  Nomenklatura;  Carl Linné;  Lékařství;  Vlas
 
 
 V užším slova smyslu bychom pak biologii mohli popsat jako vědu, zkoumající organismy od úrovně subcelulární, tedy od úrovně jednotlivých buněčných organel se vším, co s nimi souvisí, přes urovně buněk, tkání, orgánů až po samotného jedince.
@@ -421,14 +429,6 @@ Související články: Seznam biologů; Hierarchie druhů; Prokaryota; Eukaryot
 /* Základy moderní biologie */
 Homeostáze - fyziologické procesy udržující stálé vnitřní podmínky těla nehledíc na podmínky vnitřní.
 Homeostáze - fyziologické procesy udržující stálé vnitřní podmínky těla nehledíc na podmínky vnější.
-
-/* Historie */
-V jejich bádání pokračovali ve středověku arabští lékaři jako al-Jahiz, Avicenna, Avenzoar a Ibn al-Nafis.
-V jejich bádání pokračovali ve středověku čínští lékaři jako al-Jahiz, Avicenna, Avenzoar a Ibn al-Nafis.
-
-Editace uživatele „81.25.23.1“ vrácena do předchozího stavu, jehož autorem je „Xqbot“.
-V jejich bádání pokračovali ve středověku čínští lékaři jako al-Jahiz, Avicenna, Avenzoar a Ibn al-Nafis.
-V jejich bádání pokračovali ve středověku arabští lékaři jako al-Jahiz, Avicenna, Avenzoar a Ibn al-Nafis.
 
 delink
 Obory.
@@ -1282,11 +1282,11 @@ Renesanční filosofie; Mikuláš Kusánský, Erasmus Rotterdamský, Mikuláš K
 Předsokratici: Thalés, Anaximandros, Anaximenés, Pythagoras, Hérakleitos, Xenofanés, Parmenidés, Zenón z Eleje, Empedoklés, Anaxagorás, Leukippos z Milétu, Démokritos;  Vrcholné období: Sókratés, Platón a Aristotelés;  Sofisté;  Kynici;  Stoicismus;  Epikureismus, Skepticismus, Eklekticismus;  Novoplatonismus: Středověk .
 Předsokratici: Thalés, Anaximandros, Anaximenés, Pythagoras, Hérakleitos, Xenofanés, Parmenidés, Zenón z Eleje, Empedoklés, Anaxagorás, Leukippos z Milétu, Démokritos;  Vrcholné období: Sókratés, Platón a Aristotelés;  Sofisté;  Kynismus;  Stoicismus;  Epikureismus, Skepticismus, Eklekticismus;  Novoplatonismus: Středověk .
 
-Doplněn odstavec o citování fil. literatury, drobné kor.
+/* Texty ke stažení */ opr
 "Cicero": Immanuel Kant vymezil úlohu filosofie třemi otázkami: 1) Co mohu vědět?
 "Descartes": Immanuel Kant vymezil úlohu filosofie třemi otázkami: 1) Co mohu vědět?
 
-Doplněn odstavec o citování fil. literatury, drobné kor.
+/* Texty ke stažení */ opr
 Praha 2001. ISBN 80-7298-030-0. Fiala, J. : "Analytická filosofie 1 - Úvod" Plzeň 2005. ISBN 80-239-7106-9. Poznámky: Související články: Seznam německých filozofů;  Současná filozofie v České republice Externí odkazy: Slovníky: Stanford Encyclopedia of Philosophy - en;  Internet Encyclopedia of Philosophy - en;  Phillex - slovník filosofických pojmů - de;  Philolex - slovník filosofů a pojmů - de;  Rudolf Eisler: Wörterbuch der philosophischen Begriffe (1904);  F. Kirchner: Wörterbuch philosophischer Grundbegriffe - de.
 Praha 2001. ISBN 80-7298-030-0. Fiala, J. : "Analytická filosofie 1 - Úvod" Plzeň 2005. ISBN 80-239-7106-9. Poznámky: Související články: Seznam německých filozofů;  Současná filozofie v České republice Externí odkazy: Slovníky: Stanford Encyclopedia of Philosophy - en (vynikající);  Internet Encyclopedia of Philosophy - en;  Phillex - slovník filosofických pojmů - de;  Philolex - slovník filosofů a pojmů - de;  Rudolf Eisler: Wörterbuch der philosophischen Begriffe (1904);  F. Kirchner: Wörterbuch philosophischer Grundbegriffe - de.
 
@@ -1377,190 +1377,6 @@ Protože vytváří definitivní a nepochybná tvrzení, nemá ani povahu kumula
 /* Filosofická metoda */
 Protože vytváří definitivní a nepochybná tvrzení, nemá ani povahu kumulativního vědění, kde se jednotlivé poznatky prostě skládají k sobě.
 Protože nevytváří definitivní a nepochybná tvrzení, nemá ani povahu kumulativního vědění, kde se jednotlivé poznatky prostě skládají k sobě.
-
-v pravidlech pravopisu není filosofie
-Filosofie jazyka: Ferdinand de Saussure, Ludwig Wittgenstein, Noam Chomsky, Umberto Eco.
-Ferdinand de Saussure, Ludwig Wittgenstein, Noam Chomsky, Umberto Eco.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-Filozofie, řecky φιλοσοφία, z φιλειν ("filein", mít rád, toužit po něčem) a σοφια ("sofía" moudrost, zdatnost) je soustavné, racionální a kritické zkoumání skutečnosti, světa a člověka, případně i toho, co je přesahuje (metafyzika).
-Filosofie, řecky φιλοσοφία, z φιλειν ("filein", mít rád, toužit po něčem) a σοφια ("sofía" moudrost, zdatnost) je soustavné, racionální a kritické zkoumání skutečnosti, světa a člověka, případně i toho, co je přesahuje (metafyzika).
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-Myšlenky velkých filozofů nezastarávají a tím nejcitovanějším je dodnes Platón.
-Filosofové o filosofii: Myšlenky velkých filosofů nezastarávají a tím nejcitovanějším je dodnes Platón.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-Někteří filozofii charakterizovali takto: "Údiv je postoj člověka, který moudrost skutečně miluje, a není jiný počátek filozofie než tento.
-Někteří filosofii charakterizovali takto: "Údiv je postoj člověka, který moudrost skutečně miluje, a není jiný počátek filosofie než tento.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-" Platón: "Údiv vedl lidi k filozofování - na počátku i dnes - a to tak, že se zarazili s údivem u nejbližších otázek a potom se pomalu zamýšleli i nad většími věcmi.
-" Platón: "Údiv vedl lidi k filosofování - na počátku i dnes - a to tak, že se zarazili s údivem u nejbližších otázek a potom se pomalu zamýšleli i nad většími věcmi.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-" Aristotelés: "Kdo chce hledat radost sám v sobě, nenajde ji jinde než ve filozofii.
-" Aristotelés: "Kdo chce hledat radost sám v sobě, nenajde ji jinde než ve filosofii.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-" Aristotelés: "filozofie je péče (starost) o duši.
-" Aristotelés: "Filosofie je péče (starost) o duši.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-" Cicero: "Studium filozofie není k tomu, abychom věděli, co se lidé domnívali, ale jak se to má s pravdou věcí.
-" Cicero: "Studium filosofie není k tomu, abychom věděli, co se lidé domnívali, ale jak se to má s pravdou věcí.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-" Tomáš Akvinský: "Žít a nefilozofovat je jako mít zavřené oči a nikdy se ani nepokusit je otevřít.
-" Tomáš Akvinský: "Žít a nefilosofovat je jako mít zavřené oči a nikdy se ani nepokusit je otevřít.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-" René Descartes: Immanuel Kant vymezil úlohu filozofie třemi otázkami: 1) Co mohu vědět?
-" René Descartes: Immanuel Kant vymezil úlohu filosofie třemi otázkami: 1) Co mohu vědět?
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-"Úkolem filozofie je pochopit to, co jest".
-"Úkolem filosofie je pochopit to, co jest".
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-G. W. F. Hegel: "Zachytit hranice rozumu - jen to je pravá filozofie.
-G. W. F. Hegel: "Zachytit hranice rozumu - jen to je pravá filosofie.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-" Friedrich Nietzsche: "Velká filozofie není filozofie bez chyb, ale beze strachu.
-" Friedrich Nietzsche: "Velká filosofie není filosofie bez chyb, ale beze strachu.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-" Charles Péguy: "filozofie není nauka, nýbrž činnost.
-" Charles Péguy: "Filosofie není nauka, nýbrž činnost.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-Od věd, které kdysi z filozofie vzešly, se filozofie liší jednak širší, vlastně neomezenou oblastí témat, jednak volnější metodou.
-Od věd, které kdysi z filosofie vzešly, se filosofie liší jednak širší, vlastně neomezenou oblastí témat, jednak volnější metodou.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-Naopak od poezie a literatury se filozofie liší tím, že se musí snažit o určité pojmové vyjadřování, ale hlavně tím, že každé své tvrzení musí umět nějak obhájit, vysvětlit proč říká to, co říká.
-Naopak od poezie a literatury se filosofie liší tím, že se musí snažit o určité pojmové vyjadřování, ale hlavně tím, že každé své tvrzení musí umět nějak obhájit, vysvětlit proč říká to, co říká.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-Ve 20. století se začal název filozofie používat v širším slova smyslu i pro vypracované systémy náboženské a školy moudrosti, a mluví se tedy i o filozofii indické, čínské nebo africké.
-Ve 20. století se začal název filosofie používat v širším slova smyslu i pro vypracované systémy náboženské a školy moudrosti, a mluví se tedy i o filosofii indické, čínské nebo africké.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-V anglicky mluvící oblasti se běžně hovoří i o "filozofii" ve významu např. firemní strategie nebo záměru a tento zvyk se přenáší i k nám.
-V anglicky mluvící oblasti se běžně hovoří i o "filosofii" ve významu např. firemní strategie nebo záměru a tento zvyk se přenáší i k nám.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-Na rozdíl od jednotlivých věd, které se zpravidla vymezují také svojí specifickou metodou (matematickou, experimentální, historickou a pod.
-Filosofická metoda: Na rozdíl od jednotlivých věd, které se zpravidla vymezují také svojí specifickou metodou (matematickou, experimentální, historickou a pod.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-To je pravda potud, že filozofická práce se nedá popsat návodem, který by automaticky vedl k cíli.
-To je pravda potud, že filosofická práce se nedá popsat návodem, který by automaticky vedl k cíli.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-Na druhé straně filozofie vznikla právě tím, že na myšlení klade určité nároky.
-Na druhé straně filosofie vznikla právě tím, že na myšlení klade určité nároky.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-Tak filozofické myšlení má např. vytvářet a používat pevné pojmy, každé cizí tvrzení podrobit kritice, každé vlastní být schopno racionálně zdůvodnit.
-Tak filosofické myšlení má např. vytvářet a používat pevné pojmy, každé cizí tvrzení podrobit kritice, každé vlastní být schopno racionálně zdůvodnit.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-" filozof se může snažit postupovat deduktivně jako Sókratés, Spinoza nebo Kant, může pozorovat a srovnávat jako Aristotelés a může klást proti sobě protikladná stanoviska jako Tomáš Akvinský, nemůže se ale zbavit závislosti na jazyku: záleží i na tom, jak věci říká.
-" Filosof se může snažit postupovat deduktivně jako Sókratés, Spinoza nebo Kant, může pozorovat a srovnávat jako Aristotelés a může klást proti sobě protikladná stanoviska jako Tomáš Akvinský, nemůže se ale zbavit závislosti na jazyku: záleží i na tom, jak věci říká.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-Některá filozofická díla, například Platónova, Nietzscheova, Sartrova nebo Heideggerova, mají blízko ke krásné literatuře.
-Některá filosofická díla, například Platónova, Nietzscheova, Sartrova nebo Heideggerova, mají blízko ke krásné literatuře.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-Někteří filozofové vytvářeli nová slova, aby se jejich pojmy nepletly, většina se ale snaží vystačit s běžným jazykem, protože se chce odvolávat na společnou lidskou zkušenost.
-Někteří filosofové vytvářeli nová slova, aby se jejich pojmy nepletly, většina se ale snaží vystačit s běžným jazykem, protože se chce odvolávat na společnou lidskou zkušenost.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-Na druhé straně by ale mělo být samozřejmé, že filozof zná stav diskuse k dané otázce, a to ne jen za posledních několik let.
-Na druhé straně by ale mělo být samozřejmé, že filosof zná stav diskuse k dané otázce, a to ne jen za posledních několik let.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-Pro dnešní medicínu má Hippokratés jen historický význam, kdežto pro filozofii je Platón stále aktuální; britský filozof Whitehead dokonce napsal, že celá filozofie je jen komentář k Platónovi.
-Pro dnešní medicínu má Hippokratés jen historický význam, kdežto pro filosofii je Platón stále aktuální; britský filosof Whitehead dokonce napsal, že celá filosofie je jen komentář k Platónovi.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-Tak je filozofie vždycky diskusí, často napříč staletími.
-Tak je filosofie vždycky diskusí, často napříč staletími.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-Málokdy se stane, aby se nějaký skutečný problém filozoficky "vyřešil"; spíš se udržuje a možná prohlubuje, přizpůsobuje měnícím se podmínkám našeho života.
-Málokdy se stane, aby se nějaký skutečný problém filosoficky "vyřešil"; spíš se udržuje a možná prohlubuje, přizpůsobuje měnícím se podmínkám našeho života.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-Někdy se rozlišuje mezi "historickým" a "systematickým" přístupem k filozofii.
-Někdy se rozlišuje mezi "historickým" a "systematickým" přístupem k filosofii.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-Ve skutečnosti nejsou ani dějiny filozofie pouze dějinami, nýbrž také inspirací k vlastnímu myšlení, kdežto systematický výklad nějakého tématu obvykle vyžaduje vyložit i jeho minulost, původ.
-Ve skutečnosti nejsou ani dějiny filosofie pouze dějinami, nýbrž také inspirací k vlastnímu myšlení, kdežto systematický výklad nějakého tématu obvykle vyžaduje vyložit i jeho minulost, původ.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-Vedle dějin filozofie k tomu často slouží i rozbor původu slov (etymologie), protože jazyk a slova jako stopy či sedimenty staleté lidské zkušenosti a přemýšlení často odhalují pozoruhodné souvislosti.
-Vedle dějin filosofie k tomu často slouží i rozbor původu slov (etymologie), protože jazyk a slova jako stopy či sedimenty staleté lidské zkušenosti a přemýšlení často odhalují pozoruhodné souvislosti.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-Citování filozofické literatury: Na rozdíl od většiny empirických věd, které kumulují nové poznatky a kde se tedy zpravidla pracuje jen s nejnovější, většinou časopiseckou literaturou, udržuje filozofie diskusi s celou svou historií.
-Citování filosofické literatury: Na rozdíl od většiny empirických věd, které kumulují nové poznatky a kde se tedy zpravidla pracuje jen s nejnovější, většinou časopiseckou literaturou, udržuje filosofie diskusi s celou svou historií.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-I když se většina filozofické literatury cituje běžným způsobem (např.
-I když se většina filosofické literatury cituje běžným způsobem (např.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-"první filozofie", nauka o základech bytí; logika - nauka o správném myšlení, řeči a argumentování;  etika - nauka o správném jednání.
-"první filosofie", nauka o základech bytí; logika - nauka o správném myšlení, řeči a argumentování;  etika - nauka o správném jednání.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-Teoretická filozofie: metafyzika a ontologie - o celku bytí, o jeho počátku, povaze a smyslu;  logika - o správném myšlení, vyvozování a argumentování;  teorie poznání (epistemologie, gnoseologie) - o možnostech a podmínkách poznávání;  teorie vědy - o podmínkách, metodách a cílech vědy;  filozofie jazyka - o vztahu jazyka k myšlení a skutečnosti, o komunikaci.
-Teoretická filosofie: metafyzika a ontologie - o celku bytí, o jeho počátku, povaze a smyslu;  logika - o správném myšlení, vyvozování a argumentování;  teorie poznání (epistemologie, gnoseologie) - o možnostech a podmínkách poznávání;  teorie vědy - o podmínkách, metodách a cílech vědy;  filosofie jazyka - o vztahu jazyka k myšlení a skutečnosti, o komunikaci.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-Praktická filozofie: etika- o správném jednání a morálce; metaetika - o zdůvodnění morálky a etiky;  estetika - o vnímání, umění, kráse a vnímání krásy;  axiologie -o hodnotách a hodnocení;
-Praktická filosofie: etika- o správném jednání a morálce; metaetika - o zdůvodnění morálky a etiky;  estetika - o vnímání, umění, kráse a vnímání krásy;  axiologie -o hodnotách a hodnocení;
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-Hraniční disciplíny: dějiny filozofie - o filozofech, filozofických školách a směrech minulosti;  filozofická antropologie - o člověku, jeho možnostech a společnosti;  filozofie dějin - o dějinných procesech a tendencích, o jejich smyslu;  filozofie mysli - o vědomí, vnímání a mozku;  filozofie náboženství - o Bohu, o náboženství a mravnosti;  filozofie práva - o spravedlnosti, o smyslu a cílech práva;  filozofie výchovy - o výchově a vzdělávání, o úloze učitele a školství;  politická filozofie - o občanovi a svobodě, o vládě a státu.
-Hraniční disciplíny: dějiny filosofie - o filosofech, filosofických školách a směrech minulosti;  filosofická antropologie - o člověku, jeho možnostech a společnosti;  filosofie dějin - o dějinných procesech a tendencích, o jejich smyslu;  filosofie mysli - o vědomí, vnímání a mozku;  filosofie náboženství - o Bohu, o náboženství a mravnosti;  filosofie práva - o spravedlnosti, o smyslu a cílech práva;  filosofie výchovy - o výchově a vzdělávání, o úloze učitele a školství;  politická filosofie - o občanovi a svobodě, o vládě a státu.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-Patristika: Aurelius Augustinus, Pseudodionysios, Boethius, Joannes Scotus Eurigena; Raná scholastika: Anselm z Canterbury, Pierre Abélard, Bernard z Clairvaux, Chartreská škola;  Islámská filozofie: al-Kindí, Al Farábí, Avicenna, Averroes;  Maimonides (Moše ben Maimon);  Vrcholná scholastika: Siger Brabantský, Albert Veliký, Tomáš Akvinský, Bonaventura, Roger Bacon;  Pozdní scholastika: Mistr Eckhart, Jan Duns Scotus, William Occam: Raný novověk.
-Patristika: Aurelius Augustinus, Pseudodionysios, Boethius, Joannes Scotus Eurigena; Raná scholastika: Anselm z Canterbury, Pierre Abélard, Bernard z Clairvaux, Chartreská škola;  Islámská filosofie: al-Kindí, Al Farábí, Avicenna, Averroes;  Maimonides (Moše ben Maimon);  Vrcholná scholastika: Siger Brabantský, Albert Veliký, Tomáš Akvinský, Bonaventura, Roger Bacon;  Pozdní scholastika: Mistr Eckhart, Jan Duns Scotus, William Occam: Raný novověk.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-Renesanční filozofie; Mikuláš Kusánský, Erasmus Rotterdamský, Mikuláš Koperník, Giordano Bruno;  Reformace: Jan Hus, Martin Luther, Philipp Melanchthon, Ulrich Zwingli, Jan Kalvín;  René Descartes, Baruch Spinoza, Blaise Pascal, Gottfried Leibniz;  Thomas Hobbes, John Locke a George Berkeley;  Isaac Newton: Osvícenství.
-Renesanční filosofie; Mikuláš Kusánský, Erasmus Rotterdamský, Mikuláš Koperník, Giordano Bruno;  Reformace: Jan Hus, Martin Luther, Philipp Melanchthon, Ulrich Zwingli, Jan Kalvín;  René Descartes, Baruch Spinoza, Blaise Pascal, Gottfried Leibniz;  Thomas Hobbes, John Locke a George Berkeley;  Isaac Newton: Osvícenství.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-Ferdinand de Saussure, Ludwig Wittgenstein, Noam Chomsky, Umberto Eco.
-Filosofie jazyka: Ferdinand de Saussure, Ludwig Wittgenstein, Noam Chomsky, Umberto Eco.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-Analytická filozofie: George Edward Moore, Bertrand Russell, Rudolf Carnap.
-Analytická filosofie: George Edward Moore, Bertrand Russell, Rudolf Carnap.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-Karl Popper, Paul Karl Feyerabend, Thomas Kuhn: Východní filozofie.
-Filosofie vědy: Karl Popper, Paul Karl Feyerabend, Thomas Kuhn: Východní filosofie.
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-"filozofie indická": Védy, Upanišady, Bhagavadgíta, Buddha (Siddhártha Gautama), Mahávíra (Džina), Pataňdžali, Bódhidharma, Ánanda; "filozofie čínská": Konfucius (Kchung-fu-c', Kongfuzi), Lao-c' (Laozi), Čuang-c' (Zhuangzi), Mo-c' (Mozi); "filozofie japonská": Zen, Kúkai, Dógen; "filozofie korejská": Son: Hlavní filozofické pozice .
-"Filosofie indická": Védy, Upanišady, Bhagavadgíta, Buddha (Siddhártha Gautama), Mahávíra (Džina), Pataňdžali, Bódhidharma, Ánanda; "Filosofie čínská": Konfucius (Kchung-fu-c', Kongfuzi), Lao-c' (Laozi), Čuang-c' (Zhuangzi), Mo-c' (Mozi); "Filosofie japonská": Zen, Kúkai, Dógen; "Filosofie korejská": Son: Hlavní filosofické pozice .
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-Praha 1994. ISBN 80-85764-07-5. "filozofický slovník".
-Praha 1994. ISBN 80-85764-07-5. "Filosofický slovník".
-
-rv, otázka, zda psát filoSofie nebo filoZofie není doposud diskusí vyřešena - do té doby nechat status quo, můžete se zapojit do diskuse
-FIN Olomouc 1998. ISBN 80-7182-064-4. Brugger, W. : "filozofický slovník".
-FIN Olomouc 1998. ISBN 80-7182-064-4. Brugger, W. : "Filosofický slovník".
 
 Celková revize po formální stránce
 Filosofie, řecky φιλοσοφία, z φιλειν ("filein", mít rád, toužit po něčem) a σοφια ("sofía" moudrost, zdatnost) je soustavné, racionální a kritické zkoumání skutečnosti, světa a člověka, případně i toho, co je přesahuje (metafyzika).
@@ -1918,7 +1734,7 @@ Praha 2006. ISBN 80-242-1578-0. Tretera, I. : "Nástin dějin evropského myšle
 " Cicero"Studium filosofie není k tomu, abychom věděli, co se lidé domnívali, ale jak se to má s pravdou věcí.
 " CiceroFilosofie je vysvětlení okolního světa v kontroverzním a osobitém smyslu spisovatele"Studium filosofie není k tomu, abychom věděli, co se lidé domnívali, ale jak se to má s pravdou věcí.
 
-rv, nesystémové, bez zdroje
+{{upravit externí odkazy}}, úpravy šabl.
 " CiceroFilosofie je vysvětlení okolního světa v kontroverzním a osobitém smyslu spisovatele"Studium filosofie není k tomu, abychom věděli, co se lidé domnívali, ale jak se to má s pravdou věcí.
 " Cicero"Studium filosofie není k tomu, abychom věděli, co se lidé domnívali, ale jak se to má s pravdou věcí.
 
@@ -2051,48 +1867,28 @@ Praha 2001. ISBN 80-7298-030-0. Fiala, J. : "Analytická filosofie 1 - Úvod".
 Praha 69. ISBN 80-7298-030-0. Fiala, J. : "Analytická filosofie 1 - Úvod".
 
 
-Jiří Michálek o tom píše: "Hovoří se také o filosofickém světovém názoru, ba dokonce si mnozí myslí, že takové vytvoření světového názoru je nejvyšším úkolem filosofie.
-Jiří Michálek o tom píše: "Hovoří se také o filosofickém světovém názoru, ba dokonce si mnozí myslí, že takové vytvoření světového názoru je nejvyš porno ším úkolem filosofie.
+Durozoi - Roussel: "Filozofický slovník".
+Durozoi - Roussel: "Filozofický porno slovník".
 
-revert vandalismu
-Jiří Michálek o tom píše: "Hovoří se také o filosofickém světovém názoru, ba dokonce si mnozí myslí, že takové vytvoření světového názoru je nejvyš porno ším úkolem filosofie.
-Jiří Michálek o tom píše: "Hovoří se také o filosofickém světovém názoru, ba dokonce si mnozí myslí, že takové vytvoření světového názoru je nejvyšším úkolem filosofie.
 
-revert vandalismu
 FIN Olomouc 1998. ISBN 80-7182-064-4. Brugger, W. : " slovník m r dky ".
 FIN Olomouc 1998. ISBN 80-7182-064-4. Brugger, W. : "Filosofický slovník".
 
-revert vandalismu
+
 Praha 1996. ISBN 80-86005-05-4. Deleuze - Guattari: "Co je a n á l"?
 Praha 1996. ISBN 80-86005-05-4. Deleuze - Guattari: "Co je filosofie"?
 
-revert vandalismu
+
 Praha 69. ISBN 80-7298-030-0. Fiala, J. : "Analytická filosofie 1 - Úvod".
 Praha 2001. ISBN 80-7298-030-0. Fiala, J. : "Analytická filosofie 1 - Úvod".
 
 
-Durozoi - Roussel: "Filozofický slovník".
-Durozoi - Roussel: "Filozofický porno slovník".
-
-
 Filosofie nebo filozofie, řecky φιλοσοφία, z φιλειν ("filein", mít rád, toužit po něčem) a σοφια ("sofía", moudrost, zdatnost) je soustavné, racionální a kritické zkoumání skutečnosti, světa a člověka, případně i toho, co je přesahuje (metafyzika).
 Filosofie nebo filozofie, řecky φιλοσοφία, z φιλειν ("filein", mít rád sex online) a σοφια ("sofía", moudrost, zdatnost) je soustavné, racionální a kritické zkoumání skutečnosti, světa a člověka, případně i toho, co je přesahuje (metafyzika).
 
-
-" Cicero"Studium filosofie není k tomu, abychom věděli, co se lidé domnívali, ale jak se to má s pravdou věcí.
-" Cicero"Studium filosofie není k tomu, abychom věděli, c free porn o se lidé domnívali, ale jak se to má s pravdou věcí.
-
-revert
+{{Wikicitáty}} do Externích odkazů, převod na řádek; kosmetické úpravy
 Filosofie nebo filozofie, řecky φιλοσοφία, z φιλειν ("filein", mít rád sex online) a σοφια ("sofía", moudrost, zdatnost) je soustavné, racionální a kritické zkoumání skutečnosti, světa a člověka, případně i toho, co je přesahuje (metafyzika).
 Filosofie nebo filozofie, řecky φιλοσοφία, z φιλειν ("filein", mít rád, toužit po něčem) a σοφια ("sofía", moudrost, zdatnost) je soustavné, racionální a kritické zkoumání skutečnosti, světa a člověka, případně i toho, co je přesahuje (metafyzika).
-
-revert
-" Cicero"Studium filosofie není k tomu, abychom věděli, c free porn o se lidé domnívali, ale jak se to má s pravdou věcí.
-" Cicero"Studium filosofie není k tomu, abychom věděli, co se lidé domnívali, ale jak se to má s pravdou věcí.
-
-revert
-Durozoi - Roussel: "Filozofický porno slovník".
-Durozoi - Roussel: "Filozofický slovník".
 
 {{Wikicitáty}} do Externích odkazů, převod na řádek; kosmetické úpravy
 Hlavní filosofické pozice: atomismus vs. holismus; monismus vs. dualismus a pluralismus;  materialismus vs. idealismus;  empirismus vs. racionalismus vs. iracionalismus;  nominalismus vs. realismus;  antropocentrismus vs. biocentrismus;  hédonismus;  historicismus;  humanismus;  naturalismus;  perspektivismus;  pozitivismus a novopozitivismus;  pragmatismus;  psychologismus Odkazy: Reference: Literatura .
@@ -2101,6 +1897,30 @@ Hlavní filosofické pozice: atomismus vs. holismus; monismus vs. dualismus a pl
 {{Wikicitáty}} do Externích odkazů, převod na řádek; kosmetické úpravy
 Seznam filosofů; Seznam politických filosofů: Externí odkazy: Slovníky: Stanford Encyclopedia of Philosophy - en;  Internet Encyclopedia of Philosophy - en;  Rudolf Eisler: "Wörterbuch der philosophischen Begriffe" (1904);  F. Kirchner: "Wörterbuch philosophischer Grundbegriffe" - de.
 Slovníky: Stanford Encyclopedia of Philosophy - en; Internet Encyclopedia of Philosophy - en;  Rudolf Eisler: "Wörterbuch der philosophischen Begriffe" (1904);  F. Kirchner: "Wörterbuch philosophischer Grundbegriffe" - de.
+
+Podle nové gramatiky je oficiální název "filozofie", nikoliv "filosofie".
+Filosofové o filosofii: Myšlenky velkých filosofů nezastarávají a tím nejcitovanějším je dodnes Platón.
+Filozofové o filozofii: Myšlenky velkých filosofů nezastarávají a tím nejcitovanějším je dodnes Platón.
+
+Podle nové gramatiky je oficiální název "filozofie", nikoliv "filosofie".
+Bohu, o náboženství a mravnosti; filosofie výchovy - o výchově a vzdělávání, o úloze učitele a školství;  filosofie matematiky - o předpokladech, základech a důsledcích matematiky;  Západní filosofie: Antika .
+Bohu, o náboženství a mravnosti; filosofie výchovy - o výchově a vzdělávání, o úloze učitele a školství;  filosofie matematiky - o předpokladech, základech a důsledcích matematiky;  Západní filozofie: Antika .
+
+Podle nové gramatiky je oficiální název "filozofie", nikoliv "filosofie".
+Hlavní filosofické pozice: atomismus vs. holismus; monismus vs. dualismus a pluralismus;  materialismus vs. idealismus;  empirismus vs. racionalismus vs. iracionalismus;  nominalismus vs. realismus;  antropocentrismus vs. biocentrismus;  hédonismus;  historicismus;  humanismus;  naturalismus;  perspektivismus;  pozitivismus a novopozitivismus;  pragmatismus;  psychologismus.
+Hlavní filozofické pozice: atomismus vs. holismus; monismus vs. dualismus a pluralismus;  materialismus vs. idealismus;  empirismus vs. racionalismus vs. iracionalismus;  nominalismus vs. realismus;  antropocentrismus vs. biocentrismus;  hédonismus;  historicismus;  humanismus;  naturalismus;  perspektivismus;  pozitivismus a novopozitivismus;  pragmatismus;  psychologismus.
+
+/* Externí odkazy */ fix
+Filozofové o filozofii: Myšlenky velkých filosofů nezastarávají a tím nejcitovanějším je dodnes Platón.
+Filosofové o filosofii: Myšlenky velkých filosofů nezastarávají a tím nejcitovanějším je dodnes Platón.
+
+/* Externí odkazy */ fix
+Bohu, o náboženství a mravnosti; filosofie výchovy - o výchově a vzdělávání, o úloze učitele a školství;  filosofie matematiky - o předpokladech, základech a důsledcích matematiky;  Západní filozofie: Antika .
+Bohu, o náboženství a mravnosti; filosofie výchovy - o výchově a vzdělávání, o úloze učitele a školství;  filosofie matematiky - o předpokladech, základech a důsledcích matematiky;  Západní filosofie: Antika .
+
+/* Externí odkazy */ fix
+Hlavní filozofické pozice: atomismus vs. holismus; monismus vs. dualismus a pluralismus;  materialismus vs. idealismus;  empirismus vs. racionalismus vs. iracionalismus;  nominalismus vs. realismus;  antropocentrismus vs. biocentrismus;  hédonismus;  historicismus;  humanismus;  naturalismus;  perspektivismus;  pozitivismus a novopozitivismus;  pragmatismus;  psychologismus.
+Hlavní filosofické pozice: atomismus vs. holismus; monismus vs. dualismus a pluralismus;  materialismus vs. idealismus;  empirismus vs. racionalismus vs. iracionalismus;  nominalismus vs. realismus;  antropocentrismus vs. biocentrismus;  hédonismus;  historicismus;  humanismus;  naturalismus;  perspektivismus;  pozitivismus a novopozitivismus;  pragmatismus;  psychologismus.
 
 /* Filosofové o filosofii */
 Někteří filosofii charakterizovali takto: "Údiv je postoj člověka, který moudrost skutečně miluje, a není jiný počátek filosofie než tento.
@@ -2149,12 +1969,4 @@ Slovníky: Stanford Encyclopedia of Philosophy - en; Internet Encyclopedia of Ph
 /* Co není filosofie? */
 Světový názor vždy nějak positivně a definitivně určuje jsoucna (říká co jsou) včetně člověka, uspořádává zkušenost zcela určitým směrem a tomu vše podřizuje, a tím zužuje a uzavírá lidský život a odnímá mu jeho nesamozřejmost.
 Světový názor vždy nějak positivně a definitivně určuje jsoucna (říká, co jsou) včetně člověka, uspořádává zkušenost zcela určitým směrem a tomu vše podřizuje, a tím zužuje a uzavírá lidský život a odnímá mu jeho nesamozřejmost.
-
-
-Filosofie nebo filozofie, řecky φιλοσοφία, z φιλειν ("filein", mít rád, toužit po něčem) a σοφια ("sofía", moudrost, zdatnost) je soustavné, racionální a kritické zkoumání skutečnosti, světa a člověka, případně i toho, co je přesahuje (metafyzika).
-Filosofie nebo filozofie, řecky φιλοσοφία, z φιλειν ("filein", mít rád, toužit po něčem) a σοφια ("sofía", moudrost, zdatnost) je soustavné, racionální a kritické zkoumání skutečnosti, světa a člověka, případně i toho, co je přesahuje (obezita) pravdivého poznání, smyslu a dobrého života prostředky reflexe, racionální argumentace a diskuse, která vyžaduje určité pojmy.
-
-rv
-Filosofie nebo filozofie, řecky φιλοσοφία, z φιλειν ("filein", mít rád, toužit po něčem) a σοφια ("sofía", moudrost, zdatnost) je soustavné, racionální a kritické zkoumání skutečnosti, světa a člověka, případně i toho, co je přesahuje (obezita) pravdivého poznání, smyslu a dobrého života prostředky reflexe, racionální argumentace a diskuse, která vyžaduje určité pojmy.
-Filosofie nebo filozofie, řecky φιλοσοφία, z φιλειν ("filein", mít rád, toužit po něčem) a σοφια ("sofía", moudrost, zdatnost) je soustavné, racionální a kritické zkoumání skutečnosti, světa a člověka, případně i toho, co je přesahuje (metafyzika).
 
