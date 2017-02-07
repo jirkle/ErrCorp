@@ -1,15 +1,16 @@
 # coding=UTF-8
 import getopt
 import sys
+import os
 import io
 import xml.etree.ElementTree as ET
 import difflib
+import re
 from multiprocessing import Pool
 from collections import deque
 
 import WikiExtractor
-from UnicodeHack import hack_regexp
-from utils import *
+from utils import printUsage, openStream, splitBySentences, lemma, bagOfWords, wordDistance, sentenceSimilarity, cleanUpText, cleanUpSentence, downloadFile
 
 # Maximal distance of two words to be considered as typo
 typoTreshold = 2
@@ -35,7 +36,7 @@ preserveRobotRevisions = False
 filterOutput = False
 lang = "en"
 supportedLangs = ("cs", "en")
-dumpPaths = ["../cswiki.xml.bz2"]
+dumpPaths = []
 dumpDownloads = []
 pageDownloads = []
 outputFolder = "export/"
@@ -58,18 +59,19 @@ class revision(object):
 	comment = "Wonderfull improvements of content"
 	text = "To be or not to be, that is the question!"
 	author = "Interesting author"
-	format = "wiki-markup" #[wikimarkup | plaintext]
+	contentFormat = "wikimarkup" #[wikimarkup|html|plaintext]
 
 	def __init__(self):
 		self.timestamp = ""
 		self.comment = ""
 		self.text = ""
 		self.author = ""
+		self.contentFormat = "wikimarkup"
 	    
 # Comment filters
 excludeFilter = {
-	'cs':re.compile(r'.*((Hlavní\sstrana)|([rR]ozcestník)|(Nápověda:)|(Wikipedista:)|(Wikipedie:)|(Diskuse:)|(MediaWiki:)|(Portál:)|(Šablona:)|(Kategorie:)).*', re.U),
-	'en':re.compile(r'.*((Main\sPage)).*', re.U)
+	'cs':re.compile(r'.*((Hlavní\sstrana)|([rR]ozcestník)|(Nápověda:)|(Wikipedista:)|(Wikipedie:)|(Diskuse:)|(MediaWiki:)|(Portál:)|(Šablona:)|(Kategorie:)|(Soubor:)).*', re.U),
+	'en':re.compile(r'.*((Main\sPage)|(File:)|(User\stalk:)|(Category:)|(Talk:)|(User:)).*', re.U)
 }
 	    
 typoFilter = {
@@ -140,18 +142,18 @@ def findEdits(oldSent, newSent, comment):
 	editOutputStream.write("%s\n%s\n%s\n\n" % (comment, oldSent, newSent))
 
 # Processes and flushes buffer to disk
-def writeCorpBuffer(comment):
+def writeCorpBuffer():
 	global corpBuffer
 	if len(corpBuffer) > 0:
 		for sentTuple in corpBuffer:		    
 			founded = False
-			founded = findWO(sentTuple[0], sentTuple[1], comment)
+			founded = findWO(sentTuple[0], sentTuple[1], sentTuple[2])
 			if(not founded):
-				founded = findTypos(sentTuple[0], sentTuple[1], comment)
+				founded = findTypos(sentTuple[0], sentTuple[1], sentTuple[2])
 			if(not founded):
-				founded = findEdits(sentTuple[0], sentTuple[1], comment)
+				founded = findEdits(sentTuple[0], sentTuple[1], sentTuple[2])
 			if(not founded):
-				otherOutputStream.write("%s\n%s\n%s\n\n" % (comment, sentTuple[0], sentTuple[1]))
+				otherOutputStream.write("%s\n%s\n%s\n\n" % (sentTuple[2], sentTuple[0], sentTuple[1]))
 		woOutputStream.flush()
 		typoOutputStream.flush()
 		editOutputStream.flush()
@@ -159,7 +161,7 @@ def writeCorpBuffer(comment):
 		corpBuffer = []
 
 # Processes sentence's stacks - old sentences are matched to sentences from new sentence's stack
-def processStacks(oldStack, newStack):
+def processStacks(oldStack, newStack, comment):
 	if(len(oldStack) == 0 or len(newStack) == 0):
 		return
 	while len(oldStack) > 0:
@@ -168,7 +170,7 @@ def processStacks(oldStack, newStack):
 		candidates = [(x, similarity) for (x, similarity) in candidates if similarity > sentenceTreshold]
 		if(len(candidates) > 0):
 			candidates = sorted(candidates, key=lambda candidate: candidate[1], reverse=True)
-			corpBuffer.append((oldSent, candidates[0][0]))
+			corpBuffer.append((oldSent, candidates[0][0], comment))
 
 # Compares two revisions and constructs old and new stacks of sentences for further processing
 def processRevisions(oldRev, newRev):
@@ -187,68 +189,77 @@ def processRevisions(oldRev, newRev):
 			oldStack.append(line[1:])
 		elif line.startswith('+'): #Write diff lines from new revision to stack
 			newStack.append(line[1:])
-	processStacks(oldStack, newStack)
+	processStacks(oldStack, newStack, newRev.comment)
 
 # Function for removing bot or reverted revisions. TODO - bug - doesn't match all reverted revs
 def removeBadRevisions(page):
 	previous = None
-	for rev in page.revisions:
-		if(rev == None or rev.comment == None):
-			try:
-				page.revisions.remove(rev)
-			except:
-				pass
-		elif(not preserveRobotRevisions):
-			if(botFilter[lang].search(rev.comment)):
-				try:
-					page.revisions.remove(rev)
-				except:
-					pass
+	page.revisions = [x for x in page.revisions if x != None and x.comment != None]
+	if(not preserveRobotRevisions):
+		page.revisions = [x for x in page.revisions if not botFilter[lang].search(x.comment)]
+	
+	toRevert = []
+	prev = None
 	for rev in page.revisions:
 		if(revertFilter[lang].search(rev.comment)):
-			try:
-				page.revisions.remove(rev)
-			except:
-				pass
-			try:
-				page.revisions.remove(previous)
-			except:
-				pass
-		previous = rev
+			toRevert.append(rev)
+			toRevert.append(prev)
+		prev = rev
+	toRevert = set(toRevert)
+	page.revisions = [x for x in page.revisions if x not in toRevert]
 
 # Removes reverted revisions, goes through revs and sends every two neighbous to processing
 def processPage(page):
-	removeBadRevisions(page)
 	newRev = page.revisions[0]
 	for i in range(1, len(page.revisions) - 1):
 		oldRev = newRev
 		newRev = page.revisions[i - 1]
 		if(newRev.comment != None):
 			processRevisions(oldRev, newRev)
-		writeCorpBuffer(newRev.comment)
+	writeCorpBuffer()
 
-# Renders wiki markup into plain text via WikiExtractor and then cleans output text
-def normalizeText(text, title):
-	if(text != None):  
-		out = io.StringIO()
-		extractor = WikiExtractor.Extractor(0, 0, title, text.split("\n"))
-		extractor.extract(out)
-		text = out.getvalue()
-		out.close()
-		text = cleanUpText(text)
-		text = splitBySentences(text)
-		for i in range(0, len(text)):
-			text[i] = cleanUpSentence(text[i], trimToSentenceStart=True)
-		return text
+def renderRevision(rev, title):
+	if(rev.text != None): 
+		if(rev.contentFormat == "wikimarkup"):
+			text = re.sub("\n(\s\n)*", "\n", rev.text) #Replace more paragraphs endings
+			text = rev.text
+			out = io.StringIO()
+			extractor = WikiExtractor.Extractor(0, 0, title, text.split("\n"))
+			extractor.extract(out)
+			text = out.getvalue()
+			out.close()
+			text = cleanUpText(text)
+			text = splitBySentences(text)
+			for i in range(0, len(text)):
+				text[i] = cleanUpSentence(text[i], trimToSentenceStart=True)
+			rev.text = [x for x in text if x != ""]
+			return rev
+		else:
+			return rev
 	else:
-		return ""
+		return rev	
+
+# Renders all revs in wiki markup/html into plain text and then cleans output text
+def renderPageRevisions(page):
+	pool = Pool(processes=poolProcesses)
+	poolAsyncResults = []
+	for rev in page.revisions:
+		poolAsyncResults.append(pool.apply_async(renderRevision, args=(rev,page.title)))
+		#rev.text = renderRevision(rev, page.title)
+	for i in range(0, len(poolAsyncResults) - 1):
+		try:
+			page.revisions[i] = poolAsyncResults[i].get()	#collect results from pool
+			page.revisions[i].format = "plaintext"
+		except:
+			page.revisions[i].text = None
+	page.revisions = [x for x in page.revisions if x != None]
+	
 
 def processStream(fileStream):
-	pool = Pool(processes=poolProcesses)
 	pagesProcessed = 0    
 	curPage = page()
 	curRevision = revision()
-	poolAsyncResults = []
+
 	skip = False
 	for event, elem in ET.iterparse(fileStream):
 		if event == 'end':
@@ -269,31 +280,52 @@ def processStream(fileStream):
 					curRevision.comment = elem.text
 				elif elem.tag.endswith('text'):
 					if(elem.text != None or elem.text != ""):
-						poolAsyncResults.append(pool.apply_async(normalizeText, args=(elem.text,curPage.title)))
-						#curRevision.text = normalizeText(elem.text, curPage.title)
+						curRevision.text = elem.text
 				elif elem.tag.endswith('revision'):
 					curPage.revisions.append(curRevision)
 					curRevision = revision()
 				elif elem.tag.endswith('page'):
-					for i in range(0, len(poolAsyncResults) - 1):
-						try:
-							curPage.revisions[i].text = poolAsyncResults[i].get()	#collect results from pool
-							curPage.revisions[i].format = "plaintext"
-						except:
-							curPage.revisions[i].text = None
+					removeBadRevisions(curPage)
+					renderPageRevisions(curPage)
 					#pool.apply(processPage, args=(curPage,))
 					processPage(curPage)
 					curPage = page()
 					curPage.revisions = []
-					poolAsyncResults = []
 			elem.clear()
     
 
 def main():
+	pool = Pool(processes=1)
+	downloadResult = None
+	if(len(dumpDownloads) > 0):
+		url = dumpDownloads.popleft()
+		downloadResult = pool.apply_async(downloadFile, args=(url,))
+		
 	for path in dumpPaths:
 		print("Processing file %s" % (path,))
 		stream = openStream(path)
 		processStream(stream)
+	try:
+		filePath = downloadResult.get()	#wait for download end
+		
+		while len(dumpDownloads) > 0:
+			print("Processing file %s" % filePath)
+			url = dumpDownloads.popleft()
+			downloadResult = pool.apply_async(downloadFile, args=(url,))
+			stream = openStream(filePath)
+			processStream(stream)
+			stream.close()
+			os.remove(filePath)
+			filePath = downloadResult.wait()
+		print("Processing file %s" % filePath)	
+		stream = openStream(filePath)
+		processStream(stream)
+		stream.close()
+		os.remove(filePath)				
+			
+	except OSError as e:
+		pass
+
 
 if __name__ == "__main__":
 	try:
@@ -316,11 +348,11 @@ if __name__ == "__main__":
 		elif opt in ("-f", "--outputFilter"):
 			filterOutput = True
 		elif opt in ("-p", "--paths"):
-			dumpPaths = [x.strip() for x in arg.split(",")]
+			dumpPaths = deque([x.strip() for x in arg.split(",")])
 		elif opt in ("-d", "--dumpUrls"):
-			dumpDownloads = [x.strip() for x in arg.split(",")]
+			dumpDownloads = deque([x.strip() for x in arg.split(",")])
 		elif opt in ("-u", "--pageUrls"):
-			pageDownloads = [x.strip() for x in arg.split(",")]
+			pageDownloads = deque([x.strip() for x in arg.split(",")])
 		elif opt in ("-o", "--output"):
 			outputFolder = arg
 	woOutputStream = io.open('export/wo.txt', 'w')

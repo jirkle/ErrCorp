@@ -1,7 +1,9 @@
+# coding=UTF-8
 import bz2
 import lzma
 import re
 import string
+import urllib.request
 
 from UnicodeHack import hack_regexp
 
@@ -34,9 +36,17 @@ def openStream(path):
 	elif(path.lower().endswith('.xml')):
 		return open(path, "r")
 	elif(path.lower().endswith('.7z')):
-		return lzma.open(path, "r")
+		raise Exception('7zip files are not supported yet')
+		#return lzma.open(path, "r")
 	else:
 		return None
+
+# Downloads file from url
+def downloadFile(url):
+	fileName = url.split('/')[-1]
+	print("Starting background downloading of %s" % url)
+	urllib.request.urlretrieve(url, fileName)
+	return fileName
 
 ###############################################################################
 #
@@ -49,7 +59,7 @@ def openStream(path):
 	
 # Funkce z http://stackoverflow.com/questions/4576077/python-split-text-on-sentences, TODO: licence?
 caps = hack_regexp(r"(\\p{Lu})")
-prefixes = r"\s+(Mr|St|Mrs|Ms|Dr|MUDr|JuDr|Mgr|Bc|atd|tzv|řec|lat|it|např|př|vs|Et)[.]"
+prefixes = r"\s+(Mr|St|Mrs|Ms|Dr|MUDr|JuDr|Mgr|Bc|atd|tzv|řec|lat|it|např|př|vs|Et|tj)[.]"
 suffixes = r"(Inc|Ltd|Jr|Sr|Co)"
 starters = r"(Mr|Mrs|Ms|Dr|He\s|She\s|It\s|They\s|Their\s|Our\s|We\s|But\s|However\s|That\s|This\s|Wherever)"
 acronyms = hack_regexp(r"(\\p{Lu}[.]\\p{Lu}[.](?:\\p{Lu}[.])?)")
@@ -138,10 +148,7 @@ def cleanUpText(text):
 	text = re.sub(r"[‘’ʹ՚‛ʻʼ՝ʽʾ]", r"'", text) #Preserve only one type of single quotes
 	text = re.sub(r"[„“˝”ˮ‟″‶〃＂“]", r'"', text) #Preserve only one type of double quotes
 	text = re.sub(r"[‐‑‒−–⁃➖˗﹘-]", r"-", text) #Preserve only one type of hyphens
-	text = re.sub(r"\.\.\.", r"…", text) #Clean text
-	text = re.sub(r"\s*\.(\s*\.)*", r". ", text) #Remove more dots
-	text = re.sub(r"[…]", r"...", text) #Clean text
-
+	
 	#Mark headings to be start of sentences and preserve heading text
 	text = re.sub(r"======(.*?)======", r". \1:", text)
 	text = re.sub(r"=====(.*?)=====", r". \1:", text)
@@ -149,7 +156,11 @@ def cleanUpText(text):
 	text = re.sub(r"===(.*?)===", r". \1:", text)
 	text = re.sub(r"==(.*?)==", r". \1:", text)
 	text = re.sub(r"=", r" ", text) #Remove rest equal signs
-	text = re.sub(r"[\[\]]", r" ", text) #Clean rest brackets
+	
+	text = re.sub(r"\.\.\.", r"…", text) #Clean text
+	text = re.sub(r"\s*\.(\s*\.)*", r". ", text) #Remove more dots
+	text = re.sub(r"…", r"...", text) #Clean 	text
+	
 	text = re.sub(r"(\s+)", r" ", text) #Remove more spaces
 	return text
 
@@ -157,16 +168,22 @@ def cleanUpText(text):
 def cleanUpSentence(text, removeDigits=False, trimToSentenceStart=False):
 	if(text == None):
 		return None
-	text = re.sub(r"\'(\s*\')*", r"'", text, re.U) #Remove more single quotes
-	text = re.sub(r"\"(\s*\")*", r'"', text, re.U) #Remove more double quotes
-	text = re.sub(r"\s*,(\s*,)*", r", ", text, re.U) #Remove more commas
-	text = re.sub(r"\s*:(\s*:)*", r": ", text, re.U) #Remove more colons
-	text = re.sub(r"-(\s*-)*", r"-", text, re.U) #Remove more hyphens
 	text = re.sub(r"^(\s*(\*)*\s*)", r" ", text, re.U) #Replace bullets at the start
 	text = re.sub(r"([:,\.])(\s*(\*)*\s*)", r"\1 ", text, re.U) #Replace bullets at the start
 	text = re.sub(r"\*", r"; ", text, re.U) #Replace bullets
 	text = re.sub(r"\s*;(\s*;)*", r";", text, re.U) #Remove more semi-colons
-	text = re.sub(r"([:;.,])+[:;.,]+", r"\1 ", text, re.U) #Remove odd punctuation combinations
+	text = re.sub(r"([:;.,-])+\s*[:;.,-]+", r"\1 ", text, re.U) #Remove odd punctuation combinations
+	
+	text = re.sub(r"\'(\s*\')*", r"'", text, re.U) #Remove more single quotes
+	text = re.sub(r"\"(\s*\")*", r'"', text, re.U) #Remove more double quotes
+	text = re.sub(r"\s*,(\s*,)*\s*", r", ", text, re.U) #Remove more commas
+	text = re.sub(r"\s*:(\s*:)*\s*", r": ", text, re.U) #Remove more colons
+	text = re.sub(r"-(\s*-)*", r"-", text, re.U) #Remove more hyphens
+		
+	text = re.sub(r"[\[\]]", r" ", text) #Clean rest brackets
+	
+	text = re.sub(r"([\(\{\[])\s*", r"\1", text, re.U) #Remove spaces after starting brackets
+	text = re.sub(r"\s*([\)\}\]])", r"\1", text, re.U) #Remove spaces before closing brackets	
     
 	if(trimToSentenceStart):
 		text = re.subn(hack_regexp(r"^.*?(\\p{Lu}|[\"\'])"), r"\1", text, re.U)

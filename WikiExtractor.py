@@ -447,7 +447,7 @@ class Frame(object):
 
     def __str__(self):
         res = ''
-        prev = this.prev
+        prev = self.prev
         while prev:
             if res: res += ', '
             res += '(%s, %s)' % (prev.title, prev.args)
@@ -1977,7 +1977,7 @@ def replaceInternalLinks(text):
             trail = m.group(0)
             end = m.end()
         else:
-            trail = ''
+            trail = ' '
             end = e
         inner = text[s + 2:e - 2]
         # find first |
@@ -1995,7 +1995,7 @@ def replaceInternalLinks(text):
                     pipe = last  # advance
                 curp = e1
             label = inner[pipe + 1:].strip()
-        res += text[cur:s] + makeInternalLink(title, label) + trail
+        res += text[cur:s] + " " + makeInternalLink(title, label) + trail
         cur = end
     return res + text[cur:]
 
