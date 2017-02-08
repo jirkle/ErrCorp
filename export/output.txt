@@ -1,0 +1,761 @@
+Komentáře editací: /* Základní pojmy */  diagram - základní pojmy<separator>reorganisace<separator>
+start: nebeský rovník (světový rovník) - zemský rovník promítnutý na nebeskou sféru
+other: nebeský rovník (světový rovník) - zemský rovník promítnutý na nebeskou sféru
+other: Nebeský rovník (světový rovník) - zemský rovník promítnutý na nebeskou sféru
+
+Komentáře editací: <separator>xakru, jeden překlep, 3 editace<separator>tři překlepy pryč<separator>
+start: Sférická astronome sklouží k popisu poloh objektů na nebeské sféře, zavededením souřadnic a popisuje výyznamné křivky a body na nebeské sféře.
+other: Sférická astronome sklouží k popisu poloh objektů na nebeské sféře, zavededením souřadnic a popisuje výyznamné křivky a body na nebeské sféře.
+typos: Sférická astronomie sklouží k popisu poloh objektů na nebeské sféře, zavededením souřadnic a popisuje výyznamné křivky a body na nebeské sféře.
+typos: Sférická astronomie sklouží k popisu poloh objektů na nebeské sféře, zavedením souřadnic a popisuje významné křivky a body na nebeské sféře.
+
+Komentáře editací: /* Části astronomie */<separator>/* Části astronomie */<separator>
+start: Astronomie A se podobně jako další vědy začala rozvíjet ve starověku.
+other: Astronomie A se podobně jako další vědy začala rozvíjet ve starověku.
+other: Astronomie se podobně jako další vědy začala rozvíjet ve starověku.
+
+Komentáře editací: reorganisace
+start: Ekliptika - myšlená dráha na obloze, kterou během roku prochází Slunce
+other: Ekliptika - myšlená dráha na obloze, kterou během roku prochází Slunce
+
+Komentáře editací: reorganisace
+start: Zemská osa - jakási nehmotná a nekonečná tyčka, kolem které se Země otáčí
+other: Zemská osa - jakási nehmotná a nekonečná tyčka, kolem které se Země otáčí
+
+Komentáře editací: reorganisace
+start: Nebeský pól (světový pól) - bod ležící nad zemským pólem
+other: Nebeský pól (světový pól) - bod ležící nad zemským pólem
+
+Komentáře editací: reorganisace
+start: Zenit (nadhlavník) - bod ležící nad pozorovatelem
+other: Zenit (nadhlavník) - bod ležící nad pozorovatelem
+
+Komentáře editací: reorganisace
+start: Nadir (podnožník) - bod ležící pod pozorovatelem
+other: Nadir (podnožník) - bod ležící pod pozorovatelem
+
+Komentáře editací: reorganisace
+start: Nebeská sféra - nekonečně vzdálená myšlená kulová plocha (obepínající celou Zemi), na kterou se promítají všechny pozorované objekty ve vesmíru
+other: Nebeská sféra - nekonečně vzdálená myšlená kulová plocha (obepínající celou Zemi), na kterou se promítají všechny pozorované objekty ve vesmíru
+
+Komentáře editací: /* Systémy souřadnic */  - klenba -> sféra
+start: na nebeské sféře: obzorníkové, rovníkové (ekvatoreální), ekliptikální, galaktické, ICRF (International Celestial Reference Frame)
+typos: na nebeské sféře: obzorníkové, rovníkové (ekvatoreální), ekliptikální, galaktické, ICRF (International Celestial Reference Frame)
+
+Komentáře editací: tři překlepy pryč
+start: Pojmy ze sférické astronomie se také používají při měření času.
+typos: Pojmy ze sférické astronomie se také používají při měření času.
+
+Komentáře editací: větší editace
+start: Zabývá se pohybem těles v gravitačním poli, například planet ve Sluneční soustavě.
+edits: Zabývá se pohybem těles v gravitačním poli, například planet ve Sluneční soustavě.
+
+Komentáře editací: větší editace
+start: Zabývá se fyzikou hvězd a mezihvězdné hmoty (hustotou, teplotou, chemickým složením atd.).
+edits: Zabývá se fyzikou hvězd a mezihvězdné hmoty (hustotou, teplotou, chemickým složením atd.).
+
+Komentáře editací: * [[Slunovrat]] et al.
+start: Astronomie, řecky αστρονομία z άστρον (astron) hvězda a νόμος (nomos) zákon, česky též hvězdářství, je věda, která se zabývá jevy za hranicemi zemské atmosféry.
+other: Astronomie, řecky αστρονομία z άστρον (astron) hvězda a νόμος (nomos) zákon, česky též hvězdářství, je věda, která se zabývá jevy za hranicemi zemské atmosféry.
+
+Komentáře editací: /* Části astronomie */
+start: První se z astronomie rozvíjela astrometrie, zabývající se měřením poloh hvězd a planet na obloze.
+other: První se z astronomie rozvíjela astrometrie, zabývající se měřením poloh hvězd a planet na obloze.
+
+Komentáře editací: /* Vztah astronomie k dalším vědám */ typo
+start: Naopak astronomické systémy jsou pro velkou část fyzikální teorie nejdůležitější "laboratoří", přirozeně především ve velkých prostorových a časových měřítkách se projevuje gravitace a testuje obecná teorie relativity.
+typos: Naopak astronomické systémy jsou pro velkou část fyzikální teorie nejdůležitější "laboratoří", přirozeně především ve velkých prostorových a časových měřítkách se projevuje gravitace a testuje obecná teorie relativity.
+
+Komentáře editací: /* Vztah astronomie k dalším vědám */ typo
+start: Ve vesmíru se vyskytují i extrémní podmínky, které nejsou zatím dosažitelné v laboratořích, například tlak, hustota, teplota, magnetické pole a další.
+typos: Ve vesmíru se vyskytují i extrémní podmínky, které nejsou zatím dosažitelné v laboratořích, například tlak, hustota, teplota, magnetické pole a další.
+
+Komentáře editací: /* Astronomické pozorování */ typo
+start: Hypotetická gravitační astronomie by měla pozorovat gravitační vlny.
+typos: Hypotetická gravitační astronomie by měla pozorovat gravitační vlny.
+
+Komentáře editací: překlep (okosystémy )<separator><separator>
+start: Biologie v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy - tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu prostředí.
+typos: Biologie v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy - tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu prostředí.
+other: Biologie (z řeckého bio jako život a logie jako věda - tedy životověda - věda zkoumající život) v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy - tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu prostředí.
+
+Komentáře editací: /* Historie */<separator>datum úmrtí: z  1849 na 1829 , zdroj : internet<separator>
+start: Termín "biologie" tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744 - 1849).
+other: Termín "biologie" tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744 - 1849).
+other: Termín "biologie" tak, jak ho známe dnes, byl zaveden Jeanem-Baptistou Lamarckem (1744 - 1829).
+
+Komentáře editací: /* Podřízené a související vědní obory */<separator>/* Podřízené a související vědní obory */ přidána evolučka<separator>/* Podřízené a související vědní obory */<separator>robot  přidal:be,mk,kw<separator>
+start: Pod biologii tedy můžeme zařadit, nebo nalézt její úzkou spojitost s následujícími vědními obory: Molekulární biologie, biochemie, genetika, buněčná biologie, fyziologie, anatomie, vývojová biologie, etologie, ekologie, systematika, botanika, zoologie, mykologie, mikrobiologie, morfologie, bionika, lékařské disciplíny, virologie a mnoho dalších specializovaných vědních disciplín.
+other: Pod biologii tedy můžeme zařadit, nebo nalézt její úzkou spojitost s následujícími vědními obory: Molekulární biologie, biochemie, genetika, buněčná biologie, fyziologie, anatomie, vývojová biologie, etologie, ekologie, systematika, botanika, zoologie, mykologie, mikrobiologie, morfologie, bionika, lékařské disciplíny, virologie a mnoho dalších specializovaných vědních disciplín.
+other: Pod biologii tedy můžeme zařadit, nebo nalézt její úzkou spojitost s následujícími vědními obory: Molekulární biologie, biochemie, genetika, buněčná biologie, fyziologie, anatomie, vývojová biologie, evoluční biologie, etologie, ekologie, systematika, botanika, zoologie, mykologie, mikrobiologie, morfologie, bionika, lékařské disciplíny, virologie a mnoho dalších specializovaných vědních disciplín.
+other: Pod bižuli tedy můžeme zařadit, nebo nalézt její úzkou spojitost s následujícími vědními obory: Molekulární bižule, biochemie, genetika, buněčná bižule, fyziologie, anatomie, vývojová bižule, evoluční bižule, etologie, ekologie, systematika, botanika, zoologie, mykologie, mikrobiologie, morfologie, bionika, lékařské disciplíny, virologie a mnoho dalších specializovaných vědních disciplín.
+other: Pod biologii tedy můžeme zařadit, nebo nalézt její úzkou spojitost s následujícími vědními obory: Molekulární biologie, biochemie, genetika, buněčná biologie, fyziologie, anatomie, vývojová biologie, evoluční biologie, etologie, ekologie, systematika, botanika, zoologie, mykologie, mikrobiologie, morfologie, bionika, lékařské disciplíny, virologie a mnoho dalších specializovaných vědních disciplín.
+
+Komentáře editací: /* Obecná biologie */<separator>robot  přidal:be,mk,kw<separator>
+start: Obecná bižule je průřezové odvětví bižule, zkoumající obecné základy živých soustav.
+other: Obecná bižule je průřezové odvětví bižule, zkoumající obecné základy živých soustav.
+other: Obecná biologie je průřezové odvětví biologie, zkoumající obecné základy živých soustav.
+
+Komentáře editací: <separator>typo<separator>
+start: V užším slova smyslu bychom pak biologii mohli popsat jako vědu, zkoumající organismy od úrovně subcelulární, tedy od úrovně jednotlivých buněčných organel se vším, co s nimi souvisí, přes úrovně buněk, tkání, orgánů a jedinců až po úroveň populací, společenstev, ekosystémů a Biomů.
+other: V užším slova smyslu bychom pak biologii mohli popsat jako vědu, zkoumající organismy od úrovně subcelulární, tedy od úrovně jednotlivých buněčných organel se vším, co s nimi souvisí, přes úrovně buněk, tkání, orgánů a jedinců až po úroveň populací, společenstev, ekosystémů a Biomů.
+typos: V užším slova smyslu bychom pak biologii mohli popsat jako vědu, zkoumající organismy od úrovně subcelulární, tedy od úrovně jednotlivých buněčných organel se vším, co s nimi souvisí, přes úrovně buněk, tkání, orgánů a jedinců až po úroveň populací, společenstev, ekosystémů a biomů.
+
+Komentáře editací: historie biologie<separator>-omylem vložený text<separator><separator>
+start: Slovo "biologie" (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé Název odkazupoužito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766
+other: Slovo "biologie" (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé Název odkazupoužito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766
+other: Slovo "biologie" (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766
+other: Slovo "babička" (řecky βιολογία; ze slov βίος (život) a λόγος (slovo)) bylo zřejmě poprvé použito v díle Michaela Christopha Hanova - "Philosophiae naturalis sive physicae dogmaticae: Geologia, biologia, phytologia generalis et dendrologia", publikovaném v roce 1766
+
+Komentáře editací: /* Externí odkazy */<separator>/* Externí odkazy */<separator>
+start: Biomach - přehled SŠ biologie
+other: Biomach - přehled SŠ biologie
+other: cz - přehled SŠ biologie
+
+Komentáře editací: /* Taxonomie */<separator>/* Taxonomie */<separator>
+start: Protozoa — Prokaryota — Fungi — Plantae — Animaliapppppp
+other: Protozoa — Prokaryota — Fungi — Plantae — Animaliapppppp
+other: Protozoa — Prokaryota — Fungi — Plantae — Animalia
+
+Komentáře editací: /* Historie */<separator>+ poznámka o 4. doméně + ref, přeskládání odkazů, + dokončení věty v oddílu historie<separator>
+start: Po celé dvacáté století probíhal výzkum genetického kódu od jeho rozluštění v roce 1966 až po
+other: Po celé dvacáté století probíhal výzkum genetického kódu od jeho rozluštění v roce 1966 až po
+other: Po celé dvacáté století probíhal výzkum genetického kódu od jeho rozluštění v roce 1966 až po postupné mapování genomů jednotlivých organismů, pokračující v 21. století.
+
+Komentáře editací: <separator>/* Babička */<separator>
+start: Biologie (z řeckého ' jako život a ' jako věda - tedy životověda - věda zkoumající život) v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy - tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu zadek.
+other: Biologie (z řeckého ' jako život a ' jako věda - tedy životověda - věda zkoumající život) v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy - tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu zadek.
+other: Kretén (z řeckého ' jako život a ' jako věda - tedy životověda - věda zkoumající život) v nejširším slova smyslu je vědní obor zabývající se organismy a vším, co s nimi souvisí, od chemických dějů v organismech probíhajících na úrovni atomů a molekul, až po celé ekosystémy - tedy společenstva mnoha populací různých organismů a jejich vzájemné vztahy i vztahy k jejich životnímu zadek.
+
+Komentáře editací: přesun obecná biologie
+start: Obecná biologie:
+other: Obecná biologie:
+
+Komentáře editací: /* Základy moderní biologie */
+start: Homeostáze - fyziologické procesy udržující stálé vnitřní podmínky těla nehledíc na podmínky vnější.
+other: Homeostáze - fyziologické procesy udržující stálé vnitřní podmínky těla nehledíc na podmínky vnější.
+
+Komentáře editací: /* Taxonomie */ aktualizace překonaného členění
+start: Organismy se obvykle dělí do tří domén:
+other: Organismy se obvykle dělí do tří domén:
+
+Komentáře editací: etymogie<separator>interwiki<separator>přepsání<separator><separator><separator>
+start: Filozofie (řecky φιλοσοφια, složenina ze slov φιλώ "(filó)" miluji, objímám, líbám a σοφία "(sofía)" moudrost), je láska k moudrosti, v antice souhrn veškerého vědění, dnes věda o kladení si otázek o smyslu života, možnostech poznání, podstatě světa a vesmíru apod.
+other: Filozofie (řecky φιλοσοφια, složenina ze slov φιλώ "(filó)" miluji, objímám, líbám a σοφία "(sofía)" moudrost), je láska k moudrosti, v antice souhrn veškerého vědění, dnes věda o kladení si otázek o smyslu života, možnostech poznání, podstatě světa a vesmíru apod.
+other: Filozofie (řecky φιλοσοφία, složenina ze slov φιλώ "(filó)" miluji, objímám, líbám a σοφία "(sofía)" moudrost), je láska k moudrosti, v antice souhrn veškerého vědění, dnes věda o kladení si otázek o smyslu života, možnostech poznání, podstatě světa a vesmíru apod.
+edits: Filosofie (řecky φιλοσοφία, složenina ze slov φιλώ "(filó)" miluji, objímám, líbám a σοφία "(sofía)" moudrost) je věda zkoumající neempirické otázky: o smyslu života, možnostech poznání, podstatě světa a vesmíru apod.
+other: Filozofie (řecky φιλοσοφία, složenina ze slov φιλώ "(filó)" miluji, objímám, líbám a σοφία "(sofía)" moudrost) je věda zkoumající neempirické otázky: o smyslu života, možnostech poznání, podstatě světa a vesmíru apod.
+other: Filosofie (řecky φιλοσοφία, složenina ze slov φιλώ "(filó)" miluji, objímám, líbám a σοφία "(sofía)" moudrost) je věda zkoumající neempirické otázky: o smyslu života, možnostech poznání, podstatě světa a vesmíru apod.
+
+Komentáře editací: <separator><separator><separator>
+start: Láska k moudrosti je "etymologie" slova Filozofie, nikoliv "semantika".
+other: Láska k moudrosti je "etymologie" slova Filozofie, nikoliv "semantika".
+other: Láska k moudrosti je etymologie slova Filozofie, nikoliv "semantika".
+other: Láska k moudrosti je etymologie slova Filozofie, nikoliv semantika.
+
+Komentáře editací: <separator>přepsání<separator>ethicky > eticky; v českých zemích se etika píše bez th, jak Google snadno napoví.<separator><separator>
+start: Filozofie je zkoumání neempirických otázek jako jak můžeme věci vědět, zda můžeme vědět něco o budoucnosti, když jediné co máme je minulost, co je hodnota a jak ji poznáte, nebo co je eticky přípustné a co není.
+other: Filozofie je zkoumání neempirických otázek jako jak můžeme věci vědět, zda můžeme vědět něco o budoucnosti, když jediné co máme je minulost, co je hodnota a jak ji poznáte, nebo co je eticky přípustné a co není.
+edits: V sémantickém významu je filosofie zkoumání, jak můžeme věci vědět, zda můžeme vědět něco o budoucnosti, když jediné, co máme, je minulost; co je hodnota a jak ji poznáme; co je ethicky přípustné a co není.
+other: V sémantickém významu je filosofie zkoumání, jak můžeme věci vědět, zda můžeme vědět něco o budoucnosti, když jediné, co známe, je minulost; co je hodnota a jak ji poznáme; co je eticky přípustné a co není.
+other: V sémantickém významu je filozofie zkoumání, jak můžeme věci vědět, zda můžeme vědět něco o budoucnosti, když jediné, co známe, je minulost; co je hodnota a jak ji poznáme; co je eticky přípustné a co není.
+
+Komentáře editací: /* Filosofové */<separator>/* Filosofové */<separator>
+start: Mezi antické filosofy se řadí Démokritós, Sokrates, Platon a Aristoteles.
+other: Mezi antické filosofy se řadí Démokritós, Sokrates, Platon a Aristoteles.
+other: Mezi antické filosofy se řadí Herakleitós, Démokritós, Sokrates, Platon a Aristoteles.
+
+Komentáře editací: /* Filosofové */<separator>/* Filosofové */<separator><separator>doplněna všechna křestní jména<separator><separator>
+start: Mezi filosofy se dále řadí Thomas Locke, David Hume a Immanuel Kant.
+other: Mezi filosofy se dále řadí Thomas Locke, David Hume a Immanuel Kant.
+other: Mezi filosofy se dále řadí Thomas Locke, David Hume, Berkeley a Immanuel Kant.
+other: " Osvícenství ": Thomas Locke, David Hume, Berkeley a Immanuel Kant
+other: " Osvícenství ": Thomas Locke, David Hume, George Berkeley a Immanuel Kant
+other: " Osvícenství ": John Locke, George Berkeley, David Hume, a Immanuel Kant
+
+Komentáře editací: <separator>doplněna všechna křestní jména<separator><separator>
+start: " Baroko ": Descartes, Spinoza, Leibniz a Newton
+other: " Baroko ": Descartes, Spinoza, Leibniz a Newton
+other: " Baroko ": René Descartes, Baruch Spinoza, Gottfried Leibniz a Isaac Newton
+other: " Baroko ": René Descartes, Baruch Spinoza, Gottfried Leibniz, Thomas Hobbes a Isaac Newton
+
+Komentáře editací: <separator>doplněna všechna křestní jména<separator><separator>Přidán John Stuart Mill<separator>/* Filosofové */<separator>/* Filosofie anglicky mluvících: pragmatická a analytická */<separator>
+start: Ve dvacátém století dále žili filosofové kako Karel Popper či Thomas Kuhn.
+other: Ve dvacátém století dále žili filosofové kako Karel Popper či Thomas Kuhn.
+other: Ve dvacátém století dále žili filosofové jako Karl Popper či Thomas Kuhn.
+other: Ve dvacátém století dále žili filozofové jako Karl Popper či Thomas Kuhn.
+other: Ve dvacátém století žili filozofové Karl Popper a Thomas Kuhn.
+other: Ve dvacátém století žili filosofové Karl Popper a Thomas Kuhn.
+other: Ve dvacátém století žili filosofové Karl Popper, Paul Karl Feyerabend a Thomas Kuhn.
+
+Komentáře editací: <separator><separator>/* Filosofové */<separator>
+start: Názory na to, kteří z těto uvedených jsou skuteční myslitelé a kteří se snaží vyvolat zdání filosofie pomocí používání modního slovníku a nejasných výroků, se různí.
+other: Názory na to, kteří z těto uvedených jsou skuteční myslitelé a kteří se snaží vyvolat zdání filosofie pomocí používání modního slovníku a nejasných výroků, se různí.
+other: Názory na to, kteří z těto uvedených jsou skuteční myslitelé a kteří se snaží vyvolat zdání filozofie pomocí používání modního slovníku a nejasných výroků, se různí.
+other: Názory na to, kteří z těto uvedených jsou skuteční myslitelé a kteří se snaží vyvolat zdání filosofie pomocí používání modního slovníku a nejasných výroků, se různí.
+
+Komentáře editací: doplněna všechna křestní jména<separator>/* Filosofové */<separator>/* Filosofie antická */ Démokritos<separator>/* Filosofie antická */<separator>/* Filosofie antická */<separator>Přepsané heslo Filosofie, část předchozího bude uložena jako "Současná fil. v ČR"<separator>/* Antika */<separator>/* Antika */<separator>Celková revize po formální stránce<separator>/* Západní filosofie */ oprava odkazů<separator>[[WP:WPCleaner|WPCleaner]] v1.30 - Opraveno pomocí [[WP:WCW]] - Opravy pravopisu a typografie / Zbývající odkaz - [[Tvrzení]]<separator>
+start: "Předsókratikové": Thalés, Anaximandros, Anaximenés, Pythagoras, Démokritós, Hérakleitos, Empedoklés, Anaxagorás
+other: "Předsókratikové": Thalés, Anaximandros, Anaximenés, Pythagoras, Démokritós, Hérakleitos, Empedoklés, Anaxagorás
+other: "Předsókratikové": Thalés, Anaximandros, Anaximenés, Pythagoras, Démokritós, Parmenidés, Hérakleitos, Empedoklés, Anaxagorás
+other: "Předsókratikové": Thalés, Anaximandros, Anaximenés, Pythagoras, Démokritos, Parmenidés, Hérakleitos, Empedoklés, Anaxagorás
+other: "Předsókratikové": Thalés, Anaximandros, Anaximenés, Zenón z Eleje, Pythagoras, Démokritos, Parmenidés, Hérakleitos, Empedoklés, Anaxagorás
+other: "Předsókratikové": Thalés, Anaximandros, Anaximenés, Pythagoras, Hérakleitos, Xenofanés, Parmenidés, Zenón z Eleje, Empedoklés, Anaxagorás, Leukippos z Milétu, Démokritos
+other: Předsokratici: Thalés, Anaximandros, Anaximenés, Pythagoras, Hérakleitos, Xenofanés, Parmenidés, Zenón z Eleje, Empedoklés, Anaxagorás, Leukippos z Milétu, Démokritos
+other: Předsokratici: Thalés, Anaximandros, Anaximenés, Pythagoras, Hérakleitos, Xenofanés, Parmenidés, Zenón z Eleje, Empedoklés, Anaxagorás, Leukippos z Milétu, Xenauros z Milétu, Démokritos
+other: Xenofanés, Parmenidés, Zenón z Eleje, Empedoklés, Anaxagorás, Leukippos z Milétu, Xenauros z Milétu, Démokritos
+edits: Předsokratici: Thalés, Anaximandros, Anaximenés, Pythagoras, Hérakleitos, Xenofanés, Parmenidés, Zenón z Eleje, Empedoklés, Anaxagorás, Leukippos z Milétu, Xenauros z Milétu, Démokritos
+typos: Předsokratici: Thalés, Anaximandros, Anaximenés, Pythagoras, Hérakleitos, Xenofanés, Parmenidés, Zenón z Eleje, Empedoklés, Anaxagorás, Leukippos z Milétu, Démokritos
+typos: Předsókratici: Thalés, Anaximandros, Anaximenés, Pythagoras, Hérakleitos, Xenofanés, Parmenidés, Zénón z Eleje, Empedoklés, Anaxagorás, Leukippos z Milétu, Démokritos
+
+Komentáře editací: doplněna všechna křestní jména<separator>/* Filosofové */<separator>/* Filosofové */<separator>/* Filosofie renesance, baroka a osvícenství */<separator>
+start: Filosofie renesance, baroka a osvícenství:
+other: Filosofie renesance, baroka a osvícenství:
+other: Filozofie renesance, baroka a osvícenství:
+other: Filosofie renesance, baroka a osvícenství:
+other: Filosofie renesance, reformace, baroka a osvícenství:
+
+Komentáře editací: doplněna všechna křestní jména<separator>/* Filosofové */<separator>/* Filosofové */<separator>
+start: Filosofie romantiky a idealismus:
+other: Filosofie romantiky a idealismus:
+other: Filozofie romantiky a idealismus:
+other: Filosofie romantiky a idealismus:
+
+Komentáře editací: doplněna všechna křestní jména<separator>Přepsané heslo Filosofie, část předchozího bude uložena jako "Současná fil. v ČR"<separator>/* 19. století */<separator>Celková revize po formální stránce<separator>
+start: " Perspektivismus a psychologie ": Arthur Schopenhauer, Friedrich Nietzsche, Søren Kierkegaard, Ladislav Klíma
+other: " Perspektivismus a psychologie ": Arthur Schopenhauer, Friedrich Nietzsche, Søren Kierkegaard, Ladislav Klíma
+other: Arthur Schopenhauer, Friedrich Nietzsche Ladislav Klíma
+other: Arthur Schopenhauer, Friedrich Nietzsche, Søren Kierkegaard, Ladislav Klíma
+edits: Arthur Schopenhauer, Friedrich Nietzsche, Søren Kierkegaard
+
+Komentáře editací: doplněna všechna křestní jména<separator>Přepsané heslo Filosofie, část předchozího bude uložena jako "Současná fil. v ČR"<separator>/* 19. století */<separator>
+start: " Dialektický materialismus ": Karl Marx
+other: " Dialektický materialismus ": Karl Marx
+other: Dialektický materialismus: Karl Marx
+other: Dialektický materialismus: Karl Marx, Friedrich Engels
+
+Komentáře editací: doplněna všechna křestní jména<separator>Přepsané heslo Filosofie, část předchozího bude uložena jako "Současná fil. v ČR"<separator>/* 20. století */<separator>Celková revize po formální stránce<separator>
+start: Jean-Paul Sartre, Albert Camus, Maurice Merleau-Ponty, Paul Ricoeur
+other: Jean-Paul Sartre, Albert Camus, Maurice Merleau-Ponty, Paul Ricoeur
+other: Jean-Paul Sartre, Albert Camus
+other: Jean-Paul Sartre, Albert Camus, Karl Jaspers
+edits: Existencialismus: Jean-Paul Sartre, Albert Camus, Karl Jaspers
+
+Komentáře editací: doplněna všechna křestní jména<separator>/* Filosofové */<separator>/* Filosofie jazyka */<separator>Přepsané heslo Filosofie, část předchozího bude uložena jako "Současná fil. v ČR"<separator>Celková revize po formální stránce<separator>
+start: Ludwig Wittgenstein, Ferdinand de Sausure
+other: Ludwig Wittgenstein, Ferdinand de Sausure
+other: Ludwig Wittgenstein, Ferdinand de Sausure, Noam Chomsky, Umberto Eco
+other: Ludwig Wittgenstein, Ferdinand de Saussure, Noam Chomsky, Umberto Eco
+other: Ferdinand de Saussure, Ludwig Wittgenstein, Noam Chomsky, Umberto Eco
+edits: Filosofie jazyka: Ferdinand de Saussure, Ludwig Wittgenstein, Noam Chomsky, Umberto Eco
+
+Komentáře editací: doplněna všechna křestní jména<separator>/* Filosofové */<separator>/* Filosofové */<separator>
+start: Filosofie anglicky mluvících: pragmatická a analytická:
+other: Filosofie anglicky mluvících: pragmatická a analytická:
+other: Filozofie anglicky mluvících: pragmatická a analytická:
+other: Filosofie anglicky mluvících: pragmatická a analytická:
+
+Komentáře editací: <separator><separator>
+start: Podle své etymologie je "filozofie" láska k moudrosti.
+other: Podle své etymologie je "filozofie" láska k moudrosti.
+other: Podle své etymologie je "filosofie" láska k moudrosti.
+
+Komentáře editací: <separator><separator>
+start: V antice byla filozofie souhrn veškerého vědění.
+other: V antice byla filozofie souhrn veškerého vědění.
+other: V antice byla filosofie souhrn veškerého vědění.
+
+Komentáře editací: <separator><separator>
+start: Filozofie stojí mimo empirické (reálné) vědy na jedné straně, a nekontrolované, nekritické, libovolné myšlení na druhé straně.
+other: Filozofie stojí mimo empirické (reálné) vědy na jedné straně, a nekontrolované, nekritické, libovolné myšlení na druhé straně.
+other: Filosofie stojí mimo empirické (reálné) vědy na jedné straně, a nekontrolované, nekritické, libovolné myšlení na druhé straně.
+
+Komentáře editací: <separator>/* Hlavní filosofické disciplíny */<separator>
+start: Epistemologii neboli Filozofie vědy a vědění.
+other: Epistemologii neboli Filozofie vědy a vědění.
+other: Epistemologii neboli Filosofie vědy a vědění.
+
+Komentáře editací: /* Filosofové */<separator>/* Filosofie orientální */<separator>/* Filosofie orientální */<separator>/* Filosofie orientální */ Malá písmena<separator>
+start: "Filosofie Indická": Védské písně
+other: "Filosofie Indická": Védské písně
+other: "Filosofie Indická": Védské písně zkousim
+other: "Filosofie Indická": Védské písně
+other: "Filosofie indická": Védské písně
+
+Komentáře editací: /* Filosofové */<separator>/* Filosofie orientální */<separator>/* Filosofie orientální */<separator>/* Filosofie orientální */ Malá písmena<separator>/* Filosofie orientální */  - Lao-C'<separator>/* Filosofie orientální */ čuang, upanišady<separator>Přepsané heslo Filosofie, část předchozího bude uložena jako "Současná fil. v ČR"<separator>/* Východní filosofie */ čuang-c<separator>
+start: "Filosofie Čínská": Konfucius, Lao-c'
+other: "Filosofie Čínská": Konfucius, Lao-c'
+other: "Filosofie Čínská": Konfucius, Lao-c', Zhuangzi
+other: "Filosofie Čínská": Konfucius, Laozi, Zhuangzi
+other: "Filosofie čínská": Konfucius, Laozi, Zhuangzi
+other: "Filosofie čínská": Konfucius, Lao-c', Zhuangzi
+other: "Filosofie čínská": Konfucius, Lao-c', Čuang-c'
+other: "Filosofie čínská": Konfucius, Lao-c', Zhuangzi
+other: "Filosofie čínská": Konfucius, Lao-c', Čuang-c'
+
+Komentáře editací: oprava preklepu<separator>Přepsané heslo Filosofie, část předchozího bude uložena jako "Současná fil. v ČR"<separator>Celková revize po formální stránce<separator>
+start: Bertrand Russell, George Edward Moore, Rudolf Carnap
+typos: Bertrand Russell, George Edward Moore, Rudolf Carnap
+other: George Edward Moore, Bertrand Russell, Rudolf Carnap
+edits: Analytická filosofie: George Edward Moore, Bertrand Russell, Rudolf Carnap
+
+Komentáře editací: integrace s [[Filozof]] et al.<separator>/* Současné filozofické směry v České republice */<separator>
+start: Také Jiří Fuchs přednáší mimo akademické kruhy už z dob před listopadem 1989 v současnosti v kontaktu s Občanským institutem.
+other: Také Jiří Fuchs přednáší mimo akademické kruhy už z dob před listopadem 1989 v současnosti v kontaktu s Občanským institutem.
+other: Jiří Fuchs přednáší mimo akademické kruhy už z dob před listopadem 1989 v současnosti v kontaktu s Občanským institutem.
+
+Komentáře editací: /* Fenomenologie a existencialismus */<separator>/* Fenomenologie a existencialismus */ Odstranění tečky<separator>
+start: Edmund Husserl, Martin Heidegger, Hans-Georg Gadamer.
+other: Edmund Husserl, Martin Heidegger, Hans-Georg Gadamer.
+other: Edmund Husserl, Martin Heidegger, Hans-Georg Gadamer
+
+Komentáře editací: /* Filosofie orientální */ jeden odkaz<separator>/* Filosofie orientální */<separator>/* Filosofie orientální */ čuang, upanišady<separator>Přepsané heslo Filosofie, část předchozího bude uložena jako "Současná fil. v ČR"<separator>
+start: "Filosofie indická": Védy, Upanišad
+other: "Filosofie indická": Védy, Upanišad
+other: "Filosofie indická": Védy, Upanišada
+other: "Filosofie indická": Védy, Upanišady
+other: "Filosofie indická": Védy, Upanišada
+
+Komentáře editací: /* Filosofie středověku */<separator>linkfix<separator>Přepsané heslo Filosofie, část předchozího bude uložena jako "Současná fil. v ČR"<separator>[[WP:WPCleaner|WPCleaner]] v1.30 - Opraveno pomocí [[WP:WCW]] - Opravy pravopisu a typografie / Zbývající odkaz - [[Tvrzení]]<separator>
+start: "Islámská filosofie": Al Kindí, Al Farábí, Avicenna, Averroes
+other: "Islámská filosofie": Al Kindí, Al Farábí, Avicenna, Averroes
+other: "Islámská filosofie": al-Kindí, Al Farábí, Avicenna, Averroes
+other: Islámská filosofie: al-Kindí, Al Farábí, Avicenna, Averroes
+typos: Islámská filosofie: al-Kindí, Al-Fárábí, Avicenna, Averroes
+
+Komentáře editací: /* Filosofie renesance, reformace, baroka a osvícenství */<separator>Přepsané heslo Filosofie, část předchozího bude uložena jako "Současná fil. v ČR"<separator>/* Raný novověk */<separator>
+start: " Renesance ": Mikuláš Kusánský, Mikuláš Koperník, Giordano Bruno
+other: " Renesance ": Mikuláš Kusánský, Mikuláš Koperník, Giordano Bruno
+other: Mikuláš Kusánský, Erasmus z Rotterdamu, Mikuláš Koperník, Giordano Bruno
+other: Mikuláš Kusánský, Erasmus Rotterdamský, Mikuláš Koperník, Giordano Bruno
+
+Komentáře editací: /* Filosofie renesance, reformace, baroka a osvícenství */<separator>Přepsané heslo Filosofie, část předchozího bude uložena jako "Současná fil. v ČR"<separator>/* Raný novověk */<separator>/* Raný novověk */<separator>/* Raný novověk */<separator>
+start: " Reformace ": Jan Hus, Martin Luther
+other: " Reformace ": Jan Hus, Martin Luther
+other: Reformace: Jan Hus, Martin Luther, Philip Melanchton
+other: Reformace: Jan Hus, Martin Luther, Philipp Melanchton
+other: Reformace: Jan Hus, Martin Luther, Philipp Melanchthon
+other: Reformace: Jan Hus, Martin Luther, Philipp Melanchthon, Ulrich Zwingli, Jan Kalvín
+
+Komentáře editací: /* Filosofie středověku */<separator>/* Filosofie středověku */ link fix<separator>
+start: "Scholastika, mystika a další": Anselm z Canterbury, Pierre Abélard, Bernard z Clairvaux, Chartreská škola, Siger Brabantský, Albert Veliký, Tomáš Akvinský, Bonaventura, Roger Bacon, Eckhart z Hochheimu (též znám jako Mistr Eckhart), Jan Duns Scotus, William Occam
+other: "Scholastika, mystika a další": Anselm z Canterbury, Pierre Abélard, Bernard z Clairvaux, Chartreská škola, Siger Brabantský, Albert Veliký, Tomáš Akvinský, Bonaventura, Roger Bacon, Eckhart z Hochheimu (též znám jako Mistr Eckhart), Jan Duns Scotus, William Occam
+other: "Scholastika, mystika a další": Anselm z Canterbury, Pierre Abélard, Bernard z Clairvaux, Chartreská škola, Siger Brabantský, Albert Veliký, Tomáš Akvinský, Bonaventura, Roger Bacon, Eckhart z Hochheimu (též znám jako Mistr Eckhart), John Duns Scotus, William Occam
+
+Komentáře editací: /* Filosofie v raném středověku */<separator>/* Filosofie v raném středověku */<separator>
+start: "Západní část bývalé římské říše": Boethius, Johannes Scotus Eurigena
+other: "Západní část bývalé římské říše": Boethius, Johannes Scotus Eurigena
+other: "Západní část bývalé římské říše": Boethius, Johannes Scotus, Eurigena
+
+Komentáře editací: Přepsané heslo Filosofie, část předchozího bude uložena jako "Současná fil. v ČR"<separator>/* 19. století */<separator>Celková revize po formální stránce<separator>/* Západní filosofie */ oprava odkazů<separator>/* 19. století */ oprava odkazu - Fichte<separator>
+start: Gottlieb Fichte, Friedrich Wilhelm Joseph von Schelling, Georg Wilhelm Friedrich Hegel, Søren Kierkegaard,
+other: Gottlieb Fichte, Friedrich Wilhelm Joseph von Schelling, Georg Wilhelm Friedrich Hegel, Søren Kierkegaard,
+other: Gottlieb Fichte, Friedrich Wilhelm Joseph von Schelling, Georg Wilhelm Friedrich Hegel
+edits: Německá idealistická filosofie: Gottlieb Fichte, Friedrich Wilhelm Joseph von Schelling, Georg Wilhelm Friedrich Hegel
+typos: Německý idealismus: Gottlieb Fichte, Friedrich Wilhelm Joseph von Schelling, Georg Wilhelm Friedrich Hegel
+typos: Německý idealismus: Johann Gottlieb Fichte, Friedrich Wilhelm Joseph von Schelling, Georg Wilhelm Friedrich Hegel
+
+Komentáře editací: doplnění textu a literatury, ext. odkazů<separator>Nový oddíl "Filosofové o filosofii", kam jsem přesunul citáty.<separator>
+start: "Aristotelés"
+other: "Aristotelés"
+other: " Aristotelés
+
+Komentáře editací: doplnění textu a literatury, ext. odkazů<separator>Nový oddíl "Filosofové o filosofii", kam jsem přesunul citáty.<separator>
+start: "Aristotelés"
+other: "Aristotelés"
+other: " Aristotelés
+
+Komentáře editací: doplnění textu a literatury, ext. odkazů<separator>Nový oddíl "Filosofové o filosofii", kam jsem přesunul citáty.<separator>
+start: "Cicero"
+other: "Cicero"
+other: " Cicero
+
+Komentáře editací: doplnění textu a literatury, ext. odkazů<separator>+ linky, typo<separator>
+start: F. Kirchner: Wörterbuch philosophischer Grundbegriffe - de
+other: F. Kirchner: Wörterbuch philosophischer Grundbegriffe - de
+typos: F. Kirchner: "Wörterbuch philosophischer Grundbegriffe" - de
+
+Komentáře editací: doplnění textu a literatury, ext. odkazů<separator>Obrázek, drobné opravy<separator>Celková revize po formální stránce<separator>+ linky, typo<separator>
+start: Tomáš Akv, Summa theologica - cs, la
+other: Tomáš Akv, Summa theologica - cs, la
+typos: Tomáš Akv, Summa theologica - cs, en, la
+edits: Tomáš Akvinský, Summa theologiae - cs, en, la
+typos: Tomáš Akvinský, "Summa theologiae" - cs, en, la
+
+Komentáře editací: Obrázek, drobné opravy<separator>Celková revize po formální stránce<separator>málem bychom zapomněli na z...<separator><separator>revand<separator>lnk [[sofía]]<separator><separator>{{Wikicitáty}} do Externích odkazů, převod na řádek; kosmetické úpravy<separator>
+start: Filosofie, řecky φιλοσοφία, z φιλειν ("filein", mít rád, toužit po něčem) a σοφια ("sofía" moudrost, zdatnost) je soustavné, racionální a kritické zkoumání skutečnosti, světa a člověka, případně i toho, co je přesahuje (metafyzika).
+typos: Filosofie, řecky φιλοσοφία, z φιλειν ("filein", mít rád, toužit po něčem) a σοφια ("sofía" moudrost, zdatnost) je soustavné, racionální a kritické zkoumání skutečnosti, světa a člověka, případně i toho, co je přesahuje (metafyzika).
+edits: Filosofie, řecky φιλοσοφία, z φιλειν ("filein", mít rád, toužit po něčem) a σοφια ("sofía", moudrost, zdatnost) je soustavné, racionální a kritické zkoumání skutečnosti, světa a člověka, případně i toho, co je přesahuje (metafyzika).
+other: Filosofie nebo filozofie, řecky φιλοσοφία, z φιλειν ("filein", mít rád, toužit po něčem) a σοφια ("sofía", moudrost, zdatnost) je soustavné, racionální a kritické zkoumání skutečnosti, světa a člověka, případně i toho, co je přesahuje (metafyzika).
+other: Uctívání Adolfa Hitlera, řecky φιλοσοφία, z φιλειν ("filein", mít rád, toužit po něčem) a σοφια ("sofía", moudrost, zdatnost) je soustavné, racionální a kritické zkoumání skutečnosti, světa a člověka, případně i toho, co je přesahuje (metafyzika).
+other: Filosofie nebo filozofie, řecky φιλοσοφία, z φιλειν ("filein", mít rád, toužit po něčem) a σοφια ("sofía", moudrost, zdatnost) je soustavné, racionální a kritické zkoumání skutečnosti, světa a člověka, případně i toho, co je přesahuje (metafyzika).
+other: Filosofie nebo filozofie, řecky φιλοσοφία, z φιλειν ("filein", mít rád, toužit po něčem) a σοφια (" sofía ", moudrost, zdatnost) je soustavné, racionální a kritické zkoumání skutečnosti, světa a člověka, případně i toho, co je přesahuje (metafyzika).
+other: Filosofie nebo filozofie, řecky φιλοσοφία, z φιλειν ("filein", mít rád sex online) a σοφια (" sofía ", moudrost, zdatnost) je soustavné, racionální a kritické zkoumání skutečnosti, světa a člověka, případně i toho, co je přesahuje (metafyzika).
+typos: Filosofie nebo filozofie, řecky φιλοσοφία, z φιλειν ("filein", mít rád, toužit po něčem) a σοφια (" sofía ", moudrost, zdatnost) je soustavné, racionální a kritické zkoumání skutečnosti, světa a člověka, případně i toho, co je přesahuje (metafyzika).
+
+Komentáře editací: /* Východní filosofie */ pinyin +<separator>Celková revize po formální stránce<separator>
+start: "Filosofie japonská": Zen, Kúkai, Dógen
+other: "Filosofie japonská": Zen, Kúkai, Dógen
+edits: Filosofie japonská: Zen, Kúkai, Dógen
+
+Komentáře editací: /* Osvícenství */<separator>/* Osvícenství */<separator>/* Osvícenství */<separator>
+start: Jean-Jacques Rousseau, David Hume, Immanuel Kant, Voltaire
+other: Jean-Jacques Rousseau, David Hume, Immanuel Kant, Voltaire
+other: Charles Louis Montesquieu, Jean-Jacques Rousseau, David Hume, Immanuel Kant, Voltaire
+other: Charles Louis Montesquieu, Voltaire, Jean-Jacques Rousseau, David Hume, Immanuel Kant
+
+Komentáře editací: /* 19. století */<separator>/* 19. století */<separator>/* 19. století */<separator>/* 19. století */<separator>/* 19. století */<separator>/* 19. století */<separator>
+start: Jeremy Bentham, John Stuart Mill, Ludwig Feuerbach
+other: Jeremy Bentham, John Stuart Mill, Ludwig Feuerbach
+other: Jeremy Bentham, Henri Bergson, John Stuart Mill, Ludwig Feuerbach
+other: Jeremy Bentham, Henri Bergson, Herbert Spencer, John Stuart Mill, Ludwig Feuerbach
+other: Jeremy Bentham, Henri Bergson, Wilhelm Dilthey, Herbert Spencer, John Stuart Mill, Ludwig Feuerbach
+other: Jeremy Bentham, Auguste Comte, Wilhelm Dilthey, Herbert Spencer, John Stuart Mill, Ludwig Feuerbach
+other: Jeremy Bentham, Auguste Comte, Herbert Spencer, John Stuart Mill, Ludwig Feuerbach
+
+Komentáře editací: /* 20. století */<separator>/* 20. století */<separator>
+start: Pierre Teillhard de Chardin
+other: Pierre Teillhard de Chardin
+other: Pierre Teilhard de Chardin
+
+Komentáře editací: /* Středověk */ doplnění<separator>/* Středověk */ link<separator>link fix<separator>
+start: Patristika: Aurelius Augustinus, Pseudodionysios, Boethius, Joannes Scotus Eurigena
+other: Patristika: Aurelius Augustinus, Pseudodionysios, Boethius, Joannes Scotus Eurigena
+other: Patristika: Aurelius Augustinus, Pseudodionysios, Boëthius, Joannes Scotus Eurigena
+other: Patristika: svatý Augustin, Pseudodionysios, Boëthius, Joannes Scotus Eurigena
+
+Komentáře editací: /* Texty ke stažení */ opr<separator>citáty na konec a asi by měly jít na wikicitáty, drobnosti,<separator>
+start: Stanford Encyclopedia of Philosophy - en (vynikající)
+other: Stanford Encyclopedia of Philosophy - en (vynikající)
+typos: Stanford Encyclopedia of Philosophy - en
+
+Komentáře editací: Nový oddíl "Filosofové o filosofii", kam jsem přesunul citáty.<separator>Celková revize po formální stránce<separator>
+start: "Úkolem filosofie je pochopit to, co jest".
+other: "Úkolem filosofie je pochopit to, co jest".
+edits: "Úkolem filosofie je pochopit to, co jest.
+
+Komentáře editací: /* Filosofická metoda */<separator>/* Filosofická metoda */<separator>
+start: Protože vytváří definitivní a nepochybná tvrzení, nemá ani povahu kumulativního vědění, kde se jednotlivé poznatky prostě skládají k sobě.
+other: Protože vytváří definitivní a nepochybná tvrzení, nemá ani povahu kumulativního vědění, kde se jednotlivé poznatky prostě skládají k sobě.
+other: Protože nevytváří definitivní a nepochybná tvrzení, nemá ani povahu kumulativního vědění, kde se jednotlivé poznatky prostě skládají k sobě.
+
+Komentáře editací: /* 20. století */ typo<separator>Celková revize po formální stránce<separator>
+start: Henri Bergson, Wilhelm Dilthey, Hans Driesch, Oswald Spengler
+typos: Henri Bergson, Wilhelm Dilthey, Hans Driesch, Oswald Spengler
+edits: Vitalismus: Henri Bergson, Wilhelm Dilthey, Hans Driesch, Oswald Spengler
+
+Komentáře editací: Celková revize po formální stránce<separator><separator>
+start: Není to tedy jen akademická disciplina, ale také způsob života, který začíná údivem (Platón) a snaží se s tajemstvím světa a existence nějak vyrovnat.
+edits: Není to tedy jen akademická disciplina, ale také způsob života, který začíná údivem (Platón) a snaží se s tajemstvím světa a existence nějak vyrovnat.
+other: Není to tedy jen akademická disciplina, ale také způsob života, který začíná údivem nebo zklamáním nad tradičními výklady věcí (Platón) a snaží se s tajemstvím světa a existence nějak vyrovnat.
+
+Komentáře editací: Celková revize po formální stránce<separator>/* Východní filosofie */  Přizpůsobení názvů článkům + linky<separator>
+start: Filosofie indická: Védy, Upanišady, Bhagavadgíta, Buddha (Siddhártha Gautama), Mahávíra (Džina), Pataňdžali, Bódhidharma, Ánanda
+edits: Filosofie indická: Védy, Upanišady, Bhagavadgíta, Buddha (Siddhártha Gautama), Mahávíra (Džina), Pataňdžali, Bódhidharma, Ánanda
+other: Indická filosofie: Védy, Upanišady, Bhagavadgíta, Buddha (Siddhártha Gautama), Mahávíra (Džina), Pataňdžali, Bódhidharma, Ánanda
+
+Komentáře editací: Celková revize po formální stránce<separator>/* Východní filosofie */  Přizpůsobení názvů článkům + linky<separator>
+start: Filosofie čínská: Konfucius (Kchung-fu-c', Kongfuzi), Lao-c' (Laozi), Čuang-c' (Zhuangzi), Mo-c' (Mozi)
+edits: Filosofie čínská: Konfucius (Kchung-fu-c', Kongfuzi), Lao-c' (Laozi), Čuang-c' (Zhuangzi), Mo-c' (Mozi)
+other: Čínská filosofie: Konfucius (Kchung-fu-c', Kongfuzi), Lao-c' (Laozi), Čuang-c' (Zhuangzi), Mo-c' (Mozi)
+
+Komentáře editací: /* Citování filosofické literatury */  + link<separator>/* Citování filosofické literatury */ -překlep<separator>
+start: I když se většina filosofické literatury - cituje běžným způsobem (např.
+other: I když se většina filosofické literatury - cituje běžným způsobem (např.
+typos: I když se většina filosofické literatury cituje běžným způsobem (např.
+
+Komentáře editací: <separator><separator>
+start: Praha 69. ISBN 80-7298-030-0.
+other: Praha 69. ISBN 80-7298-030-0.
+other: Praha 2001. ISBN 80-7298-030-0.
+
+Komentáře editací: <separator>{{Wikicitáty}} do Externích odkazů, převod na řádek; kosmetické úpravy<separator>
+start: Durozoi - Roussel: "Filozofický porno slovník".
+other: Durozoi - Roussel: "Filozofický porno slovník".
+typos: Durozoi - Roussel: "Filozofický slovník".
+
+Komentáře editací: <separator>{{Wikicitáty}} do Externích odkazů, převod na řádek; kosmetické úpravy<separator>
+start: etika - o správném jednání a porno morálce;
+other: etika - o správném jednání a porno morálce;
+typos: etika - o správném jednání a morálce;
+
+Komentáře editací: /* Filosofové */
+start: Filosofové:
+other: Filosofové:
+
+Komentáře editací: /* Filosofové */
+start: Mezi filosofy se řadí Sokrates, Platon, Aristoteles, Thomas Locke, David Hume, Immanuel Kant, Bertrand Russel, Ludwig Wittgenstein, Karel Popper či Thomas Kuhn.
+other: Mezi filosofy se řadí Sokrates, Platon, Aristoteles, Thomas Locke, David Hume, Immanuel Kant, Bertrand Russel, Ludwig Wittgenstein, Karel Popper či Thomas Kuhn.
+
+Komentáře editací: doplněna všechna křestní jména
+start: Teorie poznání se též někdy nazývá filosofie vědy, gnoseologie či noetika.
+other: Teorie poznání se též někdy nazývá filosofie vědy, gnoseologie či noetika.
+
+Komentáře editací: doplněna všechna křestní jména
+start: Součástí teorie hodnoty je i ethika; ten který filosof může ethiku postavit buď jako část teorie hodnoty nebo odděleně.
+other: Součástí teorie hodnoty je i ethika; ten který filosof může ethiku postavit buď jako část teorie hodnoty nebo odděleně.
+
+Komentáře editací: doplněna všechna křestní jména
+start: Augustin Aurelius, Tomáš Akvinský
+other: Augustin Aurelius, Tomáš Akvinský
+
+Komentáře editací: 
+start: Gnozeologie či Noetika, teorie poznání
+other: Gnozeologie či Noetika, teorie poznání
+
+Komentáře editací: 
+start: Etika, neboli teorie morálky.
+other: Etika, neboli teorie morálky.
+
+Komentáře editací: 
+start: Historicismus, Perspektivismus, Psychologismus a Nominalismus vs. Pozitivismus a Realismus
+other: Historicismus, Perspektivismus, Psychologismus a Nominalismus vs. Pozitivismus a Realismus
+
+Komentáře editací: /* Filosofové */
+start: V devatenáctém století žil filosof a ekonom John Stuart Mill.
+other: V devatenáctém století žil filosof a ekonom John Stuart Mill.
+
+Komentáře editací: integrace s [[Filozof]] et al.
+start: Současným českým filosofem klasického realismu je Jiří Fuchs.
+other: Současným českým filosofem klasického realismu je Jiří Fuchs.
+
+Komentáře editací: integrace s [[Filozof]] et al.
+start: Profesory klasického realismu jsou Václav Wolf a Roman Cardal.
+other: Profesory klasického realismu jsou Václav Wolf a Roman Cardal.
+
+Komentáře editací: /* Pravopis */  oprava na středoevropské - Rusko a Ukrajina píší filosofija
+start: Je tedy jen na nás, zda se čeština zařadí mezi západo- a východoevropské nebo středodoevropské jazyky.
+typos: Je tedy jen na nás, zda se čeština zařadí mezi západo- a východoevropské nebo středodoevropské jazyky.
+
+Komentáře editací: překlep
+start: Běžná mluva používá pojem filozofie také pro názor.
+typos: Běžná mluva používá pojem filozofie také pro názor.
+
+Komentáře editací: /* Hlavní filosofické disciplíny */
+start: Axiologie, neboli teorie hodnoty.
+other: Axiologie, neboli teorie hodnoty.
+
+Komentáře editací: /* Pravopis */ typo
+start: Podle § 99 Pravidel českého pravopisu z roku 1957 se "v latinské příponě "-ismus" píše jen "s"; rovněž tak v několika slovech humanistické tradice "filosofie, gymnasium, president, presidium, universita" (a v jejich odvozeninách); jen "s" se ovšem píše též v slovech nezdomácnělých, jako např. "cirrhosis, gnose, gnoseologie, konsensus, spasmus, tenesmus", a rovněž v některých vlastních jménech osobních a zeměpisných (viz § 108 - 113)".
+typos: Podle § 99 Pravidel českého pravopisu z roku 1957 se "v latinské příponě "-ismus" píše jen "s"; rovněž tak v několika slovech humanistické tradice "filosofie, gymnasium, president, presidium, universita" (a v jejich odvozeninách); jen "s" se ovšem píše též v slovech nezdomácnělých, jako např. "cirrhosis, gnose, gnoseologie, konsensus, spasmus, tenesmus", a rovněž v některých vlastních jménech osobních a zeměpisných (viz § 108 - 113)".
+
+Komentáře editací: /* Pravopis */ typo
+start: Toto pravidlo bylo zrušeno v PČP 1983, kdy bylo zavedeno psaní "z", avšak psaní "s" též povoleno.
+typos: Toto pravidlo bylo zrušeno v PČP 1983, kdy bylo zavedeno psaní "z", avšak psaní "s" též povoleno.
+
+Komentáře editací: /* Současné filozofické směry v České republice */  opraven link
+start: Stanislava Sousedíka (FF UK, KTF UK): Petr Dvořák (FF UK, CMTF UP), Tomáš Machula, Lukáš Novák, Daniel Heider (všichni TF JU), David Svoboda (KTF UK).
+typos: Stanislava Sousedíka (FF UK, KTF UK): Petr Dvořák (FF UK, CMTF UP), Tomáš Machula, Lukáš Novák, Daniel Heider (všichni TF JU), David Svoboda (KTF UK).
+
+Komentáře editací: /* Hlavní filosofické disciplíny */ fmt, jazyková úprava
+start: filozofická antropologie - zabývající se otázkou člověka
+other: filozofická antropologie - zabývající se otázkou člověka
+
+Komentáře editací: /* Hlavní filosofické disciplíny */
+start: Ostatní:
+other: Ostatní:
+
+Komentáře editací: /* Filosofie středověku */
+start: "Scholastika": Tomáš Akvinský, William Occam
+other: "Scholastika": Tomáš Akvinský, William Occam
+
+Komentáře editací: Přepsané heslo Filosofie, část předchozího bude uložena jako "Současná fil. v ČR"
+start: Vrcholné období: Sókratés, Platón a Aristotelés
+other: Vrcholné období: Sókratés, Platón a Aristotelés
+
+Komentáře editací: doplnění textu a literatury, ext. odkazů
+start: "Platon"
+other: "Platon"
+
+Komentáře editací: doplnění textu a literatury, ext. odkazů
+start: Petříček, M. "Úvod do (současné) filosofie".
+other: Petříček, M. "Úvod do (současné) filosofie".
+
+Komentáře editací: /* Praktická filosofie */  2x ta samá kategorie
+start: estetika - o vnímání, umění, kráse a vnímání krásy;
+other: estetika - o vnímání, umění, kráse a vnímání krásy;
+
+Komentáře editací: /* Praktická filosofie */  2x ta samá kategorie
+start: estetika - o vnímání, umění, kráse a vnímání krásy;
+other: estetika - o vnímání, umění, kráse a vnímání krásy;
+
+Komentáře editací: Obrázek, drobné opravy
+start: metafyzika - "první filosofie", nauka o základech bytí;
+typos: metafyzika - "první filosofie", nauka o základech bytí;
+
+Komentáře editací: Obrázek, drobné opravy
+start: metafyzika a ontologie - o celku bytí, o jeho počátku, povaze a smyslu;
+typos: metafyzika a ontologie - o celku bytí, o jeho počátku, povaze a smyslu;
+
+Komentáře editací: /* Literatura k úvodu */ fix isbn
+start: NLN Praha 2001. ISBN 80-7106-339-8.
+other: NLN Praha 2001. ISBN 80-7106-339-8.
+
+Komentáře editací: /* Literatura k úvodu */ fix isbn
+start: Praha 1996. ISBN 80-86005-05-4.
+other: Praha 1996. ISBN 80-86005-05-4.
+
+Komentáře editací: /* Literatura k úvodu */ fix isbn
+start: Praha 1996. ISBN 80-86005-05-4.
+other: Praha 1996. ISBN 80-86005-05-4.
+
+Komentáře editací: /* Raný novověk */
+start: René Descartes, Thomas Hobbes, John Locke, Baruch Spinoza, Blaise Pascal
+other: René Descartes, Thomas Hobbes, John Locke, Baruch Spinoza, Blaise Pascal
+
+Komentáře editací: /* 20. století */
+start: Fenomenologie: Edmund Husserl, Martin Heidegger, Hans-Georg Gadamer, Maurice Merleau-Ponty, Paul Ricoeur, Jan Patočka, Eugen Fink
+other: Fenomenologie: Edmund Husserl, Martin Heidegger, Hans-Georg Gadamer, Maurice Merleau-Ponty, Paul Ricoeur, Jan Patočka, Eugen Fink
+
+Komentáře editací: Nový oddíl "Filosofové o filosofii", kam jsem přesunul citáty.
+start: které lze shrnout do jediné:
+other: které lze shrnout do jediné:
+
+Komentáře editací: Doplnění lit., drobnosti
+start: Pozdní scholastika: Mistr Eckhart, Jan Duns Scotus, William Occam
+typos: Pozdní scholastika: Mistr Eckhart, Jan Duns Scotus, William Occam
+
+Komentáře editací: Doplnění lit., drobnosti
+start: FIN Olomouc 1998. ISBN 80-7182-064-4.
+typos: FIN Olomouc 1998. ISBN 80-7182-064-4.
+
+Komentáře editací: Celková revize po formální stránce
+start: "Co mohu vědět?
+edits: "Co mohu vědět?
+
+Komentáře editací: Celková revize po formální stránce
+start: V co mohu doufat"?
+edits: V co mohu doufat"?
+
+Komentáře editací: Celková revize po formální stránce
+start: " G. W. F. Hegel
+edits: " G. W. F. Hegel
+
+Komentáře editací: Celková revize po formální stránce
+start: filosofie vědy - o podmínkách, metodách a cílech vědy;
+edits: filosofie vědy - o podmínkách, metodách a cílech vědy;
+
+Komentáře editací: Celková revize po formální stránce
+start: axiologie - o hodnotách a hodnocení.
+edits: axiologie - o hodnotách a hodnocení.
+
+Komentáře editací: Celková revize po formální stránce
+start: Thomas Hobbes, John Locke, George Berkeley
+edits: Thomas Hobbes, John Locke, George Berkeley
+
+Komentáře editací: Celková revize po formální stránce
+start: Pragmatismus: William James, John Dewey
+edits: Pragmatismus: William James, John Dewey
+
+Komentáře editací: Celková revize po formální stránce
+start: Filosofie vědy: Karl Raimund Popper, Paul Karl Feyerabend, Thomas Kuhn
+edits: Filosofie vědy: Karl Raimund Popper, Paul Karl Feyerabend, Thomas Kuhn
+
+Komentáře editací: Celková revize po formální stránce
+start: Filosofie korejská: Son
+edits: Filosofie korejská: Son
+
+Komentáře editací: Celková revize po formální stránce
+start: Praha 1999. ISBN 80-7185-243-0.
+edits: Praha 1999. ISBN 80-7185-243-0.
+
+Komentáře editací: Celková revize po formální stránce
+start: Praha 1999. ISBN 80-7185-243-0.
+edits: Praha 1999. ISBN 80-7185-243-0.
+
+Komentáře editací: Celková revize po formální stránce
+start: Anzenbacher, A: "Úvod do filosofie".
+edits: Anzenbacher, A: "Úvod do filosofie".
+
+Komentáře editací: Celková revize po formální stránce
+start: Fiala, J. "Analytická filosofie 1 - Úvod".
+edits: Fiala, J. "Analytická filosofie 1 - Úvod".
+
+Komentáře editací: Celková revize po formální stránce
+start: Karl Vorländer, "Geschichte der Philosophie (1902)" - de
+edits: Karl Vorländer, "Geschichte der Philosophie (1902)" - de
+
+Komentáře editací: Celková revize po formální stránce
+start: Paul Janet, "Traité élémentaire de philosophie" - fr
+edits: Paul Janet, "Traité élémentaire de philosophie" - fr
+
+Komentáře editací: Celková revize po formální stránce
+start: Victor Cousin, "Histoire générale de la philosophie" - fr
+edits: Victor Cousin, "Histoire générale de la philosophie" - fr
+
+Komentáře editací: Bot: prettier ISBN
+start: Praha 2004. ISBN 80-7178-804-X.
+other: Praha 2004. ISBN 80-7178-804-X.
+
+Komentáře editací: /* Filosofická metoda */
+start: Některá filosofická díla, například Platónova, Nietzschova, Sartrova nebo Heideggerova, mají blízko ke krásné literatuře.
+other: Některá filosofická díla, například Platónova, Nietzschova, Sartrova nebo Heideggerova, mají blízko ke krásné literatuře.
+
+Komentáře editací: 
+start: Nemohou tedy hodnotit, ptát se na smysl své činnosti ani odpovídat na prosté otázky, jaké kladou třeba děti - například, co je věda, co je to pravda nebo proč se nemá lhát.
+other: Nemohou tedy hodnotit, ptát se na smysl své činnosti ani odpovídat na prosté otázky, jaké kladou třeba děti - například, co je věda, co je to pravda nebo proč se nemá lhát.
+
+Komentáře editací: + linky, typo
+start: Rudolf Eisler: "Wörterbuch der philosophischen Begriffe" (1904)
+typos: Rudolf Eisler: "Wörterbuch der philosophischen Begriffe" (1904)
+
+Komentáře editací: př. n. l.
+start: Právě v takové situaci řeckých měst vznikl někdy v 6. století př. n. l. nový způsob hledání či "touhy po moudrosti" (filo-sofie), který se neopíral o Homéra ani Hésioda, nýbrž snažil se přijít věcem na kloub pozorováním, přemýšlením a argumentací, zkrátka vlastním rozumem a diskusí.
+other: Právě v takové situaci řeckých měst vznikl někdy v 6. století př. n. l. nový způsob hledání či "touhy po moudrosti" (filo-sofie), který se neopíral o Homéra ani Hésioda, nýbrž snažil se přijít věcem na kloub pozorováním, přemýšlením a argumentací, zkrátka vlastním rozumem a diskusí.
+
+Komentáře editací: /* Středověk */ + pár dalších jmen...
+start: Vrcholná scholastika: Siger Brabantský, Boethius z Dácie, sv.
+other: Vrcholná scholastika: Siger Brabantský, Boethius z Dácie, sv.
+
+Komentáře editací: 
+start: Filosofie nebo filozofie, řecky φιλοσοφία, z φιλειν ("filein" - milovat, mít rád, toužit po něčem) a σοφια ("sofía" - moudrost) - doslova: láska k moudrosti - myšleno jako snaha o přiblížení se k moudrosti, úsilí být moudřejší.
+other: Filosofie nebo filozofie, řecky φιλοσοφία, z φιλειν ("filein" - milovat, mít rád, toužit po něčem) a σοφια ("sofía" - moudrost) - doslova: láska k moudrosti - myšleno jako snaha o přiblížení se k moudrosti, úsilí být moudřejší.
+
+Komentáře editací: 
+start: Pomocný slovník filosofa - sk
+other: Pomocný slovník filosofa - sk
+
+Komentáře editací: /* Co je filosofie? */
+start: Naopak od poezie a literatury se filosofie liší tím, že se musí snažit o určité pojmové vyjadřování, ale hlavně tím, že každé své tvrzení musí umět nějak obhájit, tedy vysvětlit, proč říká to, co říká.
+other: Naopak od poezie a literatury se filosofie liší tím, že se musí snažit o určité pojmové vyjadřování, ale hlavně tím, že každé své tvrzení musí umět nějak obhájit, tedy vysvětlit, proč říká to, co říká.
+
+Komentáře editací: Revize a omezení ext. odkazů
+start: Project Gutenberg: Klasická literatura - en
+edits: Project Gutenberg: Klasická literatura - en
+
+Komentáře editací: Revize a omezení ext. odkazů
+start: Antika, patristika, středověk (Georgetown University)- en, la
+edits: Antika, patristika, středověk (Georgetown University)- en, la
+
+Komentáře editací: robot odstranil interwiki, které je na [[WP:Wikidata|Wikidatech]]: pms
+start: Bývá pozadu za skutečností, kterou chce pochopit - proto říká Hegel, že " Minervina sova létá za soumraku.
+other: Bývá pozadu za skutečností, kterou chce pochopit - proto říká Hegel, že " Minervina sova létá za soumraku.
+
+Komentáře editací: 
+start: politická filosofie - o občanovi a svobodě, o vládě a státu;
+other: politická filosofie - o občanovi a svobodě, o vládě a státu;
+
+Komentáře editací: 
+start: sociální filosofie - o povaze, smyslu a funkci společnosti;
+other: sociální filosofie - o povaze, smyslu a funkci společnosti;
+
+Komentáře editací: [[WP:WPCleaner|WPCleaner]] v1.30 - Opraveno pomocí [[WP:WCW]] - Opravy pravopisu a typografie / Zbývající odkaz - [[Tvrzení]]
+start: Na rozdíl od jednotlivých věd, které se zpravidla vymezují také svojí specifickou metodou (matematickou, experimentální, historickou apod.
+typos: Na rozdíl od jednotlivých věd, které se zpravidla vymezují také svojí specifickou metodou (matematickou, experimentální, historickou apod.
+
+Komentáře editací: [[WP:WPCleaner|WPCleaner]] v1.30 - Opraveno pomocí [[WP:WCW]] - Opravy pravopisu a typografie / Zbývající odkaz - [[Tvrzení]]
+start: Pro dílo Aristotelovo je základem berlínské vydání A. I. Bekkera z let 1816-1823
+typos: Pro dílo Aristotelovo je základem berlínské vydání A. I. Bekkera z let 1816-1823
+
+Komentáře editací: [[WP:WPCleaner|WPCleaner]] v1.30 - Opraveno pomocí [[WP:WCW]] - Opravy pravopisu a typografie / Zbývající odkaz - [[Tvrzení]]
+start: Tak se Descartes cituje podle souborného vydání Adama a Tanneryho z let 1897-1913 (AT díl, stránka), Kant podle "Akademie-Ausgabe", Berlín (AA svazek, stránka), Nietzsche podle kritického vydání díla a dopisů (KGW, KGB) nebo podle příručního vydání (KSA, KSB), obojí od Colliho a Montinariho.
+typos: Tak se Descartes cituje podle souborného vydání Adama a Tanneryho z let 1897-1913 (AT díl, stránka), Kant podle "Akademie-Ausgabe", Berlín (AA svazek, stránka), Nietzsche podle kritického vydání díla a dopisů (KGW, KGB) nebo podle příručního vydání (KSA, KSB), obojí od Colliho a Montinariho.
+
+Komentáře editací: [[WP:WPCleaner|WPCleaner]] v1.30 - Opraveno pomocí [[WP:WCW]] - Opravy pravopisu a typografie / Zbývající odkaz - [[Tvrzení]]
+start: teorie poznání (epistemologie, gnozeologie) - o možnostech a podmínkách poznávání;
+typos: teorie poznání (epistemologie, gnozeologie) - o možnostech a podmínkách poznávání;
+
+Komentáře editací: /* Co není filosofie? */
+start: Světový názor vždy nějak positivně a definitivně určuje jsoucna (říká, co jsou) včetně člověka, uspořádává zkušenost zcela určitým směrem a tomu vše podřizuje, a tím zužuje a uzavírá lidský život a odnímá mu jeho nesamozřejmost.
+other: Světový názor vždy nějak positivně a definitivně určuje jsoucna (říká, co jsou) včetně člověka, uspořádává zkušenost zcela určitým směrem a tomu vše podřizuje, a tím zužuje a uzavírá lidský život a odnímá mu jeho nesamozřejmost.
+

@@ -40,6 +40,20 @@ def openStream(path):
 		#return lzma.open(path, "r")
 	else:
 		return None
+"""Recursion of error construction"""
+def seConstructError(errors):
+	if(len(errors) <= 1):
+		return errors[0][0]
+	
+	last = errors[-1]
+	errContent = last[0]
+	errType = last[1]
+	
+	return "<err type=\"%s\">" % errType + seConstructError(errors[:-1]) + "</err><corr type=\"%s\">%s</corr>" % (errType, errContent)
+
+def writeStream(stream, errors, writeFormat="se"):
+	if writeFormat == "se":
+		stream.write(seConstructError(errors))
 
 # Downloads file from url
 def downloadFile(url):
@@ -52,57 +66,13 @@ def downloadFile(url):
 #
 #  Text processing functions
 #   -splitBySentences, lemma, bagOfWords, wordDistance, sentenceSimilarity,
-#    cleanUpText, cleanUpSentence
+#    textClean, sentenceClean
 #
 ###############################################################################
-	
-	
-# Funkce z http://stackoverflow.com/questions/4576077/python-split-text-on-sentences, TODO: licence?
-caps = hack_regexp(r"(\\p{Lu})")
-prefixes = r"\s+(Mr|St|Mrs|Ms|Dr|MUDr|JuDr|Mgr|Bc|atd|tzv|řec|lat|it|např|př|vs|Et|tj)[.]"
-suffixes = r"(Inc|Ltd|Jr|Sr|Co)"
-starters = r"(Mr|Mrs|Ms|Dr|He\s|She\s|It\s|They\s|Their\s|Our\s|We\s|But\s|However\s|That\s|This\s|Wherever)"
-acronyms = hack_regexp(r"(\\p{Lu}[.]\\p{Lu}[.](?:\\p{Lu}[.])?)")
-websites = r"[.](com|net|org|io|gov|cz)\s"
-digits = r"([0-9])"
-digitsSentenceEndings = r"((roce|(z\slet)|(z\sroků))\s*[0-9\-\s]*)[.]"
-decimalPoint = r"[.|,]"
-	
-def splitBySentences(text):
-	if(text == None): return None
-	text = " " + text + "  "
-	text = text.replace("\n"," ")
-	text = re.sub(prefixes," \\1<prd>",text)
-	text = re.sub(websites,"<prd>\\1 ",text)
-	text = text.replace("Ph.D.","Ph<prd>D<prd>")
-	text = text.replace("n.l.","n<prd>l<prd>")
-	text = text.replace("n. l.","n<prd> l<prd>")
-	text = re.sub("\s" + caps + "[.] "," \\1<prd> ",text)
-	text = re.sub(acronyms+" "+starters,"\\1<stop> \\2",text)
-	text = re.sub(caps + "[.]" + caps + "[.]" + caps + "[.]","\\1<prd>\\2<prd>\\3<prd>",text)
-	text = re.sub(caps + "[.]" + caps + "[.]","\\1<prd>\\2<prd>",text)
-	text = re.sub(" "+suffixes+"[.] "+starters," \\1<stop> \\2",text)
-	text = re.sub(" "+suffixes+"[.]"," \\1<prd>",text)
-	text = re.sub(" " + caps + "[.]"," \\1<prd>",text)
-	text = re.sub(digitsSentenceEndings,"\\1<stop>",text)
-	text = re.sub(digits + decimalPoint + "\s*" + digits,"\\1<prd> \\2",text)
-	text = re.sub(digits + "[\.]\s*", "\\1<prd> ",text)
-	text = text.replace(".\"","\".")
-	text = text.replace("!\"","\"!")
-	text = text.replace("?\"","\"?")
-	text = text.replace("\.*,","<prd>,")
-	text = text.replace(".",".<stop>")
-	text = text.replace("?","?<stop>")
-	text = text.replace("!","!<stop>")
-	text = text.replace("<prd>",".")
-	sentences = re.split("<stop>", text, flags=re.MULTILINE)
-	sentences = [s.strip() for s in sentences]
-	return sentences
 
 # Function for text lemmatization
 def lemma(text):
-	text = cleanUpSentence(text, True) #No lemma just remove unnecessary chars
-	return text
+	return lemmaClean(text) #No lemma just remove unnecessary chars
 
 # Generates bag of words
 def bagOfWords(sentence, doLemma=True, minWordLen=0):
@@ -142,7 +112,10 @@ def sentenceSimilarity(first, second):
 	return similarity
 
 # Cleans up the text - removes rests from wiki markup, replaces special character (e.g. '…' -> '...', '„' -> '"')
-def cleanUpText(text):
+def textClean(text):
+	text = re.sub(r"&lt;", r"<", text) #Replace inline markup
+	text = re.sub(r"&gt;", r">", text) #Replace inline markup
+	
 	text = re.sub(r"\/\*(.*?)\*\/", r"\1", text) #Replace comments
 	text = re.sub(r"\[.*?\|(.*?)\]", r"\1", text) #Remove wiki interlinks
 	text = re.sub(r"[‘’ʹ՚‛ʻʼ՝ʽʾ]", r"'", text) #Preserve only one type of single quotes
@@ -165,7 +138,7 @@ def cleanUpText(text):
 	return text
 
 # Cleans up the sentence
-def cleanUpSentence(text, removeDigits=False, trimToSentenceStart=False):
+def sentenceClean(text, trimToSentenceStart=True, trimToSentenceEnd=True):
 	if(text == None):
 		return None
 	text = re.sub(r"^(\s*(\*)*\s*)", r" ", text, re.U) #Replace bullets at the start
@@ -186,12 +159,61 @@ def cleanUpSentence(text, removeDigits=False, trimToSentenceStart=False):
 	text = re.sub(r"\s*([\)\}\]])", r"\1", text, re.U) #Remove spaces before closing brackets	
     
 	if(trimToSentenceStart):
-		text = re.subn(hack_regexp(r"^.*?(\\p{Lu}|[\"\'])"), r"\1", text, re.U)
+		text = re.subn(hack_regexp(r"^.*?(\\p{Lu}|\\p{Ll}|[\"\'])"), r"\1", text, re.U)
 		if(text[1] == 0):
 			text = ""
 		else:
 			text = text[0]
-	if(removeDigits):
-		text = re.sub(r"[0-9]", r" ", text) #Remove digits
 	text = re.sub(r"(\s+)", r" ",text, re.M) #Remove more spaces
 	return text.strip()
+
+def lemmaClean(text):
+	return re.sub(r"[0-9]", r" ", text) #Remove digits	
+
+# Funkce z http://stackoverflow.com/questions/4576077/python-split-text-on-sentences, TODO: licence?
+caps = hack_regexp(r"(\\p{Lu})")
+prefixes = r"\s+(Mr|St|Mrs|Ms|Dr|MUDr|JuDr|Mgr|Bc|atd|tzv|řec|lat|it|např|př|vs|Et|tj)[.]"
+suffixes = r"(Inc|Ltd|Jr|Sr|Co)"
+starters = r"(Mr|Mrs|Ms|Dr|He\s|She\s|It\s|They\s|Their\s|Our\s|We\s|But\s|However\s|That\s|This\s|Wherever)"
+acronyms = hack_regexp(r"(\\p{Lu}[.]\\p{Lu}[.](?:\\p{Lu}[.])?)")
+websites = r"[.](com|net|org|io|gov|cz)\s"
+digits = r"([0-9])"
+digitsSentenceEndings = r"((roce|(z\slet)|(z\sroků))\s*[0-9\-\s]*)[.]"
+decimalPoint = r"[.|,]"
+	
+def splitBySentences(rev, doClean=True):
+	text = rev.text
+	if(text == None): return None
+	if(doClean): text = textClean(text)
+	text = " " + text + "  "
+	text = text.replace("\n"," ")
+	text = re.sub(prefixes," \\1<prd>",text)
+	text = re.sub(websites,"<prd>\\1 ",text)
+	text = text.replace("Ph.D.","Ph<prd>D<prd>")
+	text = text.replace("n.l.","n<prd>l<prd>")
+	text = text.replace("n. l.","n<prd> l<prd>")
+	text = re.sub("\s" + caps + "[.] "," \\1<prd> ",text)
+	text = re.sub(acronyms+" "+starters,"\\1<stop> \\2",text)
+	text = re.sub(caps + "[.]" + caps + "[.]" + caps + "[.]","\\1<prd>\\2<prd>\\3<prd>",text)
+	text = re.sub(caps + "[.]" + caps + "[.]","\\1<prd>\\2<prd>",text)
+	text = re.sub(" "+suffixes+"[.] "+starters," \\1<stop> \\2",text)
+	text = re.sub(" "+suffixes+"[.]"," \\1<prd>",text)
+	text = re.sub(" " + caps + "[.]"," \\1<prd>",text)
+	text = re.sub(digitsSentenceEndings,"\\1<stop>",text)
+	text = re.sub(digits + decimalPoint + "\s*" + digits,"\\1<prd> \\2",text)
+	text = re.sub(digits + "[\.]\s*", "\\1<prd> ",text)
+	text = text.replace(".\"","\".")
+	text = text.replace("!\"","\"!")
+	text = text.replace("?\"","\"?")
+	text = text.replace("\.*,","<prd>,")
+	text = text.replace(".",".<stop>")
+	text = text.replace("?","?<stop>")
+	text = text.replace("!","!<stop>")
+	text = text.replace("<prd>",".")
+	sentences = re.split("<stop>", text, flags=re.MULTILINE)
+	sentences = [s.strip() for s in sentences]
+	if(doClean): 
+		for i in range(0, len(sentences)):
+			sentences[i] = sentenceClean(sentences[i])
+	rev.text = [x for x in sentences if x != ""]		
+	return rev

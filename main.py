@@ -6,11 +6,12 @@ import io
 import xml.etree.ElementTree as ET
 import difflib
 import re
+import itertools
 from multiprocessing import Pool
 from collections import deque
 
 import WikiExtractor
-from utils import printUsage, openStream, splitBySentences, lemma, bagOfWords, wordDistance, sentenceSimilarity, cleanUpText, cleanUpSentence, downloadFile
+from utils import printUsage, openStream, splitBySentences, bagOfWords, wordDistance, sentenceSimilarity, downloadFile
 
 # Maximal distance of two words to be considered as typo
 typoTreshold = 2
@@ -41,10 +42,7 @@ dumpDownloads = []
 pageDownloads = []
 outputFolder = "export/"
 
-woOutputStream = None
-typoOutputStream = None
-editOutputStream = None
-otherOutputStream = None
+outputStream = None
 
 # Base classes
 class page(object):
@@ -141,36 +139,80 @@ def findEdits(oldSent, newSent, comment):
 		return False
 	editOutputStream.write("%s\n%s\n%s\n\n" % (comment, oldSent, newSent))
 
+def classifyEditType(oldList, newList):
+	oldBag = bagOfWords(oldList[1])
+	newBag = bagOfWords(newList[1])
+	comment = newList[0]
+	if(oldBag - newBag == 0):
+		return "order"
+	if(typoFilter[lang].search(comment)):
+		return "typos"
+	if(editFilter[lang].search(comment)):
+		return "edits"
+	return "other"
+
+def resolveEvolution():
+	global corpBuffer
+	evolutionLinks = []
+	toRemove = set()
+	for i in range(0, len(corpBuffer)):
+		for j in range(i, len(corpBuffer)):
+			if(corpBuffer[i][2] == corpBuffer[j][1]):
+				toRemove.add(corpBuffer[i])
+				toRemove.add(corpBuffer[j])
+				founded = False
+				for k in range(0, len(evolutionLinks)):
+					if(evolutionLinks[k][-1]==i):
+						evolutionLinks[k] = evolutionLinks[k] + (j,)
+						founded = True
+						break
+				if not founded:
+					evolutionLinks.append((i,j))
+				break
+	evolutionDeques = []
+	for ev in evolutionLinks:
+		queue = deque()
+		oldList = ["", corpBuffer[ev[0]][1]]
+		queue.append(oldList) #Append first oldest sentence
+		allComments = ""
+		for l in ev:
+			allComments += corpBuffer[l][0] + "<separator>"
+			newList = [corpBuffer[l][0], corpBuffer[l][2]]
+			newList[0] = classifyEditType(oldList, newList)
+			queue.append(newList) #Append newer versions of sentence
+			oldList = newList
+		queue[0][0] = allComments
+		evolutionDeques.append(queue)
+	#Normalize corpBuffer to have the same structure as evolution deques
+	corpBuffer = [deque([[x[0], x[1]], [classifyEditType(["", x[1]], [x[0], x[2]]), x[2]]]) for x in corpBuffer if x not in toRemove]
+	corpBuffer = evolutionDeques + corpBuffer
+
+
 # Processes and flushes buffer to disk
 def writeCorpBuffer():
+	resolveEvolution()
 	global corpBuffer
 	if len(corpBuffer) > 0:
-		for sentTuple in corpBuffer:		    
-			founded = False
-			founded = findWO(sentTuple[0], sentTuple[1], sentTuple[2])
-			if(not founded):
-				founded = findTypos(sentTuple[0], sentTuple[1], sentTuple[2])
-			if(not founded):
-				founded = findEdits(sentTuple[0], sentTuple[1], sentTuple[2])
-			if(not founded):
-				otherOutputStream.write("%s\n%s\n%s\n\n" % (sentTuple[2], sentTuple[0], sentTuple[1]))
-		woOutputStream.flush()
-		typoOutputStream.flush()
-		editOutputStream.flush()
-		otherOutputStream.flush()
+		for evolutionQueue in corpBuffer:
+			outputStream.write("Komentáře editací: %s\nstart: %s\n" % (evolutionQueue[0][0], evolutionQueue[1][1]))
+			for i in range(1, len(evolutionQueue)):
+				outputStream.write("%s: %s\n" % (evolutionQueue[i][0], evolutionQueue[i][1]))
+			outputStream.write("\n")
+		outputStream.flush()
 		corpBuffer = []
 
 # Processes sentence's stacks - old sentences are matched to sentences from new sentence's stack
 def processStacks(oldStack, newStack, comment):
 	if(len(oldStack) == 0 or len(newStack) == 0):
 		return
+	oldStack = deque([x for x in oldStack if x not in newStack])
 	while len(oldStack) > 0:
 		oldSent = oldStack.popleft()
 		candidates = [(x, sentenceSimilarity(oldSent, x)) for x in newStack]
 		candidates = [(x, similarity) for (x, similarity) in candidates if similarity > sentenceTreshold]
 		if(len(candidates) > 0):
 			candidates = sorted(candidates, key=lambda candidate: candidate[1], reverse=True)
-			corpBuffer.append((oldSent, candidates[0][0], comment))
+			corpBuffer.append((comment, oldSent, candidates[0][0]))
 
 # Compares two revisions and constructs old and new stacks of sentences for further processing
 def processRevisions(oldRev, newRev):
@@ -191,7 +233,7 @@ def processRevisions(oldRev, newRev):
 			newStack.append(line[1:])
 	processStacks(oldStack, newStack, newRev.comment)
 
-# Function for removing bot or reverted revisions. TODO - bug - doesn't match all reverted revs
+# Function for removing bot or reverted revisions.
 def removeBadRevisions(page):
 	previous = None
 	page.revisions = [x for x in page.revisions if x != None and x.comment != None]
@@ -221,18 +263,14 @@ def processPage(page):
 def renderRevision(rev, title):
 	if(rev.text != None): 
 		if(rev.contentFormat == "wikimarkup"):
-			text = re.sub("\n(\s\n)*", "\n", rev.text) #Replace more paragraphs endings
-			text = rev.text
+			text = re.sub("\n(\s\n)*", "<stop>", rev.text) #Replace more paragraphs endings
 			out = io.StringIO()
 			extractor = WikiExtractor.Extractor(0, 0, title, text.split("\n"))
 			extractor.extract(out)
-			text = out.getvalue()
+			rev.text = out.getvalue()
 			out.close()
-			text = cleanUpText(text)
-			text = splitBySentences(text)
-			for i in range(0, len(text)):
-				text[i] = cleanUpSentence(text[i], trimToSentenceStart=True)
-			rev.text = [x for x in text if x != ""]
+			rev = splitBySentences(rev)
+			rev.contentFormat = "plaintext"
 			return rev
 		else:
 			return rev
@@ -245,11 +283,10 @@ def renderPageRevisions(page):
 	poolAsyncResults = []
 	for rev in page.revisions:
 		poolAsyncResults.append(pool.apply_async(renderRevision, args=(rev,page.title)))
-		#rev.text = renderRevision(rev, page.title)
+		#rev = renderRevision(rev, page.title)
 	for i in range(0, len(poolAsyncResults) - 1):
 		try:
 			page.revisions[i] = poolAsyncResults[i].get()	#collect results from pool
-			page.revisions[i].format = "plaintext"
 		except:
 			page.revisions[i].text = None
 	page.revisions = [x for x in page.revisions if x != None]
@@ -355,8 +392,5 @@ if __name__ == "__main__":
 			pageDownloads = deque([x.strip() for x in arg.split(",")])
 		elif opt in ("-o", "--output"):
 			outputFolder = arg
-	woOutputStream = io.open('export/wo.txt', 'w')
-	typoOutputStream = io.open('export/typos.txt', 'w')
-	editOutputStream = io.open('export/edit.txt', 'w')
-	otherOutputStream = io.open('export/other.txt', 'w')    
+	outputStream = io.open('export/output.txt', 'w')
 	main()
