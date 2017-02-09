@@ -180,12 +180,12 @@ start: Organismy se obvykle dělí do pěti říší:
 other: Organismy se obvykle dělí do tří domén:
 
 Komentáře editací: typos
-start: Předsokratici
-typos: Předsókratici
-
-Komentáře editací: typos
 start: Zenón
 typos: Zénón
+
+Komentáře editací: typos
+start: Předsokratici
+typos: Předsókratici
 
 Komentáře editací: typos
 start: Russel

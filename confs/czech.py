@@ -1,8 +1,9 @@
+# coding=UTF-8
 import re
 import string
 from UnicodeHack import hack_regexp
 
-#Dle wiki
+#Abbreviations from wiki https://cs.wiktionary.org/wiki/Kategorie:%C4%8Cesk%C3%A9_zkratky
 abbrs = r"""\s+(a|abl|absol|abstr|adj|adm|adv|aj|ak|ak|akc|akt|et\sal|
 alch|amer|anat|angl|anglosas|ap|apod|arab|arch|archit|arg|arm|astr|
 astrol|atd|atp|att|bás|[Bb]c|[Bb]cA|belg|bibl|biol|bl|brig|brit|bulh|
@@ -25,9 +26,10 @@ reg|resp|rkp|RNDr|roč|RSDr|rtm|rtn|rum|rus|ř|řec|řeckokat|říj|římskokat|
 sport|šprap|srov|st|št|stfr|stol|str|střfr|střv|stržm|stsl|subj|subs|
 superl|sv|svob|švýc|sz|š|t|táz|tech|telev|teol|Th|ThDr|tis|tj|
 trans|tur|tv|typogr|tzn|tzv|úř|v|V|var|vč|vedl|veř|verb|vl|voj|
-vok|vs|vůb|vulg|výtv|vz|vztaž|z|zahr|zajm|zast|zejm|zeměd|žert|zkr|
+vok|vs|vůb|vulg|výtv|vz|vztaž|www|z|zahr|zajm|zast|zejm|zeměd|žert|zkr|
 zn|zř|zvl)[.]"""
 
+#Website domains
 websites = r"""[.](?:cancerresearch|international|construction|versicherung|accountants|blackfriday|
 contractors|engineering|enterprises|investments|motorcycles|photography|productions|williamhill|
 associates|bnpparibas|consulting|creditcard|cuisinella|foundation|healthcare|immobilien|industries|
@@ -67,11 +69,13 @@ nl|no|np|nr|nu|nz|om|pa|pe|pf|pg|ph|pk|pl|pm|pn|pr|ps|pt|pw|py|qa|re|ro|rs|ru|rw
 sg|sh|si|sj|sk|sl|sm|sn|so|sr|st|su|sv|sx|sy|sz|tc|td|tf|tg|th|tj|tk|tl|tm|tn|to|tp|tr|tt|tv|tw|
 tz|ua|ug|uk|us|uy|uz|va|vc|ve|vg|vi|vn|vu|wf|ws|ye|yt|za|zm|zw)\s"""
 
-
+#Sentence endings with digits (e.g.: ...in year 1999.)
 digitsSentenceEndings = r"((roce|(z\slet)|(z\sroků))\s*[0-9\-\s]+)[.]"
 
+#Punctuation
 punctuation = '[%s]' % re.escape(string.punctuation)
 
+#Compiled regexes
 reList = {
     "abbrs": re.compile(abbrs, re.U | re.X),
     "websites": re.compile(websites, re.U | re.X),
@@ -79,21 +83,33 @@ reList = {
     "punctuation": re.compile(punctuation, re.U | re.X)
 }
 
+#Capitals
 caps = hack_regexp(r"(\\p{Lu})")
+
+#Low letters
 lows = hack_regexp(r"(\\p{Ll})")
+
+#Digits
 digits = r"([0-9])"
+
+#Language specific decimal point
 decimalPoint = r"[.|,]"
 
+#Excluded pages
 excludeFilter = re.compile(r""".*(Hlavní\sstrana|Rozcestník|Nápověda:|Wikipedista:|
 Wikipedie:|Diskuse:|MediaWiki:|Portál:|Šablona:|Kategorie:|Soubor:).*""", re.U | re.X)
 
+#Typo classification filter
 typoFilter = re.compile(r""".*([Tt]ypo|[Cc]l[\s\:]|[Cc]leanup|[Cc]u[\s\:]|[Pp]řeklep|
 [Pp]ravopis|[Kk]osmetické|[Dd]robnost|[Oo]prav|[Oo]pr[\s\:]|\-\>).*""", re.U | re.X)
 
+#Edit classification filter
 editFilter = re.compile(r""".*([Cc]opyedit|[Cc]pyed|[Ee]dit|[Pp]řepsání|[Tt]ypografie|
 [Rr]evize|[Úú]prav).*""", re.U | re.X)
 
+#Revert classification filter
 revertFilter = re.compile(r"""(.*([Rr]evert|[Rr]vrt|[Rr]v[\s\:]|rvv|vrácen|zrušen|
 vandal|[Ee]ditace\s(?:[0-9]\s)*uživatele|[Vv]erze\s(?:[0-9]\s)*uživatele).*)|rv""", re.U | re.X)
 
+#Bot classification filter
 botFilter = re.compile(r"""(.*([Rr]obot|[Bb]ot[\s\:]|[Bb]otCS|WPCleaner).*)""", re.U | re.X)

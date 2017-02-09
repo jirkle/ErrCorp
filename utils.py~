@@ -1,6 +1,8 @@
 # coding=UTF-8
 import bz2
+import lzma
 import re
+import string
 import io
 import urllib.request
 import unitok
@@ -18,8 +20,6 @@ websites = None
 digitsSentenceEndings = None
 
 def init():
-	"""Inits utils"""
-	
 	global caps
 	global decimalPoint
 	global digits
@@ -41,9 +41,8 @@ def init():
 #
 ###############################################################################
 
+"""Tokenizes given text"""
 def tokenize(text):
-	"""Tokenizes given text"""
-	
 	out = io.StringIO()
 	re_list = unitokConfig.re_list
 	tokens = unitok.tokenize_recursively(text, re_list)
@@ -52,19 +51,12 @@ def tokenize(text):
 	out.close()
 	return text
 
-def lemmaClean(text):
-	"""Clean before lemmatization -> removing digits"""
-	
-	return re.sub(r"[0-9]", r" ", text) #Remove digits
-
+# Function for text lemmatization
 def lemma(text):
-	"""Function for text lemmatization"""
-	
 	return lemmaClean(text) #No lemma just remove unnecessary chars
 
+# Generates bag of words
 def bagOfWords(sentence, doLemma=True, minWordLen=0):
-	"""Generates bag of words"""
-	
 	sentence = errCorpConfig.reList["punctuation"].sub(' ', sentence)
 	if(doLemma):
 		sentence = lemma(sentence)
@@ -72,11 +64,8 @@ def bagOfWords(sentence, doLemma=True, minWordLen=0):
 	words = [w for w in words if len(w) > minWordLen]
 	return set(words)
 
+# Func for distance metric (Levenshtein), used this impl: https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance#Python
 def wordDistance(s1, s2):
-	"""Func for distance metric (Levenshtein), used this impl:
-	https://en.wikibooks.org/wiki/Algorithm_Implementation/Strings/Levenshtein_distance#Python"""
-	
-	
 	if len(s1) < len(s2):
 		return wordDistance(s2, s1)
 
@@ -95,19 +84,16 @@ def wordDistance(s1, s2):
 
 	return previous_row[-1]
 
+# Metric for similarity of two given sentences, returns nuber in range <0,1>
 def sentenceSimilarity(first, second):
-	"""Metric for similarity of two given sentences, returns nuber in range <0,1>"""
-	
 	firstBag = bagOfWords(first)
 	secndBag = bagOfWords(second)
 	if(len(firstBag) == 0 or len(secndBag) == 0): return 0
 	similarity = 2 * float(len(firstBag & secndBag))/(len(firstBag)+len(secndBag))
 	return similarity
 
+# Cleans up the text - removes rests from wiki markup, replaces special character (e.g. '…' -> '...', '„' -> '"')
 def textClean(text):
-	"""Cleans up the text - removes rests from wiki markup, 
-	replaces special character (e.g. '…' -> '...', '„' -> '"')"""
-	
 	text = re.sub(r"&lt;", r"<", text) #Replace inline markup
 	text = re.sub(r"&gt;", r">", text) #Replace inline markup
 	
@@ -132,9 +118,8 @@ def textClean(text):
 	text = re.sub(r"(\s+)", r" ", text) #Remove more spaces
 	return text
 
+# Cleans up the sentence
 def sentenceClean(text, trimToSentenceStart=True, trimToSentenceEnd=True):
-	"""Cleans up the sentence"""
-	
 	if(text == None):
 		return None
 	text = re.sub(r"^(\s*(\*)*\s*)", r" ", text, re.U) #Replace bullets at the start
@@ -160,18 +145,20 @@ def sentenceClean(text, trimToSentenceStart=True, trimToSentenceEnd=True):
 			text = ""
 		else:
 			text = text[0]
-	if(trimToSentenceEnd):
-		pass
 	text = re.sub(r"(\s+)", r" ",text, re.M) #Remove more spaces
-	return text.strip()	
+	return text.strip()
 
+def lemmaClean(text):
+	return re.sub(r"[0-9]", r" ", text) #Remove digits	
+
+# Funkce z http://stackoverflow.com/questions/4576077/python-split-text-on-sentences
 def splitBySentences(rev, doClean=True):
-	"""Splits text to sentences. Base function from 
-	http://stackoverflow.com/questions/4576077/python-split-text-on-sentences"""
-	
 	text = rev.text
 	if(text == None): return None
 	if(doClean): text = textClean(text)
+	reList = errCorpConfig.reList
+	
+	
 	text = " " + text + "  "
 	text = text.replace("\n"," ")
 	text = abbrs.sub(" \\1<prd>", text)
@@ -202,13 +189,12 @@ def splitBySentences(rev, doClean=True):
 ###############################################################################
 #
 #  Support functions
-#   -printUsage, openStream, errorStringRecursively, writeStream, downloadFile
+#   -printUsage, openStream, 
 #
 ###############################################################################
 
+# Prints usage information
 def printUsage():
-	"""Prints usage information"""
-	
 	print('-h\t--help\t\tPrint help')
 	print('-l\t--lang\t\tLang of processed dumps [czech|english]')
 	print('-r\t--robots\tFlag: Include revisions made by bots')
@@ -221,9 +207,8 @@ def printUsage():
 	print('-f\t--outputFormat\tOutput format [txt|se]')
 	print('-F\t--outputFilter\tFlag: Additional SVM (support vector machines) filter at the output')
 
+# Opens compressed files (7z, bz2) & uncompressed xml
 def openStream(path):
-	"""Opens compressed files (7z, bz2) & uncompressed xml"""
-	
 	if(path.lower().endswith('.bz2')):
 		return bz2.BZ2File(path, "r")
 	elif(path.lower().endswith('.xml')):
@@ -234,9 +219,8 @@ def openStream(path):
 	else:
 		return None
 
+"""Recursion of error construction"""
 def errorStringRecursively(errors):
-	"""Recursion of error string construction"""
-	
 	if(len(errors) <= 1):
 		return tokenize(errors[0][1])
 	
@@ -247,8 +231,6 @@ def errorStringRecursively(errors):
 	return ("<err type=\"%s\">\n" % errType) + errorStringRecursively(errors[:-1]) + ("\n</err>\n<corr type=\"%s\">\n%s\n</corr>" % (errType, tokenize(errContent)))
 
 def writeStream(stream, errors, writeFormat="se"):
-	"""Writes given errors to output stream"""
-	
 	if writeFormat == "se":
 		for error in errors:
 			output = errorStringRecursively(error)
@@ -263,9 +245,8 @@ def writeStream(stream, errors, writeFormat="se"):
 			stream.write("\n")
 		stream.flush()
 		
+# Downloads file from url
 def downloadFile(url):
-	"""Downloads file from url"""
-	
 	fileName = url.split('/')[-1]
 	print("Starting background downloading of %s" % url)
 	urllib.request.urlretrieve(url, fileName)

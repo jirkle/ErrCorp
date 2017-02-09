@@ -6,8 +6,6 @@ import io
 import xml.etree.ElementTree as ET
 import difflib
 import re
-import itertools
-import unitok
 from multiprocessing import Pool
 from collections import deque
 
@@ -48,6 +46,7 @@ supportedOutputFormats = ("txt", "se")
 
 unitokConfig = None
 errCorpConfig = None
+
 outputStream = None
 
 # Base classes
@@ -75,12 +74,16 @@ class revision(object):
 ###############################################################################
 #
 # Extractor functions
-#  -main, processStream, normalizeText, removeBadRevisions, processPage, processRevisions,
-#   processStacks, writeCorpBuffer, findEdits, findTypos, findWO
+#  -main, processStream, renderPageRevisions, renderRevision, removeBadRevisions, 
+#   processPage, processRevisions, processStacks, writeCorpBuffer, 
+#   resolveEvolution, classifyEditType, findTypos, extractTypos, appendRev
 #
 ###############################################################################
 
 def appendRev(textList, oldRev, newRev):
+	"""Searches the textList. If any list (within textList) ends with oldRev then appeds newRev at it's end.
+	Otherwise it creates new list and inserts it in the textList"""
+	
 	founded = False
 	for k in range(0, len(textList)):
 		#if(textList[k][-1]==newRev):
@@ -93,6 +96,11 @@ def appendRev(textList, oldRev, newRev):
 		textList.append((oldRev, newRev))	
 
 def extractTypos(oldSent, newSent):
+	"""Extracts typos from old & new sentence version and writes them into the stream. Key idea -
+	difference of old sentence's & new sentence's word's sets gives us set of words which has been changed.
+	If we look through the new sentence's words for each this word and get the one with the least word
+	distance lesser than typo treshold it might be the correction"""
+	
 	oldBag = utils.bagOfWords(oldSent, minWordLen=typoMinWordLen)
 	newBag = utils.bagOfWords(newSent, minWordLen=typoMinWordLen)
 	difference = oldBag - newBag
@@ -106,12 +114,9 @@ def extractTypos(oldSent, newSent):
 	return typos	
 
 
-# Extracts typos from old & new sentence version and writes them into the stream. Key idea -
-# difference of old sentence's & new sentence's word's sets gives us set of words which has been changed.
-# If we look through the new sentence's words for each this word and get the one with the least word
-# distance lesser than typo treshold it might be the correction
 def findTypos():
-	global corpBuffer
+	"""Iterates through corp buffer & extracts typos where revisions are marked as typos"""
+	
 	typos = []
 	for error in corpBuffer:
 		for i in range(1, len(error)):
@@ -124,8 +129,9 @@ def findTypos():
 	typos = [[["typos", x[0]],["typos", x[1]]]for x in typos]
 	return typos
 
-
 def classifyEditType(oldSentenceList, newSentenceList):
+	"""Classifies revision and returns edit type"""
+	
 	oldBag = utils.bagOfWords(oldSentenceList[1])
 	newBag = utils.bagOfWords(newSentenceList[1])
 	comment = newSentenceList[0]
@@ -138,6 +144,10 @@ def classifyEditType(oldSentenceList, newSentenceList):
 	return "other"
 
 def resolveEvolution():
+	"""Resolves evolution - 
+	Changes structure of corp buffer to list of evolution lists:
+	[[[allComments, baseSentence], [comment, edit], ...], ...]"""
+	
 	global corpBuffer
 	evolutionLinks = []
 	toRemove = set()
@@ -167,8 +177,9 @@ def resolveEvolution():
 	corpBuffer = evolutionDeques + corpBuffer
 
 
-# Processes and flushes buffer to disk
 def writeCorpBuffer():
+	"""Processes and flushes buffer to disk"""
+	
 	global corpBuffer
 	resolveEvolution()
 	typos = findTypos()
@@ -178,8 +189,9 @@ def writeCorpBuffer():
 		utils.writeStream(outputStream, corpBuffer, outputFormat)
 	corpBuffer = []	
 
-# Processes sentence's stacks - old sentences are matched to sentences from new sentence's stack
 def processStacks(oldStack, newStack, comment):
+	"""Processes sentence's stacks - old sentences are matched to sentences from new sentence's stack"""
+	
 	if(len(oldStack) == 0 or len(newStack) == 0):
 		return
 	oldStack = deque([x for x in oldStack if x not in newStack])
@@ -191,8 +203,9 @@ def processStacks(oldStack, newStack, comment):
 			candidates = sorted(candidates, key=lambda candidate: candidate[1], reverse=True)
 			corpBuffer.append((comment, oldSent, candidates[0][0]))
 
-# Compares two revisions and constructs old and new stacks of sentences for further processing
 def processRevisions(oldRev, newRev):
+	"""Compares two revisions and constructs old and new stacks of sentences for further processing"""
+
 	if(oldRev == None or newRev == None or oldRev.text == None or newRev.text == None):
 		return
 	oldStack = deque()
@@ -210,9 +223,9 @@ def processRevisions(oldRev, newRev):
 			newStack.append(line[1:])
 	processStacks(oldStack, newStack, newRev.comment)
 
-# Function for removing bot or reverted revisions.
 def removeBadRevisions(page):
-	previous = None
+	"""Function for removing bot or reverted revisions."""
+	
 	page.revisions = [x for x in page.revisions if x != None and x.comment != None]
 	if(not preserveRobotRevisions):
 		page.revisions = [x for x in page.revisions if not errCorpConfig.botFilter.search(x.comment)]
@@ -227,8 +240,9 @@ def removeBadRevisions(page):
 	toRevert = set(toRevert)
 	page.revisions = [x for x in page.revisions if x not in toRevert]
 
-# Removes reverted revisions, goes through revs and sends every two neighbous to processing
 def processPage(page):
+	"""Removes reverted revisions, goes through revs and sends every two neighbous to processing"""
+	
 	newRev = page.revisions[0]
 	for i in range(1, len(page.revisions) - 1):
 		oldRev = newRev
@@ -238,6 +252,8 @@ def processPage(page):
 	writeCorpBuffer()
 
 def renderRevision(rev, title):
+	"""Renders revision in HTML/WikiMarkup to plaintext; TODO Html conversion"""
+	
 	if(rev.text != None): 
 		if(rev.contentFormat == "wikimarkup"):
 			text = re.sub("\n(\s\n)*", "<stop>", rev.text) #Replace more paragraphs endings
@@ -254,13 +270,14 @@ def renderRevision(rev, title):
 	else:
 		return rev	
 
-# Renders all revs in wiki markup/html into plain text and then cleans output text
 def renderPageRevisions(page):
+	"""Renders all revs in wiki markup/html into plain text and then cleans output text"""
+	
 	pool = Pool(processes=poolProcesses)
 	poolAsyncResults = []
 	for rev in page.revisions:
-		#poolAsyncResults.append(pool.apply_async(renderRevision, args=(rev, page.title)))
-		rev = renderRevision(rev, page.title)
+		poolAsyncResults.append(pool.apply_async(renderRevision, args=(rev, page.title)))
+		#rev = renderRevision(rev, page.title)
 	for i in range(0, len(poolAsyncResults) - 1):
 		try:
 			page.revisions[i] = poolAsyncResults[i].get()	#collect results from pool
@@ -268,8 +285,9 @@ def renderPageRevisions(page):
 			page.revisions[i].text = None
 	page.revisions = [x for x in page.revisions if x != None]
 	
-
 def processStream(fileStream):
+	"""Processes XML stream in export schema https://www.mediawiki.org/xml/export-0.8.xsd"""
+	
 	pagesProcessed = 0    
 	curPage = page()
 	curRevision = revision()
@@ -306,14 +324,15 @@ def processStream(fileStream):
 					curPage = page()
 					curPage.revisions = []
 			elem.clear()
-    
-
+			
 def main():
+	"""Main func"""
+	
 	pool = Pool(processes=1)
 	downloadResult = None
 	if(len(dumpDownloads) > 0):
 		url = dumpDownloads.popleft()
-		downloadResult = pool.apply_async(downloadFile, args=(url,))
+		downloadResult = pool.apply_async(utils.downloadFile, args=(url,))
 		
 	for path in dumpPaths:
 		print("Processing file %s" % (path,))
@@ -325,19 +344,19 @@ def main():
 		while len(dumpDownloads) > 0:
 			print("Processing file %s" % filePath)
 			url = dumpDownloads.popleft()
-			downloadResult = pool.apply_async(downloadFile, args=(url,))
-			stream = openStream(filePath)
+			downloadResult = pool.apply_async(utils.downloadFile, args=(url,))
+			stream = utils.openStream(filePath)
 			processStream(stream)
 			stream.close()
 			os.remove(filePath)
 			filePath = downloadResult.wait()
 		print("Processing file %s" % filePath)	
-		stream = openStream(filePath)
+		stream = utils.openStream(filePath)
 		processStream(stream)
 		stream.close()
 		os.remove(filePath)				
 			
-	except OSError as e:
+	except OSError:
 		pass
 
 
@@ -347,11 +366,11 @@ if __name__ == "__main__":
 		opts, args = getopt.getopt(sys.argv[1:], "p:d:u:l:o:f:hrF",
 		                           ["paths=", "dumpUrls=", "pageUrls=" "lang=", "robots", "help", "outputFilter", "output=", "outputFormat="])
 	except getopt.GetoptError:
-		printUsage()
+		utils.printUsage()
 		sys.exit(2)
 	for opt, arg in opts:
 		if opt == '-h':
-			printUsage()
+			utils.printUsage()
 			sys.exit()
 		elif opt in ("-l", "--lang"):
 			lang = arg
