@@ -7,11 +7,12 @@ import xml.etree.ElementTree as ET
 import difflib
 import re
 import itertools
+import unitok
 from multiprocessing import Pool
 from collections import deque
 
 import WikiExtractor
-from utils import printUsage, openStream, writeStream, splitBySentences, bagOfWords, wordDistance, sentenceSimilarity, downloadFile
+import utils
 
 # Maximal distance of two words to be considered as typo
 typoTreshold = 2
@@ -35,16 +36,18 @@ corpBuffer = []
 # Settings from command line = default settings
 preserveRobotRevisions = False
 filterOutput = False
-lang = "en"
+lang = "english"
 dumpPaths = []
 dumpDownloads = []
 pageDownloads = []
 outputFolder = "export/"
 outputFormat = "txt"
 
-supportedLangs = ("cs", "en")
+supportedLangs = ("czech", "english")
 supportedOutputFormats = ("txt", "se")
 
+unitokConfig = None
+errCorpConfig = None
 outputStream = None
 
 # Base classes
@@ -68,32 +71,6 @@ class revision(object):
 		self.text = ""
 		self.author = ""
 		self.contentFormat = "wikimarkup"
-	    
-# Comment filters
-excludeFilter = {
-	'cs':re.compile(r'.*((Hlavní\sstrana)|([rR]ozcestník)|(Nápověda:)|(Wikipedista:)|(Wikipedie:)|(Diskuse:)|(MediaWiki:)|(Portál:)|(Šablona:)|(Kategorie:)|(Soubor:)).*', re.U),
-	'en':re.compile(r'.*((Main\sPage)|(File:)|(User\stalk:)|(Category:)|(Talk:)|(User:)).*', re.U)
-}
-	    
-typoFilter = {
-	'cs':re.compile(r'.*(([Tt]ypo)|([Cc]l[\s\:])|([Cc]leanup)|([Cc]u[\s\:])|([Pp]řeklep)|([Pp]ravopis)|([Kk]osmetické)|([Dd]robnost)|([Oo]prav)|([Oo]pr[\s\:])|(\-\>)).*', re.U),
-	'en':re.compile(r'.*(([Tt]ypo)|([Cc]l[\s\:])|([Cc]leanup)|([Cc]u[\s\:])|(\-\>)).*', re.U)
-}
-	    
-editFilter = {
-	'cs':re.compile(r'.*(([Cc]opyedit)|([Cc]pyed)|([Ee]dit)|([Pp]řepsání)|([Tt]ypografie)|([Rr]evize)).*', re.U),
-	'en':re.compile(r'.*(([Cc]opyedit)|([Cc]pyed)|([Cc]e[\s\:])|([Ee]dit)|([Tt]ypography)).*', re.U)
-}
-	    
-revertFilter = {
-	'cs':re.compile(r'(.*(([Rr]evert)|([Rr]vrt)|([Rr]v[\s\:])|(rvv)|([Ee]ditace\s([0-9]\s)*uživatele)|(vrácen)|(zrušen)|(vandal)|([Vv]erze\s([0-9]\s)*uživatele)).*)|(rv)', re.U),
-	'en':re.compile(r'(.*(([Rr]evert)|([Rr]vrt)|([Rr]v[\s\:])|(rvv)|(vandalism)).*)|(rv)', re.U)
-}
-	    
-botFilter = {
-	'cs':re.compile(r'(.*(([Rr]obot)|([Bb]ot[\s\:])|([Bb]otCS)|(WPCleaner)).*)', re.U),
-	'en':re.compile(r'(.*(([Rr]obot)|([Bb]ot[\s\:])|(WPCleaner)).*)', re.U)
-}
 
 ###############################################################################
 #
@@ -116,12 +93,12 @@ def appendRev(textList, oldRev, newRev):
 		textList.append((oldRev, newRev))	
 
 def extractTypos(oldSent, newSent):
-	oldBag = bagOfWords(oldSent, minWordLen=typoMinWordLen)
-	newBag = bagOfWords(newSent, minWordLen=typoMinWordLen)
+	oldBag = utils.bagOfWords(oldSent, minWordLen=typoMinWordLen)
+	newBag = utils.bagOfWords(newSent, minWordLen=typoMinWordLen)
 	difference = oldBag - newBag
 	typos = []
 	for word in difference:
-		candidates = [(x, wordDistance(word, x)) for x in newBag]
+		candidates = [(x, utils.wordDistance(word, x)) for x in newBag]
 		candidates = [(x, d) for (x, d) in candidates if d <= typoTreshold]
 		if(len(candidates) > 0):
 			candidates = sorted(candidates, key=lambda candidate: candidate[1], reverse=True)
@@ -149,14 +126,14 @@ def findTypos():
 
 
 def classifyEditType(oldSentenceList, newSentenceList):
-	oldBag = bagOfWords(oldSentenceList[1])
-	newBag = bagOfWords(newSentenceList[1])
+	oldBag = utils.bagOfWords(oldSentenceList[1])
+	newBag = utils.bagOfWords(newSentenceList[1])
 	comment = newSentenceList[0]
 	if(oldBag - newBag == 0):
 		return "order"
-	if(typoFilter[lang].search(comment)):
+	if(errCorpConfig.typoFilter.search(comment)):
 		return "typos"
-	if(editFilter[lang].search(comment)):
+	if(errCorpConfig.editFilter.search(comment)):
 		return "edits"
 	return "other"
 
@@ -196,9 +173,9 @@ def writeCorpBuffer():
 	resolveEvolution()
 	typos = findTypos()
 	if len(typos) > 0:
-		writeStream(outputStream, typos, outputFormat)
+		utils.writeStream(outputStream, typos, outputFormat)
 	if len(corpBuffer) > 0:
-		writeStream(outputStream, corpBuffer, outputFormat)
+		utils.writeStream(outputStream, corpBuffer, outputFormat)
 	corpBuffer = []	
 
 # Processes sentence's stacks - old sentences are matched to sentences from new sentence's stack
@@ -208,7 +185,7 @@ def processStacks(oldStack, newStack, comment):
 	oldStack = deque([x for x in oldStack if x not in newStack])
 	while len(oldStack) > 0:
 		oldSent = oldStack.popleft()
-		candidates = [(x, sentenceSimilarity(oldSent, x)) for x in newStack]
+		candidates = [(x, utils.sentenceSimilarity(oldSent, x)) for x in newStack]
 		candidates = [(x, similarity) for (x, similarity) in candidates if similarity > sentenceTreshold]
 		if(len(candidates) > 0):
 			candidates = sorted(candidates, key=lambda candidate: candidate[1], reverse=True)
@@ -238,12 +215,12 @@ def removeBadRevisions(page):
 	previous = None
 	page.revisions = [x for x in page.revisions if x != None and x.comment != None]
 	if(not preserveRobotRevisions):
-		page.revisions = [x for x in page.revisions if not botFilter[lang].search(x.comment)]
+		page.revisions = [x for x in page.revisions if not errCorpConfig.botFilter.search(x.comment)]
 	
 	toRevert = []
 	prev = None
 	for rev in page.revisions:
-		if(revertFilter[lang].search(rev.comment)):
+		if(errCorpConfig.revertFilter.search(rev.comment)):
 			toRevert.append(rev)
 			toRevert.append(prev)
 		prev = rev
@@ -269,7 +246,7 @@ def renderRevision(rev, title):
 			extractor.extract(out)
 			rev.text = out.getvalue()
 			out.close()
-			rev = splitBySentences(rev)
+			rev = utils.splitBySentences(rev)
 			rev.contentFormat = "plaintext"
 			return rev
 		else:
@@ -282,8 +259,8 @@ def renderPageRevisions(page):
 	pool = Pool(processes=poolProcesses)
 	poolAsyncResults = []
 	for rev in page.revisions:
-		poolAsyncResults.append(pool.apply_async(renderRevision, args=(rev,page.title)))
-		#rev = renderRevision(rev, page.title)
+		#poolAsyncResults.append(pool.apply_async(renderRevision, args=(rev, page.title)))
+		rev = renderRevision(rev, page.title)
 	for i in range(0, len(poolAsyncResults) - 1):
 		try:
 			page.revisions[i] = poolAsyncResults[i].get()	#collect results from pool
@@ -303,7 +280,7 @@ def processStream(fileStream):
 			if elem.tag.endswith('title'):
 				pagesProcessed += 1
 				curPage.title = elem.text
-				if(excludeFilter[lang].search(curPage.title)):
+				if(errCorpConfig.excludeFilter.search(curPage.title)):
 					print("Skipping page   #%s: %s" % (pagesProcessed, curPage.title))
 					skip = True
 					continue
@@ -340,7 +317,7 @@ def main():
 		
 	for path in dumpPaths:
 		print("Processing file %s" % (path,))
-		stream = openStream(path)
+		stream = utils.openStream(path)
 		processStream(stream)
 	try:
 		filePath = downloadResult.get()	#wait for download end
@@ -365,6 +342,7 @@ def main():
 
 
 if __name__ == "__main__":
+	print("Preparing environment")
 	try:
 		opts, args = getopt.getopt(sys.argv[1:], "p:d:u:l:o:f:hrF",
 		                           ["paths=", "dumpUrls=", "pageUrls=" "lang=", "robots", "help", "outputFilter", "output=", "outputFormat="])
@@ -378,7 +356,7 @@ if __name__ == "__main__":
 		elif opt in ("-l", "--lang"):
 			lang = arg
 			if lang not in supportedLangs:
-				print("%s language is not supported, switching to English", lang)
+				print("%s language is not supported, switching to English" % lang)
 				lang = "en"	    
 		elif opt in ("-r", "--robots"):
 			preserveRobotRevisions = True
@@ -393,9 +371,17 @@ if __name__ == "__main__":
 		elif opt in ("-f", "--outputFormat"):
 			outputFormat = arg
 			if outputFormat not in supportedOutputFormats:
-				print("%s output format is not supported, switching to text output", outputFormat)
+				print("%s output format is not supported, switching to text output" % outputFormat)
 				outputFormat = "txt"
 		elif opt in ("-F", "--outputFilter"):
 			filterOutput = True		
 	outputStream = io.open('export/output.txt', 'w')
+	from importlib import import_module
+	errCorpConfig = import_module("confs." + lang)
+	unitokConfig = import_module("unitok-confs." + lang)
+	
+	utils.unitokConfig = unitokConfig
+	utils.errCorpConfig = errCorpConfig
+	utils.init()
+	print("Environment prepared")
 	main()

@@ -3,11 +3,35 @@ import bz2
 import lzma
 import re
 import string
+import io
 import urllib.request
+import unitok
 
 from UnicodeHack import hack_regexp
 
-rePunctuation = re.compile('[%s]' % re.escape(string.punctuation))
+unitokConfig = None
+errCorpConfig = None
+
+caps = None
+decimalPoint = None
+digits = None
+abbrs = None
+websites = None
+digitsSentenceEndings = None
+
+def init():
+	global caps
+	global decimalPoint
+	global digits
+	global abbrs
+	global websites
+	global digitsSentenceEndings
+	caps = errCorpConfig.caps
+	decimalPoint = errCorpConfig.decimalPoint
+	digits = errCorpConfig.digits
+	abbrs = errCorpConfig.reList["abbrs"]
+	websites = errCorpConfig.reList["websites"]
+	digitsSentenceEndings = errCorpConfig.reList["digitsSentenceEndings"]	
 
 ###############################################################################
 #
@@ -18,6 +42,12 @@ rePunctuation = re.compile('[%s]' % re.escape(string.punctuation))
 ###############################################################################
 
 def tokenize(text):
+	out = io.StringIO()
+	re_list = unitokConfig.re_list
+	tokens = unitok.tokenize_recursively(text, re_list)
+	unitok.print_tokens(tokens, out, True, False)
+	text = out.getvalue()
+	out.close()
 	return text
 
 # Function for text lemmatization
@@ -26,7 +56,7 @@ def lemma(text):
 
 # Generates bag of words
 def bagOfWords(sentence, doLemma=True, minWordLen=0):
-	sentence = rePunctuation.sub(' ', sentence)
+	sentence = errCorpConfig.reList["punctuation"].sub(' ', sentence)
 	if(doLemma):
 		sentence = lemma(sentence)
 	words = sentence.split()
@@ -120,36 +150,23 @@ def sentenceClean(text, trimToSentenceStart=True, trimToSentenceEnd=True):
 def lemmaClean(text):
 	return re.sub(r"[0-9]", r" ", text) #Remove digits	
 
-# Funkce z http://stackoverflow.com/questions/4576077/python-split-text-on-sentences, TODO: licence?
-caps = hack_regexp(r"(\\p{Lu})")
-prefixes = r"\s+(Mr|St|Mrs|Ms|Dr|MUDr|JuDr|Mgr|Bc|atd|tzv|řec|lat|it|např|př|vs|Et|tj)[.]"
-suffixes = r"(Inc|Ltd|Jr|Sr|Co)"
-starters = r"(Mr|Mrs|Ms|Dr|He\s|She\s|It\s|They\s|Their\s|Our\s|We\s|But\s|However\s|That\s|This\s|Wherever)"
-acronyms = hack_regexp(r"(\\p{Lu}[.]\\p{Lu}[.](?:\\p{Lu}[.])?)")
-websites = r"[.](com|net|org|io|gov|cz)\s"
-digits = r"([0-9])"
-digitsSentenceEndings = r"((roce|(z\slet)|(z\sroků))\s*[0-9\-\s]*)[.]"
-decimalPoint = r"[.|,]"
-	
+# Funkce z http://stackoverflow.com/questions/4576077/python-split-text-on-sentences
 def splitBySentences(rev, doClean=True):
 	text = rev.text
 	if(text == None): return None
 	if(doClean): text = textClean(text)
+	reList = errCorpConfig.reList
+	
+	
 	text = " " + text + "  "
 	text = text.replace("\n"," ")
-	text = re.sub(prefixes," \\1<prd>",text)
-	text = re.sub(websites,"<prd>\\1 ",text)
-	text = text.replace("Ph.D.","Ph<prd>D<prd>")
-	text = text.replace("n.l.","n<prd>l<prd>")
-	text = text.replace("n. l.","n<prd> l<prd>")
-	text = re.sub("\s" + caps + "[.] "," \\1<prd> ",text)
-	text = re.sub(acronyms+" "+starters,"\\1<stop> \\2",text)
+	text = abbrs.sub(" \\1<prd>", text)
+	text = websites.sub("<prd>",text)
+	text = re.sub("\s" + caps + "[.] "," \\1<prd> ", text)
 	text = re.sub(caps + "[.]" + caps + "[.]" + caps + "[.]","\\1<prd>\\2<prd>\\3<prd>",text)
 	text = re.sub(caps + "[.]" + caps + "[.]","\\1<prd>\\2<prd>",text)
-	text = re.sub(" "+suffixes+"[.] "+starters," \\1<stop> \\2",text)
-	text = re.sub(" "+suffixes+"[.]"," \\1<prd>",text)
 	text = re.sub(" " + caps + "[.]"," \\1<prd>",text)
-	text = re.sub(digitsSentenceEndings,"\\1<stop>",text)
+	text = digitsSentenceEndings.sub("\\1<stop>",text)
 	text = re.sub(digits + decimalPoint + "\s*" + digits,"\\1<prd> \\2",text)
 	text = re.sub(digits + "[\.]\s*", "\\1<prd> ",text)
 	text = text.replace(".\"","\".")
@@ -178,7 +195,7 @@ def splitBySentences(rev, doClean=True):
 # Prints usage information
 def printUsage():
 	print('-h\t--help\t\tPrint help')
-	print('-l\t--lang\t\tLang of processed dumps [cs|en]')
+	print('-l\t--lang\t\tLang of processed dumps [czech|english]')
 	print('-r\t--robots\tFlag: Include revisions made by bots')
 	print('Input:')
 	print('-p\t--paths\t\tLocal paths to dump files [dumpPath(, dumpPath)*]')

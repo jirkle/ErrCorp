@@ -19,12 +19,12 @@ start: fyzální
 typos: fyzikální
 
 Komentáře editací: typos
-start: magnetického
-typos: magnetické
-
-Komentáře editací: typos
 start: Vesmíru
 typos: vesmíru
+
+Komentáře editací: typos
+start: magnetického
+typos: magnetické
 
 Komentáře editací: typos
 start: atronomie
@@ -543,6 +543,11 @@ start: "Filosofie čínská": Konfucius (Kchung-fu-c', Kongfuzi), Lao-c' (Laozi)
 edits: Filosofie čínská: Konfucius (Kchung-fu-c', Kongfuzi), Lao-c' (Laozi), Čuang-c' (Zhuangzi), Mo-c' (Mozi)
 other: Čínská filosofie: Konfucius (Kchung-fu-c', Kongfuzi), Lao-c' (Laozi), Čuang-c' (Zhuangzi), Mo-c' (Mozi)
 
+Komentáře editací: /* Středověk */  úprava odkazu na danou osobu.<separator>/* Středověk */ + pár dalších jmen...<separator>
+start: Vrcholná scholastika: Siger Brabantský, Albert Veliký, Tomáš Akvinský, Bonaventura, Roger Bacon
+edits: Vrcholná scholastika: Siger Brabantský, sv. Albert Veliký, sv. Tomáš Akvinský, sv. Bonaventura, Roger Bacon
+other: Vrcholná scholastika: Siger Brabantský, Boethius z Dácie, sv. Albert Veliký, sv. Tomáš Akvinský, sv. Bonaventura, Roger Bacon
+
 Komentáře editací: /* Citování filosofické literatury */  + link<separator>/* Citování filosofické literatury */ -překlep<separator>
 start: I když se většina filosofické literatury cituje běžným způsobem (např.
 other: I když se většina filosofické literatury - cituje běžným způsobem (např.
@@ -628,12 +633,12 @@ start: " Toto pravidlo bylo zrušeno v PČP 1983, kdy bylo zavedeno psaní "z", 
 typos: Toto pravidlo bylo zrušeno v PČP 1983, kdy bylo zavedeno psaní "z", avšak psaní "s" též povoleno.
 
 Komentáře editací: /* Současné filozofické směry v České republice */  opraven link
-start: S. Sousedíka (FF UK, KTF UK): Petr Dvořák (FF UK, CMTF UP), Tomáš Machula, Lukáš Novák, Daniel Heider (všichni TF JU), David Svoboda (KTF UK).
-typos: Stanislava Sousedíka (FF UK, KTF UK): Petr Dvořák (FF UK, CMTF UP), Tomáš Machula, Lukáš Novák, Daniel Heider (všichni TF JU), David Svoboda (KTF UK).
+start: o rehabilitaci aristotelských témat, zejména ve scholastické podobě, v rámci analytické filozofie se snaží okruh filozofů kolem prof. S. Sousedíka (FF UK, KTF UK): Petr Dvořák (FF UK, CMTF UP), Tomáš Machula, Lukáš Novák, Daniel Heider (všichni TF JU), David Svoboda (KTF UK).
+typos: o rehabilitaci aristotelských témat, zejména ve scholastické podobě, v rámci analytické filozofie se snaží okruh filozofů kolem prof. Stanislava Sousedíka (FF UK, KTF UK): Petr Dvořák (FF UK, CMTF UP), Tomáš Machula, Lukáš Novák, Daniel Heider (všichni TF JU), David Svoboda (KTF UK).
 
 Komentáře editací: /* Hlavní filosofické disciplíny */ fmt, jazyková úprava
 start: Filozofická antropologie, zabývající se otázkou člověka.
-other: filozofická antropologie - zabývající se otázkou člověka
+edits: filozofická antropologie - zabývající se otázkou člověka
 
 Komentáře editací: /* Hlavní filosofické disciplíny */
 start: Ostatní
@@ -784,12 +789,8 @@ start: Rudolf Eisler: Wörterbuch der philosophischen Begriffe (1904)
 typos: Rudolf Eisler: "Wörterbuch der philosophischen Begriffe" (1904)
 
 Komentáře editací: př. n. l.
-start: nový způsob hledání či "touhy po moudrosti" (filo-sofie), který se neopíral o Homéra ani Hésioda, nýbrž snažil se přijít věcem na kloub pozorováním, přemýšlením a argumentací, zkrátka vlastním rozumem a diskusí.
+start: Právě v takové situaci řeckých měst vznikl někdy v 6. století př. Kr. nový způsob hledání či "touhy po moudrosti" (filo-sofie), který se neopíral o Homéra ani Hésioda, nýbrž snažil se přijít věcem na kloub pozorováním, přemýšlením a argumentací, zkrátka vlastním rozumem a diskusí.
 other: Právě v takové situaci řeckých měst vznikl někdy v 6. století př. n. l. nový způsob hledání či "touhy po moudrosti" (filo-sofie), který se neopíral o Homéra ani Hésioda, nýbrž snažil se přijít věcem na kloub pozorováním, přemýšlením a argumentací, zkrátka vlastním rozumem a diskusí.
-
-Komentáře editací: /* Středověk */ + pár dalších jmen...
-start: Vrcholná scholastika: Siger Brabantský, sv.
-other: Vrcholná scholastika: Siger Brabantský, Boethius z Dácie, sv.
 
 Komentáře editací: 
 start: Filosofie nebo filozofie, řecky φιλοσοφία, z φιλειν ("filein", milovat, mít rád, toužit po něčem) a σοφια ("sofía", moudrost) - doslova: láska k moudrosti - myšleno jako snaha o přiblížení se k moudrosti, úsilí být moudřejší.
@@ -825,7 +826,7 @@ other: sociální filosofie - o povaze, smyslu a funkci společnosti;
 
 Komentáře editací: [[WP:WPCleaner|WPCleaner]] v1.30 - Opraveno pomocí [[WP:WCW]] - Opravy pravopisu a typografie / Zbývající odkaz - [[Tvrzení]]
 start: Na rozdíl od jednotlivých věd, které se zpravidla vymezují také svojí specifickou metodou (matematickou, experimentální, historickou a pod.
-typos: Na rozdíl od jednotlivých věd, které se zpravidla vymezují také svojí specifickou metodou (matematickou, experimentální, historickou apod.
+typos: Na rozdíl od jednotlivých věd, které se zpravidla vymezují také svojí specifickou metodou (matematickou, experimentální, historickou apod.), je filosofická metoda daleko volnější a začátečníkovi se může zdát, že žádná ani není.
 
 Komentáře editací: [[WP:WPCleaner|WPCleaner]] v1.30 - Opraveno pomocí [[WP:WCW]] - Opravy pravopisu a typografie / Zbývající odkaz - [[Tvrzení]]
 start: Pro dílo Aristotelovo je základem berlínské vydání A. I. Bekkera z let 1816 - 1823
