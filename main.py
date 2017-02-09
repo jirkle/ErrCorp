@@ -11,7 +11,7 @@ from multiprocessing import Pool
 from collections import deque
 
 import WikiExtractor
-from utils import printUsage, openStream, splitBySentences, bagOfWords, wordDistance, sentenceSimilarity, downloadFile
+from utils import printUsage, openStream, writeStream, splitBySentences, bagOfWords, wordDistance, sentenceSimilarity, downloadFile
 
 # Maximal distance of two words to be considered as typo
 typoTreshold = 2
@@ -36,11 +36,14 @@ corpBuffer = []
 preserveRobotRevisions = False
 filterOutput = False
 lang = "en"
-supportedLangs = ("cs", "en")
 dumpPaths = []
 dumpDownloads = []
 pageDownloads = []
 outputFolder = "export/"
+outputFormat = "txt"
+
+supportedLangs = ("cs", "en")
+supportedOutputFormats = ("txt", "se")
 
 outputStream = None
 
@@ -100,49 +103,55 @@ botFilter = {
 #
 ###############################################################################
 
-# Extracts word order corrections from old & new sentence version and writes them into the stream. 
-# Key idea - if difference of old sentence's & new sentence's word's sets is equals 0 then the only 
-# thing that could've changed is word order
-def findWO(oldSent, newSent, comment):
-	oldBag = bagOfWords(oldSent)
-	newBag = bagOfWords(newSent)
-	if(oldBag - newBag == 0):
-		woOutputStream.write("%s\n%s\n%s\n\n" % (comment.encode("utf-8"), oldSent, newSent))
-		return True
-	else:
-		return False
+def appendRev(textList, oldRev, newRev):
+	founded = False
+	for k in range(0, len(textList)):
+		#if(textList[k][-1]==newRev):
+		#	break #TODO search revision list to find right place for adding old Version
+		if(textList[k][-1]==oldRev):
+			textList[k] = textList[k] + (newRev,)
+			founded = True
+			break
+	if not founded:
+		textList.append((oldRev, newRev))	
 
-# Extracts typos from old & new sentence version and writes them into the stream. Key idea -
-# difference of old sentence's & new sentence's word's sets gives us set of words which has been changed.
-# If we look through the new sentence's words for each this word and get the one with the least word
-# distance lesser than typo treshold it might be the correction
-def findTypos(oldSent, newSent, comment):
-	if(not typoFilter[lang].search(comment)):
-		return False
+def extractTypos(oldSent, newSent):
 	oldBag = bagOfWords(oldSent, minWordLen=typoMinWordLen)
 	newBag = bagOfWords(newSent, minWordLen=typoMinWordLen)
 	difference = oldBag - newBag
-	writed=False
+	typos = []
 	for word in difference:
 		candidates = [(x, wordDistance(word, x)) for x in newBag]
 		candidates = [(x, d) for (x, d) in candidates if d <= typoTreshold]
 		if(len(candidates) > 0):
 			candidates = sorted(candidates, key=lambda candidate: candidate[1], reverse=True)
-			typoOutputStream.write("%s -> %s\n" % (word, candidates[0][0]))
-			writed=True
-	return writed
+			typos.append((word, candidates[0][0]))
+	return typos	
 
-# Extracts edits from old & new sentence version and writes them into the stream.
-# Key idea - comment contains predefined words
-def findEdits(oldSent, newSent, comment):
-	if (not editFilter[lang].search(comment)):
-		return False
-	editOutputStream.write("%s\n%s\n%s\n\n" % (comment, oldSent, newSent))
 
-def classifyEditType(oldList, newList):
-	oldBag = bagOfWords(oldList[1])
-	newBag = bagOfWords(newList[1])
-	comment = newList[0]
+# Extracts typos from old & new sentence version and writes them into the stream. Key idea -
+# difference of old sentence's & new sentence's word's sets gives us set of words which has been changed.
+# If we look through the new sentence's words for each this word and get the one with the least word
+# distance lesser than typo treshold it might be the correction
+def findTypos():
+	global corpBuffer
+	typos = []
+	for error in corpBuffer:
+		for i in range(1, len(error)):
+			if(error[i][0]=="typos"):
+				oldSent = error[i-1][1]
+				newSent = error[i][1]
+				t = extractTypos(oldSent, newSent)
+				for typo in t:
+					appendRev(typos, typo[0], typo[1])
+	typos = [[["typos", x[0]],["typos", x[1]]]for x in typos]
+	return typos
+
+
+def classifyEditType(oldSentenceList, newSentenceList):
+	oldBag = bagOfWords(oldSentenceList[1])
+	newBag = bagOfWords(newSentenceList[1])
+	comment = newSentenceList[0]
 	if(oldBag - newBag == 0):
 		return "order"
 	if(typoFilter[lang].search(comment)):
@@ -160,46 +169,37 @@ def resolveEvolution():
 			if(corpBuffer[i][2] == corpBuffer[j][1]):
 				toRemove.add(corpBuffer[i])
 				toRemove.add(corpBuffer[j])
-				founded = False
-				for k in range(0, len(evolutionLinks)):
-					if(evolutionLinks[k][-1]==i):
-						evolutionLinks[k] = evolutionLinks[k] + (j,)
-						founded = True
-						break
-				if not founded:
-					evolutionLinks.append((i,j))
+				appendRev(evolutionLinks, i, j)
 				break
 	evolutionDeques = []
 	for ev in evolutionLinks:
-		queue = deque()
-		oldList = ["", corpBuffer[ev[0]][1]]
-		queue.append(oldList) #Append first oldest sentence
+		queue = []
+		oldSentenceList = ["", corpBuffer[ev[0]][1]]
+		queue.append(oldSentenceList) #Append first oldest sentence
 		allComments = ""
 		for l in ev:
 			allComments += corpBuffer[l][0] + "<separator>"
 			newList = [corpBuffer[l][0], corpBuffer[l][2]]
-			newList[0] = classifyEditType(oldList, newList)
+			newList[0] = classifyEditType(oldSentenceList, newList)
 			queue.append(newList) #Append newer versions of sentence
-			oldList = newList
+			oldSentenceList = newList
 		queue[0][0] = allComments
 		evolutionDeques.append(queue)
-	#Normalize corpBuffer to have the same structure as evolution deques
-	corpBuffer = [deque([[x[0], x[1]], [classifyEditType(["", x[1]], [x[0], x[2]]), x[2]]]) for x in corpBuffer if x not in toRemove]
+	#Normalize corpBuffer to have the same structure as evolution deques & remove matched evolution sentences
+	corpBuffer = [[[x[0], x[1]], [classifyEditType(["", x[1]], [x[0], x[2]]), x[2]]] for x in corpBuffer if x not in toRemove]
 	corpBuffer = evolutionDeques + corpBuffer
 
 
 # Processes and flushes buffer to disk
 def writeCorpBuffer():
-	resolveEvolution()
 	global corpBuffer
+	resolveEvolution()
+	typos = findTypos()
+	if len(typos) > 0:
+		writeStream(outputStream, typos, outputFormat)
 	if len(corpBuffer) > 0:
-		for evolutionQueue in corpBuffer:
-			outputStream.write("Komentáře editací: %s\nstart: %s\n" % (evolutionQueue[0][0], evolutionQueue[1][1]))
-			for i in range(1, len(evolutionQueue)):
-				outputStream.write("%s: %s\n" % (evolutionQueue[i][0], evolutionQueue[i][1]))
-			outputStream.write("\n")
-		outputStream.flush()
-		corpBuffer = []
+		writeStream(outputStream, corpBuffer, outputFormat)
+	corpBuffer = []	
 
 # Processes sentence's stacks - old sentences are matched to sentences from new sentence's stack
 def processStacks(oldStack, newStack, comment):
@@ -366,8 +366,8 @@ def main():
 
 if __name__ == "__main__":
 	try:
-		opts, args = getopt.getopt(sys.argv[1:], "p:d:u:l:o:hrf",
-		                           ["paths=", "dumpUrls=", "pageUrls=" "lang=", "robots", "help", "outputFilter", "output="])
+		opts, args = getopt.getopt(sys.argv[1:], "p:d:u:l:o:f:hrF",
+		                           ["paths=", "dumpUrls=", "pageUrls=" "lang=", "robots", "help", "outputFilter", "output=", "outputFormat="])
 	except getopt.GetoptError:
 		printUsage()
 		sys.exit(2)
@@ -382,8 +382,6 @@ if __name__ == "__main__":
 				lang = "en"	    
 		elif opt in ("-r", "--robots"):
 			preserveRobotRevisions = True
-		elif opt in ("-f", "--outputFilter"):
-			filterOutput = True
 		elif opt in ("-p", "--paths"):
 			dumpPaths = deque([x.strip() for x in arg.split(",")])
 		elif opt in ("-d", "--dumpUrls"):
@@ -392,5 +390,12 @@ if __name__ == "__main__":
 			pageDownloads = deque([x.strip() for x in arg.split(",")])
 		elif opt in ("-o", "--output"):
 			outputFolder = arg
+		elif opt in ("-f", "--outputFormat"):
+			outputFormat = arg
+			if outputFormat not in supportedOutputFormats:
+				print("%s output format is not supported, switching to text output", outputFormat)
+				outputFormat = "txt"
+		elif opt in ("-F", "--outputFilter"):
+			filterOutput = True		
 	outputStream = io.open('export/output.txt', 'w')
 	main()

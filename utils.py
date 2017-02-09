@@ -11,64 +11,14 @@ rePunctuation = re.compile('[%s]' % re.escape(string.punctuation))
 
 ###############################################################################
 #
-#  Support functions
-#   -printUsage, openStream
-#
-###############################################################################
-
-# Prints usage information
-def printUsage():
-	print('-h\t--help\t\tPrint help')
-	print('-l\t--lang\t\tLang of processed dumps [cs|en]')
-	print('-r\t--robots\tFlag: Include revisions made by bots')
-	print('-f\t--outputFilter\tFlag: Additional SVM (support vector machines) filter at the output')
-	print('Input:')
-	print('-p\t--paths\t\tLocal paths to dump files [dumpPath(, dumpPath)*]')
-	print('-d\t--dumpUrls\tRemote paths to dump files [dumpDownloadUrl(, dumpDownloadUrl)*]')
-	print('-u\t--pageUrls\tUrl paths to pages [pageUrl(, pageUrl)*]')    
-	print('Output:')
-	print('-o\t--output\tOutput path')
-
-# Opens compressed files (7z, bz2) & uncompressed xml
-def openStream(path):
-	if(path.lower().endswith('.bz2')):
-		return bz2.BZ2File(path, "r")
-	elif(path.lower().endswith('.xml')):
-		return open(path, "r")
-	elif(path.lower().endswith('.7z')):
-		raise Exception('7zip files are not supported yet')
-		#return lzma.open(path, "r")
-	else:
-		return None
-"""Recursion of error construction"""
-def seConstructError(errors):
-	if(len(errors) <= 1):
-		return errors[0][0]
-	
-	last = errors[-1]
-	errContent = last[0]
-	errType = last[1]
-	
-	return "<err type=\"%s\">" % errType + seConstructError(errors[:-1]) + "</err><corr type=\"%s\">%s</corr>" % (errType, errContent)
-
-def writeStream(stream, errors, writeFormat="se"):
-	if writeFormat == "se":
-		stream.write(seConstructError(errors))
-
-# Downloads file from url
-def downloadFile(url):
-	fileName = url.split('/')[-1]
-	print("Starting background downloading of %s" % url)
-	urllib.request.urlretrieve(url, fileName)
-	return fileName
-
-###############################################################################
-#
 #  Text processing functions
 #   -splitBySentences, lemma, bagOfWords, wordDistance, sentenceSimilarity,
 #    textClean, sentenceClean
 #
 ###############################################################################
+
+def tokenize(text):
+	return text
 
 # Function for text lemmatization
 def lemma(text):
@@ -217,3 +167,69 @@ def splitBySentences(rev, doClean=True):
 			sentences[i] = sentenceClean(sentences[i])
 	rev.text = [x for x in sentences if x != ""]		
 	return rev
+
+###############################################################################
+#
+#  Support functions
+#   -printUsage, openStream
+#
+###############################################################################
+
+# Prints usage information
+def printUsage():
+	print('-h\t--help\t\tPrint help')
+	print('-l\t--lang\t\tLang of processed dumps [cs|en]')
+	print('-r\t--robots\tFlag: Include revisions made by bots')
+	print('Input:')
+	print('-p\t--paths\t\tLocal paths to dump files [dumpPath(, dumpPath)*]')
+	print('-d\t--dumpUrls\tRemote paths to dump files [dumpDownloadUrl(, dumpDownloadUrl)*]')
+	print('-u\t--pageUrls\tUrl paths to pages [pageUrl(, pageUrl)*]')    
+	print('Output:')
+	print('-o\t--output\tOutput path')
+	print('-f\t--outputFormat\tOutput format [txt|se]')
+	print('-F\t--outputFilter\tFlag: Additional SVM (support vector machines) filter at the output')
+
+# Opens compressed files (7z, bz2) & uncompressed xml
+def openStream(path):
+	if(path.lower().endswith('.bz2')):
+		return bz2.BZ2File(path, "r")
+	elif(path.lower().endswith('.xml')):
+		return open(path, "r")
+	elif(path.lower().endswith('.7z')):
+		raise Exception('7zip files are not supported yet')
+		#return lzma.open(path, "r")
+	else:
+		return None
+
+"""Recursion of error construction"""
+def seConstructError(errors):
+	if(len(errors) <= 1):
+		return tokenize(errors[0][1])
+	
+	last = errors[-1]
+	errContent = last[1]
+	errType = last[0]
+	
+	return ("<err type=\"%s\">\n" % errType) + seConstructError(errors[:-1]) + ("\n</err>\n<corr type=\"%s\">\n%s\n</corr>" % (errType, tokenize(errContent)))
+
+def writeStream(stream, errors, writeFormat="se"):
+	if writeFormat == "se":
+		for error in errors:
+			output = seConstructError(error)
+			stream.write(output)
+			stream.write("\n")
+		stream.flush()
+	if writeFormat == "txt":
+		for error in errors:
+			stream.write("Komentáře editací: %s\nstart: %s\n" % (error[0][0], error[0][1]))
+			for i in range(1, len(error)):
+				stream.write("%s: %s\n" % (error[i][0], error[i][1]))
+			stream.write("\n")
+		stream.flush()
+		
+# Downloads file from url
+def downloadFile(url):
+	fileName = url.split('/')[-1]
+	print("Starting background downloading of %s" % url)
+	urllib.request.urlretrieve(url, fileName)
+	return fileName
