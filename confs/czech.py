@@ -4,29 +4,30 @@ import string
 from UnicodeHack import hack_regexp
 
 #Abbreviations from wiki https://cs.wiktionary.org/wiki/Kategorie:%C4%8Cesk%C3%A9_zkratky
-abbrs = r"""\s+(a|abl|absol|abstr|adj|adm|adv|aj|ak|ak|akc|akt|et\sal|
+abbrs = r"""[\s\(\[\{\"\']+([aAáÁbBcCčČdDďĎeEéÉěĚfFgGhHiIíÍjJkKlLmMnNňŇoOóÓpPqQrRřŘsSšŠtTťŤuUúÚůŮvVwWxXyYýÝzZžŽ]|
+abl|absol|abstr|adj|adm|adv|aj|ak|ak|akc|akt|et\sal|
 alch|amer|anat|angl|anglosas|ap|apod|arab|arch|archit|arg|arm|astr|
 astrol|atd|atp|att|bás|[Bb]c|[Bb]cA|belg|bibl|biol|bl|brig|brit|bulh|
-býv|c|č|cca|čce|čes|čet|chem|chil|čín|cír|círk|čís|čj|ck|čp|csc|
-csl|d|D|dán|dat|děj|dep|des|detto|dět|dial|[Dd][Ii][Čč]|DiS|dl|doc|
+býv|cca|čce|čes|čet|chem|chil|čín|cír|círk|čís|čj|ck|čp|csc|[ČC]VUT|[ČC]ZU
+csl|dán|dat|děj|dep|des|detto|dět|dial|[Dd][Ii][Čč]|DiS|dl|doc|
 dol|dop|dopr|dór|dosl|dra|Dr|DrSc|dto|dtto|ekon|epic|Et|etnonym|eufem|
-ev|event|f|fa|fam|fce|fě|fem|fil|film|fin|form|fot|fr|fut|fy|
+ev|event|fa|fam|fce|fě|fem|fil|film|fin|form|fot|fr|fut|fy|
 fyz|gen|genmjr|genplk|genpor|geogr|geol|geom|germ|gram|gšt|hebr|herald|
-hist|hl|hod|hor|horn|hovor|hud|hut|i|[Ii][Čč][Oo]|ie|imp|impf|ind|
-indoevr|inf|Ing|instr|inter|interj|ión|iron|it|j|jap|jm|JuDr|k|
+hist|hl|hod|hor|horn|hovor|hud|hut|[Ii][Čč][Oo]|ie|imp|impf|ind|
+indoevr|inf|Ing|instr|inter|interj|ión|iron|it|jap|jm|JuDr|
 kanad|katalán|kce|kk|klas|km|kniž|ko|komp|konj|konkr|kpt|kr|Kr|kř|
-ks|kuch|kupř|l|lat|lék|les|lid|lit|liturg|log|lok|m|mat|max|
-meteor|metr|MgA|Mgr|mil|min|mj|mjr|ml|mld|mod|[Mm]ons|ms|MUDr|mysl|
-n|náb|nám|námoř|např|neklas|něm|nesklon|než|niz|nom|nor|npor|nprap|
-nrtm|nstržm|o|ob|obch|obyč|odd|odp|ojed|opt|p|part|pas|pejor|pers|
+ks|kuch|kupř|lat|lék|les|lid|lit|liturg|log|lok|mat|max|
+meteor|metr|MgA|Mgr|mil|min|mj|mjr|ml|mld|mod|[Mm]ons|ms|MUDr|MUNI|mysl|
+náb|nám|námoř|např|neklas|něm|nesklon|než|niz|nom|nor|npor|nprap|
+nrtm|nstržm|ob|obch|obyč|odd|odp|ojed|opt|part|pas|pejor|pers|
 pf|Ph|Pha|pí|pl|plk|plpf|pol|pomn|popř|por|pplk|ppor|pprap|př|
-prap|prav|práv|předl|prep|příp|přívl|přn|prof|ps|psč|r|R|rak|rcsl|refl|
-reg|resp|rkp|RNDr|roč|RSDr|rtm|rtn|rum|rus|ř|řec|řeckokat|říj|římskokat|
-řn|s|S|samohl|sg|škpt|sl|slang|slov|soudr|souhl|špan|spec|spol|
+prap|prav|práv|předl|prep|příp|přívl|přn|prof|ps|psč|rak|rcsl|refl|
+reg|resp|rkp|RNDr|roč|RSDr|rtm|rtn|rum|rus|řec|řeckokat|říj|římskokat|
+řn|samohl|sg|škpt|sl|slang|slov|soudr|souhl|špan|spec|spol|
 sport|šprap|srov|st|št|stfr|stol|str|střfr|střv|stržm|stsl|subj|subs|
-superl|sv|svob|švýc|sz|š|t|táz|tech|telev|teol|Th|ThDr|tis|tj|
-trans|tur|tv|typogr|tzn|tzv|úř|v|V|var|vč|vedl|veř|verb|vl|voj|
-vok|vs|vůb|vulg|výtv|vz|vztaž|www|z|zahr|zajm|zast|zejm|zeměd|žert|zkr|
+superl|sv|svob|švýc|sz|táz|tech|telev|teol|Th|ThDr|tis|tj|
+trans|tur|tv|typogr|tzn|tzv|UK|úř|var|vč|vedl|veř|verb|vl|voj|
+vok|vs|V[ŠS]CHT|V[ŠS]E|vůb|vulg|VUT|výtv|vz|vztaž|www|zahr|zajm|zast|zejm|zeměd|žert|zkr|
 zn|zř|zvl)[.]"""
 
 #Website domains
@@ -67,10 +68,11 @@ id|ie|il|im|in|io|iq|ir|is|it|je|jm|jo|jp|ke|kg|kh|ki|km|kn|kp|kr|kw|ky|kz|la|lb
 lt|lu|lv|ly|ma|mc|md|me|mg|mh|mk|ml|mm|mn|mo|mp|mq|mr|ms|mt|mu|mv|mw|mx|my|mz|na|nc|ne|nf|ng|ni|
 nl|no|np|nr|nu|nz|om|pa|pe|pf|pg|ph|pk|pl|pm|pn|pr|ps|pt|pw|py|qa|re|ro|rs|ru|rw|sa|sb|sc|sd|se|
 sg|sh|si|sj|sk|sl|sm|sn|so|sr|st|su|sv|sx|sy|sz|tc|td|tf|tg|th|tj|tk|tl|tm|tn|to|tp|tr|tt|tv|tw|
-tz|ua|ug|uk|us|uy|uz|va|vc|ve|vg|vi|vn|vu|wf|ws|ye|yt|za|zm|zw)\s"""
+tz|ua|ug|uk|us|uy|uz|va|vc|ve|vg|vi|vn|vu|wf|ws|ye|yt|za|zm|zw)"""
 
 #Sentence endings with digits (e.g.: ...in year 1999.)
-digitsSentenceEndings = r"((roce|(z\slet)|(z\sroků))\s*[0-9\-\s]+)[.]"
+digitsSentenceEndings = r"""((roce|(z\slet)|(z\sroků)|(ledn[ua])|(únor[ua])|(březn[ua]|
+(dubn[ua])|(květn[ua])|(červn[ua])|(červenc[ie])|(srpn[ua])|(září)|(říjn[ua])|(listopadu)|(prisinc[ie])))\s*[0-9\-\s]+)[.]"""
 
 #Punctuation
 punctuation = '[%s]' % re.escape(string.punctuation)

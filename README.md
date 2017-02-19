@@ -9,3 +9,12 @@ It takes bz2 wiki dump with history and processes it page by page. During proces
 * **Other** - all other, non classified errors
 
 For more info check [wiki](https://github.com/jirkle/ErrCorp/wiki)
+
+### Command line
+* Download pages through wiki api:
+
+-u "Astronomie, Biologie, Fyzika" -l "cs" -r
+
+* Process local dump:
+
+-p "cswiki.xml.bz2" -l "cs" -r

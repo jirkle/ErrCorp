@@ -1,0 +1,18 @@
+Co s nadpisy?
+-brát jako samostatnou větu
+
+Tabulky
+-každá buňka == samostatná věta?
+-zahazovat krátké buňky
+
+Seznamy
+-spojit dohromady, nebo každou odrážku zvlášť?
+filtr
+
+Obecné
+-jak zjistit kvalitu korpusu?
+-data, metadata, granularita
+
+Learners corpora, api wiki, popis algoritmu + dokumentace v příloze
+Fithesis3 - overleaf
+Poslat korpus, statistika chyb (délka, klasifikace)

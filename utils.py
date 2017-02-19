@@ -4,6 +4,9 @@ import re
 import io
 import urllib.request
 import unitok
+import WikiExtractor
+import platform
+from multiprocessing import Pool
 
 from UnicodeHack import hack_regexp
 
@@ -16,6 +19,9 @@ digits = None
 abbrs = None
 websites = None
 digitsSentenceEndings = None
+poolProcesses = 8
+
+pool = None
 
 def init():
 	"""Inits utils"""
@@ -26,18 +32,20 @@ def init():
 	global abbrs
 	global websites
 	global digitsSentenceEndings
+	global pool
 	caps = errCorpConfig.caps
 	decimalPoint = errCorpConfig.decimalPoint
 	digits = errCorpConfig.digits
 	abbrs = errCorpConfig.reList["abbrs"]
 	websites = errCorpConfig.reList["websites"]
-	digitsSentenceEndings = errCorpConfig.reList["digitsSentenceEndings"]	
+	digitsSentenceEndings = errCorpConfig.reList["digitsSentenceEndings"]
+	pool = Pool(processes=poolProcesses)
 
 ###############################################################################
 #
 #  Text processing functions
-#   -tokenize, lemma, bagOfWords, wordDistance, sentenceSimilarity,
-#    textClean, sentenceClean, lemmaClean, splitBySentences
+#   -tokenize, lemma, lemmaClean, bagOfWords, wordDistance,
+#    sentenceSimilarity, textClean, sentenceClean, splitBySentences
 #
 ###############################################################################
 
@@ -96,7 +104,7 @@ def wordDistance(s1, s2):
 	return previous_row[-1]
 
 def sentenceSimilarity(first, second):
-	"""Metric for similarity of two given sentences, returns nuber in range <0,1>"""
+	"""Metric for similarity of two given sentences, returns nuber in range <0,1> TODO: Levenstein?"""
 	
 	firstBag = bagOfWords(first)
 	secndBag = bagOfWords(second)
@@ -110,26 +118,29 @@ def textClean(text):
 	
 	text = re.sub(r"&lt;", r"<", text) #Replace inline markup
 	text = re.sub(r"&gt;", r">", text) #Replace inline markup
+	text = re.sub(r"<span.*?>", r"", text) #Remove rest spans from wikiapi
+	text = re.sub(r"</span.*?>", r"", text) #Remove rest spans
 	
 	text = re.sub(r"\/\*(.*?)\*\/", r"\1", text) #Replace comments
-	text = re.sub(r"\[.*?\|(.*?)\]", r"\1", text) #Remove wiki interlinks
+	text = re.sub(r"\[.*?\|(.*?)\]", r"\1", text) #Remove all wiki interlinks
 	text = re.sub(r"[‘’ʹ՚‛ʻʼ՝ʽʾ]", r"'", text) #Preserve only one type of single quotes
 	text = re.sub(r"[„“˝”ˮ‟″‶〃＂“]", r'"', text) #Preserve only one type of double quotes
 	text = re.sub(r"[‐‑‒−–⁃➖˗﹘-]", r"-", text) #Preserve only one type of hyphens
+	text = re.sub(r"\*", r"<stop>", text, re.U) #Replace bullets
 	
 	#Mark headings to be start of sentences and preserve heading text
-	text = re.sub(r"======(.*?)======", r". \1:", text)
-	text = re.sub(r"=====(.*?)=====", r". \1:", text)
-	text = re.sub(r"====(.*?)====", r". \1:", text) 
-	text = re.sub(r"===(.*?)===", r". \1:", text)
-	text = re.sub(r"==(.*?)==", r". \1:", text)
-	text = re.sub(r"=", r" ", text) #Remove rest equal signs
+	text = re.sub(r"======\s*(.*?)\s*======", r"<stop>\1<stop>:", text)
+	text = re.sub(r"=====\s*(.*?)\s*=====", r"<stop>\1<stop>", text)
+	text = re.sub(r"====\s*(.*?)\s*====", r"<stop>\1<stop>", text) 
+	text = re.sub(r"===\s*(.*?)\s*===", r"<stop>\1<stop>", text)
+	text = re.sub(r"==\s*(.*?)\s*==", r"<stop>\1<stop>", text)
+	#text = re.sub(r"=", r" ", text) #Remove rest equal signs	
 	
 	text = re.sub(r"\.\.\.", r"…", text) #Clean text
-	text = re.sub(r"\s*\.(\s*\.)*", r". ", text) #Remove more dots
-	text = re.sub(r"…", r"...", text) #Clean 	text
+	text = re.sub(r"\s*\.(\s*\.)*", r".", text) #Remove more dots
+	text = re.sub(r"…", r"...", text) #Clean text
 	
-	text = re.sub(r"(\s+)", r" ", text) #Remove more spaces
+	text = re.sub(r"(\s+)", r"\1", text) #Remove more spaces
 	return text
 
 def sentenceClean(text, trimToSentenceStart=True, trimToSentenceEnd=True):
@@ -138,8 +149,6 @@ def sentenceClean(text, trimToSentenceStart=True, trimToSentenceEnd=True):
 	if(text == None):
 		return None
 	text = re.sub(r"^(\s*(\*)*\s*)", r" ", text, re.U) #Replace bullets at the start
-	text = re.sub(r"([:,\.])(\s*(\*)*\s*)", r"\1 ", text, re.U) #Replace bullets at the start
-	text = re.sub(r"\*", r"; ", text, re.U) #Replace bullets
 	text = re.sub(r"\s*;(\s*;)*", r";", text, re.U) #Remove more semi-colons
 	text = re.sub(r"([:;.,-])+\s*[:;.,-]+", r"\1 ", text, re.U) #Remove odd punctuation combinations
 	
@@ -169,34 +178,36 @@ def splitBySentences(rev, doClean=True):
 	"""Splits text to sentences. Base function from 
 	http://stackoverflow.com/questions/4576077/python-split-text-on-sentences"""
 	
-	text = rev.text
+	text = rev["*"]
 	if(text == None): return None
 	if(doClean): text = textClean(text)
 	text = " " + text + "  "
-	text = text.replace("\n"," ")
-	text = abbrs.sub(" \\1<prd>", text)
-	text = websites.sub("<prd>",text)
-	text = re.sub("\s" + caps + "[.] "," \\1<prd> ", text)
-	text = re.sub(caps + "[.]" + caps + "[.]" + caps + "[.]","\\1<prd>\\2<prd>\\3<prd>",text)
-	text = re.sub(caps + "[.]" + caps + "[.]","\\1<prd>\\2<prd>",text)
-	text = re.sub(" " + caps + "[.]"," \\1<prd>",text)
-	text = digitsSentenceEndings.sub("\\1<stop>",text)
-	text = re.sub(digits + decimalPoint + "\s*" + digits,"\\1<prd> \\2",text)
-	text = re.sub(digits + "[\.]\s*", "\\1<prd> ",text)
-	text = text.replace(".\"","\".")
-	text = text.replace("!\"","\"!")
-	text = text.replace("?\"","\"?")
-	text = text.replace("\.*,","<prd>,")
-	text = text.replace(".",".<stop>")
-	text = text.replace("?","?<stop>")
-	text = text.replace("!","!<stop>")
-	text = text.replace("<prd>",".")
-	sentences = re.split("<stop>", text, flags=re.MULTILINE)
+	text = text.replace("\n", r"<stop>")
+	text = text.replace("\r", r"<stop>")	
+	text = abbrs.sub(r" \1<prd>", text)
+	text = websites.sub(r"<prd>",text)
+	text = re.sub(r"\s" + caps + r"[.] ", r" \1<prd> ", text)
+	text = re.sub(caps + r"[.]" + caps + r"[.]" + caps + r"[.]", r"\1<prd>\2<prd>\3<prd>",text)
+	text = re.sub(caps + r"[.]" + caps + r"[.]", r"\1<prd>\2<prd>", text)
+	text = re.sub(r" " + caps + r"[.]", r" \1<prd>",text)
+	text = digitsSentenceEndings.sub(r"\1<stop>",text)
+	text = re.sub(digits + decimalPoint + r"\s*" + digits, r"\1<prd> \2", text)
+	text = re.sub(digits + r"[\.]\s*", r"\1<prd> ",text)
+	text = text.replace(r".\"", r"\".")
+	text = text.replace(r"!\"", r"\"!")
+	text = text.replace(r"?\"", r"\"?")
+	text = text.replace(r"\.*,", r"<prd>,")
+	text = text.replace(r".", r".<stop>")
+	text = text.replace(r"?", r"?<stop>")
+	text = text.replace(r"!", r"!<stop>")
+	text = text.replace(r"<prd>", r".")
+	sentences = re.split(r"<stop>", text, flags=re.MULTILINE)
 	sentences = [s.strip() for s in sentences]
+	sentences = [x for x in sentences if x != ""]
 	if(doClean): 
 		for i in range(0, len(sentences)):
 			sentences[i] = sentenceClean(sentences[i])
-	rev.text = [x for x in sentences if x != ""]		
+	rev["*"] = [x for x in sentences if x != ""]		
 	return rev
 
 ###############################################################################
@@ -235,7 +246,7 @@ def openStream(path):
 		return None
 
 def errorStringRecursively(errors):
-	"""Recursion of error string construction"""
+	"""Recursion for constructing error string in sketch engine fromat"""
 	
 	if(len(errors) <= 1):
 		return tokenize(errors[0][1])
@@ -270,3 +281,57 @@ def downloadFile(url):
 	print("Starting background downloading of %s" % url)
 	urllib.request.urlretrieve(url, fileName)
 	return fileName
+
+
+def removeBadRevisions(page, preserveRobotRevisions=False):
+	"""Function for removing bot or reverted revisions."""
+	
+	page["revisions"] = [x for x in page["revisions"] if x != None and x["comment"] != None]
+	if(not preserveRobotRevisions):
+		page["revisions"] = [x for x in page["revisions"] if not errCorpConfig.botFilter.search(x["comment"])]
+	
+	toRevert = []
+	prev = None
+	for rev in page["revisions"]:
+		if(errCorpConfig.revertFilter.search(rev["comment"])):
+			toRevert.append(rev)
+			toRevert.append(prev)
+		prev = rev
+	page["revisions"] = [x for x in page["revisions"] if x not in toRevert]
+	
+def renderRevision(rev, title):
+	"""Renders revision in HTML/WikiMarkup to plaintext; TODO Html conversion"""
+	
+	if(rev["*"] != None): 
+		if(rev["format"] == "wikimarkup"):
+			text = rev["*"]# re.sub("\n(\s\n)*", "<stop>", ) #Replace more paragraphs endings
+			out = io.StringIO()
+			extractor = WikiExtractor.Extractor(0, 0, title, text.split("\n"))
+			extractor.extract(out)
+			rev["*"] = out.getvalue()
+			out.close()
+			rev = splitBySentences(rev)
+			rev["format"] = "plaintext"
+			return rev
+		else:
+			return rev
+	else:
+		return rev	
+
+def renderPageRevisions(page, poolProcesses=8):
+	"""Renders all revs in wiki markup/html into plain text and then cleans output text"""
+	global pool
+	poolAsyncResults = []
+	for rev in page["revisions"]:
+		if(platform.system() == "Linux"):
+			poolAsyncResults.append(pool.apply_async(renderRevision, args=(rev, page["name"])))
+			#renderRevision(rev, page["name"])
+		else:
+			renderRevision(rev, page["name"])
+	for i in range(0, len(poolAsyncResults)):
+		try:
+			page["revisions"][i] = poolAsyncResults[i].get()	#collect results from pool
+		except:
+			page["revisions"][i]["*"] = None
+	page["revisions"] = [x for x in page["revisions"] if x != None]
+	return page
