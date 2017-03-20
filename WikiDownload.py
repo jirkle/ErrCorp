@@ -1,3 +1,4 @@
+# coding=UTF-8
 import mwclient
 import urllib.request
 import sys
@@ -6,7 +7,7 @@ import io
 from mwclient import MwClientError
 from pprint import pprint
 
-import utils
+import Utils
 import WikiExtractor
 
 #MW client site
@@ -30,6 +31,8 @@ def get_page(article_id):
 				if '*' in rev:
 					rev["format"] = "wikimarkup"
 					page.revisions.append(rev)
+					if("comment" not in rev):
+						rev["comment"] = ""
 				rev = revisions.next()
 		except:
 			pass
@@ -43,4 +46,3 @@ def get_page(article_id):
 		print(e.reason) 
 	except urllib.error.URLError as e:
 		print(e.reason)
-
