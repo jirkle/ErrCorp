@@ -137,7 +137,7 @@ def main():
 	processed = 0
 	for page in context["pageDownloads"]:
 		print("Downloading page %s" % page)
-		p = WikiDownload.(page)
+		p = WikiDownload.get_page(page)
 		print("Processing page %s" % page)
 		processPage(p)
 		processed +=1

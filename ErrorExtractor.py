@@ -69,9 +69,9 @@ def resolveEvolution():
 	evolutionLinks = []
 	toRemove = set()
 	for i in range(0, len(errorBuffer)):
-		cmp = errorBuffer[i][2]
+		comparement = errorBuffer[i][2]
 		for j in range(i, len(errorBuffer)):
-			if(cmp == errorBuffer[j][1]):
+			if(comparement == errorBuffer[j][1]):
 				toRemove.add(errorBuffer[i])
 				toRemove.add(errorBuffer[j])
 				appendRev(evolutionLinks, i, j)

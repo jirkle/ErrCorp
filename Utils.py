@@ -1,7 +1,6 @@
 # coding=UTF-8
 import re
 import string
-import Levenshtein
 
 context = None
 

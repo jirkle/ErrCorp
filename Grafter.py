@@ -3,7 +3,6 @@ import difflib
 import re
 import pprint
 from intervaltree import IntervalTree
-from intervaltree import Interval
 
 import Utils
 
@@ -32,7 +31,6 @@ class HidingString(object):
 			self.visibleString = text
 	
 	def update(self):
-		tokenIntervals = IntervalTree()
 		intervals = IntervalTree()
 		stack = []
 		for match in self.secretsRe[0].finditer(self.fullString):
@@ -149,8 +147,8 @@ def expandDifferences(old, new, differences, expand=True):
 	differences = [diff for diff in differences if diff[0] != diff[1] and diff[2] != diff[3]]
 	if expand:
 		for diff in differences: #Trim to whole words
-			oldS = old[diff[0]:diff[1]]
-			newS = new[diff[2]:diff[3]]
+			#oldS = old[diff[0]:diff[1]]
+			#newS = new[diff[2]:diff[3]]
 			#if diff[0] != diff[1]:
 			while diff[0] > 0 and (not old[diff[0]-1].isspace() and not Utils.ispunct(old[diff[0]-1])):
 				diff[0] -= 1
@@ -161,8 +159,8 @@ def expandDifferences(old, new, differences, expand=True):
 				diff[2] -= 1
 			while diff[3] < len(new) and (not new[diff[3]].isspace() and not Utils.ispunct(new[diff[3]])):
 				diff[3] += 1
-			oldS = old[diff[0]:diff[1]]
-			newS = new[diff[2]:diff[3]]			
+			#oldS = old[diff[0]:diff[1]]
+			#newS = new[diff[2]:diff[3]]			
 	return differences
 	
 def getDifferences(base, new, errorType):

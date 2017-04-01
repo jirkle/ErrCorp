@@ -4,7 +4,6 @@ import re
 import platform
 from multiprocessing import Pool
 from UnicodeHack import hack_regexp
-from tag_sentences import SentenceTagger
 
 import WikiExtractor
 
@@ -143,7 +142,6 @@ def renderRevision(rev, title):
 
 def renderPageRevisions(page):
 	"""Renders all revs of page into plain text, uses multiprocessing on Linux."""
-	global pool
 	poolAsyncResults = []
 	for rev in page["revisions"]:
 		if(platform.system() == "Linux"):
