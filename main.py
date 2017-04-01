@@ -5,9 +5,8 @@ import os
 import io
 import bz2
 import xml.etree.ElementTree as ET
-import difflib
-import pprint
-import re
+import cProfile
+import urllib
 from collections import deque
 from multiprocessing import Pool
 
@@ -15,12 +14,13 @@ import WikiDownload
 import PageProcessor
 import ErrorExtractor
 import Grafter
-import Utils
 import Exporter
+import Utils
 
 # Settings from command line & default settings
 context = {
   "preserveRobotRevisions": False,
+  "allowNesting": False, #Not implemented
   "lang": ("english", "en"),
   "supportedLangs": (("english", "en"), ("czech", "cs")),
   # Maximal distance of two sentences to be considered as typo
@@ -42,7 +42,7 @@ context = {
   "errCorpConfig": None
 }
 
-
+p = dict()
 
 def printUsage():
 	"""Prints usage information"""
@@ -81,8 +81,11 @@ def downloadFile(url):
 
 def processPage(page):
 	page = PageProcessor.normalize(page)
+	print("Extracting errors")
 	page = ErrorExtractor.extract(page)
+	print("Post processing errors")
 	page = Grafter.graft(page)
+	print("Flushing to corpora")
 	Exporter.exportToStream(page)
 	
 def processStream(fileStream):
@@ -98,7 +101,7 @@ def processStream(fileStream):
 			if elem.tag.endswith('title'):
 				pagesProcessed += 1
 				curPage["name"] = elem.text
-				if(errCorpConfig.excludeFilter.search(curPage["name"])):
+				if(context["errCorpConfig"].excludeFilter.search(curPage["name"])):
 					print("Skipping page   #%s: %s" % (pagesProcessed, curPage["name"]))
 					skip = True
 					continue
@@ -128,14 +131,15 @@ def processStream(fileStream):
 			elem.clear()
 			
 def main():
+	global p
 	"""Main func"""
 	#Download articles through wiki api if any
 	processed = 0
 	for page in context["pageDownloads"]:
 		print("Downloading page %s" % page)
-		p = WikiDownload.get_page(page)
+		p = WikiDownload.(page)
 		print("Processing page %s" % page)
-		processPage(p)		
+		processPage(p)
 		processed +=1
 		print("Done %s%%" % (float(processed)/len(context["pageDownloads"])*100))
 	pool = Pool(processes=1)
@@ -190,7 +194,7 @@ if __name__ == "__main__":
 			try:
 				context["lang"] = [supLang for supLang in context["supportedLangs"] if arg in supLang][0]
 			except:
-				print("%s language is not supported, switching to English" % lang)
+				print("%s language is not supported, switching to English" % arg)
 				context["lang"] = context["supportedLangs"][0]
 		elif opt in ("-r", "--robots"):
 			context["preserveRobotRevisions"] = True
@@ -209,12 +213,13 @@ if __name__ == "__main__":
 				context["outputFormat"] = "txt"	
 	context["outputStream"] = io.open('%soutput.%s' % (context["outputFolder"], context["outputFormat"]), 'w', encoding="utf-8")
 	from importlib import import_module
-	context["errCorpConfig"] = import_module("confs." + context["lang"][0])
-	context["unitokConfig"] = import_module("unitok-confs." + context["lang"][0])
+	context["errCorpConfig"] = import_module("confs." + context["lang"][0] + "-err-corp")
+	context["unitokConfig"] = import_module("confs." + context["lang"][0])
 	
 	Exporter.context = context
 	PageProcessor.context = context
 	ErrorExtractor.context = context
+	Grafter.context = context
 	Utils.context = context
 	
 	if(len(context["pageDownloads"]) > 0):

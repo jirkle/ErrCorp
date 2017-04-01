@@ -1,5 +1,9 @@
-##ErrCorp
+## ErrCorp
 ErrCorp is tool for automated generation of error corpora from wikipedia dump.
+
+### Install
+pip install intervaltree
+pip install python-Levenshtein
 
 ### How it works
 It takes bz2 wiki dump with history and processes it page by page. During processing it compares content of every two adjacent revisions and gets unique sentences in older and newer revision. Then ErrCorp links each old sentence to best matching new sentence and finally each of these matches are resolved as one type of error:

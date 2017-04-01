@@ -1,20 +1,12 @@
 # coding=UTF-8
-import sys
-import os
 import io
-import xml.etree.ElementTree as ET
-import difflib
-import pprint
 import re
 import platform
-from collections import deque
 from multiprocessing import Pool
 from UnicodeHack import hack_regexp
+from tag_sentences import SentenceTagger
 
 import WikiExtractor
-import Utils
-
-poolProcesses = 8
 
 pool = None
 
@@ -26,24 +18,23 @@ def textClean(text):
 
 	text = re.sub(r"&lt;.*?&gt;", r"",text) #Remove inline markup
 	text = re.sub(r"<.*?>", r"", text) #Remove inline markup
-	text = re.sub(r"\.\.\.", r"…", text) #Clean text
+	text = re.sub(r"\.\.\.", r"<p><p><p>", text) #Clean text
 	
-	text = re.sub(r"\[(.*?\|)*(.*?)\]", r"\1", text) #Remove all wiki interlinks
+	text = re.sub(r"\[(.*?\|)*(.*?)\]", r"\2", text) #Remove all wiki interlinks
 	text = re.sub(r"[‘’ʹ՚‛ʻʼ՝ʽʾ]", r"'", text) #Preserve only one type of single quotes
 	text = re.sub(r"[„“˝”ˮ‟″‶〃＂“]", r'"', text) #Preserve only one type of double quotes
 	text = re.sub(r"[‐‑‒−–⁃➖˗﹘-]", r"-", text) #Preserve only one type of hyphens
-	text = re.sub(r"\*", r"<stop>", text, re.U) #Replace bullets
+	text = re.sub(r"\*", r"<s>", text, re.U) #Replace bullets
 	
 	#Mark headings to be start of sentences and preserve heading text
-	text = re.sub(r"======\s*(.*?)\s*======", r"<stop>\1<stop>:", text)
-	text = re.sub(r"=====\s*(.*?)\s*=====", r"<stop>\1<stop>", text)
-	text = re.sub(r"====\s*(.*?)\s*====", r"<stop>\1<stop>", text) 
-	text = re.sub(r"===\s*(.*?)\s*===", r"<stop>\1<stop>", text)
-	text = re.sub(r"==\s*(.*?)\s*==", r"<stop>\1<stop>", text)
+	text = re.sub(r"======\s*(.*?)\s*======", r"<s>\1<s>:", text)
+	text = re.sub(r"=====\s*(.*?)\s*=====", r"<s>\1<s>", text)
+	text = re.sub(r"====\s*(.*?)\s*====", r"<s>\1<s>", text) 
+	text = re.sub(r"===\s*(.*?)\s*===", r"<s>\1<s>", text)
+	text = re.sub(r"==\s*(.*?)\s*==", r"<s>\1<s>", text)
 	#text = re.sub(r"=", r" ", text) #Remove rest equal signs	
 	
 	text = re.sub(r"\s*\.(\s*\.)*", r".", text) #Remove more dots
-	text = re.sub(r"…", r"...", text) #Clean text
 	
 	text = re.sub(r"(\s+)", r"\1", text) #Remove more spaces
 	return text
@@ -77,8 +68,7 @@ def sentenceClean(text, trimToSentenceStart=False, trimToSentenceEnd=True):
 	if(trimToSentenceEnd):
 		pass
 	text = re.sub(r"(\s+)", r" ", text) #Remove more spaces
-	
-	return text.strip()	
+	return text.strip()
 
 def splitBySentences(rev, doClean=True):
 	"""Splits text to sentences. Base function from 
@@ -88,25 +78,26 @@ def splitBySentences(rev, doClean=True):
 	if(text == None): return None
 	if(doClean): text = textClean(text)
 	text = " " + text + "  "
-	text = text.replace("\n", r"<stop>")
-	text = text.replace("\r", r"<stop>")
-	text = text.replace(r"\.*,", r"<prd>,")
-	text = config.reList["abbrs"].sub(r"\1\2<prd>", text)
-	text = config.reList["websites"].sub(r"<prd>\1", text)	
-	text = text.replace(r"\.(" + config.puncEnders + ")", r"<prd>\1<stop>")
-	text = re.sub(r"\s" + config.caps + r"[.]\s", r" \1<prd> ", text)
-	text = re.sub(config.caps + r"[.]" + config.caps + r"[.]" + config.caps + r"[.]", r"\1<prd>\2<prd>\3<prd>", text)
-	text = re.sub(config.caps + r"[.]" + config.caps + r"[.]", r"\1<prd>\2<prd>", text)
-	text = re.sub(r"\s" + config.caps + r"[.]", r" \1<prd>", text)
-	text = config.reList["digitsSentenceEndings"].sub(r"\1<stop> \2", text)
-	text = re.sub(config.digits + r"[.]", r"\1<prd>", text)
+	text = text.replace("\n", r"<s>")
+	text = text.replace("\r", r"<s>")
+	text = text.replace(r"\.*,", r"<p>,")
+	text = config.reList["abbrs"].sub(r"\1\2<p>", text)
+	text = config.reList["websites"].sub(r"<p>\1", text)
+	text = config.reList["romanNums"].sub(r"\1<p>", text)
+	text = text.replace(r"\.(" + config.puncEnders + ")", r"<p>\1<s>")
+	text = re.sub(r"\s" + config.caps + r"[.]\s", r" \1<p> ", text)
+	text = re.sub(config.caps + r"[.]" + config.caps + r"[.]" + config.caps + r"[.]", r"\1<p>\2<p>\3<p>", text)
+	text = re.sub(config.caps + r"[.]" + config.caps + r"[.]", r"\1<p>\2<p>", text)
+	text = re.sub(r"\s" + config.caps + r"[.]", r" \1<p>", text)
+	text = config.reList["digitsSentenceEndings"].sub(r"\1<s> \2", text)
+	text = re.sub(config.digits + r"[.]", r"\1<p>", text)
 	text = text.replace(r"!\"", r"\"!")
 	text = text.replace(r"?\"", r"\"?")
-	text = text.replace(r".", r".<stop>")
-	text = text.replace(r"?", r"?<stop>")
-	text = text.replace(r"!", r"!<stop>")
-	text = text.replace(r"<prd>", r".")
-	sentences = re.split(r"<stop>", text, flags=re.MULTILINE)
+	text = text.replace(r".", r".<s>")
+	text = text.replace(r"?", r"?<s>")
+	text = text.replace(r"!", r"!<s>")
+	text = text.replace(r"<p>", r".")
+	sentences = re.split(r"<s>", text, flags=re.MULTILINE)
 	sentences = [s.strip() for s in sentences]
 	sentences = [x for x in sentences if x != ""]
 	if(doClean): 
@@ -150,11 +141,9 @@ def renderRevision(rev, title):
 	else:
 		return rev	
 
-def renderPageRevisions(page, poolProcesses=8):
+def renderPageRevisions(page):
 	"""Renders all revs of page into plain text, uses multiprocessing on Linux."""
 	global pool
-	if(pool == None):
-		pool = Pool(context["poolProcesses"])
 	poolAsyncResults = []
 	for rev in page["revisions"]:
 		if(platform.system() == "Linux"):
@@ -172,7 +161,9 @@ def renderPageRevisions(page, poolProcesses=8):
 
 def normalize(page):
 	"""Removes reverted revisions, then renders them all of them into plaintext"""
-	
+	global pool
+	if(pool == None):
+		pool = Pool(context["poolProcesses"])	
 	removeBadRevisions(page, context["preserveRobotRevisions"])
-	renderPageRevisions(page, poolProcesses)
+	renderPageRevisions(page)
 	return page

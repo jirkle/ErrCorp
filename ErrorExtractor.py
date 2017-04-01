@@ -1,24 +1,13 @@
 # coding=UTF-8
-import getopt
-import sys
-import os
-import io
-import xml.etree.ElementTree as ET
 import difflib
-import pprint
-import re
+import Levenshtein
 from collections import deque
 
-import WikiDownload
 import Utils
-import Exporter
 
 errorBuffer = []
 
 context = None
-
-#Stats
-stats = { "all": 0, "punct": 0, "order": 0, "typos": 0, "edits": 0, "other": 0 }
 
 def appendRev(textList, oldRev, newRev):
 	"""Searches the textList. If any list (within textList) ends with oldRev then appeds newRev at it's end.
@@ -34,12 +23,12 @@ def appendRev(textList, oldRev, newRev):
 			break
 	if not founded:
 		textList.append((oldRev, newRev))
-
+"""
 def extractTypos(oldSent, newSent):
-	"""Extracts typos from old & new sentence version and writes them into the stream. Key idea -
+	Extracts typos from old & new sentence version and writes them into the stream. Key idea -
 	difference of old sentence's & new sentence's word's sets gives us set of words which has been changed.
 	If we look through the new sentence's words for each this word and get the one with the least word
-	distance lesser than typo treshold it might be the correction"""
+	distance lesser than typo treshold it might be the correction
 	
 	oldBag = Utils.bagOfWords(oldSent, minWordLen=typoMinWordLen)
 	newBag = Utils.bagOfWords(newSent, minWordLen=typoMinWordLen)
@@ -51,45 +40,24 @@ def extractTypos(oldSent, newSent):
 		if(len(candidates) > 0):
 			candidates = sorted(candidates, key=lambda candidate: candidate[1], reverse=True)
 			typos.append((word, candidates[0][0]))
-	return typos
-
-def findTypos():
-	"""Iterates through corp buffer & extracts typos where revisions are marked as typos"""
-	
-	typos = []
-	for error in errorBuffer:
-		for i in range(1, len(error)):
-			if(error[i][0]=="typos"):
-				oldSent = error[i-1][1]
-				newSent = error[i][1]
-				t = extractTypos(oldSent, newSent)
-				for typo in t:
-					appendRev(typos, typo[0], typo[1])
-	typos = [[["typos", x[0]],["typos", x[1]]]for x in typos]
-	return typos
+	return typos"""
 
 def classifyEditType(oldSentenceList, newSentenceList):
 	"""Classifies revision and returns edit type"""
 	config = context["errCorpConfig"]
-	stats["all"] += 1
 	oldBag = Utils.bagOfWords(oldSentenceList[1])
 	newBag = Utils.bagOfWords(newSentenceList[1])
 	comment = newSentenceList[0]
 	oldPunct = config.reList["punctuation"].sub('', oldSentenceList[1])
 	newPunct = config.reList["punctuation"].sub('', newSentenceList[1])
 	if(oldPunct == newPunct): #TODO
-		stats["punct"] += 1
 		return "punct"
 	if(oldBag - newBag == 0):
-		stats["order"] += 1
 		return "order"
-	if(Utils.wordDistance(oldSentenceList[1], newSentenceList[1]) < context["typoTreshold"]):
-		stats["typos"] += 1
+	if(Levenshtein.distance(oldSentenceList[1], newSentenceList[1]) < context["typoTreshold"]):
 		return "typos"
 	if(config.editFilter.search(comment)):
-		stats["edits"] += 1
 		return "edits"
-	stats["other"] += 1
 	return "other"
 
 def resolveEvolution():
@@ -101,8 +69,9 @@ def resolveEvolution():
 	evolutionLinks = []
 	toRemove = set()
 	for i in range(0, len(errorBuffer)):
+		cmp = errorBuffer[i][2]
 		for j in range(i, len(errorBuffer)):
-			if(errorBuffer[i][2] == errorBuffer[j][1]):
+			if(cmp == errorBuffer[j][1]):
 				toRemove.add(errorBuffer[i])
 				toRemove.add(errorBuffer[j])
 				appendRev(evolutionLinks, i, j)
@@ -176,5 +145,4 @@ def extract(page):
 		page["errors"] = errorBuffer
 	else:
 		page["errors"] = []
-	pprint.pprint(stats)
 	return page

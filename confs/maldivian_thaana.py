@@ -7,7 +7,7 @@
 
 import sys, re
 
-SGML_TAG = r"""
+SGML_TAG = ur"""
     (?:                         # make enclosing parantheses non-grouping
     <!-- .*? -->                # XML/SGML comment
     |                           # -- OR --
@@ -24,10 +24,10 @@ SGML_TAG = r"""
 SGML_TAG_RE = re.compile(SGML_TAG, re.UNICODE | re.VERBOSE | re.DOTALL)
 
 
-IP_ADDRESS = r"(?:[0-9]{1,3}\.){3}[0-9]{1,3}"
+IP_ADDRESS = ur"(?:[0-9]{1,3}\.){3}[0-9]{1,3}"
 IP_ADDRESS_RE = re.compile(IP_ADDRESS)
 
-DNS_HOST = r"""
+DNS_HOST = ur"""
     (?:
         [-a-z0-9]+\.                # Host name
         (?:[-a-z0-9]+\.)*           # Intermediate domains
@@ -54,7 +54,7 @@ DNS_HOST = r"""
         localhost
     )"""
 
-URL = r"""
+URL = ur"""
     (?:
 
     # Scheme part
@@ -83,12 +83,12 @@ URL = r"""
 """
 URL_RE = re.compile(URL, re.VERBOSE | re.IGNORECASE | re.UNICODE)
 
-EMAIL = r"[-a-z0-9._']+@" + DNS_HOST
+EMAIL = ur"[-a-z0-9._']+@" + DNS_HOST
 EMAIL_RE = re.compile(EMAIL, re.VERBOSE | re.IGNORECASE)
 
 # also matches initials
 # FIXME! only match capital letters (?)
-ACRONYM = r"""
+ACRONYM = ur"""
     (?<!\w)     # should not be preceded by a letter
     # sequence of single letter followed by . (e.g. U.S.)
     (?:
@@ -112,20 +112,20 @@ ACRONYM_RE = re.compile(ACRONYM, re.UNICODE | re.VERBOSE)
 # tested using top ~10M tokens from ententen12: 0.344 % wrongly placed <g/> corrected, no new mistakes introduced (briefly checked)
 # regexp inspired by http://stackoverflow.com/questions/5224835/what-is-the-proper-regular-expression-to-match-all-utf-8-unicode-lowercase-lette
 uu = []
-for i in range(sys.maxunicode):
-    c = chr(i)
+for i in xrange(sys.maxunicode):
+    c = unichr(i)
     if c.isupper():
         uu.append(c)
 unicode_uppers = u''.join(uu)
 ABBREVIATION_RE = re.compile(u'[0-9%s-]{2,}' % unicode_uppers)
 
-MULTICHAR_PUNCTUATION = r"(?:[?!]+|``|'')"
+MULTICHAR_PUNCTUATION = ur"(?:[?!]+|``|'')"
 MULTICHAR_PUNCTUATION_RE = re.compile(MULTICHAR_PUNCTUATION, re.VERBOSE)
 
 # These punctuation marks should be tokenised to single characters
 # even if a sequence of the same characters is found. For example,
 # tokenise '(((' as ['(', '(', '('] rather than ['((('].
-OPEN_CLOSE_PUNCTUATION = r"""
+OPEN_CLOSE_PUNCTUATION = ur"""
     [
         \u00AB \u2018 \u201C \u2039 \u00BB \u2019 \u201D \u203A \u0028 \u005B
         \u007B \u0F3A \u0F3C \u169B \u2045 \u207D \u208D \u2329 \u23B4 \u2768
@@ -146,7 +146,7 @@ OPEN_CLOSE_PUNCTUATION = r"""
 OPEN_CLOSE_PUNCTUATION_RE = re.compile(OPEN_CLOSE_PUNCTUATION, re.UNICODE | re.VERBOSE)
 
 
-NUMBER_INTEGER_PART = r"""
+NUMBER_INTEGER_PART = ur"""
     (?:
         0           
         |
@@ -154,13 +154,13 @@ NUMBER_INTEGER_PART = r"""
         |
         [1-9][0-9]*      
     )"""
-NUMBER_DECIMAL_PART = r"""
+NUMBER_DECIMAL_PART = ur"""
     (?:
         [.,]
         [0-9]+
         (?:[eE][-+]?[0-9]+)?
     )"""
-NUMBER = r"""
+NUMBER = ur"""
     (?:(?:\A|(?<=\s))[-+])?
     (?:
         %(integer)s %(decimal)s?
@@ -170,37 +170,23 @@ NUMBER = r"""
 
 NUMBER_RE = re.compile(NUMBER, re.UNICODE | re.VERBOSE)
 
-WHITESPACE = r"\s+"
+WHITESPACE = ur"\s+"
 WHITESPACE_RE = re.compile(WHITESPACE)
 
-ANY_SEQUENCE = r"(.)\1*"
+ANY_SEQUENCE = ur"(.)\1*"
 ANY_SEQUENCE_RE = re.compile(ANY_SEQUENCE)
 
-HTMLENTITY = r"&(?:#x?[0-9]+|\w+);"
+HTMLENTITY = ur"&(?:#x?[0-9]+|\w+);"
 HTMLENTITY_RE = re.compile(HTMLENTITY)
 
+abbreviations = re.compile(ur"""
+(?<!\w)     # should not be preceded by a letter
+(?:
+    co\.|inc\.|ltd\.|dr\.|prof\.|jr\.
+)
+""", re.IGNORECASE | re.UNICODE | re.VERBOSE)
 
-clictics = re.compile(r"""
-    (?:
-        (?<=\w)     # only consider clictics preceded by a letter
-        -li
-    )
-    (?!\w)          # clictics should not be followed by a letter
-    """, re.UNICODE | re.VERBOSE | re.IGNORECASE)
-
-abbreviations = re.compile(r"""
-    (?:
-        # these should not be preceded by a letter
-        (?<!\w)
-        (?:
-    #Generated from http://cs.wiktionary.org/wiki/Kategorie:%C4%8Cesk%C3%A9_zkratky by Makefile.Czech.abbr
-    např\.|mudr\.|abl\.|absol\.|adj\.|adv\.|ak\.|ak\. sl\.|alch\.|amer\.|anat\.|angl\.|anglosas\.|archit\.|arg\.|astr\.|astrol\.|att\.|bás\.|belg\.|bibl\.|biol\.|boh\.|bulh\.|círk\.|csl\.|č\.|čes\.|dět\.|dial\.|dór\.|dopr\.|dosl\.|ekon\.|el\.|epic\.|eufem\.|f\.|fam\.|fem\.|fil\.|form\.|fr\.|fut\.|fyz\.|gen\.|geogr\.|geol\.|geom\.|germ\.|hebr\.|herald\.|hist\.|hl\.|hud\.|hut\.|chcsl\.|chem\.|ie\.|imp\.|impf\.|ind\.|indoevr\.|inf\.|instr\.|interj\.|iron\.|it\.|katalán\.|kniž\.|komp\.|konj\.|konkr\.|kř\.|kuch\.|lat\.|lit\.|liturg\.|lok\.|m\.|mat\.|mod\.|ms\.|n\.|náb\.|námoř\.|neklas\.|něm\.|nesklon\.|nom\.|ob\.|obch\.|obyč\.|ojed\.|opt\.|pejor\.|pers\.|pf\.|pl\.|plpf\.|prep\.|předl\.|přivl\.|r\.|rcsl\.|refl\.|reg\.|rkp\.|ř\.|řec\.|s\.|samohl\.|sg\.|sl\.|souhl\.|spec\.|srov\.|stfr\.|střv\.|stsl\.|subj\.|subst\.|superl\.|sv\.|sz\.|táz\.|tech\.|telev\.|teol\.|trans\.|typogr\.|var\.|verb\.|vl\. jm\.|voj\.|vok\.|vůb\.|vulg\.|výtv\.|vztaž\.|zahr\.|zájm\.|zast\.|zejm\.|zeměd\.|zkr\.|zř\.|mj\.|dl\.|atp\.|mgr\.|horn\.|mvdr\.|judr\.|rsdr\.|bc\.|phdr\.|thdr\.|ing\.|aj\.|apod\.|pharmdr\.|pomn\.|ev\.|nprap\.|odp\.|dop\.|pol\.|st\.|stol\.|p\. n\. l\.|před n\. l\.|n\. l\.|př\. kr\.|po kr\.|př\. n\. l\.|odd\.|rndr\.|tzv\.|atd\.|tzn\.|resp\.|tj\.|p\.|br\.|č\. j\.|čj\.|č\. p\.|čp\.|a\. s\.|s\. r\. o\.|spol\. s r\. o\.|p\. o\.|s\. p\.|v\. o\. s\.|k\. s\.|o\. p\. s\.|o\. s\.|v\. r\.|v z\.|ml\.|vč\.|kr\.|mld\.|popř\.|ap\.|event\.|švýc\.|p\. t\.|zvl\.|hor\.|dol\.|plk\.|pplk\.|mjr\.|genmjr\.|genpor\.|kpt\.|npor\.|por\.|ppor\.|prap\.|pprap\.|rtm\.|rtn\.|des\.|svob\.|adm\.|brit\.|býv\.|čín\.|fin\.|chil\.|jap\.|nám\.|niz\.|špan\.|tur\.|bl\.|mga\.|zn\.|říj\.|etnonym\.|b\. k\.|škpt\.|nrtm\.|nstržm\.|stržm\.|genplk\.|šprap\.|št\. prap\.|brig\. gen\.|arm\. gen\.|doc\.|prof\.|csc\.|bca\.|dis\.
-        )
-    )
-    """, re.UNICODE | re.VERBOSE | re.IGNORECASE)
-
-word = r"(?:(?![\d])[-\w])+"
-word_re = re.compile(word, re.UNICODE)
+word_re = re.compile(u'[\w\u0780-\u07bf]+')
 
 re_list = [
     ('SGML_TAG', SGML_TAG_RE),
@@ -210,7 +196,6 @@ re_list = [
     ('IP_ADDRESS', IP_ADDRESS_RE),
     ('HTMLENTITY', HTMLENTITY_RE),
     ('ABBREVIATION', abbreviations),
-    ('CLICTIC', clictics),
     ('B52', ABBREVIATION_RE),
     ('NUMBER', NUMBER_RE),
     ('ACRONYM', ACRONYM_RE),

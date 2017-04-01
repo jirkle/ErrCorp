@@ -1,12 +1,6 @@
 # coding=UTF-8
-import bz2
-import re
 import io
-import urllib.request
 import unitok
-import WikiExtractor
-import platform
-from multiprocessing import Pool
 
 context = None
 
@@ -25,14 +19,15 @@ def exportToStream(page):
 	"""Writes given errors to output stream"""
 	stream = context["outputStream"]
 	if context["outputFormat"] == "se":
-		stream.write(tokenize("<doc n=\"%s\"><latest>" % page["name"]))
+		output = ("<doc n=\"%s\"><latest>" % page["name"])
 		latestRev = page["revisions"][-1]["*"]
 		for line in latestRev:
-			stream.write(tokenize("<s>%s</s>" % line))
-		stream.write(tokenize("</latest><errors>"))
+			output += ("<s>%s</s>" % line)
+		output += "</latest><errors>"
 		for error in page["errors"]:
-			stream.write(tokenize("<s>%s</s>" % error))
-		stream.write(tokenize("</errors></doc>"))
+			output += ("<s>%s</s>" % error)
+		output += "</errors></doc>"
+		stream.write(tokenize(output))
 		stream.flush()
 	elif context["outputFormat"] == "txt":
 		stream.write("Page: %s\n" % (page["name"]))
