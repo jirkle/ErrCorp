@@ -4,12 +4,18 @@ import re
 import pprint
 from intervaltree import IntervalTree
 
+import ErrorClassifier
 import Utils
 
 context = None
 
 #Stats
-stats = { "all": 0, "punct": 0, "order": 0, "typos": 0, "edits": 0, "other": 0 }
+stats = { "all": 0 }
+
+def __init__(con):
+	global context
+	context = con
+	ErrorClassifier.context = con
 
 class HidingString(object):
 	fullString = ""
@@ -108,7 +114,7 @@ class HidingString(object):
 				fullPos += (match[1] - match[0])
 		return fullPos
 	
-	def wrap(self, start, end, startString, endString):
+	def wrap(self, start, end, startString, endString, update=True):
 		if(start > end):
 			t = start
 			start = end
@@ -125,7 +131,8 @@ class HidingString(object):
 		canWrap = True
 		if(openers == None and closers == None):
 			self.fullString = self.fullString[0:start] + startString + self.fullString[start:end] + endString + 			self.fullString[end:]
-			self.update()
+			if(update):
+				self.update()
 			return True
 		if(openers == None or closers == None):
 			canWrap = False
@@ -139,31 +146,71 @@ class HidingString(object):
 				canWrap = False
 		if(canWrap):
 			self.fullString = self.fullString[0:start] + startString + self.fullString[start:end] + endString + 			self.fullString[end:]
-			self.update()
+			if(update):
+				self.update()
 			return True
 		return False
 
-def expandDifferences(old, new, differences, expand=True):
-	differences = [diff for diff in differences if diff[0] != diff[1] and diff[2] != diff[3]]
-	if expand:
-		for diff in differences: #Trim to whole words
-			#oldS = old[diff[0]:diff[1]]
-			#newS = new[diff[2]:diff[3]]
-			#if diff[0] != diff[1]:
-			while diff[0] > 0 and (not old[diff[0]-1].isspace() and not Utils.ispunct(old[diff[0]-1])):
+def tupleReducer(oldTuple, newTuple):
+	return (min(oldTuple[0], newTuple[0]), max(oldTuple[1], newTuple[1]))
+		
+
+def concatDifferences(diffs):
+	if(len(diffs) > 1):
+		points = list()
+		tree = IntervalTree()
+		for diff in diffs:
+			if(diff[0] == diff[1]):
+				points.append(diff)
+			else:
+				tree[diff[0]:diff[1]] = (diff[2], diff[3])
+		tree.merge_overlaps(tupleReducer)
+		items = tree.items()
+		for point in points:
+			if(len(tree[point[0]]) == 0):
+				items.add((point[0], point[1], (point[2], point[3])))
+		
+		points = list()
+		tree = IntervalTree()
+		for item in items:
+			if(item[2][0] == item[2][1]):
+				points.append([item[2][0], item[2][1], item[0], item[1]])
+			else:
+				tree[item[2][0]:item[2][1]] = (item[0], item[1])
+		tree.merge_overlaps(tupleReducer)
+		items = tree.items()
+		for point in points:
+			if(len(tree[point[0]]) == 0):
+				items.add((point[0], point[1], (point[2], point[3])))		
+		diffs = list()
+		for item in items:
+			diffs.append([item[2][0], item[2][1], item[0], item[1]])
+	return diffs
+		
+	
+
+def expandDifferences(old, new, differences):
+	differences = [diff for diff in differences if diff[0] != diff[1] or diff[2] != diff[3]]
+	punctRe = context["errCorpConfig"].reList["allpunctuation"]
+	punctSpaceRe = context["errCorpConfig"].reList["punctSpace"]	
+	for diff in differences: #Trim to whole words
+		if (not punctRe.match(new[diff[2]:diff[3]]) and not punctRe.match(old[diff[0]:diff[1]])):
+			oldTrimmed = False
+			newTrimmed = False
+			while diff[0] > 0 and not punctSpaceRe.search(old[diff[0] - 1]):
 				diff[0] -= 1
-			while diff[1] < len(old) and (not old[diff[1]].isspace() and not Utils.ispunct(old[diff[1]])):
+			while diff[1] < len(old) and not punctSpaceRe.search(old[diff[1]]):
 				diff[1] += 1
-			#if diff[2] != diff[3]:	
-			while diff[2] > 0 and (not new[diff[2]-1].isspace() and not Utils.ispunct(new[diff[2]-1])):
+			while diff[2] > 0 and not punctSpaceRe.search(new[diff[2] - 1]):
 				diff[2] -= 1
-			while diff[3] < len(new) and (not new[diff[3]].isspace() and not Utils.ispunct(new[diff[3]])):
-				diff[3] += 1
-			#oldS = old[diff[0]:diff[1]]
-			#newS = new[diff[2]:diff[3]]			
+			while diff[3] < len(new) and not punctSpaceRe.search(new[diff[3]]):
+				diff[3] += 1			
+		o = old[diff[0]:diff[1]]
+		n = new[diff[2]:diff[3]]
+	differences = concatDifferences(differences)
 	return differences
 	
-def getDifferences(base, new, errorType):
+def getDifferences(base, new):
 	sequenceMatcher = difflib.SequenceMatcher(a=base.getString(), b=new, autojunk=False)
 	matchingBlocks = sequenceMatcher.get_matching_blocks()
 	edits = []
@@ -172,26 +219,29 @@ def getDifferences(base, new, errorType):
 	for match in matchingBlocks:
 		if(match[2] == 0): #End of matches
 			edits.append(list((startOldSent, len(sequenceMatcher.a), startNewSent, len(sequenceMatcher.b))))
-			return expandDifferences(sequenceMatcher.a, sequenceMatcher.b, edits, not "punct" == errorType)
+			return expandDifferences(sequenceMatcher.a, sequenceMatcher.b, edits)
 		edits.append(list((startOldSent, match[0], startNewSent, match[1])))
 		startOldSent = match[0] + match[2]
 		startNewSent = match[1] + match[2]
-	return expandDifferences(sequenceMatcher.a, sequenceMatcher.b, edits, not "punct" == errorType)
+	return expandDifferences(sequenceMatcher.a, sequenceMatcher.b, edits)
 
 def expandError(error):
 	error.reverse()
 	base = error.pop(0)
-	errorType = base[0]
 	base = HidingString(base[1])
 	#currTokens = tokenize(currSent[1])
 	for sentence in error:
-		differences = sorted(getDifferences(base, sentence[1], errorType), reverse=True)
+		differences = getDifferences(base, sentence[1])
+		differences = sorted(differences, key=lambda diff: diff[0], reverse=True)
 		for diff in differences:
-			injectedText = sentence[1][diff[2]:diff[3]]
-			wrapped = base.wrap(diff[0], diff[1], "<err type=\""+ errorType + "\">" + injectedText + "</err><corr>", "</corr>")
+			error = ErrorClassifier.ErrorClassifier(base.getString(), sentence[1], diff)
+			wrapped = base.wrap(error.getStart(), error.getEnd(), error.getStartString(), error.getEndString())
 			if(wrapped):
 				stats["all"] += 1
-				stats[errorType] += 1
+				if(error.getErrorType() in stats):
+					stats[error.getErrorType()] += 1
+				else:
+					stats[error.getErrorType()] = 1
 		errorType = sentence[0]
 	return base
 
@@ -209,5 +259,6 @@ def graft(page):
 				expanded.remove(error)
 				break
 	page["errors"] = [e.getString(True) for e in expanded]
-	pprint.pprint(stats)
+	if(not context["mute"]):
+		pprint.pprint(stats)
 	return page

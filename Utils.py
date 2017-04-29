@@ -25,7 +25,7 @@ def lemma(text):
 def bagOfWords(sentence, doLemma=True, minWordLen=0):
 	"""Generates bag of words"""
 	
-	sentence = context["errCorpConfig"].reList["punctuation"].sub(' ', sentence)
+	sentence = context["errCorpConfig"].reList["allpunctuation"].sub('', sentence).lower()
 	if(doLemma):
 		sentence = lemma(sentence)
 	words = sentence.split()
@@ -33,7 +33,7 @@ def bagOfWords(sentence, doLemma=True, minWordLen=0):
 	return set(words)
 
 def sentenceSimilarity(first, second):
-	"""Metric for similarity of two given sentences, returns nuber in range <0,1> TODO: Levenstein?"""
+	"""Metric for similarity of two given sentences, returns nuber in range <0,1>"""
 	
 	firstBag = bagOfWords(first)
 	secndBag = bagOfWords(second)

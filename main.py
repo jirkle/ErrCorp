@@ -7,6 +7,7 @@ import bz2
 import xml.etree.ElementTree as ET
 import cProfile
 import urllib
+import datetime
 from collections import deque
 from multiprocessing import Pool
 
@@ -20,12 +21,15 @@ import Utils
 # Settings from command line & default settings
 context = {
   "preserveRobotRevisions": False,
-  "allowNesting": False, #Not implemented
+  "allowNesting": False, #Implemented but evolution is not tested
+  "mute": False,
   "lang": ("english", "en"),
   "supportedLangs": (("english", "en"), ("czech", "cs")),
-  # Maximal distance of two sentences to be considered as typo
+  # Maximal distance of error and correction to be considered as typo (used by classifier)
   "typoTreshold": 3,
-   # Minimal treshold that should old & new sentences from revision diff have to be
+  # Maximal word distance used by classifier
+  "wordTreshold": 3,
+  # Minimal treshold that should old & new sentences from revision diff have to be
   # considered as two similar sentences. Similarity is returned by Utils.sentenceSimilarity function.
   "sentenceTreshold": 0.7,
   # Multiprocessing - Pool processes count
@@ -39,7 +43,12 @@ context = {
   "supportedOutputFormats": ("txt", "se"),
   "separator": ";",
   "unitokConfig": None,
-  "errCorpConfig": None
+  "errCorpConfig": None,
+  "pagesCount": 378675,
+  "skipped": 0,
+  "startTime": None,
+  "processedPages": 0,
+  "timeout": 5
 }
 
 p = dict()
@@ -49,11 +58,14 @@ def printUsage():
 	
 	print('-h\t--help\t\tPrint help')
 	print('-l\t--lang\t\tLang of processed dumps [czech|english]')
+	print('-s\t--separator\tSeparator char, default [;]')
 	print('-r\t--robots\tFlag: Include revisions made by bots')
-	print('Input:')
+	print('-n\t--nesting\tFlag: If present, nesting of errors are allowed, yet experimental')
+	print('-m\t--mute\tFlag: Script informs only about current processed page & rest estimated time')
+	print('Input, all combinations are allowed:')
 	print('-p\t--paths\t\tLocal paths to dump files [dumpPath(, dumpPath)*]')
 	print('-d\t--dumpUrls\tRemote paths to dump files [dumpDownloadUrl(, dumpDownloadUrl)*]')
-	print('-u\t--pageUrls\tUrl paths to pages [pageUrl(, pageUrl)*]')    
+	print('-a\t--articleName\tUrl paths to pages [pageUrl(, pageUrl)*]')    
 	print('Output:')
 	print('-o\t--output\tOutput path')
 	print('-f\t--outputFormat\tOutput format [txt|se]')
@@ -81,17 +93,28 @@ def downloadFile(url):
 
 def processPage(page):
 	page = PageProcessor.normalize(page)
-	print("Extracting errors")
+	if(not context["mute"]):
+		print("Extracting errors")
 	page = ErrorExtractor.extract(page)
-	print("Post processing errors")
+	if(len(page["revisions"]) == 0):
+		print("No errors extracted")
+		return
+	if(not context["mute"]):
+		print("Post processing errors")
 	page = Grafter.graft(page)
-	print("Flushing to corpora")
+	if(not context["mute"]):
+		print("Flushing to corpora")
 	Exporter.exportToStream(page)
+	context["processedPages"] +=1
+	delta = datetime.datetime.now() - context["startTime"]
+	remainingTime = context["pagesCount"]/float(context["processedPages"]) * delta
+	print("Estimated remaining time: %s" % str(remainingTime))
+	
 	
 def processStream(fileStream):
 	"""Processes XML stream in export schema https://www.mediawiki.org/xml/export-0.8.xsd"""
 	
-	pagesProcessed = 0    
+	context["processedPages"] = 0    
 	curPage = { "name": "", "revisions": [], "errors": [] }
 	curRevision = { "user": "", "timestamp": "", "comment": "", "*": "", "format": "wikimarkup"}
 
@@ -99,14 +122,15 @@ def processStream(fileStream):
 	for event, elem in ET.iterparse(fileStream):
 		if event == 'end':
 			if elem.tag.endswith('title'):
-				pagesProcessed += 1
 				curPage["name"] = elem.text
 				if(context["errCorpConfig"].excludeFilter.search(curPage["name"])):
-					print("Skipping page   #%s: %s" % (pagesProcessed, curPage["name"]))
+					print("Skipping page   #%s: %s" % (context["processedPages"] + 1, curPage["name"]))
+					context["processedPages"] += 1
+					context["skipped"] += 1
 					skip = True
 					continue
 				else:
-					print("Processing page #%s: %s" % (pagesProcessed, curPage["name"]))
+					print("Processing page #%s: %s" % (context["processedPages"] + 1, curPage["name"]))
 					skip = False
 			if(not skip):
 				if elem.tag.endswith('timestamp'):
@@ -134,6 +158,7 @@ def main():
 	global p
 	"""Main func"""
 	#Download articles through wiki api if any
+	context["startTime"] = datetime.datetime.now()
 	processed = 0
 	for page in context["pageDownloads"]:
 		print("Downloading page %s" % page)
@@ -181,8 +206,8 @@ def main():
 if __name__ == "__main__":
 	print("Preparing environment")
 	try:
-		opts, args = getopt.getopt(sys.argv[1:], "p:d:u:l:o:f:hrF",
-		                           ["paths=", "dumpUrls=", "pageUrls=" "lang=", "robots", "help", "output=", "outputFormat="])
+		opts, args = getopt.getopt(sys.argv[1:], "p:d:a:l:o:f:s:hmnr",
+		                           ["paths=", "dumpUrls=", "articleName=" "lang=", "output=", "outputFormat=", "separator=", "robots", "help", "nesting", "mute"])
 	except getopt.GetoptError:
 		printUsage()
 		sys.exit(2)
@@ -198,14 +223,20 @@ if __name__ == "__main__":
 				context["lang"] = context["supportedLangs"][0]
 		elif opt in ("-r", "--robots"):
 			context["preserveRobotRevisions"] = True
+		elif opt in ("-n", "--nesting"):
+			context["allowNesting"] = True
+		elif opt in ("-m", "--mute"):
+			context["mute"] = True				
 		elif opt in ("-p", "--paths"):
 			context["dumpPaths"] = deque([x.strip() for x in arg.split(context["separator"])])
 		elif opt in ("-d", "--dumpUrls"):
 			context["dumpDownloads"] = deque([x.strip() for x in arg.split(context["separator"])])
-		elif opt in ("-u", "--pageUrls"):
+		elif opt in ("-a", "--articleName"):
 			context["pageDownloads"] = deque([x.strip() for x in arg.split(context["separator"])])
 		elif opt in ("-o", "--output"):
 			context["outputFolder"] = arg
+		elif opt in ("-s", "--separator"):
+			context["separator"] = arg
 		elif opt in ("-f", "--outputFormat"):
 			context["outputFormat"] = arg
 			if context["outputFormat"] not in context["supportedOutputFormats"]:
@@ -219,7 +250,7 @@ if __name__ == "__main__":
 	Exporter.context = context
 	PageProcessor.context = context
 	ErrorExtractor.context = context
-	Grafter.context = context
+	Grafter.__init__(context)
 	Utils.context = context
 	
 	if(len(context["pageDownloads"]) > 0):

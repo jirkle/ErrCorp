@@ -70,7 +70,7 @@ nl|no|np|nr|nu|nz|om|pa|pe|pf|pg|ph|pk|pl|pm|pn|pr|ps|pt|pw|py|qa|re|ro|rs|ru|rw
 sg|sh|si|sj|sk|sl|sm|sn|so|sr|st|su|sv|sx|sy|sz|tc|td|tf|tg|th|tj|tk|tl|tm|tn|to|tp|tr|tt|tv|tw|
 tz|ua|ug|uk|us|uy|uz|va|vc|ve|vg|vi|vn|vu|wf|ws|ye|yt|za|zm|zw)"""
 
-romanNums = r"""(\s[IVXLCDM]*)[.]"""
+romanNums = r"""(\s[IVXLCDM]+)[.]"""
 
 #Punctuation starters & enders
 puncStarters = r"[\[\{\(\"\']"
@@ -82,14 +82,18 @@ duben|dubn[ua(?:em)]|květen|květn[ua(?:em)]|červen|červn[ua(?:em)]|červenec
 říjen|říjn[ua(?:em)]|listopad(?:em)*|listopadu|prosinec|prosinc[ie(?:em)])\s*[0-9\-\s]+)[.](\s*(\\p{Lu}|\[|\{|\(|\"|\'))""")
 
 #Punctuation
-punctuation = '[\s%s]' % re.escape(string.punctuation)
+punctSpace = '[\s%s]+' % re.escape(string.punctuation)
+allpunctuation = '[%s]+' % re.escape(string.punctuation)
+classifierpunctuation = '[%s]' % re.escape(",:;.…?!¡¿&")
 
 #Compiled regexes
 reList = {
     "abbrs": re.compile(abbrs, re.U | re.X),
     "websites": re.compile(websites, re.U | re.X),
     "digitsSentenceEndings": re.compile(digitsSentenceEndings, re.U | re.X),
-    "punctuation": re.compile(punctuation, re.U | re.X),
+    "allpunctuation": re.compile(allpunctuation, re.U | re.X),
+    "classifierpunctuation": re.compile(classifierpunctuation, re.U | re.X),
+    "punctSpace": re.compile(punctSpace, re.U | re.X),
     "romanNums": re.compile(romanNums, re.U | re.X)
 }
 
@@ -106,8 +110,7 @@ digits = r"([0-9])"
 decimalPoint = r"[.|,]"
 
 #Excluded pages
-excludeFilter = re.compile(r""".*(Hlavní\sstrana|Rozcestník|Nápověda:|Wikipedista:|
-Wikipedie:|Diskuse:|MediaWiki:|Portál:|Šablona:|Kategorie:|Soubor:).*""", re.U | re.X)
+excludeFilter = re.compile(r""".*(Hlavní\sstrana|Média:|Speciální:|Diskuse:|Wikipedista:|Diskuse\ss\swikipedistou:|Wikipedie|Diskuse\sk\sWikipedii:|Soubor:|Diskuse\sk\ssouboru:|MediaWiki:|Diskuse\sk MediaWiki:|Šablona:|Diskuse\sk\sšabloně:|Nápověda:|Diskuse\sk\snápovědě:|Kategorie:|Diskuse\ske\skategorii:|Portál:|Diskuse\sk\sportálu:|Rejstřík:|Diskuse\sk\srejstříku:|Kurz:|Diskuse\ske\skurzu:|Modul:|Diskuse\sk\smodulu:|Udělátko:|Diskuse\sk\sudělátku:|Definice\sudělátka:|Diskuse\sk\sdefinici udělátka:|Topic|Rozcestník).*""", re.U | re.X)
 
 #Typo classification filter
 typoFilter = re.compile(r""".*([Tt]ypo|[Cc]l[\s\:]|[Cc]leanup|[Cc]u[\s\:]|[Pp][řr]eklep|

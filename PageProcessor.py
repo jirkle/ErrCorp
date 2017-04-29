@@ -141,6 +141,7 @@ def renderRevision(rev, title):
 		return rev	
 
 def renderPageRevisions(page):
+	global pool
 	"""Renders all revs of page into plain text, uses multiprocessing on Linux."""
 	poolAsyncResults = []
 	for rev in page["revisions"]:
@@ -151,10 +152,12 @@ def renderPageRevisions(page):
 			renderRevision(rev, page["name"])
 	for i in range(0, len(poolAsyncResults)):
 		try:
-			page["revisions"][i] = poolAsyncResults[i].get()	#collect results from pool
+			page["revisions"][i] = poolAsyncResults[i].get(context["timeout"])	#collect results from pool
 		except:
 			page["revisions"][i]["*"] = None
-	page["revisions"] = [x for x in page["revisions"] if x != None]
+	pool.terminate()
+	pool = Pool(context["poolProcesses"])
+	page["revisions"] = [x for x in page["revisions"] if x != None and x["*"] != None]
 	return page
 
 def normalize(page):
