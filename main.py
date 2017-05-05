@@ -5,28 +5,33 @@ import os
 import io
 import bz2
 import xml.etree.ElementTree as ET
-import cProfile
 import urllib
 import datetime
+import time
 from collections import deque
 from multiprocessing import Pool
 
 import WikiDownload
 import PageProcessor
 import ErrorExtractor
-import Grafter
+import PostProcessor
 import Exporter
 import Utils
 
 # Settings from command line & default settings
 context = {
+  # Command line flag: Include revisions made by bots
   "preserveRobotRevisions": False,
-  "allowNesting": False, #Implemented but evolution is not tested
+  # Command line flag: Allows evolution of errors through revisions, implemented but yet experimental
+  "allowNesting": False,
+  # Command line flag: Script informs only about current processed page, estimated time and corp stats
   "mute": False,
+  # Default lang
   "lang": ("english", "en"),
+  # First is name of language file in confs directory, second language abbreviation for mwclient (MediaWiki api endpoint)
   "supportedLangs": (("english", "en"), ("czech", "cs")),
   # Maximal distance of error and correction to be considered as typo (used by classifier)
-  "typoTreshold": 3,
+  "typoTreshold": 2,
   # Maximal word distance used by classifier
   "wordTreshold": 3,
   # Minimal treshold that should old & new sentences from revision diff have to be
@@ -39,7 +44,9 @@ context = {
   "pageDownloads": [],
   "outputFolder": "export/",
   "outputFormat": "se",
-  "outputStream": None,
+  "outputStreamFull": None,
+  "outputStreamOrphans": None,
+  # Supported output formats by Exporter
   "supportedOutputFormats": ("txt", "se"),
   "separator": ";",
   "unitokConfig": None,
@@ -61,7 +68,7 @@ def printUsage():
 	print('-s\t--separator\tSeparator char, default [;]')
 	print('-r\t--robots\tFlag: Include revisions made by bots')
 	print('-n\t--nesting\tFlag: If present, nesting of errors are allowed, yet experimental')
-	print('-m\t--mute\tFlag: Script informs only about current processed page & rest estimated time')
+	print('-m\t--mute\tFlag: Script informs only about current processed page, estimated time and corp stats')
 	print('Input, all combinations are allowed:')
 	print('-p\t--paths\t\tLocal paths to dump files [dumpPath(, dumpPath)*]')
 	print('-d\t--dumpUrls\tRemote paths to dump files [dumpDownloadUrl(, dumpDownloadUrl)*]')
@@ -96,12 +103,12 @@ def processPage(page):
 	if(not context["mute"]):
 		print("Extracting errors")
 	page = ErrorExtractor.extract(page)
-	if(len(page["revisions"]) == 0):
+	if(len(page["revisions"]) == 0 or len(page["errors"]) == 0):
 		print("No errors extracted")
 		return
 	if(not context["mute"]):
 		print("Post processing errors")
-	page = Grafter.graft(page)
+	page = PostProcessor.process(page)
 	if(not context["mute"]):
 		print("Flushing to corpora")
 	Exporter.exportToStream(page)
@@ -155,10 +162,12 @@ def processStream(fileStream):
 			elem.clear()
 			
 def main():
-	global p
 	"""Main func"""
 	#Download articles through wiki api if any
+	global p
 	context["startTime"] = datetime.datetime.now()
+	context["outputStreamFull"].write("<errcorp>")
+	context["outputStreamOrphans"].write("<errcorp>")	
 	processed = 0
 	for page in context["pageDownloads"]:
 		print("Downloading page %s" % page)
@@ -171,6 +180,7 @@ def main():
 
 	#Start downloading first dump online if any
 	downloadResult = None
+	url = None
 	if(len(context["dumpDownloads"]) > 0):
 		url = context["dumpDownloads"].popleft()
 		downloadResult = pool.apply_async(downloadFile, args=(url,))
@@ -183,16 +193,25 @@ def main():
 	
 	#Wait for download of first online dump an process them all (if any)
 	try:
+		fileName = url.split('/')[-1]
+		time.sleep(1)
+		while(not downloadResult.ready()):
+			print("Downloaded %s bytes of %s" % (os.stat(fileName).st_size, fileName), end="\r")
+			time.sleep(1)
 		filePath = downloadResult.get()	#wait for download end
 		
 		while len(context["dumpDownloads"]) > 0:
 			print("Processing file %s" % filePath)
 			url = context["dumpDownloads"].popleft()
+			fileName = url.split('/')[-1]
 			downloadResult = pool.apply_async(downloadFile, args=(url,))
 			stream = openStream(filePath)
 			processStream(stream)
 			stream.close()
 			os.remove(filePath)
+			while(not downloadResult.ready()):
+				print("Downloaded %s bytes of %s" % (os.stat(fileName).st_size, fileName), end="\r")
+				sleep(10)			
 			filePath = downloadResult.wait()
 		print("Processing file %s" % filePath)	
 		stream = openStream(filePath)
@@ -201,6 +220,8 @@ def main():
 		os.remove(filePath)	
 	except:
 		pass
+	context["outputStreamFull"].write("</errcorp>")
+	context["outputStreamOrphans"].write("</errcorp>")	
 
 
 if __name__ == "__main__":
@@ -241,8 +262,13 @@ if __name__ == "__main__":
 			context["outputFormat"] = arg
 			if context["outputFormat"] not in context["supportedOutputFormats"]:
 				print("%s output format is not supported, switching to text output" % context["outputFormat"])
-				context["outputFormat"] = "txt"	
-	context["outputStream"] = io.open('%soutput.%s' % (context["outputFolder"], context["outputFormat"]), 'w', encoding="utf-8")
+				context["outputFormat"] = "txt"
+	#Create output file and output path if it doesn't exists
+	if not os.path.exists(context["outputFolder"]):
+		os.makedirs(context["outputFolder"])
+	context["outputStreamFull"] = io.open('%soutput.%s' % (context["outputFolder"], context["outputFormat"]), 'w+', encoding="utf-8")
+	context["outputStreamOrphans"] = io.open('%soutput-orphans.%s' % (context["outputFolder"], context["outputFormat"]), 'w+', encoding="utf-8")
+	
 	from importlib import import_module
 	context["errCorpConfig"] = import_module("confs." + context["lang"][0] + "-err-corp")
 	context["unitokConfig"] = import_module("confs." + context["lang"][0])
@@ -250,7 +276,7 @@ if __name__ == "__main__":
 	Exporter.context = context
 	PageProcessor.context = context
 	ErrorExtractor.context = context
-	Grafter.__init__(context)
+	PostProcessor.__init__(context)
 	Utils.context = context
 	
 	if(len(context["pageDownloads"]) > 0):

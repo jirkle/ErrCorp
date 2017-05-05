@@ -17,25 +17,33 @@ def tokenize(text):
 
 def exportToStream(page):
 	"""Writes given errors to output stream"""
-	stream = context["outputStream"]
+	outputStreamFull = context["outputStreamFull"]
+	outputStreamOrphans = context["outputStreamOrphans"]
 	if context["outputFormat"] == "se":
-		output = ("<doc n=\"%s\"><latest>" % page["name"])
+		output = ("<doc n=\"%s\">" % page["name"])
 		latestRev = page["revisions"][-1]["*"]
 		for line in latestRev:
-			output += ("<s>%s</s>" % line)
-		output += "</latest><errors>"
+			if line != "":
+				output += ("<s>%s</s>" % line)
+		output += "</doc>"
+		outputStreamFull.write(tokenize(output))
+		output = ("<doc n=\"%s\">" % page["name"])
 		for error in page["errors"]:
-			output += ("<s>%s</s>" % error)
+			if error != "":
+				output += ("<s>%s</s>" % error)
 		output += "</errors></doc>"
-		stream.write(tokenize(output))
-		stream.flush()
+		outputStreamOrphans.write(tokenize(output))
+		outputStreamFull.flush()
+		outputStreamOrphans.flush()
 	elif context["outputFormat"] == "txt":
-		stream.write("Page: %s\n" % (page["name"]))
+		outputStreamFull.write("Page: %s\n" % (page["name"]))
+		outputStreamOrphans.write("Page: %s\n" % (page["name"]))
 		latestRev = page["revisions"][-1]["*"]
 		for line in latestRev:
-			stream.write("%s\n" % line)
-		stream.write("\nUnused errors\n")
+			outputStreamFull.write("%s\n" % line)
 		for error in page["errors"]:
-			stream.write("%s\n" % error)			
-		stream.write("\n")
-		stream.flush()
+			outputStreamOrphans.write("%s\n" % error)			
+		outputStreamFull.write("\n")
+		outputStreamOrphans.write("\n")
+		outputStreamFull.flush()
+		outputStreamOrphans.flush()

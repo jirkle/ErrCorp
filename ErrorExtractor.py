@@ -10,8 +10,9 @@ context = None
 
 def appendRev(textList, oldRev, newRev):
 	"""Searches the textList. If any list (within textList) ends with oldRev then appeds newRev at it's end.
-	Otherwise it creates new list and inserts it in the textList"""
-	
+	Otherwise it creates new list and inserts it in the textList; oldRev & newRev are ids at errorBuffer"""
+	if(len(errorBuffer[newRev][1]) > 100): #Appennded sentences are too long - don't add them as errors
+		return
 	founded = False
 	for k in range(0, len(textList)):
 		if(textList[k][-1]==oldRev):
@@ -19,6 +20,8 @@ def appendRev(textList, oldRev, newRev):
 			founded = True
 			break
 	if not founded:
+		if(len(errorBuffer[oldRev][0]) > 100 or len(errorBuffer[oldRev][1]) > 100): #Appennded sentences are too long - don't add them as errors
+			return	
 		textList.append((oldRev, newRev))
 
 def removeNestedErrors():

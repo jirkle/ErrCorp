@@ -5,7 +5,6 @@ import pprint
 from intervaltree import IntervalTree
 
 import ErrorClassifier
-import Utils
 
 context = None
 
@@ -195,8 +194,6 @@ def expandDifferences(old, new, differences):
 	punctSpaceRe = context["errCorpConfig"].reList["punctSpace"]	
 	for diff in differences: #Trim to whole words
 		if (not punctRe.match(new[diff[2]:diff[3]]) and not punctRe.match(old[diff[0]:diff[1]])):
-			oldTrimmed = False
-			newTrimmed = False
 			while diff[0] > 0 and not punctSpaceRe.search(old[diff[0] - 1]):
 				diff[0] -= 1
 			while diff[1] < len(old) and not punctSpaceRe.search(old[diff[1]]):
@@ -204,9 +201,7 @@ def expandDifferences(old, new, differences):
 			while diff[2] > 0 and not punctSpaceRe.search(new[diff[2] - 1]):
 				diff[2] -= 1
 			while diff[3] < len(new) and not punctSpaceRe.search(new[diff[3]]):
-				diff[3] += 1			
-		o = old[diff[0]:diff[1]]
-		n = new[diff[2]:diff[3]]
+				diff[3] += 1
 	differences = concatDifferences(differences)
 	return differences
 	
@@ -234,7 +229,7 @@ def expandError(error):
 		differences = getDifferences(base, sentence[1])
 		differences = sorted(differences, key=lambda diff: diff[0], reverse=True)
 		for diff in differences:
-			error = ErrorClassifier.ErrorClassifier(base.getString(), sentence[1], diff)
+			error = ErrorClassifier.ErrorClassifier(base.getString(), sentence[1], diff, sentence[0])
 			wrapped = base.wrap(error.getStart(), error.getEnd(), error.getStartString(), error.getEndString())
 			if(wrapped):
 				stats["all"] += 1
@@ -242,10 +237,9 @@ def expandError(error):
 					stats[error.getErrorType()] += 1
 				else:
 					stats[error.getErrorType()] = 1
-		errorType = sentence[0]
 	return base
 
-def graft(page):
+def process(page):
 	expanded = []
 	for error in page["errors"]:
 		expanded.append(expandError(error))
@@ -259,6 +253,6 @@ def graft(page):
 				expanded.remove(error)
 				break
 	page["errors"] = [e.getString(True) for e in expanded]
-	if(not context["mute"]):
-		pprint.pprint(stats)
+	#if(not context["mute"]):
+	pprint.pprint(stats)
 	return page

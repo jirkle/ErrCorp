@@ -1,19 +1,19 @@
 # coding=UTF-8
-import difflib
-import re
 import Levenshtein
 import Utils
-from intervaltree import IntervalTree
+
+context = None
 
 class ErrorClassifier(object):
 	errorType = "other"
 	
-	def __init__(self, newSent, oldSent, diff):
+	def __init__(self, newSent, oldSent, diff, comment):
 		self.oldSent = oldSent
 		self.newSent = newSent
 		self.diff = diff
 		self.err = oldSent[diff[2]:diff[3]]
 		self.corr = newSent[diff[0]:diff[1]]
+		self.comment = comment
 		self.classify()
 	
 	def classify(self):
@@ -43,23 +43,23 @@ class ErrorClassifier(object):
 			return False
 
 	def __isTypographical(self):
-		oldPunct = context["errCorpConfig"].reList["punctSpace"].sub('', self.err).lower()
-		newPunct = context["errCorpConfig"].reList["punctSpace"].sub('', self.corr).lower()
+		oldPunct = context["errCorpConfig"].reList["punctSpace"].sub('', self.err)
+		newPunct = context["errCorpConfig"].reList["punctSpace"].sub('', self.corr)
 		if(oldPunct == newPunct):
 			return True
 		else:
 			return False
 	
 	def __isSpelling(self):
+		if(self.err.lower() == self.corr.lower()):
+			return True
 		if(len(self.errBag) == len(self.corrBag)):
 			if(Levenshtein.distance(self.err, self.corr) < context["typoTreshold"]):
 				return True
 		return False
 
 	def __isLexicoSemantic(self):
-		if((self.err == "" and len(self.corrBag) < context["wordTreshold"]) or (self.corr == "" and len(self.errBag) < context["wordTreshold"])):
-			return True
-		if((len(self.corrBag) >= len(self.errBag) and len(self.corrBag - self.errBag) <= 1) or (len(self.corrBag) < len(self.errBag) and len(self.errBag - self.corrBag) <= 1)):
+		if((len(self.corrBag) >= len(self.errBag) and len(self.corrBag - self.errBag) <= context["wordTreshold"]) or (len(self.corrBag) < len(self.errBag) and len(self.errBag - self.corrBag) <= context["wordTreshold"])):
 			return True
 		return False
 	
@@ -68,7 +68,7 @@ class ErrorClassifier(object):
 		newBag = Utils.bagOfWords(self.newSent)
 		if(len(self.corrBag - oldBag) == 0):
 			return True
-		if(len(oldBag ^ newBag) < context["wordTreshold"]): 
+		if(len(oldBag ^ newBag) <= 2 * context["wordTreshold"]): 
 			return True
 		return False
 

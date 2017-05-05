@@ -20,22 +20,15 @@ def textClean(text):
 	text = re.sub(r"\.\.\.", r"<p><p><p>", text) #Clean text
 	
 	text = re.sub(r"\[(.*?\|)*(.*?)\]", r"\2", text) #Remove all wiki interlinks
-	text = re.sub(r"[‘’ʹ՚‛ʻʼ՝ʽʾ]", r"'", text) #Preserve only one type of single quotes
-	text = re.sub(r"[„“˝”ˮ‟″‶〃＂“]", r'"', text) #Preserve only one type of double quotes
-	text = re.sub(r"[‐‑‒−–⁃➖˗﹘-]", r"-", text) #Preserve only one type of hyphens
-	text = re.sub(r"\*", r"<s>", text, re.U) #Replace bullets
+	text = re.sub(r"^\*", r"<s>", text, re.U | re.M) #Replace bullets
 	
 	#Mark headings to be start of sentences and preserve heading text
-	text = re.sub(r"======\s*(.*?)\s*======", r"<s>\1<s>:", text)
-	text = re.sub(r"=====\s*(.*?)\s*=====", r"<s>\1<s>", text)
-	text = re.sub(r"====\s*(.*?)\s*====", r"<s>\1<s>", text) 
-	text = re.sub(r"===\s*(.*?)\s*===", r"<s>\1<s>", text)
-	text = re.sub(r"==\s*(.*?)\s*==", r"<s>\1<s>", text)
-	#text = re.sub(r"=", r" ", text) #Remove rest equal signs	
-	
-	text = re.sub(r"\s*\.(\s*\.)*", r".", text) #Remove more dots
-	
-	text = re.sub(r"(\s+)", r"\1", text) #Remove more spaces
+	text = re.sub(r"======(.*?)======", r"<s>\1<s>:", text)
+	text = re.sub(r"=====(.*?)=====", r"<s>\1<s>", text)
+	text = re.sub(r"====(.*?)====", r"<s>\1<s>", text) 
+	text = re.sub(r"===(.*?)===", r"<s>\1<s>", text)
+	text = re.sub(r"==(.*?)==", r"<s>\1<s>", text)
+
 	return text
 
 def sentenceClean(text, trimToSentenceStart=False, trimToSentenceEnd=True):
@@ -45,18 +38,13 @@ def sentenceClean(text, trimToSentenceStart=False, trimToSentenceEnd=True):
 		return None
 	text = re.sub(r"^(\s*(\*)*\s*)", r" ", text, re.U) #Replace bullets at the start
 	text = re.sub(r"\s*;(\s*;)*", r";", text, re.U) #Remove more semi-colons
-	text = re.sub(r"([:;.,-])+\s*[:;.,-]+", r"\1 ", text, re.U) #Remove odd punctuation combinations
+	text = re.sub(r"([:;.,-])(\s*[:;.,-])+", r"\1 ", text, re.U) #Remove odd punctuation combinations
 	
 	text = re.sub(r"\'(\s*\')*", r"'", text, re.U) #Remove more single quotes
 	text = re.sub(r"\"(\s*\")*", r'"', text, re.U) #Remove more double quotes
 	text = re.sub(r",(\s*,)*", r",", text, re.U) #Remove more commas
 	text = re.sub(r"\:(\s*:)*", r":", text, re.U) #Remove more colons
 	text = re.sub(r"-(\s*-)*", r"-", text, re.U) #Remove more hyphens
-		
-	text = re.sub(r"[\[\]]", r" ", text) #Clean rest brackets
-	
-	text = re.sub(r"([\(\{\[])\s*", r"\1", text, re.U) #Remove spaces after starting brackets
-	text = re.sub(r"\s*([\)\}\]])", r"\1", text, re.U) #Remove spaces before closing brackets
     
 	if(trimToSentenceStart):
 		text = re.subn(hack_regexp(r"^.*?(\\p{Lu}|[\[\{\(\"\']|[0-9])"), r"\1", text, re.U)
