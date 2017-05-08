@@ -33,7 +33,7 @@ context = {
   # Maximal distance of error and correction to be considered as typo (used by classifier)
   "typoTreshold": 2,
   # Maximal word distance used by classifier
-  "wordTreshold": 3,
+  "wordTreshold": 2,
   # Minimal treshold that should old & new sentences from revision diff have to be
   # considered as two similar sentences. Similarity is returned by Utils.sentenceSimilarity function.
   "sentenceTreshold": 0.7,
@@ -104,6 +104,7 @@ def processPage(page):
 		print("Extracting errors")
 	page = ErrorExtractor.extract(page)
 	if(len(page["revisions"]) == 0 or len(page["errors"]) == 0):
+		context["processedPages"] +=1
 		print("No errors extracted")
 		return
 	if(not context["mute"]):
@@ -197,7 +198,7 @@ def main():
 		time.sleep(1)
 		while(not downloadResult.ready()):
 			print("Downloaded %s bytes of %s" % (os.stat(fileName).st_size, fileName), end="\r")
-			time.sleep(1)
+			time.sleep(10)
 		filePath = downloadResult.get()	#wait for download end
 		
 		while len(context["dumpDownloads"]) > 0:
@@ -211,7 +212,7 @@ def main():
 			os.remove(filePath)
 			while(not downloadResult.ready()):
 				print("Downloaded %s bytes of %s" % (os.stat(fileName).st_size, fileName), end="\r")
-				sleep(10)			
+				time.sleep(10)			
 			filePath = downloadResult.wait()
 		print("Processing file %s" % filePath)	
 		stream = openStream(filePath)

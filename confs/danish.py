@@ -7,7 +7,7 @@
 
 import sys, re
 
-SGML_TAG = ur"""
+SGML_TAG = r"""
     (?:                         # make enclosing parantheses non-grouping
     <!-- .*? -->                # XML/SGML comment
     |                           # -- OR --
@@ -24,10 +24,10 @@ SGML_TAG = ur"""
 SGML_TAG_RE = re.compile(SGML_TAG, re.UNICODE | re.VERBOSE | re.DOTALL)
 
 
-IP_ADDRESS = ur"(?:[0-9]{1,3}\.){3}[0-9]{1,3}"
+IP_ADDRESS = r"(?:[0-9]{1,3}\.){3}[0-9]{1,3}"
 IP_ADDRESS_RE = re.compile(IP_ADDRESS)
 
-DNS_HOST = ur"""
+DNS_HOST = r"""
     (?:
         [-a-z0-9]+\.                # Host name
         (?:[-a-z0-9]+\.)*           # Intermediate domains
@@ -54,7 +54,7 @@ DNS_HOST = ur"""
         localhost
     )"""
 
-URL = ur"""
+URL = r"""
     (?:
 
     # Scheme part
@@ -83,12 +83,12 @@ URL = ur"""
 """
 URL_RE = re.compile(URL, re.VERBOSE | re.IGNORECASE | re.UNICODE)
 
-EMAIL = ur"[-a-z0-9._']+@" + DNS_HOST
+EMAIL = r"[-a-z0-9._']+@" + DNS_HOST
 EMAIL_RE = re.compile(EMAIL, re.VERBOSE | re.IGNORECASE)
 
 # also matches initials
 # FIXME! only match capital letters (?)
-ACRONYM = ur"""
+ACRONYM = r"""
     (?<!\w)     # should not be preceded by a letter
     # sequence of single letter followed by . (e.g. U.S.)
     (?:
@@ -119,13 +119,13 @@ for i in xrange(sys.maxunicode):
 unicode_uppers = u''.join(uu)
 ABBREVIATION_RE = re.compile(u'[0-9%s-]{2,}' % unicode_uppers)
 
-MULTICHAR_PUNCTUATION = ur"(?:[?!]+|``|'')"
+MULTICHAR_PUNCTUATION = r"(?:[?!]+|``|'')"
 MULTICHAR_PUNCTUATION_RE = re.compile(MULTICHAR_PUNCTUATION, re.VERBOSE)
 
 # These punctuation marks should be tokenised to single characters
 # even if a sequence of the same characters is found. For example,
 # tokenise '(((' as ['(', '(', '('] rather than ['((('].
-OPEN_CLOSE_PUNCTUATION = ur"""
+OPEN_CLOSE_PUNCTUATION = r"""
     [
         \u00AB \u2018 \u201C \u2039 \u00BB \u2019 \u201D \u203A \u0028 \u005B
         \u007B \u0F3A \u0F3C \u169B \u2045 \u207D \u208D \u2329 \u23B4 \u2768
@@ -146,7 +146,7 @@ OPEN_CLOSE_PUNCTUATION = ur"""
 OPEN_CLOSE_PUNCTUATION_RE = re.compile(OPEN_CLOSE_PUNCTUATION, re.UNICODE | re.VERBOSE)
 
 
-NUMBER_INTEGER_PART = ur"""
+NUMBER_INTEGER_PART = r"""
     (?:
         0           
         |
@@ -154,13 +154,13 @@ NUMBER_INTEGER_PART = ur"""
         |
         [1-9][0-9]*      
     )"""
-NUMBER_DECIMAL_PART = ur"""
+NUMBER_DECIMAL_PART = r"""
     (?:
         [.,]
         [0-9]+
         (?:[eE][-+]?[0-9]+)?
     )"""
-NUMBER = ur"""
+NUMBER = r"""
     (?:(?:\A|(?<=\s))[-+])?
     (?:
         %(integer)s %(decimal)s?
@@ -170,13 +170,13 @@ NUMBER = ur"""
 
 NUMBER_RE = re.compile(NUMBER, re.UNICODE | re.VERBOSE)
 
-WHITESPACE = ur"\s+"
+WHITESPACE = r"\s+"
 WHITESPACE_RE = re.compile(WHITESPACE)
 
-ANY_SEQUENCE = ur"(.)\1*"
+ANY_SEQUENCE = r"(.)\1*"
 ANY_SEQUENCE_RE = re.compile(ANY_SEQUENCE)
 
-HTMLENTITY = ur"&(?:#x?[0-9]+|\w+);"
+HTMLENTITY = r"&(?:#x?[0-9]+|\w+);"
 HTMLENTITY_RE = re.compile(HTMLENTITY)
 
 
@@ -193,7 +193,7 @@ alm\.|beg\.|besl\.m.|bf\.|bl\.a.|ca\.|cet\. par.|d\.s.s.|dvs\.|e\.v.t.|etc\.|evt
 )
 """, re.UNICODE | re.VERBOSE | re.IGNORECASE)
 
-word = ur"(?:(?![\d])[-\w])+"
+word = r"(?:(?![\d])[-\w])+"
 word_re = re.compile(word, re.UNICODE)
 
 re_list = [

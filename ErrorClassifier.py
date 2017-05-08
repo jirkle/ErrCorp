@@ -19,13 +19,15 @@ class ErrorClassifier(object):
 	def classify(self):
 		if(self.__isPunct()):
 			self.errorType = "punct"
-		elif(self.__isTypographical()):
+		elif(self.__isTypographical_1()):
 			self.errorType = "typographical"
 		else:
 			self.errBag = Utils.bagOfWords(self.err)
 			self.corrBag = Utils.bagOfWords(self.corr)
 			if(self.__isSpelling()):
 				self.errorType = "spelling"
+			elif(self.__isTypographical_2()):
+				self.errorType = "typographical"			
 			elif(self.__isLexicoSemantic()):
 				self.errorType = "lexicosemantic"
 			elif(self.__isStylistic()):
@@ -42,13 +44,21 @@ class ErrorClassifier(object):
 		else:
 			return False
 
-	def __isTypographical(self):
+	def __isTypographical_1(self):
 		oldPunct = context["errCorpConfig"].reList["punctSpace"].sub('', self.err)
 		newPunct = context["errCorpConfig"].reList["punctSpace"].sub('', self.corr)
 		if(oldPunct == newPunct):
 			return True
 		else:
 			return False
+	
+	def __isTypographical_2(self):
+		oldPunct = context["errCorpConfig"].reList["punctSpace"].sub('', self.err).lower()
+		newPunct = context["errCorpConfig"].reList["punctSpace"].sub('', self.corr).lower()
+		if(oldPunct == newPunct):
+			return True
+		else:
+			return False	
 	
 	def __isSpelling(self):
 		if(self.err.lower() == self.corr.lower()):
@@ -59,8 +69,12 @@ class ErrorClassifier(object):
 		return False
 
 	def __isLexicoSemantic(self):
-		if((len(self.corrBag) >= len(self.errBag) and len(self.corrBag - self.errBag) <= context["wordTreshold"]) or (len(self.corrBag) < len(self.errBag) and len(self.errBag - self.corrBag) <= context["wordTreshold"])):
-			return True
+		if(len(self.corrBag) >= len(self.errBag)):
+			if(len(self.corrBag - self.errBag) <= context["wordTreshold"]):
+				return True
+		else:
+			if(len(self.errBag - self.corrBag) <= context["wordTreshold"]):
+				return True
 		return False
 	
 	def __isStylistic(self):
