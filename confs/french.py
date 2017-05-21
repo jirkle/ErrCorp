@@ -208,7 +208,7 @@ clictics = re.compile(ur"""
     )
     """, re.UNICODE | re.VERBOSE)
 
-abbreviations = re.compile(ur"""
+abbreviations = re.compile(r"""
     (?<!\w)     # should not be preceded by a letter
     (?:
         rendez-vous|d'abord|d'accord|d'ailleurs|

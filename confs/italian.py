@@ -181,7 +181,7 @@ HTMLENTITY_RE = re.compile(HTMLENTITY)
 
 
 
-clictics = re.compile(ur"""
+clictics = re.compile(r"""
     (?:
         # left clictics
         (?<!\w)     # should not be preceded by a letter

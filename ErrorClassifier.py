@@ -82,7 +82,7 @@ class ErrorClassifier(object):
 		newBag = Utils.bagOfWords(self.newSent)
 		if(len(self.corrBag - oldBag) == 0):
 			return True
-		if(len(oldBag ^ newBag) <= 2 * context["wordTreshold"]): 
+		if(len(oldBag ^ newBag) <= 2 * context["wordTreshold"]):
 			return True
 		return False
 
@@ -93,7 +93,7 @@ class ErrorClassifier(object):
 		return self.diff[1]
 		
 	def getStartString(self): 
-		return "<err type=\""+ self.errorType + "\">" + self.err + "</err><corr>"
+		return "<err type=\""+ self.errorType + "\">" + self.err + "</err><corr type=\""+ self.errorType + "\">"
 		
 	def getEndString(self):
 		return "</corr>"

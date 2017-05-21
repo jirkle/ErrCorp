@@ -1,6 +1,7 @@
 # coding=UTF-8
 import io
 import unitok
+import time
 
 context = None
 
@@ -20,8 +21,10 @@ def exportToStream(page):
 	outputStreamFull = context["outputStreamFull"]
 	outputStreamOrphans = context["outputStreamOrphans"]
 	if context["outputFormat"] == "se":
-		output = ("<doc n=\"%s\">" % page["name"])
 		latestRev = page["revisions"][-1]["*"]
+		output = ("<doc n=\"%s\" t=\"%s\">" % (page["name"], page["revisions"][-1]["timestamp"]))
+		#output = ("<doc n=\"%s\" t=\"%s\">" % (page["name"], time.strftime("%B %d, %Y %H:%M:%S", page["revisions"][-1]["timestamp"])))
+		
 		for line in latestRev:
 			if line != "":
 				output += ("<s>%s</s>" % line)

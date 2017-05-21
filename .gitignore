@@ -7,6 +7,11 @@ __pycache__/
 # C extensions
 *.so
 
+# Vue
+*.vue
+*.psd
+Thumbs.db
+
 # Distribution / packaging
 .Python
 env/

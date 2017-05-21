@@ -28,7 +28,7 @@ class HidingString(object):
 		self.secretsRe = []
 		self.fullString = text
 		self.secretsRe.append(re.compile(r"""(<err.*?>)""", re.U | re.X))
-		self.secretsRe.append(re.compile(r"""(</err><corr>)""", re.U | re.X))
+		self.secretsRe.append(re.compile(r"""(</err><corr.*?>)""", re.U | re.X))
 		self.secretsRe.append(re.compile(r"""(</corr>)""", re.U | re.X))
 		if(update):
 			self.update()

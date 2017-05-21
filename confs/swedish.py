@@ -180,7 +180,7 @@ HTMLENTITY = r"&(?:#x?[0-9]+|\w+);"
 HTMLENTITY_RE = re.compile(HTMLENTITY)
 
 
-abbreviations = re.compile(ur"""
+abbreviations = re.compile(r"""
 (?:
     # these should not be preceded by a letter
     (?<!\w)

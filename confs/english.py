@@ -196,7 +196,7 @@ clictics = re.compile(ur"""
     (?!\w)          # clictics should not be followed by a letter
     """, re.UNICODE | re.VERBOSE | re.IGNORECASE)
 
-abbreviations = re.compile(ur"""
+abbreviations = re.compile(r"""
     (?<!\w)     # should not be preceded by a letter
     (?:
         Adm\.|Ala\.|Ariz\.|Ark\.|Aug\.|Ave\.|Bancorp\.|Bhd\.|Brig\.|

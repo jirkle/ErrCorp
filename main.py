@@ -1,4 +1,42 @@
 # coding=UTF-8
+
+# ======================================================================================
+#
+#  This script and its parts (WikiDownload.py, PageProcessor.py, ErrorExtractor.py, 
+#  PostProcessor.py, ErrorClassifier.py, Exporter.py and configuration files
+#  ending at -err-corp.py) are licensed under the 3-Clause BSD License
+#
+# ======================================================================================
+#  Copyright (c) 2017, Jiří Kletečka (jiri.kletecka@gmail.com)
+# ======================================================================================
+#
+#  Redistribution and use in source and binary forms, with or without modification, 
+#  are permitted provided that the following conditions are met:
+#  
+#  1. Redistributions of source code must retain the above copyright notice, this 
+#     list of conditions and the following disclaimer.
+#
+#  2. Redistributions in binary form must reproduce the above copyright notice, 
+#     this list of conditions and the following disclaimer in the documentation
+#     and/or other materials provided with the distribution.
+#
+#  3. Neither the name of the copyright holder nor the names of its contributors
+#     may be used to endorse or promote products derived from this software without 
+#     specific prior written permission.
+#
+#  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+#  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, 
+#  THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+#  ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE 
+#  LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+#  DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR 
+#  SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER 
+#  CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+#  OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+#  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
+# ======================================================================================
+
 import getopt
 import sys
 import os
@@ -49,6 +87,7 @@ context = {
   # Supported output formats by Exporter
   "supportedOutputFormats": ("txt", "se"),
   "separator": ";",
+  "startFromPage": "",
   "unitokConfig": None,
   "errCorpConfig": None,
   "pagesCount": 378675,
@@ -125,12 +164,22 @@ def processStream(fileStream):
 	context["processedPages"] = 0    
 	curPage = { "name": "", "revisions": [], "errors": [] }
 	curRevision = { "user": "", "timestamp": "", "comment": "", "*": "", "format": "wikimarkup"}
+	if context["startFromPage"] == "": startPageFounded = True
+	else: startPageFounded = False
 
 	skip = False
 	for event, elem in ET.iterparse(fileStream):
 		if event == 'end':
 			if elem.tag.endswith('title'):
 				curPage["name"] = elem.text
+				if(not startPageFounded):
+					print("Skipping page   #%s: %s" % (context["processedPages"] + 1, curPage["name"]))
+					if(context["startFromPage"] == curPage["name"]):
+						startPageFounded = True
+					context["processedPages"] += 1
+					context["skipped"] += 1
+					skip = True
+					continue
 				if(context["errCorpConfig"].excludeFilter.search(curPage["name"])):
 					print("Skipping page   #%s: %s" % (context["processedPages"] + 1, curPage["name"]))
 					context["processedPages"] += 1
