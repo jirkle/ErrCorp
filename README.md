@@ -1,5 +1,7 @@
 ## ErrCorp
-ErrCorp is tool for automated generation of error corpora from wikipedia dump.
+ErrCorp is a tool for automated generation of error-annotated corpora from Wikipedia sites. Such corpus contains the newest versions of articles with marked errors obtained from their editing history.
+
+The script itself operates in situ, no additional files are created during processing (except the situation when the dump is located online and needs to be downloaded first). It is also unpretentious to memory as it processes input page by page.
 
 ### Install
 
@@ -7,20 +9,15 @@ ErrCorp is tool for automated generation of error corpora from wikipedia dump.
 	pip install intervaltree
 	pip install python-Levenshtein
 
-### How it works
-It takes bz2 wiki dump with history and processes it page by page. During processing it compares content of every two adjacent revisions and gets unique sentences in older and newer revision. Then ErrCorp links each old sentence to best matching new sentence and finally each of these matches are resolved as one type of error:
-* **Word order** - old &amp; new sentence have the same bag of words
-* **Typo** - comment of rev contains predefined set of words (regex - typoFilter), typos are further extracted
-* **Edit** - comment of rev contains predefined set of words (regex - editFilter)
-* **Other** - all other, non classified errors
 
-For more info check [wiki](https://github.com/jirkle/ErrCorp/wiki)
+### Usage
 
-### Command line
-* Download pages through wiki api:
+* Download and process pages through MediaWiki action API:
 
 -a "Astronomie; Biologie; Fyzika;" -l "cs" -f "se" -r
 
-* Process local dump:
+* Process pages from local dump:
 
 -p ../cswiki.xml.bz2 -l "cs" -f "txt" -r -m
+
+For more info check [wiki](https://github.com/jirkle/ErrCorp/wiki)
